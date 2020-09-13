@@ -1,0 +1,23 @@
+# EDVA - Commands - 
+
+-- Set Application path {TXT:App_EDDiscovery} in command '(((MAIN))) Settings'
+
+Begin Condition : [{CMDSEGMENT:0}] Equals 'Start' OR [{CMDSEGMENT:0}] Equals 'Open'
+    Set text [~~MyProcess] to 'EDDiscovery'
+    
+    -- ↓ Start Application
+    Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '0'
+        Run application '{TXT:App_EDDiscovery}'
+        Play sound, '{VA_SOUNDS}\Malic Profile\Alert Sounds\Windows Error.mp3'
+        
+        -- ↓ Application is running
+    Else
+        Write [Green] 'Skipped, Allready running [{TXT:App_EDDiscovery}]' to log
+        Play sound, '{VA_SOUNDS}\Malic Profile\Alert Sounds\Windows Hardware Remove.wav'
+    End Condition
+    
+    -- ↓ Close Application
+Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Close'
+    Close window 'EDDiscovery'
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Critical Stop.wav'
+End Condition
