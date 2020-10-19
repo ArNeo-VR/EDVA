@@ -1,0 +1,12 @@
+﻿--
+
+Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Chaff'
+    Press variable key(s) [edFireChaffLauncher] and hold for 0,05 seconds and release
+    
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'ECM'
+    Press variable key(s) [edChargeECM] and hold for 0,05 seconds and release
+    
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Heat sink'
+    Press variable key(s) [edDeployHeatSink] and hold for 0,05 seconds and release
+    
+End Condition

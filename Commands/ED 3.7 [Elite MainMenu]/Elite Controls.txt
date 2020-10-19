@@ -1,0 +1,182 @@
+﻿--
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+
+Begin Boolean Compare : [Elite Menu] Does Not Equal False
+    Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
+    Pause 1 second
+End Condition
+
+-- ↓ Elite Menu
+Begin Boolean Compare : [Elite Menu] Equals False
+    Press variable key(s) [edPause] and hold for 0,05 seconds and release
+    Set Boolean [Elite Menu] to True
+    Pause 0,5 seconds
+    Start Loop : Repeat 2 Times
+        DISABLED - Press variable key(s) [edUI_UP] and hold for 0,05 seconds and release
+        Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+        Pause 0,1 seconds
+    End Loop
+    -- ↓ Elite Options Menu
+    Pause 0,15 seconds
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    -- ↓ Elite Controls Menu
+End Condition
+Pause 0,15 seconds
+Press variable key(s) [edUI_Select] and hold for 0,1 seconds and release
+
+-- ↓ Elite Menu Controls - List
+Begin Text Compare : [{CMDSEGMENT:1}] Does Not Equal ''
+    Pause 1,3 seconds
+    Begin Text Compare : [{CMDSEGMENT:1}] Equals ''
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Mouse'
+        Set integer [menuoption] value to 1
+        Set integer [menulength] value to 10
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Flight Rotation'
+        Set integer [menuoption] value to 2
+        Set integer [menulength] value to 13
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Flight Thrust'
+        Set integer [menuoption] value to 3
+        Set integer [menulength] value to 9
+    Else If : [{CMDSEGMENT:1}] Equals 'Alternate Flight Controls' OR [{CMDSEGMENT:1}] Equals 'Flight Controls'
+        Set integer [menuoption] value to 4
+        Set integer [menulength] value to 6
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Flight Throttle'
+        Set integer [menuoption] value to 5
+        Set integer [menulength] value to 15
+    Else If : [{CMDSEGMENT:1}] Equals 'Flight Landing Overrides' OR [{CMDSEGMENT:1}] Equals 'Landing Overrides'
+        Set integer [menuoption] value to 6
+        Set integer [menulength] value to 19
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Flight Miscellaneous'
+        Set integer [menuoption] value to 7
+        Set integer [menulength] value to 7
+    Else If : [{CMDSEGMENT:1}] Equals 'Targetting' OR [{CMDSEGMENT:1}] Equals 'Wingman'
+        Set integer [menuoption] value to 8
+        Set integer [menulength] value to 14
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Weapons'
+        Set integer [menuoption] value to 9
+        Set integer [menulength] value to 6
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Cooling'
+        Set integer [menuoption] value to 10
+        Set integer [menulength] value to 2
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Miscellaneous'
+        Set integer [menuoption] value to 11
+        Set integer [menulength] value to 22
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Mode Switches'
+        Set integer [menuoption] value to 12
+        Set integer [menulength] value to 22
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Interface Mode'
+        Set integer [menuoption] value to 13
+        Set integer [menulength] value to 11
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Headlook Mode'
+        Set integer [menuoption] value to 14
+        Set integer [menulength] value to 16
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Galaxy Map'
+        Set integer [menuoption] value to 15
+        Set integer [menulength] value to 20
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Driving'
+        Set integer [menuoption] value to 16
+        Set integer [menulength] value to 24
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Driving Targeting'
+        Set integer [menuoption] value to 17
+        Set integer [menulength] value to 1
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Driving Turret Controls'
+        Set integer [menuoption] value to 18
+        Set integer [menulength] value to 13
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Drive Throttle'
+        Set integer [menuoption] value to 19
+        Set integer [menulength] value to 8
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Driving Miscellaneous'
+        Set integer [menuoption] value to 20
+        Set integer [menulength] value to 7
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Driving Mode Switches'
+        Set integer [menuoption] value to 21
+        Set integer [menulength] value to 11
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Multi Crew'
+        Set integer [menuoption] value to 22
+        Set integer [menulength] value to 21
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Flighter Orders'
+        Set integer [menuoption] value to 23
+        Set integer [menulength] value to 8
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Camera Suite'
+        Set integer [menuoption] value to 24
+        Set integer [menulength] value to 14
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Free Camera'
+        Set integer [menuoption] value to 25
+        Set integer [menulength] value to 39
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Store Camera'
+        Set integer [menuoption] value to 26
+        Set integer [menulength] value to 6
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Holo Me'
+        Set integer [menuoption] value to 27
+        Set integer [menulength] value to 4
+    Else If : [{CMDSEGMENT:1}] Equals 'Playlist' OR [{CMDSEGMENT:1}] Equals 'Galnet Audio'
+        Set integer [menuoption] value to 28
+        Set integer [menulength] value to 4
+    Else If : [{CMDSEGMENT:1}] Equals 'Full spectrum system scanner' OR [{CMDSEGMENT:1}] Equals 'Spectrum Scanner'
+        Set integer [menuoption] value to 29
+        Set integer [menulength] value to 26
+    Else If : [{CMDSEGMENT:1}] Equals 'Detailed surface scanner' OR [{CMDSEGMENT:1}] Equals 'Surface scanner'
+        Set integer [menuoption] value to 30
+        Set integer [menulength] value to 16
+    End Condition
+    
+    -- ↓ Execute Goto Menu Option
+    Begin Integer Compare : [menuoption] Is Less Than 16
+        Set integer [loopcount] value to 14
+        Set integer [loopcount] to [loopcount] plus [menuoption]
+        Set integer [loopback] value to 14
+        Start Loop : Repeat [loopcount] Times
+            Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+        End Loop
+        Pause 0,1 seconds
+    Else
+        Set integer [loopcount] value to 30
+        Set integer [loopback] value to 30
+        Set integer [loopback] to [loopback] minus [menuoption]
+        Press variable key(s) [edUI_Down] and hold for 1,8 seconds and release
+        Pause 0,1 seconds
+    End Condition
+    Start Loop : Repeat [loopback] Times
+        Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+        Pause 0,05 seconds
+    End Loop
+    Pause 0,05 seconds
+    Press ] } key and hold for 0,05 seconds and release
+    
+    -- ↓ Move menu to top
+    Begin Integer Compare : [menuoption] Is Greater Than Or Equals 21
+        Begin Integer Compare : [menulength] Is Greater Than Or Equals 11
+            Set integer [loopcount] value to 13
+        Else
+            Set integer [loopcount] value to 30
+            Set integer [loopcount] to [loopcount] minus [menuoption]
+            Set integer [loopcount] to [loopcount] plus [menulength]
+            Set integer [loopcount] to [loopcount] minus 3
+        End Condition
+        
+        -- ↓ Execute Move menu to top
+        Start Loop : Repeat [loopcount] Times
+            Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+        End Loop
+        Pause 0,1 seconds
+        DISABLED - Set integer [loopcount] to [loopcount] minus 1
+        Start Loop : Repeat [loopcount] Times
+            Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+        End Loop
+        Pause 0,05 seconds
+    End Condition
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+End Condition
+
+--
+Pause 0,5 seconds
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Insert.wav'
+Set integer [loopback] value to [Not Set]
+Set integer [loopcount] value to [Not Set]
+Set integer [menulength] value to [Not Set]
+Set integer [menuoption] value to [Not Set]

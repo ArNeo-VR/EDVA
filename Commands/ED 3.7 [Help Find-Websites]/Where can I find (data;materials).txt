@@ -1,0 +1,10 @@
+﻿--
+-- Opens online webpage
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+Set text [Material] to '{CMD}'
+Set text [Material] to '{TXTREPLACEVAR:Material:"where can i find ":""}'
+Set text [State variable] to 'Material'
+Execute external plugin, 'EDDI 3.7.0'
+Set text [Script] to 'Material location report'
+Execute external plugin, 'EDDI 3.7.0'

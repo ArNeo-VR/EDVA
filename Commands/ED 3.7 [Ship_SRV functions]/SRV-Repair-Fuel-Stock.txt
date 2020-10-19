@@ -1,0 +1,49 @@
+﻿--
+-- Set internal (system) panel on [Inventory] > [Synthesis]
+
+Begin Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+    Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'internal panel'
+        Execute command, '[Internal; System; Sys; Status; Inventory; Functions] Panel' (and wait until it completes)
+        Pause 0,3 seconds
+    End Condition
+    
+    Begin Text Compare : [{CMD}] Equals 'Restock'
+        Set integer [~SynthCount] value to 0
+    Else If Text Compare : [{CMD}] Equals 'Repair'
+        Set integer [~SynthCount] value to 1
+    Else If Text Compare : [{CMD}] Equals 'Refuel'
+        Set integer [~SynthCount] value to 2
+    End Condition
+    
+    Press variable key(s) [edUI_Left] and hold for 0,02 seconds and release
+    Pause 0,06 seconds
+    Start Loop : Repeat 5 Times
+        Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+        Pause 0,06 seconds
+    End Loop
+    Pause 0,1 seconds
+    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+    Pause 0,06 seconds
+    Start Loop : Repeat 5 Times
+        Press variable key(s) [edUI_Up] and hold for 0,03 seconds and release
+        Pause 0,03 seconds
+    End Loop
+    Start Loop : Repeat [~SynthCount] Times
+        Press variable key(s) [edUI_Down] and hold for 0,02 seconds and release
+        Pause 0,06 seconds
+    End Loop
+    -- execute action
+    Start Loop : Repeat 2 Times
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+        Pause 0,1 seconds
+    End Loop
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,06 seconds
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    -- elite resume
+    Pause 0,2 seconds
+    Start Loop : Repeat 2 Times
+        Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+        Pause 0,2 seconds
+    End Loop
+End Condition

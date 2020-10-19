@@ -1,0 +1,11 @@
+﻿-- EDDI original command: [Display;show] [this station;the current station;station] in E D D B
+-- Opens online webpage
+
+Begin Text Compare : [{TXT:Last station name}] Equals ''
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Fail.wav'
+Else
+    Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+    Set text [Script] to 'Displaying {TXT:Last station name} in EDDB.'
+    Execute external plugin, 'EDDI 3.7.0'
+    Execute external plugin, 'EDDI 3.7.0'
+End Condition

@@ -1,0 +1,4 @@
+﻿--
+
+Press variable key(s) [edHeadLookReset] and hold for 0,05 seconds and release
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'

@@ -1,0 +1,89 @@
+﻿--
+-- todo, Tab select
+-- Galaxy Map Route, selects target that is in the clipboard text.
+-- Galaxy Engage,
+
+-- ↓ Galaxy map open, move galaxy-tab to 0
+Begin Text Compare : [{TXT:Status gui focus}] Equals 'galaxy map'
+    Start Loop While : [galaxy-tab] Is Greater Than 0
+        Press variable key(s) [edLeftThrustButton] and hold for 0,025 seconds and release
+        Pause 0,05 seconds
+        Set small int (condition) [galaxy-tab] value as decremented by 1
+    End Loop
+Else
+    Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'none'
+        Execute command, 'Back; Exit; Exit codex' (and wait until it completes)
+    End Condition
+    Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+    Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+        Press variable key(s) [edGalaxyMapOpen] and hold for 0,05 seconds and release
+    Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+        Press variable key(s) [edGalaxyMapOpen_Buggy] and hold for 0,05 seconds and release
+    End Condition
+End Condition
+Pause 2 seconds
+
+-- ↓ Move to tab
+Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Info'
+    Set small int (condition) [galaxy-tab] value to 0
+    Write [Blue] '0' to log
+Else If : [{CMDSEGMENT:1}] Equals 'Route' OR [{CMDSEGMENT:1}] Equals 'Search' OR [{CMDSEGMENT:1}] Starts With 'Map ' OR [{CMDSEGMENT:1}] Equals 'Engage'
+    Set small int (condition) [galaxy-tab] value to 1
+    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Bookmarks'
+    Set small int (condition) [galaxy-tab] value to 2
+    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Filter'
+    Set small int (condition) [galaxy-tab] value to 3
+    Press variable key(s) [edLeftThrustButton] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+    Press variable key(s) [edLeftThrustButton] and hold for 0,05 seconds and release
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Options'
+    Set small int (condition) [galaxy-tab] value to 4
+    Press variable key(s) [edLeftThrustButton] and hold for 0,05 seconds and release
+End Condition
+Pause 0,15 seconds
+
+-- ↓ Execute command
+Begin Text Compare : [{CMDSEGMENT:1}] Equals ''
+    
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Search'
+    Press variable key(s) [edUI_Select] and hold for 0,6 seconds and release
+    
+Else If : [{CMDSEGMENT:1}] Starts With 'Map ' OR [{CMDSEGMENT:1}] Equals 'Engage'
+    Press variable key(s) [edUI_Select] and hold for 0,6 seconds and release
+    Pause 0,05 seconds
+    Press Left Ctrl+V keys and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+    Press Enter key and hold for 0,05 seconds and release
+    Pause 2,8 seconds
+    
+    Begin Text Compare : [{CMDSEGMENT:1}] Ends With ' Select'
+        Execute command, 'Map Select' (by name) (and wait until it completes)
+        
+    Else If : [{CMDSEGMENT:1}] Ends With ' Route' OR [{CMDSEGMENT:1}] Equals 'Engage'
+        Execute command, 'Map Route' (by name) (and wait until it completes)
+        
+    Else If Text Compare : [{CMDSEGMENT:1}] Ends With ' System'
+        DISABLED - Execute command, 'System map' (and wait until it completes)
+        Begin Condition : [{TXT:Status gui focus}] Does Not Equal 'system map' OR [{TXT:Status gui focus}] Equals 'galaxy map'
+            Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+                Press variable key(s) [edSystemMapOpen] and hold for 0,05 seconds and release
+            Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+                Press variable key(s) [edSystemMapOpen_Buggy] and hold for 0,05 seconds and release
+            End Condition
+        End Condition
+        
+    End Condition
+    
+    Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Engage'
+        Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+        Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space') OR ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Supercruise')
+            Execute command, 'Engage' (by name)
+        End Condition
+    End Condition
+End Condition
+
+Pause 0,15 seconds

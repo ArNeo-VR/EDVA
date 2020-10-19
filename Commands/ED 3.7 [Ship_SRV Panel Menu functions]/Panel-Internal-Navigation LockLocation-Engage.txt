@@ -1,0 +1,52 @@
+﻿-- When focused on the [Navigation Panel] (left 1st tab) And a selected a location, the action can be called.
+--
+Todo WIP - Gui focus = fss mode > press target
+
+Begin Text Compare : [{TXT:Status gui focus}] Equals 'external panel'
+    Press variable key(s) [edUI_Select] and hold for 0,02 seconds and release
+    Pause 0,02 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,025 seconds and release
+    Pause 0,02 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,025 seconds and release
+    Pause 0,02 seconds
+    Press variable key(s) [edUI_Up] and hold for 0,025 seconds and release
+    Pause 0,02 seconds
+    
+    Begin Text Compare : [{CMD}] Has Not Been Set
+        
+    Else If : [{CMD}] Equals 'Lock location' OR [{CMD}] Equals 'Lock Destination'
+        Press variable key(s) [edUI_Select] and hold for 0,02 seconds and release
+        Pause 0,02 seconds
+        Start Loop While : [{TXT:Status gui focus}] Does Not Equal 'none'
+            Pause 0,06 seconds
+            Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+        End Loop
+        
+    Else If : [{CMD}] Equals 'Lock and supercruise' OR [{CMD}] Equals 'Lock and engage hyperdrive' OR [{CMD}] Equals 'Lock and jump' OR [{CMD}] Equals 'Enage Destination'
+        Press variable key(s) [edUI_Right] and hold for 0,025 seconds and release
+        Pause 0,02 seconds
+        Press variable key(s) [edUI_Select] and hold for 0,02 seconds and release
+        
+    Else If Text Compare : [{CMD}] Equals 'surface map'
+        Begin Condition : ([Status supercruise] Equals False AND [Status docked] Equals False)
+            Pause 0,1 seconds
+            Press variable key(s) [edUI_Right] and hold for 0,025 seconds and release
+        End Condition
+        Pause 0,1 seconds
+        Press variable key(s) [edUI_Right] and hold for 0,025 seconds and release
+        Pause 0,02 seconds
+        Press variable key(s) [edUI_Select] and hold for 0,025 seconds and release
+        
+    Else If Text Compare : [{CMD}] Equals 'Bookmark location'
+        Start Loop : Repeat 4 Times
+            Press variable key(s) [edUI_Right] and hold for 0,025 seconds and release
+            Pause 0,02 seconds
+        End Loop
+        Pause 0,02 seconds
+        Press variable key(s) [edUI_Left] and hold for 0,025 seconds and release
+        Press variable key(s) [edUI_Select] and hold for 0,025 seconds and release
+    End Condition
+Else
+    -- action not allowed sound
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Ding.wav'
+End Condition

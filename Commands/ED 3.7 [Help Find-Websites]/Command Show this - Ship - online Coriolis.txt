@@ -1,0 +1,8 @@
+﻿-- [Display;show;send;open] [my;this;the;] ship [in Coriolis;to Coriolis;online]
+-- Opens online webpage
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+Set text [Script] to 'Displaying $= in Coriolis.;Sending $= to Coriolis.'
+DISABLED - Execute external plugin, 'EDDI 3.7.0'
+Execute external plugin, 'EDDI 3.7.0' and wait for return
+DISABLED - Play sound, '{VA_SOUNDS}\ED2018\ThemeSound-Error.mp3'

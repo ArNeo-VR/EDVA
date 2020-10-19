@@ -1,0 +1,10 @@
+﻿-- Do not combine, required by other commands [C]
+--
+-- EDDI: {TXT:Status gui focus} = external panel
+
+Begin Text Compare : [{TXT:Status vehicle}] Has Not Been Set
+Else If : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Status gui focus}] Does Not Equal 'external panel')
+    Press variable key(s) [edFocusLeftPanel] and hold for 0,05 seconds and release
+Else If : ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Status gui focus}] Does Not Equal 'external panel')
+    Press variable key(s) [edFocusLeftPanel_Buggy] and hold for 0,05 seconds and release
+End Condition

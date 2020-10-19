@@ -1,0 +1,25 @@
+-- [deploy; retract;] Hardpoints [up;down;]
+
+-- ↓ Environment conditions
+Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space')
+    -- ↓ Command
+    Begin Condition : [{CMDSEGMENT:2}] Equals 'down' OR [{CMDSEGMENT:2}] Equals 'up' OR [{CMDSEGMENT:0}] Equals 'deploy' OR [{CMDSEGMENT:0}] Equals 'retract'
+        Begin Condition : ([{CMDSEGMENT:2}] Equals 'down' AND [{Status hardpoints deployed}] Equals False) OR ([{CMDSEGMENT:2}] Equals 'up' AND [{Status hardpoints deployed}] Equals True) OR ([{CMDSEGMENT:0}] Equals 'deploy' AND [{Status hardpoints deployed}] Equals False) OR ([{CMDSEGMENT:0}] Equals 'retract' AND [{Status hardpoints deployed}] Equals True)
+            Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+            DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'
+            Press variable key(s) [edDeployHardpointToggle] and hold for 0,05 seconds and release
+        Else
+            Play sound, 'internal:Echo'
+            DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
+        End Condition
+    Else
+        Press variable key(s) [edDeployHardpointToggle] and hold for 0,05 seconds and release
+    End Condition
+    
+Else
+    Play sound, 'internal:Zazaza'
+    DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Fail.wav'
+    Begin Boolean Compare : [Debug write] Equals True
+        Write [Red] 'Environment conditions not valid' to log
+    End Condition
+End Condition

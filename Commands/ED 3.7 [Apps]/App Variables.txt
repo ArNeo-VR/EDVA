@@ -1,0 +1,7 @@
+============================================================================
+--  [filenames] Locations, Log files | Apps | Custom
+Set text [App_EDMC] to 'c:\Program Files (x86)\EDMarketConnector\EDMarketConnector.exe'
+Set text [App_EDEngineer] to '%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms'
+Set text [App_EDDiscovery] to 'c:\Program Files\EDDiscovery\EDDiscovery.exe'
+Set text [App_EDPlanetBearing] to '{TXT:VA_APP}\EDPlanetBearing\EDPlanetBearing.exe'
+

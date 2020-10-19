@@ -1,0 +1,21 @@
+﻿--
+
+-- ↓ Environment conditions
+Begin Condition : ([Status Vehicle] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal Space')
+    -- ↓ Command
+    Begin Text Compare : [{CMD}] Equals 'Engine Color'
+        Press variable key(s) [edEngineColourToggle] and hold for 0,05 seconds and release
+        Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+        DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'
+    Else If Text Compare : [{CMD}] Equals 'Weapon Color'
+        Press variable key(s) [edWeaponColourToggle] and hold for 0,05 seconds and release
+        Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+        DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'
+    End Condition
+Else
+    Play sound, 'internal:Zazaza'
+    DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Fail.wav'
+    Begin Boolean Compare : [Debug write] Equals True
+        Write [Red] 'Environment conditions not valid' to log
+    End Condition
+End Condition

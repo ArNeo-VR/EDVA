@@ -1,0 +1,9 @@
+﻿-- Do not combine, required by other commands [C]
+--
+-- Status gui focus: communications panel
+
+Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Status gui focus}] Does Not Equal 'communications panel')
+    Press variable key(s) [edFocusCommsPanel] and hold for 0,05 seconds and release
+Else If : ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Status gui focus}] Does Not Equal 'communications panel')
+    Press variable key(s) [edFocusCommsPanel_Buggy] and hold for 0,05 seconds and release
+End Condition

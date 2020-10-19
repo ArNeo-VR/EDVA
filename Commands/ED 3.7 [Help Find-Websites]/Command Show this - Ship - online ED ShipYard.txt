@@ -1,0 +1,8 @@
+﻿-- [Display;show;send;open] [my;this;the;] ship [in E D Shipyard; to E D Shipyard]
+-- Opens online webpage
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+Set text [Script] to 'Displaying $= in E D Shipyard.;Sending $= to E D Shipyard'
+DISABLED - Execute external plugin, 'EDDI 3.7.0'
+Write [Blue] '{TXT:EDDI uri}' to log
+Execute external plugin, 'EDDI 3.7.0' and wait for return

@@ -1,0 +1,51 @@
+﻿--
+DISABLED - Write [Blank] '-- WIP - Work in Progress' to log
+
+Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Supercruise')
+    Begin Condition : [{CMD}] Equals 'F S S' OR [{CMD}] Equals 'Spectrum' OR [{CMD}] Equals 'Spectrum scanner' OR [{CMD}] Equals 'System scanner'
+        Begin Text Compare : [{TXT:Status gui focus}] Equals 'fss mode'
+            Write [Blue] 'exit' to log
+            DISABLED - Press variable key(s) [edExplorationFSSQuit] and hold for 0,05 seconds and release
+            DISABLED - Press Right Ctrl+/ ? keys and hold for 0,05 seconds and release
+            Press variable key(s) [edExplorationFSSQuit] and hold for 0,05 seconds and release
+            Press R key and hold for 0,5 seconds and release
+        Else
+            Write [Blue] 'enter' to log
+            Press variable key(s) [edExplorationFSSEnter] and hold for 0,05 seconds and release
+        End Condition
+    End Condition
+    
+    Begin Condition : ([{TXT:Status gui focus}] Equals 'fss mode' AND [{CMD}] Equals 'Spectrum Help')
+        Press variable key(s) [edExplorationFSSEnter] and hold for 0,05 seconds and release
+        Pause 0,3 seconds
+        Press variable key(s) [edExplorationFSSShowHelp] and hold for 0,02 seconds and release
+    End Condition - Exit when condition met
+    
+    Begin Condition : [{CMD}] Equals 'system scan' OR [{CMD}] Equals 'spectrum scan'
+        Begin Text Compare : [{TXT:Status gui focus}] Equals 'fss mode'
+        Else
+            Pause 0,05 seconds
+            Press variable key(s) [edExplorationFSSEnter] and hold for 0,05 seconds and release
+            Pause 0,3 seconds
+        End Condition
+        Pause 0,3 seconds
+        DISABLED - Press variable key(s) [edExplorationFSSDiscoveryScan] and hold for 2 seconds and release
+        Press down Left Shift key
+        Click right mouse button
+        Release Left Shift key
+    End Condition
+    
+    DISABLED - Pause 0,3 seconds
+    DISABLED - Begin Condition : [{CMDSEGMENT:0}] Equals 'Leave' OR [{CMDSEGMENT:0}] Equals 'Exit' OR ([Status FSS] Equals True AND [{CMD}] Equals 'Exploration')
+        DISABLED - Set Boolean [Status FSS] to False
+        DISABLED - Press variable key(s) [edExplorationFSSQuit] and hold for 0,5 seconds and release
+        DISABLED - Press R key and hold for 0,5 seconds and release
+    DISABLED - Else If Text Compare : [{CMDSEGMENT:2}] Equals 'Scan'
+        DISABLED - Press variable key(s) [edExplorationFSSDiscoveryScan] and hold for 4 seconds and release
+    DISABLED - Else If Text Compare : [{CMDSEGMENT:2}] Equals 'Help'
+        DISABLED - Press variable key(s) [edExplorationFSSShowHelp] and hold for 0,02 seconds and release
+    DISABLED - End Condition - Exit when condition met
+    DISABLED - Set Boolean [Status FSS] to True
+    DISABLED - Press variable key(s) [edExplorationFSSEnter] and hold for 0,02 seconds and release
+    DISABLED - Press Right Ctrl+/ ? keys and hold for 0,05 seconds and release
+End Condition

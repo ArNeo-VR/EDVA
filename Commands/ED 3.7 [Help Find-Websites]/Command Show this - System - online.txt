@@ -1,0 +1,7 @@
+﻿-- EDDI original command: [Display;show] [this system;the current system;system] in E D D B;show this system online
+-- Opens online webpage
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+Set text [Script] to 'Displaying {TXT:System name (spoken)} in EDDB.'
+DISABLED - Execute external plugin, 'EDDI 3.7.0' and wait for return
+Execute external plugin, 'EDDI 3.7.0'

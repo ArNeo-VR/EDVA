@@ -1,0 +1,31 @@
+﻿
+
+OPEN Elite forum - Run application 'https://forums.frontier.co.uk'
+OPEN Elite Reddit - Run application 'https://www.reddit.com/r/EliteDangerous/'
+OPEN Elite Store (Malic_VR) - Run application 'http://click.linksynergy.com/fs-bin/click?id=iGjSRvLBR4k&offerid=366990&type=3&subid=0'
+OPEN Frontier support - Run application 'https://support.frontier.co.uk/kb/'
+OPEN Galnet - Run application 'https://community.elitedangerous.com/en/galnet'
+
+OPEN Inara - Run application 'http://inara.cz/galaxy'
+OPEN [E D D B; database] - Run application 'https://eddb.io/'
+OPEN [E D S M; Elite Dangerous Star Map; Star Map] - Run application 'https://www.edsm.net/'
+OPEN Sector map - Run application 'https://cim.sotl.org.uk/elite-dangerous/'
+
+OPEN Permits - Run application 'https://forums.frontier.co.uk/showthread.php/122593-Updated-Permit-List'
+OPEN Material trader - Run application 'https://inara.cz/galaxy-nearest/25/'
+OPEN Neutron plotter - Run application 'https://www.spansh.co.uk/'
+
+OPEN Coriolis - Run application 'https://coriolis.io/'
+OPEN [Shipyard;ED Shipyard] - Run application 'https://edsy.org/'
+
+OPEN Fuel rats;Call the fuel rats - Run application 'https://www.fuelrats.com/'
+OPEN Engineers - Run application 'http://inara.cz/galaxy-engineers'
+
+OPEN Thargoid structures - Run application 'https://docs.google.com/spreadsheets/d/1G79y2Sg-7lU8BDIpM_N0-mnS6BFqhe4va648J1wwnag/edit#gid=1403369018'
+Open Rares; Show me the list of rares - Run application 'http://www.elitedangeroustrading.com/list-of-rare-goods.aspx'
+OPEN Road to riches - Run application 'https://www.spansh.co.uk/riches'
+
+OPEN Malic profile [;help] - Run application 'https://forums.frontier.co.uk/showthread.php/351050-Malic-s-Voice-Attack-Profile-for-VR?p=5494406&viewfull=1#post5494406'
+OPEN IVONA - Run application 'http://nextup.com/ivona/'
+OPEN Voice Attack [;edBinds ;EDDI ;Google Spreadsheet] - Run application 'https://voiceattack.com/' - 
+OPEN Twitch status - Run application 'https://r-1.ch/twitch-service-status/#ingests'

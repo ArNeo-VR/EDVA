@@ -1,0 +1,39 @@
+﻿--
+--
+Begin Text Compare : [{ACTIVEWINDOWPROCESSNAME}] Equals 'EliteDangerous64'
+    
+    = External Panel (NAV) - old: nav - panel=true
+    Begin Text Compare : [{TXT:Status gui focus}] Equals 'external panel'
+        {BOOL:EDDI ship targeted targetlocked}
+        Begin Boolean Compare : [EDDI ship targeted targetlocked] Equals False
+            Set small int (condition) [nav-tabmax] value to 2
+        Else
+            Set small int (condition) [nav-tabmax] value to 3
+        End Condition
+        Set small int (condition) [nav-tab] value as decremented by 1
+        Begin Small Integer Compare : [nav-tab] Is Less Than Or Equals -1
+            DISABLED - Set small int (condition) [nav-tab] value to 2
+            Set small int (condition) [nav-tab] value to the value of [nav-tabmax]
+        DISABLED - Else If Small Integer Compare : [nav-tab] Is Greater Than 2
+        Else If Small Integer Compare : [nav-tab] Is Greater Than [nav-tabmax]
+            Set small int (condition) [nav-tab] value to 0
+        End Condition
+        DISABLED - Say, '{SMALL:nav-tab}'
+        Write [Blue] 'nav-tab: {SMALL:nav-tab} max {SMALL:nav-tabmax}' to log
+        
+        = Internal Panel (SYS) - old: sys - panel=true
+    Else If Text Compare : [{TXT:Status gui focus}] Equals 'internal panel'
+        Set small int (condition) [sys-tab] value as decremented by 1
+        Begin Small Integer Compare : [sys-tab] Is Less Than Or Equals -1
+            Set small int (condition) [sys-tab] value to 6
+        Else If Small Integer Compare : [sys-tab] Equals 7
+            Set small int (condition) [sys-tab] value to 0
+        End Condition
+        DISABLED - Say, '{SMALL:sys-tab}'
+        Write [Blue] 'sys-tab: {SMALL:sys-tab}' to log
+    End Condition
+    
+    Press variable key(s) [edCyclePreviousPanel] and hold for 0,2 seconds and release
+    DISABLED - = Delay to prevent miscounting
+    DISABLED - Pause 0,15 seconds
+End Condition

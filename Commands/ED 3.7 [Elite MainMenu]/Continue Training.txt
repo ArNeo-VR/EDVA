@@ -1,0 +1,31 @@
+﻿--
+>> required by other commands
+
+Set text [~~MyProcess] to 'EliteDangerous64'
+Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
+    -- prevent accidental selecting with the cursor of the HMD
+    Move mouse cursor to application coordinates (52, 52)
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Insert.wav'
+    Execute command, '[Continue back; Elite Resume]' (and wait until it completes)
+    
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    Pause 0,8 seconds
+    Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Insert.wav'
+    
+    Begin Condition : [{CMDSEGMENT:2}] Equals 'Simulations' OR [{CMDSEGMENT:2}] Equals 'Challenge' OR [{CMDSEGMENT:2}] Equals 'Challenge Scenarios' OR [{CMDSEGMENT:2}] Equals 'Scenarios' OR [{CMDSEGMENT:2}] Equals 'Videos'
+        Pause 0,05 seconds
+        Begin Text Compare : [{CMDSEGMENT:2}] Equals 'Simulations'
+        Else If : [{CMDSEGMENT:2}] Equals 'Challenge' OR [{CMDSEGMENT:2}] Equals 'Challenge Scenarios' OR [{CMDSEGMENT:2}] Equals 'Scenarios'
+            Press variable key(s) [edUI_Right] and hold for 0,2 seconds and release
+            Pause 0,06 seconds
+        Else If Text Compare : [{CMDSEGMENT:2}] Equals 'Videos'
+            Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
+            Pause 0,06 seconds
+        End Condition
+        Pause 0,1 seconds
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+End Condition

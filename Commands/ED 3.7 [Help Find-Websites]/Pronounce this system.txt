@@ -1,0 +1,7 @@
+--
+
+--  Debug text to log
+Begin Boolean Compare : [Debug Write] Equals True
+    Write [Blue] '{TXT:System name} - [{TXT:System name (spoken)}]' to log
+End Condition
+Say, '{TXT:System name (spoken)}'

@@ -1,0 +1,10 @@
+﻿-- Do not combine, required by other commands [C]
+--
+-- EDDI: {TXT:Status gui focus} = role panel
+
+Begin Text Compare : [{TXT:Status vehicle}] Has Not Been Set
+Else If : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Status gui focus}] Does Not Equal 'role panel')
+    Press variable key(s) [edFocusRadarPanel] and hold for 0,05 seconds and release
+Else If : ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Status gui focus}] Does Not Equal 'role panel')
+    Press variable key(s) [edFocusRadarPanel_Buggy] and hold for 0,05 seconds and release
+End Condition

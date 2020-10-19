@@ -1,0 +1,5 @@
+-- In VR/HMD when you touched the mouse center the cursor.
+-- mouse cursor to center (not moving the ship anymore)
+
+Press variable key(s) [edMouseReset] and hold for 0,05 seconds and release
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'

@@ -1,0 +1,5 @@
+﻿-- Reset [Rift; Vibe; H M D]
+
+Display window 'Elite - Dangerous (CLIENT)' as [Normal]
+Press variable key(s) [edHMDReset] and hold for 0,2 seconds and release
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'

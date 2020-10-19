@@ -1,0 +1,2 @@
+﻿Write [Red] '??used?? >>[{CMD}]' to log
+Set Boolean [sys-panel] to True

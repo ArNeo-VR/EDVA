@@ -1,0 +1,69 @@
+﻿-- Use within Galaxy / System map, an target need to be selected with a menu below it.
+-- This script does not account for the trade data row, only the select/route/... button-row.
+--
+
+Begin Condition : [{TXT:Status gui focus}] Equals 'system map' OR [{TXT:Status gui focus}] Equals 'galaxy map'
+    
+    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+    Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Map'
+        
+        -- Cursor to reference point
+        Begin Text Compare : [{CMDSEGMENT:1}] Does Not Equal ''
+            Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+            Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+            Press variable key(s) [edUI_Left] and hold for 0,65 seconds and release
+            Pause 0,05 seconds
+        End Condition - Exit when condition not met
+        
+        -- Purchase, else Other commands
+        Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Purchase'
+            Begin Condition : [{CMDSEGMENT:2}] Equals 'Exploration Data' OR [{CMDSEGMENT:2}] Equals 'Exploration' OR [{CMDSEGMENT:2}] Equals 'System Data'
+                Pause 0,05 seconds
+                Start Loop : Repeat 4 Times
+                    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+                    Pause 0,03 seconds
+                End Loop
+            Else If : [{CMDSEGMENT:2}] Equals 'Trade Data' OR [{CMDSEGMENT:2}] Equals 'Trade'
+                Pause 0,03 seconds
+                Start Loop : Repeat 5 Times
+                    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+                    Pause 0,03 seconds
+                End Loop
+            End Condition
+            
+            -- else Other commands
+        Else
+            
+            -- Back
+            Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Back'
+                Press R key and hold for 0,05 seconds and release
+            End Condition - Exit when condition met
+            
+            -- command move cursor to command selection
+            Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Select'
+            Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Route'
+                Pause 0,03 seconds
+                Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+            Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Bookmark'
+                Start Loop : Repeat 2 Times
+                    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+                    Pause 0,03 seconds
+                End Loop
+            Else If : [{CMDSEGMENT:1}] Equals 'System' OR [{CMDSEGMENT:1}] Equals 'Planet' OR [{CMDSEGMENT:1}] Equals 'Surface'
+                Pause 0,03 seconds
+                Start Loop : Repeat 3 Times
+                    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+                    Pause 0,03 seconds
+                End Loop
+            End Condition
+        End Condition
+        
+        -- Execute
+        Pause 0,03 seconds
+        Press variable key(s) [edUI_Select] and hold for 0,1 seconds and release
+        Pause 0,03 seconds
+    End Condition
+End Condition

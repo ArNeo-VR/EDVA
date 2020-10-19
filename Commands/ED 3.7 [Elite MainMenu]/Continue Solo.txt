@@ -1,0 +1,20 @@
+--
+>> required by other commands
+
+Set text [~~MyProcess] to 'EliteDangerous64'
+Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
+    -- prevent accidental selecting with the cursor of the HMD
+    Move mouse cursor to application coordinates (52, 52)
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Insert.wav'
+    Execute command, '[Continue back; Elite Resume]' (and wait until it completes)
+    
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    Pause 0,8 seconds
+    Start Loop : Repeat 2 Times
+        Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+        Pause 0,06 seconds
+    End Loop
+    Pause 0,1 seconds
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Insert.wav'
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+End Condition

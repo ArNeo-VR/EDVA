@@ -1,0 +1,35 @@
+﻿-- [Variables, Initiatlsation, Settings, Settings Audio, Applications, Write to log]
+
+-- [1] Onload profle sound
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Logon Sound.wav'
+to filter out notfications/sounds at profile load
+Set small int (condition) [VA_LOAD_STATUS] value to 1
+
+-- ↓ testing
+Set small int (condition) [Firegroup] value to 1
+
+-- ↓ Variables / Init
+Execute command, '(((MAIN))) Variables' (and wait until it completes)
+Execute command, '(((MAIN))) Initialisation' (and wait until it completes)
+-- ↓ Settings
+Execute command, '(((MAIN))) Settings' (and wait until it completes)
+Execute command, '(((MAIN))) Settings Audio' (and wait until it completes)
+-- ↓ Start/move Applications
+Execute command, '(((MAIN))) Applications' (and wait until it completes)
+-- ↓ Show variables to log
+Begin Boolean Compare : [Debug Notifications] Equals True
+    Execute command, '(((MAIN))) Write to log' (and wait until it completes)
+End Condition
+
+DISABLED - Begin Text Compare : [TODO - Frontier API status EDDI] Has Not Been Set
+    DISABLED - Say, 'Your Eddi is not logged in to the Frontier-API. Please close VoiceAttack and run Eddi standalone to login.'
+DISABLED - End Condition
+
+Set small int (condition) [VA_LOAD_STATUS] value to 0
+Begin Boolean Compare : [Debug Write] Equals True
+    Write [Blank] '=== Profile Load [EOF]' to log
+End Condition
+
+Write [Yellow] '-- New streamlined YG-System-Navigation : Master-Navigation-Systems - v{TXT:NavFileVer} ({TXT:NavFileVerDate})' to log
+Write [Yellow] 'Elite Time - {DATE:Today} {TIME:Today} - ( Local time: {TIME} )' to log
+Write [Blank] '.' to log
