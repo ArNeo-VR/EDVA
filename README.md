@@ -18,8 +18,8 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 ## Where Goes What, 
 ### VoiceAttack [default] on x64 bit windows
-- plugins location "c:\Program Files (x86)\VoiceAttack\Apps"
-- sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"
+<code>- plugins location "c:\Program Files (x86)\VoiceAttack\Apps"
+- sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>
 #### My personal settings are, this if you export your profile to another computer it will go with the userdata.
 - plugins location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Plugins"
 - sounds location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Sounds"
@@ -38,9 +38,9 @@ Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set 
 ## [Profiles](Profiles): Full profiles, needs to be imported seperately
 - [release] EDDI-3.7.0-profile 
 
-## [VA_Sounds]: Sounds to be used in commands
-- ED_ThemeSounds-2015.zip
-- ED_SFX2018.zip
+## [VA_Sounds](VA_Sounds): Sounds to be used in commands
+- ED_ThemeSounds-2015.zip - Elite themed sounds
+- ED_SFX2018.zip - SFX miscellaneous 
 - Misc other, to be created.
 
 ## Notes
