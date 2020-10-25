@@ -50,16 +50,17 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 ### Other profiles
 I've also other profiles: a 'Global profile', 'Off', 'Profile default', 'Profile default include', ...]
 
-#### Global profile, in here are VoiceCommands that activate other profiles,  
-*i.e. 'profile Elite', 'profile default', 'profile disable'*  
+#### 'Global profile'
+In here are VoiceCommands that activate other profiles,  
+*i.e. 'profile Elite', 'profile default', 'profile disable', 'Computer off'*  
 You can add the 'Global profile' in VA > [Options] > [General] > 'Global Profiles' > [Add ...]
 
-#### The 'Off' is very limited and has a small set of commands.  
-
-#### 'Profile default' has [Computer Sleep; Restart; Shutdown now] commands 
-and 'Profile default include' is included.  
-
-#### Profile default in VA, 
+#### Profile 'Off' 
+Is very limited and has a small set of commands.  
+#### 'Profile default' 
+Has [Computer Sleep; Restart; Shutdown now] commands and 'Profile default include' is included.
+#### 'Profile default include'
+in VA, 
 is used for including in selected profiles (Profile Elite) and not enable Computer shutdown commands.
 
 ---
