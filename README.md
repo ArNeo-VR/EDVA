@@ -3,7 +3,7 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 
 
 ## [Profiles](Profiles)
-- ~~[[EDVA Profile] EDVA-3.7-202010L-profile](Profiles) (Main profile)~~  
+- ~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles) (Main profile)~~  
 [Profile commands](Commands) Seperate commands exported to Text and Grouped in a profile-file (.vap)
 - [release] EDDI-3.7.0-profile (EDDI.vap file, needs to be imported seperately and included into the main profile)
 
@@ -31,11 +31,18 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 <code>Plugins location "c:\ProgramData\VoiceAttack\Plugins"</code>  
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>
 
+## Elite Dangerous - Applications/Tools
+- [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
+- [ED Engineer](https://github.com/msarilar/EDEngineer) ([release](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
+- [ED Discovery](https://github.com/EDDiscovery/EDDiscovery) ([release](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
+- [ED PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([release](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
+- []() ([release](/releases))
+
 # Setup using the profile
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
 
 ### Import Main profile
-[More profile actions] > [Import profiles] > (select ~~[[EDVA Profile] EDVA-3.7-202010L-profile](Profiles) (Main profile)~~ file)  
+[More profile actions] > [Import profiles] > (select ~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)~~ file)  
 
 ### Include: [[release] EDDI-3.7.0-profile](Profiles)
 Import profile: "[release] EDDI-3.7.0-profile.vap" is required and needs to be imported as seperate profile.  
@@ -48,6 +55,9 @@ Select the corresponding profile from the 'pull-down' menu.
 ### Optional, Auto-load profile when Elite is started
 [Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'  
 Tag the option enabled, Add text 'EliteDangerous64' in the field.
+### Configure settings
+- [Custom / Phonetic name] > '(((MAIN))) Settings'
+
 
 # Notes
 ...
