@@ -35,10 +35,10 @@ Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set 
 - [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) [Neutron router tool]
 - [ED-Router](https://github.com/chriszero/ED-Router) [Neutron router tool]
 
-## Profiles: Full profiles, needs to be imported seperately
+## [Profiles](Profiles): Full profiles, needs to be imported seperately
 - [release] EDDI-3.7.0-profile 
 
-## VA_Sounds: Sounds to be used in commands
+## [VA_Sounds]: Sounds to be used in commands
 - ED_ThemeSounds-2015.zip
 - ED_SFX2018.zip
 - Misc other, to be created.
