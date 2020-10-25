@@ -1,15 +1,15 @@
 # EDVA - VoiceAttack CMDs / profiles for Elite Dangerous.
 
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
-### Including other profiles,
-#### Include: [release] EDDI-3.7.0-profile
+## Including other profiles,
+### Include: [release] EDDI-3.7.0-profile
 Import profile: "[release] EDDI-3.7.0-profile.vap" is required and needs to be imported as seperate profile.
 
 In the profile options ([Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles': [Add ...] select "[release] EDDI-3.7.0-profile"
 
-#### Execute commands at profile [loaded / unloaded]
+### Execute commands at profile [loaded / unloaded]
 In the profile options ([Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded': Select the corresponding profile from the 'pull-down' menu.
-#### Optional, Auto-load profile when Elite is started
+### Optional, Auto-load profile when Elite is started
 In the profile options ([Edit profile] > [Options] > 'Include commands from other profiles'
 
 In the profile options ([Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'
@@ -28,7 +28,7 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 - sounds location "c:\ProgramData\VoiceAttack\Sounds"
 Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.
 
-## VA_Plugins: Voice attack plugins (3rd party, not included)
+## [VA_Plugins](ReadME-VA_Plugins.md): Voice attack plugins (3rd party, not included)
 - [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) Used for reading data into VoiceAttack
 - [EDDI](https://github.com/EDCD/EDDI) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.
 - [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) Reads keybindings from custom.binds file and creates variables
