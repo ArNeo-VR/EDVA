@@ -2,17 +2,17 @@
 Sharing VoiceAttack commands as text file and profile (.vap) files.
 
 ## [Profiles](Profiles) Full profiles
-- ~~[EDVA Profile] EDVA-3.7-202010L-profile (Main profile)~~
+- ~~[EDVA Profile] EDVA-3.7-202010L-profile (Main profile)~~  
 [Profile commands](Commands) Seperate commands exported to Text and Grouped in a profile-file (.vap)
-- [release] EDDI-3.7.0-profile (needs to be imported seperately into the main profile)
+- [release] EDDI-3.7.0-profile (EDDI.vap file, needs to be imported seperately into the main profile)
 
 ## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included)
-- [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) Used for reading data into VoiceAttack
-- [EDDI](https://github.com/EDCD/EDDI) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.
-- [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) Reads keybindings from custom.binds file and creates variables
-- [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) [Neutron router tool]
-- [ED-Router](https://github.com/chriszero/ED-Router) [Neutron router tool]
-- [EDPlanetBearing](https://github.com/Uriei/EDPlanetBearing) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
+- [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([release](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack
+- [EDDI](https://github.com/EDCD/EDDI) ([release]()) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.
+- [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([release]()) Reads keybindings from custom.binds file and creates variables
+- [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([release]()) [Neutron router tool]
+- [ED-Router](https://github.com/chriszero/ED-Router) ([release]()) [Neutron router tool]
+- [EDPlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([release]()) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
 
 ## [VA_Sounds](VA_Sounds): Sounds used in commands
 - ED_ThemeSounds-2015.zip - Elite themed sounds
@@ -32,7 +32,7 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 
 # Setup using the profile
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
-### Include: [release] EDDI-3.7.0-profile
+### Include: [[release] EDDI-3.7.0-profile]([release] EDDI-3.7.0-profile.vap)
 Import profile: "[release] EDDI-3.7.0-profile.vap" is required and needs to be imported as seperate profile.  
 [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
 [Add ...] select "[release] EDDI-3.7.0-profile"
