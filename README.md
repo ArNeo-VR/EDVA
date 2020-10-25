@@ -58,9 +58,14 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 ### Configure settings
 - [Custom / Phonetic name] > '(((MAIN))) Settings'
 
+## Plugin custo extract/install locations
+- [EDDI] [VA_Profile]\Plugins\EDDI\
+- [EDbinds] [VA_Profile]\Plugins\bindEDplugin\
+- [ED-ED-NeutronRouter] [VA_Profile]\Plugins\ED-NeutronRouter\
+- [ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\
+
 ## Applications custom extract/install locations
 - [ED PlanetBearing] [VA_Profile]\App\EDPlanetBearing\
-- [EDDI] [VA_Profile]\Plugins\EDDI\
 - [NirCMD] [VA_Profile]\App\NirCMD\
 
 # Notes
