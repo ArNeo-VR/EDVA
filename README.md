@@ -3,7 +3,7 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 
 
 ## [Profiles](Profiles)
-- ~~[EDVA Profile] EDVA-3.7-202010L-profile (Main profile)~~  
+- ~~[[EDVA Profile] EDVA-3.7-202010L-profile](Profiles) (Main profile)~~  
 [Profile commands](Commands) Seperate commands exported to Text and Grouped in a profile-file (.vap)
 - [release] EDDI-3.7.0-profile (EDDI.vap file, needs to be imported seperately and included into the main profile)
 
@@ -33,6 +33,10 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 
 # Setup using the profile
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
+
+### Import Main profile
+[More profile actions] > [Import profiles] > (select ~~[[EDVA Profile] EDVA-3.7-202010L-profile](Profiles) (Main profile)~~ file)  
+
 ### Include: [[release] EDDI-3.7.0-profile](Profiles)
 Import profile: "[release] EDDI-3.7.0-profile.vap" is required and needs to be imported as seperate profile.  
 [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
