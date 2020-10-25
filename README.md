@@ -18,8 +18,8 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 ## Where Goes What, 
 ### VoiceAttack [default] on x64 bit windows
-<code>- plugins location "c:\Program Files (x86)\VoiceAttack\Apps"
-- sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>
+<code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>
+<code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>
 #### My personal settings are, this if you export your profile to another computer it will go with the userdata.
 - plugins location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Plugins"
 - sounds location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Sounds"
