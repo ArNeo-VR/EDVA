@@ -11,7 +11,7 @@ Set small int (condition) [Firegroup] value to 1
 -- ↓ Variables / Init
 Execute command, '(((MAIN))) Variables' (and wait until it completes)
 Execute command, '(((MAIN))) Initialisation' (and wait until it completes)
--- ↓ Settings
+-- ↓ Settings, Custom Name/Phonetic, Audio devices, Paths for files, ED-Applications, 
 Execute command, '(((MAIN))) Settings' (and wait until it completes)
 Execute command, '(((MAIN))) Settings Audio' (and wait until it completes)
 -- ↓ Start/move Applications
