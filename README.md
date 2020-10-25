@@ -38,7 +38,7 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 ## [Profiles](Profiles) Full profiles, needs to be imported seperately
 - [release] EDDI-3.7.0-profile 
-### [Profile commands](Commands) Commands exported to text and Grouped in a profile-file (.vap)
+[Profile commands](Commands) Commands exported to text and Grouped in a profile-file (.vap)
 
 ## [VA_Sounds](VA_Sounds): Sounds used in commands
 - ED_ThemeSounds-2015.zip - Elite themed sounds
@@ -66,7 +66,7 @@ is used for including in selected profiles (Profile Elite) and not enable Comput
 ---
 
 # 1 EDVA
-## 2 Commands: VoiceAttack seperate commands
+## 2 Commands:
 Text line bla bla.
 Secondline bla bla.
 
