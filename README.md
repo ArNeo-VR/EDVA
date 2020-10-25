@@ -29,7 +29,8 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 <code>Plugins location "c:\ProgramData\VoiceAttack\Plugins"</code>
 
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>
-Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.
+
+*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*
 
 ## [VA_Plugins](VA_Plugins): Voice attack plugins (3rd party, not included)
 - [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) Used for reading data into VoiceAttack
