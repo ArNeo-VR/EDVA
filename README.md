@@ -1,18 +1,18 @@
 # EDVA - VoiceAttack CMDs / profiles for Elite Dangerous.
+Sharing VoiceAttack commands as text file and profile (.vap) file.
 
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
 ## Including other profiles,
+
 ### Include: [release] EDDI-3.7.0-profile
 Import profile: "[release] EDDI-3.7.0-profile.vap" is required and needs to be imported as seperate profile.  
-In the profile options ([Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles':  
+[Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
 [Add ...] select "[release] EDDI-3.7.0-profile"
-
 ### Execute commands at profile [loaded / unloaded]
-In the profile options ([Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded':  
+[Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded'  
 Select the corresponding profile from the 'pull-down' menu.
 ### Optional, Auto-load profile when Elite is started
-In the profile options ([Edit profile] > [Options] > 'Include commands from other profiles'  
-In the profile options ([Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'  
+[Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'  
 Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 ## Where Goes What, 
@@ -35,9 +35,10 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 - [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) Reads keybindings from custom.binds file and creates variables
 - [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) [Neutron router tool]
 - [ED-Router](https://github.com/chriszero/ED-Router) [Neutron router tool]
+- [EDPlanetBearing](https://github.com/Uriei/EDPlanetBearing) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
 
 ## [Profiles](Profiles) Full profiles, needs to be imported seperately
-- [release] EDDI-3.7.0-profile 
+- [release] EDDI-3.7.0-profile  
 [Profile commands](Commands) Commands exported to text and Grouped in a profile-file (.vap)
 
 ## [VA_Sounds](VA_Sounds): Sounds used in commands
