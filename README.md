@@ -2,10 +2,9 @@
 
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
 ### Including other profiles,
-#### Include [release] EDDI-3.7.0-profile
-In the profile options ([Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'
-!!"[release] EDDI-3.7.0-profile.vap" is required and needs to be imported as seperate profile.
-- 'Include commands from other profiles' [Add ...] select "[release] EDDI-3.7.0-profile"
+#### Include: [release] EDDI-3.7.0-profile
+Import profile: "[release] EDDI-3.7.0-profile.vap" is required and needs to be imported as seperate profile.
+In the profile options ([Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles': [Add ...] select "[release] EDDI-3.7.0-profile"
 #### Execute commands at profile [loaded / unloaded]
 In the profile options ([Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded'
 - Select the corresponding profile from the 'pull-down' menu.
