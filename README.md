@@ -13,7 +13,6 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 - [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables
 - [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/)
 - [ED-Router](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app]
-- [EDPlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
 
 ## [VA_Sounds](VA_Sounds): Sounds used in commands
 - ED_ThemeSounds-2015.zip - Elite themed sounds
@@ -36,6 +35,7 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 - [ED Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
 - [ED Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
 - [ED PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
+- [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 - []() ([releases](/releases))
 
 # Setup using the profile
@@ -58,6 +58,10 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 ### Configure settings
 - [Custom / Phonetic name] > '(((MAIN))) Settings'
 
+## Applications custom extract/install locations
+- [ED PlanetBearing] [VA_Profile]\App\EDPlanetBearing\
+- [EDDI] [VA_Profile]\Plugins\EDDI\
+- [NirCMD] [VA_Profile]\App\NirCMD\
 
 # Notes
 ...
