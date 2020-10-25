@@ -19,13 +19,16 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 ## Where Goes What, 
 ### VoiceAttack [default] on x64 bit windows
 <code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>
+
 <code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>
 #### My personal settings are, this if you export your profile to another computer it will go with the userdata.
-- plugins location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Plugins"
-- sounds location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Sounds"
+<code>Plugins location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Plugins"</code>
+
+<code>Sounds location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>
 #### Depending if you want to use the same profile for all the users on the computer place it in:
-- plugins location "c:\ProgramData\VoiceAttack\Plugins"
-- sounds location "c:\ProgramData\VoiceAttack\Sounds"
+<code>Plugins location "c:\ProgramData\VoiceAttack\Plugins"</code>
+
+<code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>
 Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.
 
 ## [VA_Plugins](VA_Plugins): Voice attack plugins (3rd party, not included)
