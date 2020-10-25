@@ -47,13 +47,19 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 - ED_SFX2018.zip - SFX miscellaneous 
 - Misc other, to be created.
 
-## Notes
+# Notes
 ...
+
+### Other profiles
 I've also other profiles [Global profile, Off, Profile default, ...]
 - Global profile in VA > [Options] > [General] > 'Global Profiles' > [Add ...]
+
 *In here are VoiceCommands that activate other profiles, i.e. 'profile Elite', 'profile default', 'profile disable'*
+
 - Profile default in VA, included in selected profiles (Profile Elite)
+
 Basic commands used are, Computer(to activate profile default, Computer sleep/reboot/shutdown, abort command.)
+
 - I've also a Base-default profile with basic commands that are used when VA is enabled.
 
 
