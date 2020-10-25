@@ -26,11 +26,11 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 <code>Sounds location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>
 #### Depending if you want to use the same profile for all the users on the computer place it in:
+*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*
 <code>Plugins location "c:\ProgramData\VoiceAttack\Plugins"</code>
 
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>
 
-*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*
 
 ## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included)
 - [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) Used for reading data into VoiceAttack
@@ -53,7 +53,8 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 ### Other profiles
 I've also other profiles: a 'Global profile', 'Off', 'Profile default', 'Profile default include', ...]
 
-Global profile, in here are VoiceCommands that activate other profiles, i.e. 'profile Elite', 'profile default', 'profile disable'
+Global profile, in here are VoiceCommands that activate other profiles, 
+i.e. 'profile Elite', 'profile default', 'profile disable'
 
 You can add the 'Global profile' in VA > [Options] > [General] > 'Global Profiles' > [Add ...]
 
@@ -68,6 +69,11 @@ The 'Off' is very limited and has a small set of commands.
 
 # 1 EDVA
 ## 2 Commands: VoiceAttack seperate commands
+Text line bla bla.
+Secondline bla bla.
+
+Third with blank line above. bla bla
+
 ### 3 Test
 #### 4 Test
 ##### 5 Test
