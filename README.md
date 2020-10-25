@@ -32,33 +32,36 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 *Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*
 
-## [VA_Plugins](VA_Plugins): Voice attack plugins (3rd party, not included)
+## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included)
 - [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) Used for reading data into VoiceAttack
 - [EDDI](https://github.com/EDCD/EDDI) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.
 - [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) Reads keybindings from custom.binds file and creates variables
 - [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) [Neutron router tool]
 - [ED-Router](https://github.com/chriszero/ED-Router) [Neutron router tool]
 
-## [Profiles](Profiles): Full profiles, needs to be imported seperately
+## [Profiles](Profiles) Full profiles, needs to be imported seperately
 - [release] EDDI-3.7.0-profile 
+### [Profile commands](Commands) Commands exported to text and Grouped in a profile-file (.vap)
 
-## [VA_Sounds](VA_Sounds): Sounds to be used in commands
+## [VA_Sounds](VA_Sounds): Sounds used in commands
 - ED_ThemeSounds-2015.zip - Elite themed sounds
 - ED_SFX2018.zip - SFX miscellaneous 
-- Misc other, to be created.
 
 # Notes
 ...
 
 ### Other profiles
-I've also other profiles [Global profile, Off, Profile default, ...]
-- Global profile in VA > [Options] > [General] > 'Global Profiles' > [Add ...]
+I've also other profiles: a 'Global profile', 'Off', 'Profile default', 'Profile default include', ...]
 
-*In here are VoiceCommands that activate other profiles, i.e. 'profile Elite', 'profile default', 'profile disable'*
+Global profile, in here are VoiceCommands that activate other profiles, i.e. 'profile Elite', 'profile default', 'profile disable'
+
+You can add the 'Global profile' in VA > [Options] > [General] > 'Global Profiles' > [Add ...]
+
+The 'Off' is very limited and has a small set of commands.
+
+'Profile default' has [Computer Sleep; Restart; Shutdown now] commands and 'Profile default include' is included.
 
 - Profile default in VA, included in selected profiles (Profile Elite)
-
-Basic commands used are, Computer(to activate profile default, Computer sleep/reboot/shutdown, abort command.)
 
 - I've also a Base-default profile with basic commands that are used when VA is enabled.
 
