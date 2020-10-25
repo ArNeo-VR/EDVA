@@ -1,0 +1,27 @@
+﻿--
+--
+
+unLoad ↓ Set variable for muting sounds
+Set small int (condition) [VA_LOAD_STATUS] value to 1
+
+unLoad ↓ Save variables to profile
+DISABLED - Set Boolean [Debug Write] to [Saved Value] (save value to profile)
+DISABLED - Set Boolean [Debug Notifications] to [Saved Value] (save value to profile)
+Set Boolean [Debug Write] to [Debug Write] (save value to profile)
+Set Boolean [Debug Notifications] to [Debug Notifications] (save value to profile)
+Set Boolean [EDDIVoice] to [EDDIVoice] (save value to profile)
+Set Boolean [Vocal mode] to [Vocal mode] (save value to profile)
+
+DISABLED - Clear the name value to let EDDI configure it next time
+DISABLED - and also this is a check if EDDI is logged in to the Frontier-API
+DISABLED - Set text [Name] to [Not Set]
+
+Execute command, 'Be quiet;Radio silence;Stop talking [;EDDI]' (and wait until it completes)
+
+-- ↓ Stop Applications
+Close window 'E:D Market Connector'
+
+Set small int (condition) [VA_LOAD_STATUS] value to 0
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Silent_Running_Ambience_ringtone.mp3'  (and wait until it completes)
+DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Exclamation.wav'  (and wait until it completes)
+DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Station_Ident_Empire_text.mp3'  (and wait until it completes)

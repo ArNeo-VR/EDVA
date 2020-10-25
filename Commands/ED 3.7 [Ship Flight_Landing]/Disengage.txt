@@ -1,0 +1,7 @@
+﻿--
+
+Begin Condition : ([{TXT:Environment}] Equals 'Supercruise' AND [{TXT:Status Vehicle}] Equals 'Ship')
+    Press variable key(s) [edHyperSuperCombination] and hold for 0,02 seconds and release
+Else
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows User Account Control.wav'
+End Condition

@@ -1,0 +1,40 @@
+﻿-- Status Text, writes EDDI variables to log
+
+Write [Blank] '▼▼▼ @ {TIME}:{TIMESECOND}' to log
+Write [Blue] 'location body - {TXT:EDDI.location.body}' to log
+DISABLED - Write [Orange] '"FG_{TXT:Ship ident}_{TXT:Ship name}_combat" == {INT:FG_{TXT:Ship ident}_{TXT:Ship name}_combat}' to log
+DISABLED - Write [Orange] '"FG_{TXT:Ship ident}_{TXT:Ship name}_scanner" == {INT:FG_{TXT:Ship ident}_{TXT:Ship name}_scanner}' to log
+DISABLED - Write [Orange] '"FG_{TXT:Ship ident}_{TXT:Ship name}_mining" == {INT:FG_{TXT:Ship ident}_{TXT:Ship name}_mining}' to log
+Write [Blue] 'Target> Subsystem == {TXT:TargetSubsystem} <> Previous == {TXT:PreviousTargetName}' to log
+Write [Orange] '"FG_{TXT:Ship ident}_{TXT:Ship name}"> _combat == {INT:FG_{TXT:Ship ident}_{TXT:Ship name}_combat} <> _scanner == {INT:FG_{TXT:Ship ident}_{TXT:Ship name}_scanner} <> _mini...' to log
+Write [Blank] '▼▼▼' to log
+Write [Blue] '> EDDI route details system - {TXT:EDDI route details system} <> EDDI route details count - {DEC:EDDI route details count} <' to log
+Write [Blue] '> EDDI route details routetype - {TXT:EDDI route details routetype} <> EDDI route details routedistance - {DEC:EDDI route details routedistance} <' to log
+Write [Blue] '> EDDI route details route - {TXT:EDDI route details route} <> EDDI route details distance - {DEC:EDDI route details distance} <' to log
+Write [Blank] '▲▲▲' to log
+Write [Orange] 'Last station has outfitting - {BOOL:Last station has outfitting}' to log
+Write [Orange] 'Stored ship entries - {INT:Stored ship entries}' to log
+Write [Blank] '▼▼▼ {TXT}' to log
+Write [Blue] '> Status heading - {DEC:Status heading} <> ship targeted targetlocked - {BOOL:EDDI ship targeted targetlocked} <> Status fire zone entered - {BOOL:Status fire zone entered} <' to log
+Write [Blue] '> next jump system - {TXT:EDDI next jump system} <> fsd engaged stellarclass - {TXT:EDDI fsd engaged stellarclass} <> Status near surface - {BOOL:Status near surface} <' to log
+Write [Blank] '▼▼▼' to log
+Write [Blank] '▲▲▲' to log
+Write [Blue] 'Status srv> under ship  {BOOL:Status srv under ship}  <>drive assist  {BOOL:Status srv drive assist} <> turret  {BOOL:Status srv turret deployed} <> handbrake  {BOOL:Status...' to log
+Write [Blank] '▼▼▼ SRV' to log
+Write [Blue] '> Status cargo scoop deployed - {BOOL:Status cargo scoop deployed} <> Status hardpoints deployed - {BOOL:Status hardpoints deployed} <' to log
+Write [Orange] 'Status> landing gear down - {BOOL:Status landing gear down} <> Landed - {BOOL:Status landed} <> Docked - {BOOL:Status docked} <> Hanger - {BOOL:Hangar} <' to log
+Write [Blue] 'Status Ship> flight assist:{BOOL:Status flight assist off} <> silent running:{BOOL:Status silent running} <> scooping fuel:{BOOL:Status scooping fuel} <' to log
+Write [Blue] 'Status vehicle {TXT:Status vehicle} - {TXT:Vehicle} <> analysis mode - {BOOL:Status analysis mode} <> firegroup {INT:Status firegroup} <' to log
+Write [Blank] '▼▼▼ SHIP' to log
+Write [Blue] 'Status> low fuel - {BOOL:Status low fuel} <> capacity {DEC:Ship total fuel tank capacity} [{DEC:Ship fuel tank capacity}] - {INT:Status fuel rate}s <> fuel:{DEC:Status fuel...' to log
+Write [Blue] 'Status> night vision - {BOOL:Status night vision} <> Lights on - {BOOL:Status lights on} <> Full beam {BOOL:Status full beam} <' to log
+Write [Orange] '> Status gui focus - {TXT:Status gui focus} <> Status in wing - {BOOL:Status in wing} <' to log
+Write [Blank] '▼▼▼' to log
+Write [Blue] '> Status fsd status - {TXT:Status fsd status} <> fsd engaged target - {TXT:EDDI fsd engaged target} <> fsd engaged system - {TXT:EDDI fsd engaged system} <' to log
+Write [Blue] '> Commander continued mode - {TXT:EDDI commander continued mode} <> Environment - {TXT:Environment} <' to log
+Write [Blank] '▼▼▼' to log
+Write [Yellow] 'Test Rotational correction - {BOOL:Rotational correction} - GUI {TXT:EDDI state Status gui focus} - {TXT:EDDI state Status fsd status}' to log
+Write [Yellow] 'System> Last {TXT:Last system} > Next {TXT:Next system} > Squadron {TXT:Squadron system}' to log
+Write [Yellow] '@ {TIME}:{TIMESECOND} - System> name {TXT:System name} > spoken {TXT:System name (spoken)} > Home {TXT:Home system}' to log
+Write [Blue] 'Status Ship fuel >  EDDI jumped fuelremaining - {DEC:EDDI jumped fuelremaining}' to log
+Write [Blue] 'Status filter - {BOOL:filters} | cAPI - {BOOL:cAPI active} | icao - {BOOL:icao active} | ssml - {BOOL:ssml active} | EDDI speaking - {BOOL:EDDI speaking}' to log

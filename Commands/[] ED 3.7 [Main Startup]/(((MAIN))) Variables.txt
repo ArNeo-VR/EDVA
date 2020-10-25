@@ -14,19 +14,9 @@ Set Boolean [filter] to True
 
 Load Profile ↓ Set variables required for initialisation / onload
 ============================================================================
---- Sets URLs ↓ for Navigation spreadsheet (CSV), Others are disabled in (((MAIN))) Settings
---- (== New streamlined YG-System-Navigation : Master-Navigation-Systems)
-!!! Variable is set at the command startup !!! in (((MAIN))) Variables
-*** This bellow is to BlueKnight's Spreadsheet *** @20180623, 2017-12-13, 35
-DISABLED - Set text [VAR-Systems-URL] to 'https://docs.google.com/spreadsheets/d/e/2PACX-***/pub?output=csv' (save value to profile)
-*** This bellow is to Malics Spreadsheet (2.0/3.0) *** @20180623, 2018-09-15, 2.4
-DISABLED - Set text [VAR-Systems-URL] to 'https://docs.google.com/spreadsheets/d/e/2PACX-***/pub?output=csv' (save value to profile)
-*** This bellow is to Malics Spreadsheet NEW (>4.0) *** @20181020, 2018-10-13, 1.36
-DISABLED - Set text [VAR-Systems-URL] to 'https://docs.google.com/spreadsheets/d/e/2PACX-***/pub?gid=12539... (save value to profile)
-*** This bellow is to Malics Spreadsheet (>5.0) *** @2020502, 2019-12-04, 1.32
-Set text [VAR-Systems-URL] to 'https://docs.google.com/spreadsheets/d/e/2PACX-***/pub?gid=12539... (save value to profile)
+*-*
 
--- ↓ From Malics v5 profile
+-- ↓ From profile
 Set integer [var-spotify-startup-volume] value to 1
 
 Begin Boolean Compare : [Debug Write] Equals True

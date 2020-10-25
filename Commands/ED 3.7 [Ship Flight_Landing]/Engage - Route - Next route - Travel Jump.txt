@@ -1,0 +1,174 @@
+﻿!!! EXPERIMENTAL
+
+Write [Blue] 'FSD Status - {TXT:Status fsd status}' to log
+Write [Blue] 'GUI Focus - {TXT:Status gui focus}' to log
+-- ↓ go back to station services menu
+-- ↓ execute command
+
+-- ↓ variables
+Set decimal [Traveldelay] value to 6
+Set decimal [Chargingdelay] value to 1,30000
+Set decimal [Cooldowndelay] value to 2,300000
+Set integer [EngageFSDloopMax] value to 3
+Set integer [EngageFSDloop] value to 0
+
+DISABLED - Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+-- ↓ travel jump; Engage travel jump
+DISABLED - Pause 6 seconds
+DISABLED - Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
+
+-- ↓ Superjump; Engage Superjump
+DISABLED - Press variable key(s) [edHyperSuperCombination] and hold for 0,02 seconds and release
+
+Next Jump; Jump and scan; Engage Next Jump >>
+DISABLED - Execute command, 'Next route; Next system in route; Target Next System' (and wait until it completes)
+>> Next route; Next system in route; Target Next System; Engage next route
+DISABLED - Press variable key(s) [edTargetNextRouteSystem] and hold for 0,05 seconds and release
+>> Sc an [;System]
+DISABLED - Click right mouse button
+-- 5.1 sec
+DISABLED - Pause 0,3 seconds
+>> Jump; Engage Jump
+DISABLED - Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
+DISABLED - Pause 15,2 seconds
+DISABLED - Press variable key(s) [edUseBoostJuice] and hold for 0,05 seconds and release
+Jump; Engage Jump disabled >>
+DISABLED - Press variable key(s) [edSetSpeed100] and hold for 0,05 seconds and release
+DISABLED - Pause 2,5 seconds
+DISABLED - Press variable key(s) [edSetSpeedZero] and hold for 0,05 seconds and release
+
+-- ↓ Retract [carco scoop;hardpoints;landing gear]
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+Begin Condition : ([{TXT:Status gui focus}] Does Not Equal 'communications panel' AND [{TXT:Environment}] Does Not Equal 'Supercruise')
+    Begin Boolean Compare : [Debug Write] Equals True
+        Write [Blue] '1' to log
+        Write [Blue] 'Cargo Scoop Status - {BOOL:Status cargo scoop deployed}' to log
+        Write [Blue] 'Hardpoint Deployment Status - {BOOL:Status hardpoints deployed}' to log
+        Write [Blue] 'Landing Gear Deployed - {BOOL:Status landing gear down}' to log
+    End Condition
+    Begin Boolean Compare : [Status cargo scoop deployed] Equals True
+        Press variable key(s) [edToggleCargoScoop] and hold for 0,2 seconds and release
+    End Condition
+    Begin Boolean Compare : [Status hardpoints deployed] Equals True
+        Press variable key(s) [edDeployHardpointToggle] and hold for 0,2 seconds and release
+    End Condition
+    Begin Boolean Compare : [Status landing gear down] Equals True
+        Press variable key(s) [edLandingGearToggle] and hold for 0,2 seconds and release
+    End Condition
+    Pause 0,2 seconds
+End Condition
+
+-- ↓ next route ; charging? ; Engage FSD
+Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'masslock'
+    Begin Condition : ([{CMD}] Equals 'Engage route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}') OR ([{CMD}] Equals 'Engage next route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}')
+        Write [Blue] 'NextJump {TXT:EDDI next jump system} - System {TXT:System name} >spoken> {TXT:System name (spoken)}' to log
+        Press variable key(s) [edTargetNextRouteSystem] and hold for 0,2 seconds and release
+    Else If : ([{CMD}] Equals 'Engage' AND [{TXT:Environment}] Does Not Equal 'Supercruise') OR ([{CMD}] Equals 'Engage' AND [{TXT:Environment}] Equals 'Supercruise' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}')
+    Else
+        Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Critical Stop.wav'
+        Execute command, 'Galaxy map' (and wait until it completes)
+    End Condition - Exit when condition not met
+    
+    -- ↓ <<< LOOP
+    Start Loop While : [{TXT:Status fsd status}] Does Not Equal 'charging' OR [EngageFSDloop] Is Greater Than [EngageFSDloopMax]
+        Set integer [EngageFSDloop] to [EngageFSDloop] plus 1
+        Write [Blue] 'not charging, engage check 0.3s' to log
+        Pause 0,4 seconds
+        . .
+        Begin Text Compare : [{TXT:Status fsd status}] Equals 'cooldown'
+            Write [Blue] 'cooldown delay - {DEC:Cooldowndelay}' to log
+            DISABLED - Set decimal [Traveldelay] to [Traveldelay] minus 2,3
+            DISABLED - Pause 2,3 seconds
+            Pause a variable number of seconds [Cooldowndelay]
+        End Condition
+        . .
+        Write [Blue] 'engage' to log
+        Begin Condition : ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Engage') OR ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Engage route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}') OR ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Engage next route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}')
+            Write [Blue] '>>>' to log
+            Press variable key(s) [edHyperSuperCombination] and hold for 0,2 seconds and release
+            DISABLED - Pause 1,1 seconds
+        Else If : ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Travel jump') OR ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Engage travel jump')
+            Write [Blue] '>>> travel' to log
+            Write [Blue] 'Delay {DEC:Traveldelay}' to log
+            Pause a variable number of seconds [Traveldelay]
+            Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
+        Else If : ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Jump') OR ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Engage jump')
+            Write [Blue] 'Jump' to log
+            Press variable key(s) [edHyperspace] and hold for 0,2 seconds and release
+            DISABLED - Pause 1,1 seconds
+        Else If : ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Superjump') OR ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Engage Superjump')
+            Write [Blue] 'Superjump' to log
+            Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
+            DISABLED - Pause 1,1 seconds
+        Else
+            Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Critical Stop.wav'
+        End Condition - Exit when condition not met
+        Pause a variable number of seconds [Chargingdelay]
+        Set integer [EngageFSDloop] to [EngageFSDloop] plus 1
+    End Loop
+    -- LOOP >>>
+    
+    Write [Blue] 'Exit' to log
+    Exit Command
+    -- ↓
+    Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'charging'
+        
+        -- ↓
+        Begin Text Compare : [{TXT:Status fsd status}] Equals 'cooldown'
+            Write [Blue] 'cooldown delay' to log
+            Pause 2,3 seconds
+        End Condition
+        Write [Blue] 'engage' to log
+        Begin Condition : [{CMD}] Equals 'Engage' OR ([{CMD}] Equals 'Engage route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}') OR ([{CMD}] Equals 'Engage next route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}')
+            Press variable key(s) [edHyperSuperCombination] and hold for 0,2 seconds and release
+        Else If : [{CMD}] Equals 'Travel jump' OR [{CMD}] Equals 'Engage travel jump'
+            Write [Blue] 'Delay {DEC:Traveldelay}' to log
+            Pause a variable number of seconds [Traveldelay]
+            Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
+            Exit Command
+        Else If : [{CMD}] Equals 'Jump' OR [{CMD}] Equals 'Engage jump'
+            Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
+        Else
+            Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Critical Stop.wav'
+        End Condition - Exit when condition not met
+        
+        -- ↓
+        Write [Blue] 'FSD Status - {TXT:Status fsd status}' to log
+        Pause 1,1 seconds
+        Write [Blue] 'FSD Status - {TXT:Status fsd status}' to log
+        Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'charging'
+            Write [Blue] 'not charging, engage check' to log
+            Pause 0,3 seconds
+            
+            -- ↓
+            Begin Text Compare : [{TXT:Status fsd status}] Equals 'cooldown'
+                Write [Blue] 'cooldown delay' to log
+                Pause 2,3 seconds
+            End Condition
+            
+            -- ↓
+            Begin Condition : [{CMD}] Equals 'Engage' OR ([{CMD}] Equals 'Engage route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}') OR ([{CMD}] Equals 'Engage next route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}')
+                Press variable key(s) [edHyperSuperCombination] and hold for 0,2 seconds and release
+            Else If : [{CMD}] Equals 'Travel jump' OR [{CMD}] Equals 'Engage travel jump'
+                Write [Blue] 'Delay {DEC:Traveldelay}' to log
+                Pause a variable number of seconds [Traveldelay]
+                Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
+            Else If : [{CMD}] Equals 'Jump' OR [{CMD}] Equals 'Engage jump'
+            Else If : [{CMD}] Equals 'Superjump' OR [{CMD}] Equals 'Engage Superjump'
+                Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
+            Else
+                Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Critical Stop.wav'
+            End Condition - Exit when condition not met
+            
+        End Condition
+    End Condition
+End Condition
+
+Set decimal [Traveldelay] value to [Not Set]
+Set decimal [Chargingdelay] value to [Not Set]
+Set decimal [Cooldowndelay] value to [Not Set]
+Set integer [EngageFSDloop] value to [Not Set]
+
+DISABLED - Press variable key(s) [edHyperSuperCombination] and hold for 0,05 seconds and release
+DISABLED - Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
+DISABLED - Press variable key(s) [edSupercruise] and hold for 0,05 seconds and release

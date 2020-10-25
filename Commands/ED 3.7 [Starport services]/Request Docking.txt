@@ -1,0 +1,76 @@
+!!!EXPERIMENTAL uses tab counting see Panel Menu catagory
+++ Required !! Status/Reset nav-tab (for counting the tabs), Accounting Keys and buttons.
+--
+
+Begin Condition : ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'masslock') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'ready')
+    
+    -- ↓ Go back to main screen
+    Begin Text Compare : [Status gui focus] Does Not Equal 'external panel'
+        Start Loop : Repeat 4 Times
+            Pause 0,02 seconds
+            Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
+        End Loop
+        
+        -- ↓ Goto Panel, Navigation (external panel)
+        Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+            Press variable key(s) [edFocusLeftPanel] and hold for 0,05 seconds and release
+        Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+            Press variable key(s) [edFocusLeftPanel_Buggy] and hold for 0,05 seconds and release
+        End Condition
+        Pause 0,08 seconds
+    End Condition
+    
+    -- ↓ Lights / Nightvision Off (also little delay for opening the panel)
+    Begin Boolean Compare : [Status lights on] Equals True
+        Press variable key(s) [edShipSpotLightToggle] and hold for 0,1 seconds and release
+    End Condition
+    Begin Boolean Compare : [Status night vision] Equals True
+        Press variable key(s) [edNightVisionToggle] and hold for 0,05 seconds and release
+    End Condition
+    
+    -- ↓ When in different [tab] move back to the left (variable [nav-tab])
+    Start Loop While : [nav-tab] Is Greater Than 0
+        Press variable key(s) [edLeftThrustButton] and hold for 0,025 seconds and release
+        Pause 0,04 seconds
+        Set small int (condition) [nav-tab] value as decremented by 1
+    End Loop
+    -- ↓ move to Contacts-[TAB]
+    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
+    Pause 0,06 seconds
+    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+    
+    -- ↓ Move cursor to Top of contacts
+    Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Press variable key(s) [edUI_Up] and hold for 0,6 seconds and release
+    
+    -- ↓ Select docking request
+    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+    Pause 0,08 seconds
+    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+    Pause 0,08 seconds
+    Press Space key and hold for 0,1 seconds and release
+    Pause 0,08 seconds
+    Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
+    Pause 0,06 seconds
+    
+    -- ↓ [back] to start position
+    Pause 0,1 seconds
+    Press variable key(s) [edLeftThrustButton] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press variable key(s) [edLeftThrustButton] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press variable key(s) [edUI_Left] and hold for 0,1 seconds and release
+    Pause 0,06 seconds
+    Press variable key(s) [edUI_Left] and hold for 0,1 seconds and release
+    Pause 0,06 seconds
+    Press variable key(s) [edUI_Up] and hold for 0,7 seconds and release
+    DISABLED - Pause 0,06 seconds
+    
+    -- ↓ [back] exit panel
+    Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
+    Pause 0,1 seconds
+    Set small int (condition) [nav-tab] value to 0
+    
+End Condition

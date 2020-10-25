@@ -1,5 +1,5 @@
 ﻿--
--- Set internal (system) panel on [Inventory] > [Synthesis]
+!!! In a SRV > set internal (system) panel on [Inventory] > [Synthesis]
 
 Begin Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
     Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'internal panel'

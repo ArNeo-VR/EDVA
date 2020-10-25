@@ -8,7 +8,7 @@ DISABLED - Set text [Name custom] to 'OVERRIDE#YOURNAMEHERE'
 
 *** How do you want the Commander Name to Sound when system speaks it to you  ***
 DISABLED - Set text [Name custom phonetic] to 'OVERRIDE#YOURNAMEHERE PHONETIC'
-Set text [Name custom phonetic] to 'NAME'
+Set text [Name custom phonetic] to 'R,Neo'
 
 ============================================================================
 -- ↓ Set Audio Devices
@@ -51,13 +51,13 @@ Set text [VAR-Discovered-Systems] to 'Discovered-Systems.csv' (save value to pro
 -- variables functions
 Set text [VAR-Write-Discovered-Systems] to '{TXT:VAR-Systems-DIR}{TXT:VAR-Discovered-Systems}' (save value to profile)
 
+-- Retrieve from EDDI
 Begin Text Compare : [Name custom] Has Not Been Set
-    -- Retrieve from EDDI
     Set text [Name custom] to [Name]
 End Condition
 
+-- Retrieve from EDDI
 Begin Text Compare : [Name custom phonetic] Has Not Been Set
-    -- Retrieve from EDDI
     Set text [Name custom phonetic] to [Name]
 End Condition
 

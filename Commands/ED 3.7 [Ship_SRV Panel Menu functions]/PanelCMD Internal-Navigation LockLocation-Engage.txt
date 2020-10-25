@@ -1,4 +1,5 @@
-﻿-- When focused on the [Navigation Panel] (left 1st tab) And a selected a location, the action can be called.
+﻿!!! Experimental
+-- When focused on the [Navigation Panel] (left 1st tab) And a selected a location, the action can be called.
 --
 Todo WIP - Gui focus = fss mode > press target
 

@@ -7,23 +7,23 @@ Begin Condition : [{CMDSEGMENT:0}] Equals 'Start' OR [{CMDSEGMENT:0}] Equals 'Op
     -- ↓ Application is running >> close
     Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
         Close window '{TXT:~~MyProcess}'
-        Play sound, '{VA_SOUNDS}\Malic Profile\Alert Sounds\Windows Hardware Remove.wav'
+        Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
     End Condition
     
     -- ↓ Start Application
     Begin Text Compare : [{CMDSEGMENT:2}] Equals 'Compas'
         Run application '{TXT:App_EDPlanetBearing}' -with parameters '+lat {TXT:Lat} +long {TXT:Long} +audio 1' - wait until it starts
         DISABLED - Run application '{TXT:App_EDPlanetBearing}' -with parameters '+lat 0 +long 0 +audio 1' - wait until it starts
-        Play sound, '{VA_SOUNDS}\Malic Profile\Alert Sounds\Windows Error.mp3'
+        Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'
     Else
         Run application '{TXT:App_EDPlanetBearing}' - wait until it starts
-        Play sound, '{VA_SOUNDS}\Malic Profile\Alert Sounds\Windows Error.mp3'
+        Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'
     End Condition
     
     -- ↓ Close Application
 Else If : ([{CMDSEGMENT:0}] Equals 'Close' AND [{PROCESSEXISTS:~~MyProcess}] Equals '1')
     Close window '{TXT:~~MyProcess}'
-    Play sound, '{VA_SOUNDS}\Malic Profile\Alert Sounds\Windows Hardware Remove.wav'
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
 End Condition
 
 -- ↓ Move Application
@@ -42,8 +42,7 @@ Begin Condition : ([{CMDSEGMENT:0}] Equals 'Update' AND [{TXT:Lat}] Does Not Equ
     DISABLED - Set text [MyTarget] to '{TXT:Lat},{TXT:Long}'
     DISABLED - Set Windows clipboard to '{TXT:Lat},{TXT:Long}'
     Write [Yellow] 'Compass: [{TXT:Lat},{TXT:Long}]' to log
-    Quick Input, '{TXT:Lat},{TXT:Long}
-'
+    Quick Input, '{TXT:Lat},{TXT:Long}'
     Pause 0,1 seconds
     Press Enter key and hold for 0,05 seconds and release
     Display window 'Elite - Dangerous (CLIENT)' as [Show]

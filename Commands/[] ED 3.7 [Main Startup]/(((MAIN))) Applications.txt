@@ -1,0 +1,36 @@
+﻿--
+
+-- ↓ Start Applications
+Execute command, 'Start Elite Market Connector' (by name) (and wait until it completes)
+
+-- ↓ Move Applications
+Move window 'Elite - Dangerous (CLIENT)' to (3,3)
+
+Display window 'Oculus' as [Minimize]
+
+Set text [~~MyProcess] to 'EDLauncher SET!!'
+Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
+    Display window 'ED Launcher SET!!!' as [Minimize]
+End Condition
+
+Set text [~~MyProcess] to 'EDMarketConnector'
+Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
+    DISABLED - Move window 'E:D Market Connector' to (2600,750)
+    Execute command, 'Move Elite Market Connector' (by name)
+End Condition
+
+Set text [~~MyProcess] to 'Twitch'
+Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
+    Move window 'Twitch' to (1734,-8)
+    Display window 'Twitch' as [Maximize]
+End Condition
+
+Begin Boolean Compare : [Debug Write] Equals True
+    Write [Blank] '=== [Exe] {CMD}' to log
+End Condition
+
+-- ↓ Focus Application
+Execute command, 'Focus Elite' (by name) (and wait until it completes)
+Begin Boolean Compare : [Debug Write] Equals True
+    Write [Blank] '=== [Exe] {CMD} - Focus Elite' to log
+End Condition

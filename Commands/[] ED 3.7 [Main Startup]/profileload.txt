@@ -1,22 +1,22 @@
-﻿-- [Variables, Initiatlsation, Settings, Settings Audio, Applications, Write to log]
+-- [Variables, Initiatlsation, Settings, Settings Audio, Applications, Write to log]
 
 -- [1] Onload profle sound
 Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Logon Sound.wav'
 to filter out notfications/sounds at profile load
 Set small int (condition) [VA_LOAD_STATUS] value to 1
 
--- ↓ testing
+--  testing
 Set small int (condition) [Firegroup] value to 1
 
--- ↓ Variables / Init
+--  Variables / Init
 Execute command, '(((MAIN))) Variables' (and wait until it completes)
 Execute command, '(((MAIN))) Initialisation' (and wait until it completes)
--- ↓ Settings
+--  Settings
 Execute command, '(((MAIN))) Settings' (and wait until it completes)
 Execute command, '(((MAIN))) Settings Audio' (and wait until it completes)
--- ↓ Start/move Applications
+--  Start/move Applications
 Execute command, '(((MAIN))) Applications' (and wait until it completes)
--- ↓ Show variables to log
+--  Show variables to log
 Begin Boolean Compare : [Debug Notifications] Equals True
     Execute command, '(((MAIN))) Write to log' (and wait until it completes)
 End Condition
@@ -30,5 +30,6 @@ Begin Boolean Compare : [Debug Write] Equals True
     Write [Blank] '=== Profile Load [EOF]' to log
 End Condition
 
+Write [Yellow] '-- New streamlined YG-System-Navigation : Master-Navigation-Systems - v{TXT:NavFileVer} ({TXT:NavFileVerDate})' to log
 Write [Yellow] 'Elite Time - {DATE:Today} {TIME:Today} - ( Local time: {TIME} )' to log
 Write [Blank] '.' to log

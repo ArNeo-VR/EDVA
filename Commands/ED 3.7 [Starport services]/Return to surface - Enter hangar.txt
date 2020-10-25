@@ -1,0 +1,48 @@
+﻿++ Engineers/Galactic powers/Galnet, do not have a gui focus status.
+-- [Return to surface; Enter hangar]
+
+Begin Condition : ([Status landing gear down] Equals True AND [Status docked] Equals True AND [Status landed] Equals False)
+    Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+    
+    -- ↓ go back to station services menu (202008)
+    Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'none'
+        Begin Text Compare : [{TXT:Status gui focus}] Equals 'station services'
+            Start Loop : Repeat 7 Times
+                Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+                Pause 0,1 seconds
+            End Loop
+            Pause 0,4 seconds
+        Else If Text Compare : [Status gui focus] Equals 'internal panel'
+            Press variable key(s) [edUI_Back] and hold for 0,2 seconds and release
+            Pause 0,1 seconds
+        Else If Text Compare : [Status gui focus] Equals 'external panel'
+            Press variable key(s) [edUIFocus] and hold for 0,05 seconds and release
+            Pause 0,2 seconds
+        End Condition
+        Press variable key(s) [edUI_Back] and hold for 0,2 seconds and release
+        Pause 0,1 seconds
+        Press variable key(s) [edUIFocus] and hold for 0,05 seconds and release
+        Pause 0,2 seconds
+        Set text [Status gui focus] to 'none'
+    End Condition
+    Pause 0,1 seconds
+    
+    -- ↓ execute command
+    Begin Text Compare : [{TXT:Status gui focus}] Equals 'none'
+        Begin Condition : ([hangar] Equals False AND [{CMD}] Equals 'Enter hangar') OR ([hangar] Equals True AND [{CMD}] Equals 'Return to surface')
+            Press variable key(s) [edUI_right] and hold for 0,6 seconds and release
+            Pause 0,2 seconds
+            Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+            Pause 0,2 seconds
+            Begin Condition : ([{CMD}] Equals 'Return to surface' AND [Hangar] Equals True)
+                Set Boolean [hangar] to False
+            Else If : ([{CMD}] Equals 'Enter hangar' AND [Hangar] Equals False)
+                Set Boolean [hangar] to True
+            End Condition
+            Press variable key(s) [edUI_right] and hold for 0,05 seconds and release
+            Pause 0,2 seconds
+        Else
+            Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Fail.wav'
+        End Condition
+    End Condition
+End Condition
