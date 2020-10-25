@@ -1,9 +1,10 @@
 # EDVA - VoiceAttack CMDs / profiles for Elite Dangerous.
 Sharing VoiceAttack commands as text file and profile (.vap) files.
 
-## [Profiles](Profiles) Full profiles, needs to be imported seperately
-- [release] EDDI-3.7.0-profile  
-[Profile commands](Commands) Commands exported to text and Grouped in a profile-file (.vap)
+## [Profiles](Profiles) Full profiles
+- ~~[EDVA Profile] EDVA-3.7-202010L-profile (Main profile)~~
+[Profile commands](Commands) Seperate commands exported to Text and Grouped in a profile-file (.vap)
+- [release] EDDI-3.7.0-profile (needs to be imported seperately into the main profile)
 
 ## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included)
 - [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) Used for reading data into VoiceAttack
