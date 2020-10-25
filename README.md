@@ -26,7 +26,7 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 <code>Sounds location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>
 #### Depending if you want to use the same profile for all the users on the computer place it in:
-*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*
+*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
 <code>Plugins location "c:\ProgramData\VoiceAttack\Plugins"</code>
 
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>
@@ -53,17 +53,13 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 ### Other profiles
 I've also other profiles: a 'Global profile', 'Off', 'Profile default', 'Profile default include', ...]
 
-Global profile, in here are VoiceCommands that activate other profiles, 
-i.e. 'profile Elite', 'profile default', 'profile disable'
-
+Global profile, in here are VoiceCommands that activate other profiles,  
+i.e. 'profile Elite', 'profile default', 'profile disable'  
 You can add the 'Global profile' in VA > [Options] > [General] > 'Global Profiles' > [Add ...]
 
-The 'Off' is very limited and has a small set of commands.
-
-'Profile default' has [Computer Sleep; Restart; Shutdown now] commands and 'Profile default include' is included.
-
-- Profile default in VA, included in selected profiles (Profile Elite)
-
+The 'Off' is very limited and has a small set of commands.  
+'Profile default' has [Computer Sleep; Restart; Shutdown now] commands and 'Profile default include' is included.  
+- Profile default in VA, included in selected profiles (Profile Elite)  
 - I've also a Base-default profile with basic commands that are used when VA is enabled.
 
 
@@ -72,8 +68,8 @@ The 'Off' is very limited and has a small set of commands.
 Text line bla bla.
 Secondline bla bla.
 
-Third with blank line above. bla bla
-
+Third with blank line above. bla bla  
+Fouth line with two spaces behind the third line.
 ### 3 Test
 #### 4 Test
 ##### 5 Test
