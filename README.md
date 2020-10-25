@@ -4,7 +4,7 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 ## [Profiles](Profiles)
 - ~~[EDVA Profile] EDVA-3.7-202010L-profile (Main profile)~~  
 [Profile commands](Commands) Seperate commands exported to Text and Grouped in a profile-file (.vap)
-- [release] EDDI-3.7.0-profile (EDDI.vap file, needs to be imported seperately into the main profile)
+- [release] EDDI-3.7.0-profile (EDDI.vap file, needs to be imported seperately and included into the main profile)
 
 ## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included)
 - [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([release](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack
@@ -32,7 +32,7 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 
 # Setup using the profile
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
-### Include: [[release] EDDI-3.7.0-profile]([release] EDDI-3.7.0-profile.vap)
+### Include: [\[release\] EDDI-3.7.0-profile](\[release\] EDDI-3.7.0-profile.vap)
 Import profile: "[release] EDDI-3.7.0-profile.vap" is required and needs to be imported as seperate profile.  
 [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
 [Add ...] select "[release] EDDI-3.7.0-profile"
