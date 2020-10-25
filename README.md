@@ -28,7 +28,7 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 - sounds location "c:\ProgramData\VoiceAttack\Sounds"
 Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.
 
-## [VA_Plugins](ReadME-VA_Plugins.md): Voice attack plugins (3rd party, not included)
+## [VA_Plugins](VA_Plugins): Voice attack plugins (3rd party, not included)
 - [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) Used for reading data into VoiceAttack
 - [EDDI](https://github.com/EDCD/EDDI) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.
 - [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) Reads keybindings from custom.binds file and creates variables
