@@ -24,7 +24,7 @@ Closes cargoscoop and Boost upon boost key is pressed is detected.
 Disengages from supercruise.
 
 #### Engage; Engage route; Engage next route; Engage travel jump; Travel jump; Superjump; Engage Superjump
-*Command is experimental*
+*Command is experimental and buggy*
 Engage - Engages supercruise / hyperspace (if there is a route it superjumps).  
 Engage route - 
 Engage next route - Select the next route in Galaxy map and Engages.  
