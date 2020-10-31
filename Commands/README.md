@@ -3,8 +3,9 @@
 ## E:D 3.7 [Ship_SRV functions]+
 
 #### [Lights; Full Beam] [; on; of; off; pulls; twice]
-*About the first command I made*
+*About the first command I made*  
 *- EDDI: {TXT:Status vehicle} , {TXT:Environment} , {BOOL:Status lights on} - Global command variables: {BOOL:full beam}*  
+  
 Ship/SRV lights, command checks the current lights status. 
 If the lights are allready 'On', 'Off' or at 'Full Beam' it does nothing.  
 'Lights' toggles the next light status, 'On/Off' lights does go to that status.  
