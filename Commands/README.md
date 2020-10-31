@@ -8,10 +8,10 @@
 Open [Coriolis, EDDB, EDSM, Elite-Forum,Reddit,Store,Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]  
 Opens the webpage in the default browser.  
   
-Pronounce this system (as it states).  
-Where can I find []  
-Station/System in EDDB, Coriolis  
-Find []  
+Pronounce this system. (as it states)  
+Where can I find [materials / data]  
+Open this Station / System in EDDB / Coriolis.  
+Find [System states (boom, bust, famine, ...]  
 
 ## E:D 3.7 [Ship Flight_Landing]+
 #### Launch
@@ -19,7 +19,10 @@ Docked at station: Starts Launch, moves ship up, retracts landing gear.
 Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.
 
 #### Boost
+Closes cargoscoop and Boost upon boost key is pressed is detected.
 #### Disengage
+Disengages from supercruise.
+
 #### Engage; Engage route; Engage next route; Engage travel jump; Travel jump; Superjump; Engage Superjump
 *Command is experimental*
 Engage - Engages supercruise / hyperspace (if there is a route it superjumps).  
@@ -31,6 +34,10 @@ Superjump -
 
 
 ## E:D 3.7 [Ship_SRV functions]+
+
+#### Deploy SRV / Board Ship
+Deploys SRV / Board ship requires the 'SRV Handbrake' is enabled.
+
 #### [Lights; Full Beam] [; on; of; off; pulls; twice]
 *About the first command I made*  
 *- EDDI: {TXT:Status vehicle} , {TXT:Environment} , {BOOL:Status lights on} - Global command variables: {BOOL:full beam}*  
@@ -39,13 +46,43 @@ Ship/SRV lights, command checks the current lights status.
 If the lights are allready 'On', 'Off' or at 'Full Beam' it does nothing.  
 'Lights' toggles the next light status, 'On/Off' lights does go to that status.  
 Full-Beam / Lights twice it goes to to the Full-Beam only in the SRV.  
-#### Deploy SRV / Board Ship
-Deploys SRV / Board ship requires the 'SRV Handbrake' is enabled.
+
+#### Ship/SRV Commands that either toggles or execute action.
+Night vision [; on; off; pulls]  
+[Analysis; Exploration; Combat; hud mode]  
+Cockpit [; on; off; pulls]  
+[deploy; retract;] Cargo Scoop; Cargo Hatch; Cargo Hooch  
+[deploy; retract;] Landing Gear  
+[deploy; retract;] Hardpoints  
+Silent running [; on; off; pulls]  
+Flightassist [; on; off; pulls]  
+Rotational correction [; on; off; pulls]  
+Orbit Lines [; on; off; pulls]  
+[Engine Color; Weapon Color]  
+[Shield cell; Deploy Shield; Shields up; Pop Shields]  
+[Next; Previous;] Firegroup  
+[deploy; fire;] [Chaff; ECM; Heat sink]  
+[Next; Previous;] Firegroup  
+
+#### SRV Commands that either toggles or execute action.
+Deploy SRV  
+Board ship; SVR Board ship  
+[Recall;Dismiss] Ship  
+SRV Transfer Cargo  
+[Restock; Repair; Refuel] - Requires the system-panel to be on Synthesis
+SRV Turret; Turret; Guns; Gun
 
 ## ED 3.7 [Ship_SRV Panel Menu functions]
 ## ED 3.7 [Ship_SRV Panel Menu]
 ## ED 3.7 [Starport services]
 ## ED EDDI [Actions Modified]
 ## ED EDDI [Actions]
-## [] ED 3.7 [Main Startup]
+## [] ED 3.7 [Main Startup Menu]
+Continue Open  
+Continue Solo  
+Continue Private  
+Continue Arena  
+Continue Training  
+Center - Centers mouse  
+Continue   
 ## [] ED 3.7 VA [Debug Functions]
