@@ -5,11 +5,13 @@
 ~~## ED 3.7 [Camera]~~
 ## ED 3.7 [Elite MainMenu]
 ## ED 3.7 [Help Find-Websites]
-#### Open [Coriolis, EDDB, EDSM, Elite-Forum,Reddit,Store,Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]  
-#### Pronounce this system  
-#### Where can I find []  
-#### Station/System in EDDB, Coriolis  
-#### Find []  
+Open [Coriolis, EDDB, EDSM, Elite-Forum,Reddit,Store,Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]  
+Opens the webpage in the default browser.  
+  
+Pronounce this system (as it states).  
+Where can I find []  
+Station/System in EDDB, Coriolis  
+Find []  
 
 ## E:D 3.7 [Ship Flight_Landing]+
 #### Launch
