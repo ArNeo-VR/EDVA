@@ -1,24 +1,15 @@
 # EDVA - VoiceAttack CMDs / profiles for Elite Dangerous.
 Sharing VoiceAttack commands as text file and profile (.vap) files.
 
+This profile has only the commands, all third party plugins and applications required need to be installed manualy.
+
 
 ## [Profiles](Profiles)
 - ~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles) (Main profile)~~  
 [Profile commands](Commands) Seperate commands exported to Text and Grouped in a profile-file (.vap)
 - [release] EDDI-3.7.0-profile (EDDI.vap file, needs to be imported seperately and included into the main profile)
 
-## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included)
-- [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack
-- [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.
-- [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables
-- [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/)
-- [ED-Router](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app]
-
-## [VA_Sounds](VA_Sounds): Sounds used in commands
-- ED_ThemeSounds-2015.zip - Elite themed sounds
-- ED_SFX2018.zip - SFX miscellaneous 
-
-## Voice Attack Plugins(Apps), Sounds locations
+## Voice Attack locations for Apps/Plugins and Sounds
 ### VoiceAttack [default] on x64 bit windows
 <code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>
@@ -30,13 +21,23 @@ Sharing VoiceAttack commands as text file and profile (.vap) files.
 <code>Plugins location "c:\ProgramData\VoiceAttack\Plugins"</code>  
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>
 
-## Elite Dangerous - Applications/Tools
+## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included in any profile)
+- [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack
+- [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.
+- [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables
+- [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/)
+- [ED-Router](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app]
+
+## Elite Dangerous - Applications/Tools (3rd party, not included in any profile)
 - [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
 - [ED Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
 - [ED Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
 - [ED PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
-- []() ([releases](/releases))
+
+## [VA_Sounds](VA_Sounds): Sounds used in commands
+- ED_ThemeSounds-2015.zip - Elite themed sounds
+- ED_SFX2018.zip - SFX miscellaneous 
 
 # Setup using the profile
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
