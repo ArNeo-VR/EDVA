@@ -2,7 +2,9 @@
 Sharing VoiceAttack commands as text file and profile (.vap) files.  
 This profile has only the commands, all third party plugins and applications required need to be installed manualy.
 
-## [VoiceAttack Commands](Commands)
+## [VoiceAttack Commands](Commands#edva---commands---ed-37-l)
+Exported commands to a text file and catagories are exported as a voiceattack profile (.vap) file.
+
 ## [Profiles](Profiles)
 - ~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles) (Main profile)~~  
 [Profile commands](Commands) Seperate commands exported to Text and Grouped in a profile-file (.vap)

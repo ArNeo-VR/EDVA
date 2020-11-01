@@ -25,6 +25,7 @@ Disengages from supercruise.
 
 #### Engage; Engage route; Engage next route; Engage travel jump; Travel jump; Superjump; Engage Superjump
 *Command is experimental and buggy*
+*rarely drops you out of supercruise if the target is not set correctly*
 Engage - Engages supercruise / hyperspace (if there is a route it superjumps).  
 Engage route - 
 Engage next route - Select the next route in Galaxy map and Engages.  
