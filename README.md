@@ -47,18 +47,22 @@ Exported commands to a text file and catagories are exported as a voiceattack pr
 [More profile actions] > [Import profiles] > (select ~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)~~ file)  
 
 ### Include: [[release] EDDI-3.7.0-profile](Profiles)
-Import profile: "[release] EDDI-3.7.0-profile.vap" is required and needs to be imported as seperate profile.  
-[Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
+Import profile: "[release] EDDI-3.7.0-profile.vap"  
+- is required and needs to be included in the main profile.  
+Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
 [Add ...] select "[release] EDDI-3.7.0-profile"
+
 ### Execute commands at profile [loaded / unloaded]
-[Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded'  
+Main profile [Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded'  
 Select the corresponding profile from the 'pull-down' menu.  
-*(((Elite Dangerous))) Profile Load, (((Elite Dangerous))) Profile UnLoad*
-### Optional, Auto-load profile when Elite is started
-[Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'  
+*"(((Elite Dangerous))) Profile Load"  ,  "(((Elite Dangerous))) Profile UnLoad"*
+
+### Optional, Auto-load the Main profile when Elite is started
+Main profile [Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'  
 Tag the option enabled, Add text 'EliteDangerous64' in the field.
+
 ### Configure settings
-- [Custom / Phonetic name] > '(((MAIN))) Settings'
+- [Custom / Phonetic name] in > '(((MAIN))) Settings'
 
 ## Plugin custo extract/install locations
 - [EDDI] [VA_Profile]\Plugins\EDDI\
@@ -73,21 +77,21 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 # Notes
 ...
 
-### Other profiles
+# Other profiles
 I've also other profiles: a 'Global profile', 'Off', 'Profile default', 'Profile default include', ...]
 
-#### 'Global profile'
+### 'Global profile'
 In here are VoiceCommands that activate other profiles,  
 *i.e. 'profile Elite', 'profile default', 'profile disable', 'Computer off'*  
 You can add the 'Global profile' in VA > [Options] > [General] > 'Global Profiles' > [Add ...]
 
-#### Profile 'Off' 
+### Profile 'Off' 
 Is very limited and has a small set of commands.  
 
-#### 'Profile default' 
+### 'Profile default' 
 Has [Computer Sleep; Restart; Shutdown now] commands and 'Profile default include' is included.
 
-#### 'Profile default include'
+### 'Profile default include'
 in VA, 
 is used for including in selected profiles (Profile Elite) and not enable Computer shutdown commands.
 
