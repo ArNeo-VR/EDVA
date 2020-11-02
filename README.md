@@ -15,8 +15,8 @@ Exported commands to a text file and catagories are exported as a voiceattack pr
 <code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>
 #### My personal settings are, this if you export your profile to another computer it will go with the userdata.
-<code>Plugins location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Plugins"</code>  
-<code>Sounds location "c:\Users\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>
+<code>Plugins location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Plugins"</code>  
+<code>Sounds location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>
 #### Depending if you want to use the same profile for all the users on the computer place it in:
 *Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
 <code>Plugins location "c:\ProgramData\VoiceAttack\Plugins"</code>  
