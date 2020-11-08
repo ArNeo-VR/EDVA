@@ -7,9 +7,9 @@ This profile has only the commands, all third party plugins and applications req
 Exported commands to a text file and catagories are exported as a voiceattack profile (.vap) file.  
 
 ## [Profiles](Profiles)
-- ~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles) (Main profile)~~  
-[Profile commands](Commands) Seperate commands exported to Text and Grouped in a profile-file (.vap)  
-- [release] EDDI-3.7.0-profile (EDDI.vap file, needs to be imported seperately and included into the main profile)
+~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)~~ (Main profile) to be tested/published  
+Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.vap) not fully up to date.
+**note:** [\[release\] EDDI-3.7.0-profile](Profiles) (EDDI.vap file, needs to be imported seperately and included into the main profile)
 
 ## Voice Attack locations for Apps/Plugins and Sounds
 ### VoiceAttack [default] on x64 bit windows
