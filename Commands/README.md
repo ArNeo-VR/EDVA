@@ -1,4 +1,14 @@
 # EDVA - Commands - ED 3.7 L
+## EDVA [Main Startup]
+**Profile Load** :  
+**Profile UnLoad** :  
+**(((MAIN))) Variables** :  
+**(((MAIN))) Initialisation** :  
+**(((MAIN))) Settings** :  
+**(((MAIN))) Settings Audio** :  
+**(((MAIN))) Applications** :  
+**(((MAIN))) Write to log** :  
+
 ## EDVA [MainMenu Elite]
 **Continue [solo, open, arena, training]** : Activates the action and goes to the menus and activates.  
 *require that the cursor is set at the "Conintue" button of the main menu.*  
@@ -19,19 +29,19 @@
 **Open [Coriolis, EDDB, EDSM, Elite-Forum,Reddit,Store,Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]**  
 *Opens the webpage in the default browser.*  
   
-Pronounce this system. (as it states)  
-Where can I find [materials / data]  
-Open this Station / System in EDDB / Coriolis.  
-Find [System states (boom, bust, famine, ...]  
+**Pronounce this system.** *Modified EDDIcmd* : as it states  
+**Where can I find [materials / data]** *Modified EDDIcmd* : Describes the location where you can find the item.  
+**Open this Station / System in EDDB / Coriolis.** *Modified EDDIcmd* : More command combinations available, opens a webpage  
+**Find [System states (boom, bust, famine, ...]** : Opens a page to EDSM and searches.  
 
-## EDVA [Apps-Plugins]
+## EDVA [App-Plugins]
 Used for starting applications, the [app_variables] are set in the startup sequence.  
 **note:** Applications are not included.  
 *Example is in the Variables.txt file.*  
 ~~## ED 3.6 [App] NeutronPlotter~~
 ~~## ED 3.7 [Camera]~~
 
-## EDVA [Ship Flight_Landing]+
+## EDVA [Ship Flight_Landing]
 #### Launch
 Docked at station: Starts Launch, moves ship up, retracts landing gear.  
 Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.
@@ -52,7 +62,7 @@ Superjump -
 
 
 
-## EDVA [Ship_SRV functions]+
+## EDVA [Ship_SRV functions]
 
 #### Deploy SRV / Board Ship
 Deploys SRV / Board ship requires the 'SRV Handbrake' is enabled.
