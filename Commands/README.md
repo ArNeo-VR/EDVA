@@ -1,6 +1,6 @@
 # [EDVA](../../../EDVA) - Commands - ED 3.7 L
 ## EDVA [Main Startup]
-**Profile Load** :  on Profile (un)load Command, [see settings](../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
+**Profile Load** :  on Profile (un)load Command, [see settings](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
 **Profile UnLoad** :  
 **(((MAIN))) Variables** :  
 **(((MAIN))) Initialisation** :  
