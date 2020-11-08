@@ -14,9 +14,9 @@
 *require that the cursor is set at the "Conintue" button of the main menu.*  
 
 **Elite Menu** : Goes to the in game menu or submenus (see below).  
-**Elite Audio [;Sound Effects; Music; Voice; Ship; Ships Voice; Playlist; Playlist; Galnet]**
-**Elite Grahpics [;Display; Quality; 3D]**
-**Elite Controls [;Mouse; Flight rotation; Driving; ...]
+**Elite Audio [;Sound Effects; Music; Voice; Ship; ...]**  
+**Elite Grahpics [;Display; Quality; 3D]**  
+**Elite Controls [;Mouse; Flight rotation; Driving; ...]  
 
 **Exit to Elite menu** : Exits to the game main menu.  
 **Exit to Desktop, Quit Elite Dangerous** : Exit and closes the game.  
