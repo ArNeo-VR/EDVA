@@ -1,15 +1,16 @@
 # EDVA - VoiceAttack CMDs / profiles for Elite Dangerous.
 Sharing VoiceAttack commands as text file and profile (.vap) files.  
 This profile has only the commands, all third party plugins and applications required need to be installed manualy.  
+
+## [VoiceAttack Commands](Commands)
+Commands are exported to a text file, they are manualy exported and not fully up to date.
+For the time beeing catagories are exported as a voiceattack profile (.vap) file. Until the full profile is tested and published.  
 [List of commands can be found here](Commands#edva---commands---ed-37-l)  
 
-## [VoiceAttack Commands](Commands#edva---commands---ed-37-l)
-Exported commands to a text file and catagories are exported as a voiceattack profile (.vap) file.  
-
 ## [Profiles](Profiles)
-~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)~~ (Main profile) to be tested/published  
-Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.vap) not fully up to date.
-**note:** [\[release\] EDDI-3.7.0-profile](Profiles) (EDDI.vap file, needs to be imported seperately and included into the main profile)
+~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)~~ *to be tested/published*  
+Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.vap)  
+**note:** [\[release\] EDDI-3.7.0-profile](Profiles) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
 
 ## Voice Attack locations for Apps/Plugins and Sounds
 ### VoiceAttack [default] on x64 bit windows
