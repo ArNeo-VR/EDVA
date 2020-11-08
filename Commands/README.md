@@ -5,8 +5,7 @@
 ~~## ED 3.7 [Camera]~~
 ## EDVA - Commands - ED 3.7 [Elite MainMenu]
 **Continue [solo, open, arena, training]** : Activates the action and goes to the menus and activates.  
-~~require that the cursor is set at the "Conintue" button of the main menu.~~
-**Center** : Centers mousecursor, stops ship from turning.  
+*require that the cursor is set at the "Conintue" button of the main menu.*  
 
 **Elite Menu** : Goes to the in game menu.  
 **Elite Audio [;Sound Effects; Music; Voice; Ship; Ships Voice; Playlist; Playlist; Galnet]** : Goes to Elite Settings Audio  
@@ -15,12 +14,13 @@
 **Exit to Elite menu** : Exits to the game main menu.  
 **Exit to Desktop, Quit Elite Dangerous** : Exit and closes the game.  
 
+**Center** : Centers mousecursor, stops ship from turning.  
 **Reset Rift** : Resets HMD/Rift headset position.  
 **Reset Headlook** : Resets headlook mode to center.  
 
 ## ED 3.7 [Help Find-Websites]
 **Open [Coriolis, EDDB, EDSM, Elite-Forum,Reddit,Store,Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]**  
-~~Opens the webpage in the default browser.~~  
+*Opens the webpage in the default browser.*  
   
 Pronounce this system. (as it states)  
 Where can I find [materials / data]  
