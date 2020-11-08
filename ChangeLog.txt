@@ -1,0 +1,121 @@
+﻿Navigation filter, enable **** filter, only enabled does not reset.
+Rename EDDIVoice variable
+--
+
+-- 202008, E:D 3.7.5M, version number change
+Changed command variables to ~localvariables
+
+-- 202008, E:D 3.7.3L
+Merged Help find&Websites, Lights allready status sounds.
+Changed audio file locations to SFX2018, need to copy used audio file to it.
+Added debug variables EDDI:Status lights on
+
+-- 202008, E:D 3.7.3k
+!!! If single/double/long press buttons don't work !!! PowerDown PC/Devices and Start It up again !!!
+Added starport services menu functions.
+
+-- 202008, E:D 3.5.3j
+E:D Version 2020 - 3.5(december) /3.6 (january)/3.7 (june) update, code cleanup "-- ↓ ", cleaned up fixed, rewrite menu/state conditions (landed/docked/environment).
+Moved mapped-execute commands to seperate catagory ""
+Cleanup: old command nav-panel / sys-panel,
+Rewritten (update) [enter hangar, return to service], (update
+Added BOOL:Elite Menu BOOL:Camera
+
+-- 202005, E:D 3.5.3h
+Added and changed applications startup/move/close,
+add command: Galaxy map, info, route, bookmarks, filter, options, search
+
+-- 201912, E:D 3.5.3g
+-- 201912, E:D 3.5.3h
+Joystic button press combos - single/long/double, - fixed single/double press glitch
+Reorganize naming
+
+-- 201912, E:D 3.5.3f
+Disabled ((EDDI actions)) append to log output.
+Cleanup old commands and variables (Starport*, *panels), renamed catagories _[...]-
+Organizing / commenting commands.
+Reworked onload Profile scripts, created iThougts flowchart.
+
+-- 201912, E:D 3.5.3e
+fixed Engage function dropping out suppercruise
+Modified NeutronPlotter commands. still needs some inprovment work.
+Modified commands, requirements to activate depending on [Status variables]
+
+-- 201912, E:D 3.5.3d
+Created basic NeutronPlotter commands for testing.
+Enabled auto-loading profile when elite is started+active.
+!!!! Commands are disappearing, not found why yet.
+
+-- 201912, E:D 3.5.3c
+Cleanup Onprofile: load process, de-cluttered notifications, debug notifications/write.
+Fixed editing the wrong file because the previous was auto-loaded from profile default.
+Created [global profile] for easy maintenace of ^^^ creating/loading new profiles.
+Cleaned up, inline C++ functions of Disclaimer command, moved to README.
+>> debug functions
+BOOL Debug Notifications, text writes in VA log-window
+BOOL Debug Write, text writes in VA log-window
+
+-- 201909, E:D 3.4e
+cleanup, changed profile load process, created ithoughts file
+status/set BOOL variable debug command, put BOOLvar to profile
+on/off are not used, because of recognition and to large dynamic command, removed 20190916, ; elite-menu; nav-panel; sys-panel;
+
+-- 201904, E:D 3.4c
+cleanup and sorting commands into groups.
+Added exceptions for commands when in SRV to prevent false calls
+Added EDDI-3.4.1, copied profile to 3.4d
+
+-- 201904, E:D 3.4b
+Supercruise and Hyperspace commands Engage / Jump, mixed them to one command.
+Pannel tabs accounting for use of request docking command, account only while panel is active. Slight delay when exiting and counting is still possible.
+
+-- 201904, E:D 3.4 update release, modifications
+
+-- 201902, cleanup, added Mission map (opens galaxymap on mission.
+
+-- 201812, >v2.4e cleanup, E:D 3.3beta >release 20181211
+Changed profile naming scheme, renamed to "[Profile] E:D [ArNeo]-3.3.3-2.4a"
+Added Panel menu commands for 'Outfitting' requires command 'enter hangar'
+Created SVR Deploy, Board Ship.
+
+-- 201812, >v3.3.2merge, 3.3beta4 >release 20181215
+Import 2.5a, versioning change Elite release 3.3 + VA serialnumber + changedescription
+Variable Debug write enables the output to VA (write to) log.
+Modified customloaded <txt-command>, added Debug write option.
+
+-- 201811, >v2.4e cleanup, merge command, introduce E:D 3.3beta
+Reordering the catagories
+Changes in the 3.3beta required some modifications of current commands.
+
+-- 20181016, >v2.3a cleanup, v2.4a merge-test
+Added commands for new update in beta
+Cleanup Elite Game Menu
+Cleanup Profile startup
+Cleanup Startup scripts
+
+-- 20181016, >v2.3a cleanup, v2.4a merge-test
+Cleanup comands
+
+-- 20181016, >v2.3a cleanup
+Changed Microphone volume to EEEE
+Rechecked custom EDDI commands, cleaned up shutup/talk EDDI.
+Removed variable, VAR-CMD-Name. | Created variable Name custom / Name custom phonetic, if not set then use from EDDI:Name
+Moved real settings to ((MAIN)) Settings
+Added E:D applications, Start and Close from single command.
+
+-- 20181013, Testing and cleanup
+ED Menu commands,
+!! [Options Graphics] In-game mouse rendering does not link mouse cursor to HMD movement.
+
+-- 20181012, >v2.2a Cleanup, testing, Profile loading
+Cleaned up old profile versions, moved to VAcompare-pc
+Created / renamed and configured Loading/unLoading profile scripts.
+Moved commands to other profiles.
+Custom profile switching commands [computer, profile default/disable]
+
+-- 201809, Cleanup, testing,
+Moved commands to seperate profile [default], linked profile to this profile
+Removed EDDI commands, included as seperate profile. Voice commands in this profile overrides them.
+
+-- 20180819, Sorted commands not tested/used.
+Worked on, [Navigation filter]
