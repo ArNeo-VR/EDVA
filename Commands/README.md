@@ -1,6 +1,6 @@
-# [EDVA](/EDVA) - Commands - ED 3.7 L
+# [EDVA](https://github.com/ArNeo-VR/EDVA) - Commands - ED 3.7 L
 ## EDVA [Main Startup]
-**Profile Load** :  
+**Profile Load** :  on Profile (un)load Command, [see settings](../../../#execute-commands-at-profile-loaded--unloaded)
 **Profile UnLoad** :  
 **(((MAIN))) Variables** :  
 **(((MAIN))) Initialisation** :  
