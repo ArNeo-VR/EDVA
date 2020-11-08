@@ -1,4 +1,4 @@
-# EDVA - Profiles
+# [EDVA](../../../EDVA) - Profiles
 
 ### ~~[[profile] EDVA-3.7-202010L-profile.vap](https://github.com/ArNeo-VR/EDVA/tree/master/Profiles)~~ EDVA main profile. *to be tested/published*  
 
