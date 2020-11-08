@@ -4,15 +4,13 @@
 ## ED 3.7 [Apps-Plugins]
 ~~## ED 3.7 [Camera]~~
 ## EDVA - Commands - ED 3.7 [Elite MainMenu]
-### Continue commands
-**Continue [solo, open, arena, training]**
-Activates the action and goes to the menus and activates.
+**Continue [solo, open, arena, training]** : Activates the action and goes to the menus and activates.
 - require that the cursor is set at the "Conintue" button of the main menu.
 
-**Center:** Centers mousecursor, stops ship from turning.
+**Center** : Centers mousecursor, stops ship from turning.
 
-Elite Audio:** Goes to Elite Settings Audio
-Elite Grahpics [Display, Quality, 3D]: Goes to Elite Settings Grapics and expands the settings.
+**Elite Audio [;Sound Effects; Music; Voice; Ship; Ships Voice; Playlist; Playlist; Galnet]** : Goes to Elite Settings Audio
+**Elite Grahpics [Display, Quality, 3D]** : Goes to Elite Settings Grapics and expands the settings.
 Elite Menu: Goes to the in game menu.
 
 Exit to Elite menu: Exits to the game main menu.
