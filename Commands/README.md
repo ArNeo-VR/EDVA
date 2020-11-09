@@ -13,7 +13,7 @@
 **Continue [solo, open, arena, training]** : Activates the action and goes to the menus and activates.  
 *requires that the cursor is set at the "Conintue" button of the main menu.*  
 
-Activates the in game menu and goes to the submenu/selection.
+Activates the in game menu and goes to the submenu/selection.  
 **Elite [Menu; Options; Help; Social; Friends; groups; blocked; report player; ...] [;Menu]**  
 **Elite Audio [;Sound Effects; Music; Voice; Ship; and-more...]**  
 **Elite Grahpics [;Display; Quality; 3D]**  
@@ -26,8 +26,8 @@ Activates the in game menu and goes to the submenu/selection.
 **Reset Rift** : Resets HMD/Rift headset position.  
 **Reset Headlook** : Resets headlook mode to center.  
 
-[Show; Hide] [Framerate; Connection Status; Graphical debug] | Show data in desktop application
-**Show scores** 
+**[Show; Hide] [Framerate; Connection Status; Graphical debug]** | Show data in desktop application  
+**Show scores**  
 
 ## EDVA [Debug Functions]  
 **status text** : Shows EDDI varables  
