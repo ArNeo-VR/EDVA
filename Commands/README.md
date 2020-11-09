@@ -31,16 +31,15 @@
 
 ## EDVA [Debug Functions]  
 **status text** : Shows EDDI varables  
-**[Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Silent Running; Cargo Scoop; Lights on; Night Vision]**  
-*Writes and says(TTS) EDDI variable Status*  
+**[Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Silent Running; Cargo Scoop; Lights on; Night Vision]** : *Writes and says(TTS) EDDI variable Status*  
 
-**Used for debuging/setting variables:**
-[Set; Status; Reset] [Hangar; cockpit; orbit lines; Elite Menu; Camera] [;true; false; not set]
-[Set; Status; Reset] [Starport services; Full beam] [;true; false; not set]
-[Set; Status; Reset; Get; Put] [Filter] [; not set]
-[Set; Status; Reset] [FrameRate; ConnectionStatus; GraphicalDebug] [;true; false; not set]
-[Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set]
-[Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set]
+**Used for debuging/setting variables:**  
+[Set; Status; Reset] [Hangar; cockpit; orbit lines; Elite Menu; Camera] [;true; false; not set]  
+[Set; Status; Reset] [Starport services; Full beam] [;true; false; not set]  
+[Set; Status; Reset; Get; Put] [Filter] [; not set]  
+[Set; Status; Reset] [FrameRate; ConnectionStatus; GraphicalDebug] [;true; false; not set]  
+[Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set]  
+[Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set]  
 
 
 
