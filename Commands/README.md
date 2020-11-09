@@ -11,13 +11,13 @@
 
 ## EDVA [MainMenu Elite]
 **Continue [solo, open, arena, training]** : Activates the action and goes to the menus and activates.  
-*require that the cursor is set at the "Conintue" button of the main menu.*  
+*requires that the cursor is set at the "Conintue" button of the main menu.*  
 
-**Elite [Menu; Options; Help; Social; Friends; private group; groups; blocked; report player] [;Menu]**  
+Activates the in game menu and goes to the submenu/selection.
+**Elite [Menu; Options; Help; Social; Friends; groups; blocked; report player; ...] [;Menu]**  
 **Elite Audio [;Sound Effects; Music; Voice; Ship; and-more...]**  
 **Elite Grahpics [;Display; Quality; 3D]**  
 **Elite Controls [;Mouse; Flight rotation; Driving; and-more...]**  
-*Activates the in game menu and goes to the submenu/selection.*  
 
 **Exit to Elite menu** : Exits the game to MainMenu.  
 **Exit to Desktop, Quit Elite Dangerous** : Exit and closes the game.  
