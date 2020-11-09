@@ -1,6 +1,6 @@
 # [EDVA](../../../EDVA) - Commands - ED 3.7 L
 ## EDVA [Main Startup]
-**Profile Load** :  on Profile (un)load Command, [see settings](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
+**Profile Load** :  on Profile (un)load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
 **Profile UnLoad** :  
 **(((MAIN))) Variables** :  
 **(((MAIN))) Initialisation** :  
@@ -13,19 +13,36 @@
 **Continue [solo, open, arena, training]** : Activates the action and goes to the menus and activates.  
 *require that the cursor is set at the "Conintue" button of the main menu.*  
 
-**Elite Menu** : Goes to the in game menu or submenus (see below).  
-**Elite Audio [;Sound Effects; Music; Voice; Ship; ...]**  
+**Elite [Menu; Options; Help; Social; Friends; private group; groups; blocked; report player] [;Menu]**  
+**Elite Audio [;Sound Effects; Music; Voice; Ship; and-more...]**  
 **Elite Grahpics [;Display; Quality; 3D]**  
-**Elite Controls [;Mouse; Flight rotation; Driving; ...]  
+**Elite Controls [;Mouse; Flight rotation; Driving; and-more...]**  
+*Activates the in game menu and goes to the submenu/selection.*  
 
-**Exit to Elite menu** : Exits to the game main menu.  
+**Exit to Elite menu** : Exits the game to MainMenu.  
 **Exit to Desktop, Quit Elite Dangerous** : Exit and closes the game.  
 
 **Center** : Centers mousecursor, stops ship from turning.  
 **Reset Rift** : Resets HMD/Rift headset position.  
 **Reset Headlook** : Resets headlook mode to center.  
 
+[Show; Hide] [Framerate; Connection Status; Graphical debug] | Show data in desktop application
 **Show scores** 
+
+## EDVA [Debug Functions]  
+**status text** : Shows EDDI varables  
+**[Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Silent Running; Cargo Scoop; Lights on; Night Vision]**  
+*Writes and says(TTS) EDDI variable Status*  
+
+**Used for debuging/setting variables:**
+[Set; Status; Reset] [Hangar; cockpit; orbit lines; Elite Menu; Camera] [;true; false; not set]
+[Set; Status; Reset] [Starport services; Full beam] [;true; false; not set]
+[Set; Status; Reset; Get; Put] [Filter] [; not set]
+[Set; Status; Reset] [FrameRate; ConnectionStatus; GraphicalDebug] [;true; false; not set]
+[Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set]
+[Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set]
+
+
 
 ## EDVA [Help Find-Websites]
 **Open [Coriolis, EDDB, EDSM, Elite-Forum,Reddit,Store,Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]**  
@@ -35,11 +52,17 @@
 **Where can I find [materials / data]** *Modified EDDIcmd* : Describes the location where you can find the item.  
 **Open this Station / System in EDDB / Coriolis.** *Modified EDDIcmd* : More command combinations available, opens a webpage  
 **Find [System states (boom, bust, famine, ...]** : Opens a page to EDSM and searches.  
-
+ 
 ## EDVA [App-Plugins]
+Elite Discovery : Engineer : Market Connector : PlanetBearing  
 Used for starting applications, the [app_variables] are set in the startup sequence.  
 **note:** Applications are not included.  
 *Example is in the Variables.txt file.*  
+[Start;Close] [;Elite;] [Discovery]
+[Start;Close;Move] [;Elite;] Engineer
+[Start;Close;Move] [;Elite;] Market Connector
+[Start;Close;Move;Update] [;Elite;] [PlanetBearing; Compas]
+
 ~~## ED 3.6 [App] NeutronPlotter~~
 ~~## ED 3.7 [Camera]~~
 
