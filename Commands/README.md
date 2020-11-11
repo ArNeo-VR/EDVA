@@ -1,17 +1,17 @@
 # [EDVA](../../../../EDVA) - Commands - ED 3.7 L
 ## EDVA [Main Startup]
-**Profile Load** :  on Profile (un)load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
-**Profile UnLoad** :  
-**(((MAIN))) Variables** :  
-**(((MAIN))) Initialisation** :  
-**(((MAIN))) Settings** :  
-**(((MAIN))) Settings Audio** :  
-**(((MAIN))) Applications** :  
-**(((MAIN))) Write to log** :  
+**Profile Load** :  on Profile load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
+**(((MAIN))) Load Variables** : Loads variables from profile, set required for Initialisation.  
+**(((MAIN))) Initialisation** : Load Key-binds, set preferences from loaded variables.  
+**(((MAIN))) Settings** : Commander NAME/Phonetic, Path's, Applications.  
+**(((MAIN))) Settings Audio** : Set recording and playback devices / volumes, used sounds.  
+**(((MAIN))) Applications** : START / MOVE Applications.  
+**(((MAIN))) Write to log** : Show variables to log.  
+**Profile UnLoad** :  on Profile unload Command
 
 ## EDVA [MainMenu Elite]
 **Continue [solo, open, arena, training]** : Activates the action and goes to the menus and activates.  
-*requires that the cursor is set at the "Conintue" button of the main menu.*  
+*requires that the cursor is set at the "Continue" button of the main menu.*  
 
 Activates the in game menu and goes to the submenu/selection.  
 **Elite [Menu; Options; Help; Social; Friends; groups; blocked; report player; ...] [;Menu]**  
@@ -34,17 +34,16 @@ Activates the in game menu and goes to the submenu/selection.
 **[Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Silent Running; Cargo Scoop; Lights on; Night Vision]** : *Writes and says(TTS) EDDI variable Status*  
 
 **Used for debuging/setting variables:**  
-[Set; Status; Reset] [Hangar; cockpit; orbit lines; Elite Menu; Camera] [;true; false; not set]  
-[Set; Status; Reset] [Starport services; Full beam] [;true; false; not set]  
-[Set; Status; Reset; Get; Put] [Filter] [; not set]  
-[Set; Status; Reset] [FrameRate; ConnectionStatus; GraphicalDebug] [;true; false; not set]  
-[Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set]  
-[Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set]  
+[Set; Status; Reset] [Hangar; cockpit; orbit lines; Elite Menu; Camera] [;true; false; not set] : BOOL variables
+[Set; Status; Reset] [Starport services; Full beam] [;true; false; not set] : BOOL variables  
+[Set; Status; Reset] [FrameRate; ConnectionStatus; GraphicalDebug] [;true; false; not set] : BOOL variables  
+[Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set] : Stored variables in profile.  
+[Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set] : Stored variables in profile.  
 
 
 
 ## EDVA [Help Find-Websites]
-**Open [Coriolis, EDDB, EDSM, Elite-Forum,Reddit,Store,Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]**  
+**Open [Coriolis, EDDB, EDSM, Elite-Forum-Reddit-Store-Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]**  
 *Opens the webpage in the default browser.*  
   
 **Pronounce this system.** *Modified EDDIcmd* : as it states  
@@ -53,14 +52,13 @@ Activates the in game menu and goes to the submenu/selection.
 **Find [System states (boom, bust, famine, ...]** : Opens a page to EDSM and searches.  
  
 ## EDVA [App-Plugins]
-Elite Discovery : Engineer : Market Connector : PlanetBearing  
-Used for starting applications, the [app_variables] are set in the startup sequence.  
+*Used for starting applications, the [app_variables] are set in the startup sequence.*  
 **note:** Applications are not included.  
-*Example is in the Variables.txt file.*  
 [Start;Close] [;Elite;] [Discovery]
 [Start;Close;Move] [;Elite;] Engineer
 [Start;Close;Move] [;Elite;] Market Connector
 [Start;Close;Move;Update] [;Elite;] [PlanetBearing; Compas]
+*Applications are start from variables (Main Startup), Example is in the Variables.txt file.*  
 
 ~~## ED 3.6 [App] NeutronPlotter~~
 ~~## ED 3.7 [Camera]~~

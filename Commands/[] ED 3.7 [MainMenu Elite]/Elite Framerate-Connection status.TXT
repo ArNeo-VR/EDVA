@@ -1,0 +1,12 @@
+﻿>> [Show; Hide] [Framerate; Connection Status; Graphical debug]
+
+Begin Text Compare : [{CMD}] Ends With ' Framerate'
+    Press Left Ctrl+F keys and hold for 0,05 seconds and release
+    Set Boolean [FrameRate] to Toggle
+Else If Text Compare : [{CMD}] Ends With ' Connection Status'
+    Press Left Ctrl+B keys and hold for 0,05 seconds and release
+    Set Boolean [ConnectionStatus] to Toggle
+Else If Text Compare : [{CMD}] Ends With ' Graphical debug'
+    Press Left Ctrl+Left Alt+F10 keys and hold for 0,05 seconds and release
+    Set Boolean [GraphicalDebug] to Toggle
+End Condition
