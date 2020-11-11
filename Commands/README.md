@@ -1,4 +1,4 @@
-# [EDVA](../../../EDVA) - Commands - ED 3.7 L
+# [EDVA](../../../../EDVA) - Commands - ED 3.7 L
 ## EDVA [Main Startup]
 **Profile Load** :  on Profile (un)load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
 **Profile UnLoad** :  
