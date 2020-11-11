@@ -1,15 +1,15 @@
-﻿-- [ NavData, RestartCMD, Keybinds, EDDIVoice, Sound ] --
+﻿-- [ Keybinds, EDDIVoice, Sound ] --
 
 -- ↓ Read keybinds
 Execute command, '[reset key; update key] [bind; binds]' (and wait until it completes)
 
 -- ↓ disablespeechresponder, EDDI will, not speak unless spoken to
 Begin Boolean Compare : [EDDIVoice] Equals True
-    DISABLED - Execute command, 'You may talk; You may speak; Speak up [;EDDI]' (and wait until it completes)
-    Execute command, 'You may speak now' (by name) (and wait until it completes)
+    Execute command, 'You may talk; You may speak; Speak up [;EDDI]' (and wait until it completes)
+    DISABLED - Execute command, 'You may speak' (by name) (and wait until it completes)
 Else
-    DISABLED - Execute command, 'Be0quiet;Radio silence;Stop talking [;EDDI]' (and wait until it completes)
-    Execute command, 'Be quiet' (by name) (and wait until it completes)
+    Execute command, 'Be quiet;Radio silence;Stop talking [;EDDI]' (and wait until it completes)
+    DISABLED - Execute command, 'Be quiet EDDI' (by name) (and wait until it completes)
 End Condition
 
 -- [3] Onload profle sound

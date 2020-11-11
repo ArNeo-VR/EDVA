@@ -1,17 +1,22 @@
-﻿-- [Variables, Initiatlsation, Settings, Settings Audio, Applications, Write to log]
+﻿--
 
--- [1] Onload profle sound
+-- [1] Onload profile sound
 Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Logon Sound.wav'
-to filter out notfications/sounds at profile load
+-- ↓ to filter out notfications/sounds at profile load
 Set small int (condition) [VA_LOAD_STATUS] value to 1
 
--- ↓ testing
+-- ↓ TESTING TESTING TESTING
 Set small int (condition) [Firegroup] value to 1
+-- ↓ Test/idea EDDI frontier-connected?
+DISABLED - Begin Text Compare : [TODO - Frontier API status EDDI] Has Not Been Set
+    DISABLED - Say, 'Your Eddi is not logged in to the Frontier-API. Please close VoiceAttack and run Eddi standalone to login.'
+DISABLED - End Condition
 
--- ↓ Variables / Init
-Execute command, '(((MAIN))) Variables' (and wait until it completes)
+-- ↓ Load Variables
+Execute command, '(((MAIN))) Load Variables' (and wait until it completes)
+-- ↓ Initialisation, READ-keybinds
 Execute command, '(((MAIN))) Initialisation' (and wait until it completes)
--- ↓ Settings, Custom Name/Phonetic, Audio devices, Paths for files, ED-Applications, 
+-- ↓ Settings
 Execute command, '(((MAIN))) Settings' (and wait until it completes)
 Execute command, '(((MAIN))) Settings Audio' (and wait until it completes)
 -- ↓ Start/move Applications
@@ -20,10 +25,6 @@ Execute command, '(((MAIN))) Applications' (and wait until it completes)
 Begin Boolean Compare : [Debug Notifications] Equals True
     Execute command, '(((MAIN))) Write to log' (and wait until it completes)
 End Condition
-
-DISABLED - Begin Text Compare : [TODO - Frontier API status EDDI] Has Not Been Set
-    DISABLED - Say, 'Your Eddi is not logged in to the Frontier-API. Please close VoiceAttack and run Eddi standalone to login.'
-DISABLED - End Condition
 
 Set small int (condition) [VA_LOAD_STATUS] value to 0
 Begin Boolean Compare : [Debug Write] Equals True

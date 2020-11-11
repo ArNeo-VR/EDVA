@@ -1,14 +1,19 @@
 ﻿-- [ CmdrName, Paths, AudioDevices,  ] --
 
-*** old varable from Blacknights profile.
-DISABLED - Set text [VAR-CMDR-Name] to [Name] (save value to profile)
-
 -- ↓ Set your custom name/phonetic, otherwise it will use EDDI:{TXT:NAME}
 DISABLED - Set text [Name custom] to 'OVERRIDE#YOURNAMEHERE'
 
 *** How do you want the Commander Name to Sound when system speaks it to you  ***
-DISABLED - Set text [Name custom phonetic] to 'OVERRIDE#YOURNAMEHERE PHONETIC'
-Set text [Name custom phonetic] to 'R,Neo'
+Set text [Name custom phonetic] to 'OVERRIDE#YOURNAMEHERE PHONETIC'
+
+
+-- Retrieve Name from EDDI
+Begin Text Compare : [Name custom] Has Not Been Set
+    Set text [Name custom] to [Name]
+End Condition
+Begin Text Compare : [Name custom phonetic] Has Not Been Set
+    Set text [Name custom phonetic] to [Name]
+End Condition
 
 ============================================================================
 -- ↓ Set Audio Devices
@@ -30,7 +35,7 @@ Set text [App_EDPlanetBearing] to '{TXT:VA_APP}\EDPlanetBearing\EDPlanetBearing.
 
 ============================================================================
 -- [defaultpath:] %LOCALAPPDATA%\VoiceAttack\Logs\ [filename:] eddi_output_{DATE:Today}.log
--- ↓ [path] EDDI Actions [BlueNightVR]
+-- ↓ [path] EDDI Actions
 -- ↓ (backslash is required at end of the path, becouse its used)
 Set text [Directory] to '{TXT:VA_Logs}\eddi-actions\'
 DISABLED - Set text [Filename] to 'EDDI_actions_{DATEYEAR}{DATEMONTHNUMERIC}{DATEDAY}.log'
@@ -41,25 +46,7 @@ Set text [Filename] to 'EDDI_actions_{DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10
 Set text [eddi-msg-path] to '{TXT:VA_Logs}\eddi-messages'
 Set text [eddi-msg] to 'EDDI_msg_{DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10,0,'')}{DATEMONTHNUMERIC}{EXP: IIF({DATEDAY} < 10,0,'')}{DATEDAY}.log'
 
-*** Following Variable is for the Exploring Command For New Systems / Planets Discovered ***
-*** It is an Easy Way to note the Systems that you discovered or Plants in System Discovered ***
--- [defaultpath:] %LOCALAPPDATA%\VoiceAttack\EDBlueKnight\ [filename:] Discovered-Systems.csv
-Set text [VAR-Systems-DIR] to '{TXT:VA_Logs}\EDBlueKnight\' (save value to profile)
-Set text [VAR-Discovered-Systems] to 'Discovered-Systems.csv' (save value to profile)
-
 ============================================================================
--- variables functions
-Set text [VAR-Write-Discovered-Systems] to '{TXT:VAR-Systems-DIR}{TXT:VAR-Discovered-Systems}' (save value to profile)
-
--- Retrieve from EDDI
-Begin Text Compare : [Name custom] Has Not Been Set
-    Set text [Name custom] to [Name]
-End Condition
-
--- Retrieve from EDDI
-Begin Text Compare : [Name custom phonetic] Has Not Been Set
-    Set text [Name custom phonetic] to [Name]
-End Condition
 
 Begin Boolean Compare : [Debug Write] Equals True
     Write [Blank] '=== [Exe] {CMD}' to log

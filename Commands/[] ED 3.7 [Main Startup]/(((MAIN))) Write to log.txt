@@ -18,9 +18,9 @@ Begin Boolean Compare : [Debug Write] Equals True
     Write [Gray] '[var] [directory] {TXT:Directory} || [filename] {TXT:Filename}' to log
     Write [Gray] '[var] [directory] {TXT:eddi-msg-path} || [filename] {TXT:eddi-msg}' to log
     Write [Blank] '=== Log file locations' to log
-    Write [Blue] '- {VA_SOUNDS}' to log
-    Write [Blue] '- {VA_APPS} -' to log
-    Write [Blue] '- {VA_DIR}' to log
+    DISABLED - Write [Blue] '- {VA_SOUNDS}' to log
+    DISABLED - Write [Blue] '- {VA_APPS}' to log
+    DISABLED - Write [Blue] '- {VA_DIR}' to log
 End Condition
 
 -=-

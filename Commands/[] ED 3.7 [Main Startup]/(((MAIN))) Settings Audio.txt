@@ -1,6 +1,35 @@
 ﻿--
 --
 
+Startup ↓ Set variable for muting sounds
+Set small int (condition) [VA_LOAD_STATUS] value as incremented by 2
+
+-- Spotify API is not functional anymore, disabled
+DISABLED - Set application [Spotify] audio volume to [var-spotify-startup-volume]
+
+Execute ↓ Set Microphone, recording device (both devices now available in VA)
+Change multimedia recording device to: 'Microphone (USB Audio CODEC )', Change communications recording device to: 'Microphone (USB Audio CODEC )'
+Set mic / default recording device volume to [90]
+
+Execute ↓ Playback device to [Speakers]  (both devices now available in VA)
+DISABLED - Change multimedia playback device to: 'Speakers (Realtek(R) Audio)', Change communications playback device to: 'Speakers (Realtek(R) Audio)'
+
+deprecated Execute ↓ Set Microphone, recording device
+DISABLED - Change multimedia recording device to: 'Microphone (6- USB Audio CODEC )'
+DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "{TXT:VA_PlaybackDevice}"' (hidden)
+DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "{TXT:VA_PlaybackDevice}" 2' (hidden)
+deprecated Execute ↓ Set Microphone, recording device using external program NirCMD.exe
+DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "{TXT:VA_RecordingDevice}"' (hidden)
+DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "{TXT:VA_RecordingDevice}" 2' (hidden)
+DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setvolume 1 0xCCCC 0xCCCC' (hidden)
+deprecated Execute ↓ Set Microphone, recording level 80
+DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setvolume 1 0xEEEE 0xEEEE' (hidden)
+DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setvolume 1 0xCCCC 0xCCCC' (hidden)
+
+deprecated Execute ↓ Playback device to [Speakers]  (both devices now available in VA)
+DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "Rift" 1' (hidden)
+DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "Rift" 2' (hidden)
+
 -- used sounds
 Begin Boolean Compare : [asdfasdfasdfasdgasdg] Equals True
     Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Fail.wav'
@@ -16,43 +45,12 @@ Begin Boolean Compare : [asdfasdfasdfasdgasdg] Equals True
     Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Fail.wav'
     Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Insert.wav'
     Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Critical Stop.wav'
-    Play sound, '{VA_SOUNDS}\ED2018\ThemeSound-Error.mp3'
-    Play sound, '{VA_SOUNDS}\ED2018\ThemeSound-Exclamation.wav'
-    Play sound, '{VA_SOUNDS}\ED2018\startrek-sfx-failedcommand.wav'
-    Play sound, '{VA_SOUNDS}\ED2018\startrek-sfx-blip.mp3'
-    Play sound, '{VA_SOUNDS}\ED2018\startrek-voice-request-denied-c319.wav'
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Exclamation.wav'
+    Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-failedcommand.mp3'
+    Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+    Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-voice-request-denied-c319.mp3'
 End Condition
-
-Startup ↓ Set variable for muting sounds
-Set small int (condition) [VA_LOAD_STATUS] value as incremented by 2
-
--- Spotify API is not functional anymore, disabled
-DISABLED - Set application [Spotify] audio volume to [var-spotify-startup-volume]
-
-Execute ↓ Set Microphone, recording device (both devices now available in VA)
-Change multimedia recording device to: 'Microphone (USB Audio CODEC )', Change communications recording device to: 'Microphone (USB Audio CODEC )'
-Set mic / default recording device volume to [90]
-
-Execute ↓ Set Microphone, recording device
-DISABLED - Change multimedia recording device to: 'Microphone (6- USB Audio CODEC )'
-DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "{TXT:VA_PlaybackDevice}"' (hidden)
-DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "{TXT:VA_PlaybackDevice}" 2' (hidden)
-Execute ↓ Set Microphone, recording device using external program NirCMD.exe
-DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "{TXT:VA_RecordingDevice}"' (hidden)
-DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "{TXT:VA_RecordingDevice}" 2' (hidden)
-DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setvolume 1 0xCCCC 0xCCCC' (hidden)
-Execute ↓ Set Microphone, recording level 80
-DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setvolume 1 0xEEEE 0xEEEE' (hidden)
-DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setvolume 1 0xCCCC 0xCCCC' (hidden)
-
-Execute ↓ Playback device to [Speakers]  (both devices now available in VA)
-DISABLED - Change multimedia playback device to: 'Speakers (Realtek(R) Audio)', Change communications playback device to: 'Speakers (Realtek(R) Audio)'
-
-DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "Rift" 1' (hidden)
-DISABLED - Run application '{TXT:VA_App}\nircmd\nircmd.exe' -with parameters 'setdefaultsounddevice "Rift" 2' (hidden)
-
-Execute ↓ Playback device to [Rift Audio]
-confirm {VA_SOUNDS}\ED2018\ThemeSound-Error.mp3
 
 Set small int (condition) [VA_LOAD_STATUS] value as decremented by 2
 

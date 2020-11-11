@@ -1,7 +1,7 @@
 ﻿-- [ Set Time, ReadSaved, Set-URL ]--
 
 -- ↓ from init...
--- ↓ set Variables
+-- ↓ set Variables (note: from init...)
 Set date [Today] value to the current date/time (UTC)
 -- ↓ get saved Variables
 Set Boolean [cockpit] to [Saved Value]
@@ -16,9 +16,6 @@ Load Profile ↓ Set variables required for initialisation / onload
 ============================================================================
 --- Sets URLs ↓ for Navigation spreadsheet (CSV), Others are disabled in (((MAIN))) Settings
 *-*
-
--- ↓ From profile
-Set integer [var-spotify-startup-volume] value to 1
 
 Begin Boolean Compare : [Debug Write] Equals True
     Write [Blank] '=== [Exe] {CMD}' to log
