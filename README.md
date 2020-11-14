@@ -1,4 +1,4 @@
-# EDVA - VoiceAttack CMDs / profiles for Elite Dangerous.
+# [EDVA](https://github.com/ArNeo-VR/EDVA) - VoiceAttack CMDs / profiles for Elite Dangerous.
 Sharing VoiceAttack commands as text file and as a single profile release (.vap) file.  
 This profile has only the commands, all third party plugins and applications required need to be installed manualy.  
 
@@ -17,7 +17,7 @@ Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.v
 <code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>
 #### My personal settings are, if you export your computer profile to another computer it will go with the userdata.
-<code>Plugins location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Plugins"</code>  
+<code>Plugins location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>
 #### Depending if you want to use the same profile for all the users on the computer place it in:
 *Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
@@ -25,17 +25,21 @@ Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.v
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>
 
 ## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included)
-- [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.
 - [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables
 - [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/)
 - [ED-Router](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app]
+- ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~
+- Google spreadsheets are read from within a InLine C# script.
 
 ## Elite Dangerous - Applications/Tools (3rd party, not included)
 - [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
 - [ED Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
 - [ED Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
 - [ED PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
+
+## Windows applications
+<code>Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"</code>  
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
 ## [VA_Sounds](VA_Sounds): Sounds used in commands
