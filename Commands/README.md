@@ -67,6 +67,8 @@ Launch ::
 Ship Docked at station: Starts Launch, moves ship up, retracts landing gear.  
 Ship Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.  
 
+Full Speed; Cruise; Impulse Speed; Half Impulse; Quarter Impulse; All Stop; Halt; Stepback; Backstep; Backpaddle; Go Back; Full back :: Sets speed  
+[Speed; Speed back] [;100;75;50;25;0;-25;-50;-75;-100] :: Sets speed  
 Boost :: Closes cargoscoop and Boost upon boost key is pressed is detected.
 Disengage :: Disengages from supercruise.
 
@@ -81,6 +83,23 @@ Superjump ::
 ~~Engage [;previous;next;] waypoint; Target next waypoint~~ :: Used for NeutronPlotter plugin
 
 ## EDVA [Ship_SRV functions]
+[deploy; retract;] Landing Gear  
+[deploy; retract;] Hardpoints  
+Cockpit [; on; off; pulls]  
+Silent running [; on; off; pulls]  
+Flightassist [; on; off; pulls]  
+Rotational correction [; on; off; pulls]  
+Orbit Lines [; on; off; pulls]  
+[deploy; fire;] [Chaff; ECM; Heat sink]  
+[Shield cell; Deploy Shield; Shields up; Pop Shields]  
+[Next; Previous;] Firegroup  
+[Engine Color; Weapon Color]  
+[deploy; retract;] Cargo Scoop; Cargo Hatch; Cargo Hooch  
+Night vision [; on; off; pulls]  
+[Analysis; Exploration; Combat; hud mode]  
+[lights; full beam] [; on; of; off; pulls; twice]  
+[Recall;Dismiss] Ship
+Board ship; SVR Board ship
 
 
 #### Deploy SRV / Board Ship
@@ -108,6 +127,11 @@ Orbit Lines [; on; off; pulls]
 [Shield cell; Deploy Shield; Shields up; Pop Shields]  
 [Next; Previous;] Firegroup  
 [deploy; fire;] [Chaff; ECM; Heat sink]  
+[Recall;Dismiss] Ship
+Board ship; SVR Board ship  
+SRV Transfer Cargo  
+[Restock; Repair; Refuel]  
+SRV Turret; Turret; Guns; Gun  
 
 #### SRV Commands that either toggles or execute action.
 Deploy SRV  
@@ -118,6 +142,20 @@ SRV Transfer Cargo
 SRV Turret; Turret; Guns; Gun
 
 ## EDVA [Ship_SRV Panel Menu functions]
+Galaxy map functions:  
+[Map] [Select; Route; Plot Route; Planet; Surface; Bookmark; System; Purchase ; Back] [;Exploration Data; Exploration; System Data; Trade Data; Trade] ::  
+Moves cursor and select the command.
+
+Galaxy Map :: Opens galaxy map.  
+Galaxy [Info; Route; Bookmarks; Filter; Options; Search; Map Select; Map Route; Map System; Engage] :: Moves to the spoken tab/field.  
+Galaxy map select ::  
+Galaxy map route :: Goes to the selected target (in clipboard) and maps route.  
+Galaxy map system ::  
+Galaxy engage :: Same as Galaxy map route and engages supercruise.  
+
+System Map :: Opens system map.  
+
+
 ## EDVA [Ship_SRV Panel Menu]
 ## EDVA [Starport services]
 ## EDVA EDDI [Actions Modified]
