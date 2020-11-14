@@ -89,16 +89,14 @@ Superjump -
 #### Deploy SRV / Board Ship
 Deploys SRV / Board ship requires the 'SRV Handbrake' is enabled.
 
-#### [Lights; Full Beam] [; on; of; off; pulls; twice]
-*About the first command I made*  
-*- EDDI: {TXT:Status vehicle} , {TXT:Environment} , {BOOL:Status lights on} - Global command variables: {BOOL:full beam}*  
-  
-Ship/SRV lights, command checks the current lights status. 
+#### [Lights; Full Beam] [; on; of; off; pulls; twice] 
+Ship/SRV lights, command checks the current lights status.  
 If the lights are allready 'On', 'Off' or at 'Full Beam' it does nothing.  
 'Lights' toggles the next light status, 'On/Off' lights does go to that status.  
 Full-Beam / Lights twice it goes to to the Full-Beam only in the SRV.  
+*About the first command I made*  
 
-#### Ship/SRV Commands that either toggles or execute action.
+#### Ship/SRV Commands that either toggles or execute action.  
 Night vision [; on; off; pulls]  
 [Analysis; Exploration; Combat; hud mode]  
 Cockpit [; on; off; pulls]  
@@ -113,7 +111,6 @@ Orbit Lines [; on; off; pulls]
 [Shield cell; Deploy Shield; Shields up; Pop Shields]  
 [Next; Previous;] Firegroup  
 [deploy; fire;] [Chaff; ECM; Heat sink]  
-[Next; Previous;] Firegroup  
 
 #### SRV Commands that either toggles or execute action.
 Deploy SRV  
