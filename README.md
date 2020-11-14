@@ -1,5 +1,5 @@
 # EDVA - VoiceAttack CMDs / profiles for Elite Dangerous.
-Sharing VoiceAttack commands as text file and profile (.vap) files.  
+Sharing VoiceAttack commands as text file and as a single profile release (.vap) file.  
 This profile has only the commands, all third party plugins and applications required need to be installed manualy.  
 
 ## [VoiceAttack Commands](Commands)
