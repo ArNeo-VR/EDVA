@@ -1,16 +1,16 @@
-# [EDVA](../../../../EDVA) - Commands - ED 3.7 L
+# [EDVA](../../../../EDVA) - Commands - ED 3.7 M
 ## EDVA [Main Startup]
-**Profile Load** :  on Profile load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
-**(((MAIN))) Load Variables** : Loads variables from profile, set required for Initialisation.  
-**(((MAIN))) Initialisation** : Load Key-binds, set preferences from loaded variables.  
-**(((MAIN))) Settings** : Commander NAME/Phonetic, Path's, Applications.  
-**(((MAIN))) Settings Audio** : Set recording and playback devices / volumes, used sounds.  
-**(((MAIN))) Applications** : START / MOVE Applications.  
-**(((MAIN))) Write to log** : Show variables to log.  
-**Profile UnLoad** :  on Profile unload Command
+**Profile Load** ::  on Profile load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
+**(((MAIN))) Load Variables** :: Loads variables from profile, set required for Initialisation.  
+**(((MAIN))) Initialisation** :: Load Key-binds, set preferences from loaded variables.  
+**(((MAIN))) Settings** :: Commander NAME/Phonetic, Path's, Applications.  
+**(((MAIN))) Settings Audio** :: Set recording and playback devices / volumes, used sounds.  
+**(((MAIN))) Applications** :: START / MOVE Applications.  
+**(((MAIN))) Write to log** :: Show variables to log.  
+**Profile UnLoad** ::  on Profile unload Command
 
 ## EDVA [MainMenu Elite]
-**Continue [solo, open, arena, training]** : Activates the action and goes to the menus and activates.  
+**Continue [solo, open, arena, training]** :: Activates the action and goes to the menus and activates.  
 *requires that the cursor is set at the "Continue" button of the main menu.*  
 
 Activates the in game menu and goes to the submenu/selection.  
@@ -19,70 +19,68 @@ Activates the in game menu and goes to the submenu/selection.
 **Elite Grahpics [;Display; Quality; 3D]**  
 **Elite Controls [;Mouse; Flight rotation; Driving; and-more...]**  
 
-**Exit to Elite menu** : Exits the game to MainMenu.  
-**Exit to Desktop, Quit Elite Dangerous** : Exit and closes the game.  
+**Exit to Elite menu** :: Exits the game to MainMenu.  
+**Exit to Desktop, Quit Elite Dangerous** :: Exit and closes the game.  
 
-**Center** : Centers mousecursor, stops ship from turning.  
-**Reset Rift** : Resets HMD/Rift headset position.  
-**Reset Headlook** : Resets headlook mode to center.  
+**Center** :: Centers mousecursor, stops ship from turning.  
+**Reset Rift** :: Resets HMD/Rift headset position.  
+**Reset Headlook** :: Resets headlook mode to center.  
 
-**[Show; Hide] [Framerate; Connection Status; Graphical debug]** | Show data in desktop application  
+**[Show; Hide] [Framerate; Connection Status; Graphical debug]** :: Show data in desktop application  
 **Show scores**  
 
 ## EDVA [Debug Functions]  
-**status text** : Shows EDDI varables  
-**[Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Silent Running; Cargo Scoop; Lights on; Night Vision]** : *Writes and says(TTS) EDDI variable Status*  
+**status text** :: Shows EDDI varables  
+**[Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Silent Running; Cargo Scoop; Lights on; Night Vision]** :: *Writes and says(TTS) EDDI variable Status*  
 
 **Used for debuging/setting variables:**  
-[Set; Status; Reset] [Hangar; cockpit; orbit lines; Elite Menu; Camera] [;true; false; not set] : BOOL variables
-[Set; Status; Reset] [Starport services; Full beam] [;true; false; not set] : BOOL variables  
-[Set; Status; Reset] [FrameRate; ConnectionStatus; GraphicalDebug] [;true; false; not set] : BOOL variables  
-[Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set] : Stored variables in profile.  
-[Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set] : Stored variables in profile.  
+[Set; Status; Reset] [Hangar; cockpit; orbit lines; Elite Menu; Camera] [;true; false; not set] :: BOOL variables  
+[Set; Status; Reset] [Starport services; Full beam] [;true; false; not set] :: BOOL variables  
+[Set; Status; Reset] [FrameRate; ConnectionStatus; GraphicalDebug] [;true; false; not set] :: BOOL variables  
+[Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set] :: Stored variables in profile.  
+[Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set] :: Stored variables in profile.  
 
 
+## EDVA [Apps-Plugins]
+## Elite Dangerous - Applications/Tools (3rd party, not included)
+*Used for starting applications, the [app_variables] are set in the startup sequence.*  
+[Start;Close] [;Elite;] [Discovery] :: [ED Discovery](https://github.com/EDDiscovery/EDDiscovery)  
+[Start;Close;Move] [;Elite;] Engineer :: [ED Engineer](https://github.com/msarilar/EDEngineer)  
+[Start;Close;Move] [;Elite;] Market Connector :: [ED Market Connector](https://github.com/EDCD/EDMarketConnector)  
+[Start;Close;Move;Update] [;Elite;] [PlanetBearing; Compas] :: [ED PlanetBearing](https://github.com/Uriei/EDPlanetBearing)  
+*Applications are start from variables (Main Startup), Example is in the Variables.txt file.*  
+**note:** Applications are not included.  
+
+~~## ED 3.6 [App] NeutronPlotter~~  
+~~## ED 3.7 [Camera]~~  
 
 ## EDVA [Help Find-Websites]
 **Open [Coriolis, EDDB, EDSM, Elite-Forum-Reddit-Store-Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]**  
 *Opens the webpage in the default browser.*  
   
-**Pronounce this system.** *Modified EDDIcmd* : as it states  
-**Where can I find [materials / data]** *Modified EDDIcmd* : Describes the location where you can find the item.  
-**Open this Station / System in EDDB / Coriolis.** *Modified EDDIcmd* : More command combinations available, opens a webpage  
-**Find [System states (boom, bust, famine, ...]** : Opens a page to EDSM and searches.  
- 
-## EDVA [App-Plugins]
-*Used for starting applications, the [app_variables] are set in the startup sequence.*  
-**note:** Applications are not included.  
-[Start;Close] [;Elite;] [Discovery]
-[Start;Close;Move] [;Elite;] Engineer
-[Start;Close;Move] [;Elite;] Market Connector
-[Start;Close;Move;Update] [;Elite;] [PlanetBearing; Compas]
-*Applications are start from variables (Main Startup), Example is in the Variables.txt file.*  
-
-~~## ED 3.6 [App] NeutronPlotter~~
-~~## ED 3.7 [Camera]~~
+**Pronounce this system.** *Modified EDDIcmd* :: as it states  
+**Where can I find [materials / data]** *Modified EDDIcmd* :: Describes the location where you can find the item.  
+**Open this Station / System in EDDB / Coriolis.** *Modified EDDIcmd* :: More command combinations available, opens a webpage  
+**Find [System states (boom, bust, famine, ...]** :: Opens a page to EDSM and searches.  
 
 ## EDVA [Ship Flight_Landing]
 #### Launch
-Docked at station: Starts Launch, moves ship up, retracts landing gear.  
-Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.
+Ship Docked at station: Starts Launch, moves ship up, retracts landing gear.  
+Ship Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.
 
 #### Boost
 Closes cargoscoop and Boost upon boost key is pressed is detected.
+
 #### Disengage
 Disengages from supercruise.
 
 #### Engage; Engage route; Engage next route; Engage travel jump; Travel jump; Superjump; Engage Superjump
-*Command is experimental and buggy*
-*rarely drops you out of supercruise if the target is not set correctly*
 Engage - Engages supercruise / hyperspace (if there is a route it superjumps).  
 Engage route - 
 Engage next route - Select the next route in Galaxy map and Engages.  
 Travel jump - FSD Cooldown delay and activates hyperspace to destination.  
 Superjump - 
-
-
+*Command is experimental, drops you out of supercruise if the target is not set correctly*
 
 ## EDVA [Ship_SRV functions]
 

@@ -10,28 +10,28 @@ For the time beeing catagories are exported as a voiceattack profile (.vap) file
 ## [Profiles](Profiles)
 ~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)~~ *to be tested/published*  
 Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.vap)  
-**note:** [\[release\] EDDI-3.7.0-profile](Profiles) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
+**note:** [\[release\] EDDI-3.7.1-profile](Profiles) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
 
 ## Voice Attack locations for Apps/Plugins and Sounds
 ### VoiceAttack [default] on x64 bit windows
 <code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>
-#### My personal settings are, this if you export your profile to another computer it will go with the userdata.
+#### My personal settings are, if you export your computer profile to another computer it will go with the userdata.
 <code>Plugins location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Plugins"</code>  
 <code>Sounds location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>
 #### Depending if you want to use the same profile for all the users on the computer place it in:
 *Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
-<code>Plugins location "c:\ProgramData\VoiceAttack\Plugins"</code>  
+<code>Plugins location "c:\ProgramData\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>
 
-## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included in any profile)
+## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included)
 - [ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.
 - [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables
 - [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/)
 - [ED-Router](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app]
 
-## Elite Dangerous - Applications/Tools (3rd party, not included in any profile)
+## Elite Dangerous - Applications/Tools (3rd party, not included)
 - [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
 - [ED Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
 - [ED Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
