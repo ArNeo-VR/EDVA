@@ -1,5 +1,4 @@
 ﻿-- [Shield cell; Deploy Shield; Shields up; Pop Shields]
---
 
 -- ↓ Environment conditions
 Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space')

@@ -1,4 +1,4 @@
-﻿--
+﻿-- [deploy; retract;] Cargo Scoop; Cargo Hatch; Cargo Hooch
 
 -- ↓ Environment conditions
 Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space' AND [{TXT:Status fsd status}] Does Not Equal 'charging') OR ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Environment}] Equals 'Normal space')

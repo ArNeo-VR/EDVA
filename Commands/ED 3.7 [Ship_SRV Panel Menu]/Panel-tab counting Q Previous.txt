@@ -1,5 +1,5 @@
-﻿--
---
+﻿-- <Q> <Joystick2 Button 27>
+
 Begin Text Compare : [{ACTIVEWINDOWPROCESSNAME}] Equals 'EliteDangerous64'
     
     = External Panel (NAV) - old: nav - panel=true

@@ -1,5 +1,4 @@
-﻿--
---
+﻿-- SRV Transfer Cargo
 
 Write [Blue] 'Under ship {BOOL:Status srv under ship} - Handbrake {BOOL:Status srv handbrake activated}' to log
 -- ↓ Environment conditions

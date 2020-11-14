@@ -1,3 +1,4 @@
+-- [Set Filter; Set] [All; Default; Standard; Missions; Signals; Stations; Fleet Carriers; Anomaly; Unknown; Settlement; Scanner; Signal source; system; systems; next system only] [;filters]
 == Global/Wide Variables used:
 nav-tab (experimental tab counting)
 

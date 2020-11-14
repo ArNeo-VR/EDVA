@@ -1,5 +1,6 @@
-﻿-- Do not combine, required by other commands [C]
---
+﻿-- [Internal; System; Sys; Status; Inventory; Functions] Panel
+
+-- Do not combine, required by other commands [C]
 -- EDDI: {TXT:Status gui focus} = internal panel
 
 Begin Text Compare : [{TXT:Status vehicle}] Has Not Been Set

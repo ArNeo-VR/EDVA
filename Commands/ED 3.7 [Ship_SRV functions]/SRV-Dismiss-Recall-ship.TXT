@@ -1,0 +1,28 @@
+﻿-- [Recall;Dismiss] Ship
+-- optionaly - pulls = off
+
+-- ↓ Environment conditions
+Begin Text Compare : [Status Vehicle] Equals 'SRV'
+    -- ↓ Command - on - off - pulls
+    Begin Condition : ([{CMDSEGMENT:0}] Equals 'Dismiss' AND [Status landed] Equals False) OR ([{CMDSEGMENT:0}] Equals 'Recall' AND [Status landed] Equals False)
+        Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-acknowledge-c802.wav'
+        DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'
+        Press variable key(s) [edRecallDismissShip] and hold for 0,1 seconds and release
+        --
+        Pause 2 seconds
+        DISABLED - Say, 'Got it [Captain' or '], on my way!'
+        DISABLED - Write [Blue] '{TXT:Name custom phonetic}' to log
+        Say, 'Got it {TXT:Name custom phonetic}, on my way!'
+        --
+    Else
+        Play sound, 'internal:Echo'
+        DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
+    End Condition
+    
+Else
+    Play sound, 'internal:Zazaza'
+    DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Fail.wav'
+    Begin Boolean Compare : [Debug write] Equals True
+        Write [Red] 'Environment conditions not valid' to log
+    End Condition
+End Condition

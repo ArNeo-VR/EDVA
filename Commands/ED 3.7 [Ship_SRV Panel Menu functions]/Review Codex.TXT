@@ -1,0 +1,6 @@
+﻿-- Review codex
+-- After a scan this command goes to the item in the codex, its time limited.
+
+Begin Boolean Compare : [Status analysis mode] Equals True
+    Press variable key(s) [edOpenCodexGoToDiscovery] and hold for 0,05 seconds and release
+End Condition

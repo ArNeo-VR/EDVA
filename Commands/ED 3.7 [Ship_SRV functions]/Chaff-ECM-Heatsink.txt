@@ -1,4 +1,4 @@
-﻿--
+﻿-- [deploy; fire;] [Chaff; ECM; Heat sink]
 
 Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Chaff'
     Press variable key(s) [edFireChaffLauncher] and hold for 0,05 seconds and release

@@ -1,4 +1,5 @@
---
+-- Starport [Commodities Market; Mission board; Passenger Lounge; Contacts; Universal Cartographics; Crew Lounge; Exit; Galnet; Livery; Holo-me; Store; Workshop; Engineer Workshop; Remote Workshop; Outfitting; Shipyard; Advanced maintenance; Market; Passengers; Map; Crew]
+
 -- Variable: {BOOL:Starport services}, 1st start opening delay of starport services.
 
 Commodities Market; Mission board; Passenger Lounge; Contacts; Universal Cartographics; Crew Lounge; Exit; Galnet; Livery; Holo-me; Store; Remote Workshop; Outfitting; Advanced maintenance;
@@ -6,80 +7,80 @@ Market; Missions; Passengers; Map; Crew
 
 Begin Condition : ([Status landing gear down] Equals True AND [Status docked] Equals True AND [Status landed] Equals False)
     
-    -- 
+    -- ↓
     Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Exit'
         Set Boolean [Starport services] to True
         Press variable key(s) [edUI_back] and hold for 0,05 seconds and release
         Exit Command
         
-        --  Market; Commodities Market - 0,0
+        -- ↓ Market; Commodities Market - 0,0
     Else If : [{CMDSEGMENT:1}] Equals 'Market' OR [{CMDSEGMENT:1}] Equals 'Commodities Market'
         
-        --  Missions; Mission board 0,1
+        -- ↓ Missions; Mission board 0,1
     Else If : [{CMDSEGMENT:1}] Equals 'Missions' OR [{CMDSEGMENT:1}] Equals 'Mission board'
         Set integer [~starport-y] value to 1
         
-        --  Passengers; Passenger Lounge - 0,2
+        -- ↓ Passengers; Passenger Lounge - 0,2
     Else If : [{CMDSEGMENT:1}] Equals 'Passengers' OR [{CMDSEGMENT:1}] Equals 'Passenger Lounge'
         Set integer [~starport-y] value to 2
         
-        --  Contacts - 0,3
+        -- ↓ Contacts - 0,3
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Contacts'
         Set integer [~starport-y] value to 3
         
-        --  Map; Universal Cartographics - 0,4
+        -- ↓ Map; Universal Cartographics - 0,4
     Else If : [{CMDSEGMENT:1}] Equals 'Map' OR [{CMDSEGMENT:1}] Equals 'Universal Cartographics'
         Set integer [~starport-y] value to 4
         
-        --  Crew; Crew Lounge - 0,5
+        -- ↓ Crew; Crew Lounge - 0,5
     Else If : [{CMDSEGMENT:1}] Equals 'Crew' OR [{CMDSEGMENT:1}] Equals 'Crew Lounge'
         Set integer [~starport-y] value to 5
         
-        --  Galnet - 1,0
+        -- ↓ Galnet - 1,0
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Galnet'
         Set integer [~starport-x] value to 1
         
-        --  Livery - 2,0
+        -- ↓ Livery - 2,0
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Livery'
         Set small int (condition) [~starport-x] value to 2
         
-        --  Holo-me - 2,1
+        -- ↓ Holo-me - 2,1
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Holo-me'
         Set integer [~starport-x] value to 3
         
-        --  Store - 2,2
+        -- ↓ Store - 2,2
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Store'
         Set integer [~starport-x] value to 4
         
-        --  Remote Workshop - 2,4
+        -- ↓ Remote Workshop - 2,4
     Else If Text Compare : [{CMDSEGMENT:1}] Ends With 'Workshop'
         Set integer [~starport-x] value to 2
         Set integer [~starport-y] value to 4
         
-        --  Outfitting - 2,5
+        -- ↓ Outfitting - 2,5
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Outfitting'
         Set integer [~starport-x] value to 2
         Set integer [~starport-y] value to 5
         Set Boolean [Hangar] to True
         
-        --  Shipyard - 2,6
+        -- ↓ Shipyard - 2,6
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Shipyard'
         Set integer [~starport-x] value to 2
         Set integer [~starport-y] value to 6
         
-        --  Advanced maintenance - 2,7
+        -- ↓ Advanced maintenance - 2,7
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Advanced maintenance'
         Set integer [~starport-x] value to 2
         Set integer [~starport-y] value to 7
     End Condition
     
-    --  Debug text
+    -- ↓ Debug text
     Begin Boolean Compare : [Debug write] Equals True
         Write [Blue] 'Outfitting:{BOOL:Last station has outfitting} Shipyard:{BOOL:Last station has shipyard} Market:{BOOL:Last station has market}' to log
         Write [Blue] 'Refeul:{BOOL:Last station has refuel} Repair:{BOOL:Last station has repair}' to log
     End Condition
     
-    --  If station doesn't have services:
+    -- ↓ If station doesn't have services:
     Begin Boolean Compare : [Last station has outfitting] Equals False
         Set integer [~starport-y] to [~starport-y] minus 1
     End Condition
@@ -87,7 +88,7 @@ Begin Condition : ([Status landing gear down] Equals True AND [Status docked] Eq
         Set integer [~starport-y] to [~starport-y] minus 1
     End Condition
     
-    --  execute command - Starport Services
+    -- ↓ execute command - Starport Services
     Execute command, 'Starport Services' (and wait until it completes)
     
     Pause 0,1 seconds

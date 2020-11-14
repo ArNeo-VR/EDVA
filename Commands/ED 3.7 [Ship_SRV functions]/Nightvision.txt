@@ -1,4 +1,4 @@
-﻿--
+﻿-- Night vision [; on; off; pulls]
 -- optionaly add: pulls = off
 
 -- ↓ Environment conditions

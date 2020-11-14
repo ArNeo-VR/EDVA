@@ -1,4 +1,4 @@
-﻿--
+﻿-- [Next; Previous;] Firegroup
 -- no keybinds available
 
 Begin Condition : [{CMDSEGMENT:1}] Equals 'Firegroup' OR ([{CMDSEGMENT:0}] Equals 'Next' AND [{CMDSEGMENT:1}] Equals 'Firegroup')

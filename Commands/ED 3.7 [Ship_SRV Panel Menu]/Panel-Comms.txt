@@ -1,5 +1,6 @@
-﻿-- Do not combine, required by other commands [C]
---
+﻿-- [Communication; Comms] Panel
+
+-- Do not combine, required by other commands [C]
 -- Status gui focus: communications panel
 
 Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Status gui focus}] Does Not Equal 'communications panel')

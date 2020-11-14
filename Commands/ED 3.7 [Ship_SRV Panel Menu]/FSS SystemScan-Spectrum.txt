@@ -1,5 +1,4 @@
-﻿--
-DISABLED - Write [Blank] '-- WIP - Work in Progress' to log
+﻿-- [Enter; Exit;] [System scan; System scanner; Spectrum; Spectrum scan; Spectrum scanner; Spectrum help]
 
 Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Supercruise')
     Begin Condition : [{CMD}] Equals 'F S S' OR [{CMD}] Equals 'Spectrum' OR [{CMD}] Equals 'Spectrum scanner' OR [{CMD}] Equals 'System scanner'

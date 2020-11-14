@@ -1,5 +1,5 @@
-﻿++ Engineers/Galactic powers/Galnet, do not have a gui focus status.
--- [Return to surface; Enter hangar]
+﻿-- [Return to surface; Enter hangar]
+++ Engineers/Galactic powers/Galnet, do not have a gui focus status.
 
 Begin Condition : ([Status landing gear down] Equals True AND [Status docked] Equals True AND [Status landed] Equals False)
     Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'

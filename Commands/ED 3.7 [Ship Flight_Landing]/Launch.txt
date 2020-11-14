@@ -1,9 +1,12 @@
+-- Launch
 -- Works with Ship and SRV
 
-Begin Condition : ([Status landing gear down] Equals True AND [Status landed] Equals False AND [Status docked] Equals True) OR ([Status landing gear down] Equals True AND [Status landed] Equals True AND [Status docked] Equals False AND [Hangar] Has Not B
-    Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+Begin Condition : ([Status landing gear down] Equals True AND [Status landed] Equals False AND [Status docked] Equals True) OR ([Status landing gear down] Equals True AND [Status landed] Equals True AND [Status docked] Equals False AND [Hangar] Has Not Been Set)
+    Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [Status landed] Equals True)
+        Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-c711-eginesonline.wav'
+    End Condition
     
-    --  go back to station services menu
+    -- ↓ go back to station services menu
     Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'none'
         Begin Text Compare : [{TXT:Status gui focus}] Equals 'station services'
             Start Loop : Repeat 7 Times
@@ -26,7 +29,7 @@ Begin Condition : ([Status landing gear down] Equals True AND [Status landed] Eq
     End Condition
     Pause 0,1 seconds
     
-    --  Select Launch
+    -- ↓ Select Launch
     Pause 0,2 seconds
     Press variable key(s) [edUI_Down] and hold for 0,07 seconds and release
     Pause 0,25 seconds
@@ -34,7 +37,7 @@ Begin Condition : ([Status landing gear down] Equals True AND [Status landed] Eq
     Pause 0,25 seconds
     Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
     
-    --  Delay depending on ship position
+    -- ↓ Delay depending on ship position
     Begin Condition : ([Status docked] Equals True AND [hangar] Has Not Been Set)
         Pause 11 seconds
         Set Boolean [hangar] to False
@@ -44,7 +47,7 @@ Begin Condition : ([Status landing gear down] Equals True AND [Status landed] Eq
         Pause 2 seconds
     End Condition
     
-    --  Move ship Up, retract Landing Gear
+    -- ↓ Move ship Up, retract Landing Gear
     Pause 0,1 seconds
     Set Boolean [Starport Services] to False
     Press variable key(s) [edUpThrustButton] and hold for 3,1 seconds and release

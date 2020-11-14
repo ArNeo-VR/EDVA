@@ -1,8 +1,10 @@
+-- [Request; Cancel;] Docking [;Request]
+-- <Joystick 2 button 12>
+
 !!!EXPERIMENTAL uses tab counting see Panel Menu catagory
 ++ Required !! Status/Reset nav-tab (for counting the tabs), Accounting Keys and buttons.
---
 
-Begin Condition : ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'masslock') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'ready')
+Begin Condition : ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'masslock') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'ready') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space')
     
     -- ↓ Go back to main screen
     Begin Text Compare : [Status gui focus] Does Not Equal 'external panel'

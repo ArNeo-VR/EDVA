@@ -1,4 +1,4 @@
-﻿-- Stellar Cartography
+﻿-- System map; Stellar Cartography
 
 Begin Condition : [{TXT:Status gui focus}] Does Not Equal 'system map' OR [{TXT:Status gui focus}] Equals 'galaxy map'
     Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'

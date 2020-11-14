@@ -1,4 +1,4 @@
-﻿-- Stellar Cartography
+﻿-- Galaxy map; Stellar Cartography
 
 Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'galaxy map'
     Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
@@ -6,4 +6,4 @@ Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'galaxy map'
     Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
         Press variable key(s) [edGalaxyMapOpen_Buggy] and hold for 0,05 seconds and release
     End Condition
-End Condition
+End Condition 

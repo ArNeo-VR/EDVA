@@ -1,4 +1,4 @@
-﻿--
+﻿-- [Engine Color; Weapon Color]
 
 -- ↓ Environment conditions
 Begin Condition : ([Status Vehicle] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal Space')

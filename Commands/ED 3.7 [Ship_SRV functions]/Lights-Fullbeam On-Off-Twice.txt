@@ -1,23 +1,48 @@
+-- [Lights; Full Beam] [; on; of; off; pulls; twice]
 --
+- Ship/SRV lights, command checks the current lights status.
+- If the lights are allready 'On', 'Off' or at 'Full Beam' it does nothing.
+- 'Lights' toggles the next light status, 'On/Off' lights does go to that status.
+- Full-Beam / Lights twice it goes to to the Full-Beam only in the SRV.
+*todo: Remake the command and remove disabled functions*
 
 - pulls = off (detection)
-- EDbind:key-variables for Ship/SRV lights
-- EDDI:(Status lights on), (Status vehicle)
+- EDbind: key-variables for Ship/SRV lights
+- EDDI: {TXT:Status vehicle} , {TXT:Environment} , {BOOL:Status lights on}
+- Global command variables: {BOOL:full beam}
 
 # Ship/SRV lights, this command detects the vehicle-type and status of light.
 # You can either toggle or say lights off/on/twice or full-beam, from any mode it goes to the spoken command.
 
---  Environment conditions Ship
-Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space') OR ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Supercruise') OR ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}]
-    --  Ship lights (toggle)
-    Begin Condition : [{CMD}] Equals 'Lights' OR ([{CMD}] Equals 'Lights on' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Full beam' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Lights twice' AND [Status lights on] Equals False) O
+-- ↓ Environment conditions Ship
+Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space') OR ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Supercruise') OR ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Docked') OR ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Landed')
+    -- ↓ Command - on - off - pulls - Ship lights (toggle)
+    Begin Condition : [{CMD}] Equals 'Lights' OR ([{CMD}] Equals 'Lights on' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Full beam' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Lights twice' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Lights off' AND [Status lights on] Equals True) OR ([{CMD}] Equals 'Lights of' AND [Status lights on] Equals True) OR ([{CMD}] Equals 'Lights pulls' AND [Status lights on] Equals True)
         Press variable key(s) [edShipSpotLightToggle] and hold for 0,1 seconds and release
+    Else
+        Play sound, 'internal:Echo'
     End Condition
-       
-    --  Environment conditions SRV
+    
+    -- ↓ Environment conditions SRV - ## Attempt to combine commands below ##
+DISABLED - Else If : ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Environment}] Equals 'Normal space')
+    DISABLED - Begin Condition : [{CMD}] Equals 'Lights' OR ([{CMD}] Equals 'Lights on' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Full beam' AND [full beam] Does Not Equal True) OR ([{CMD}] Equals 'Lights twice' AND [full beam] Does Not Equal True) OR ([{CMD}] Equals 'Lights off' AND [Status lights on] Equals True) OR ([{CMD}] Equals 'Lights of' AND [Status lights on] Equals True) OR ([{CMD}] Equals 'Lights pulls' AND [Status lights on] Equals True)
+        DISABLED - Begin Condition : ([{CMD}] Equals 'Lights' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Lights on' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Full beam' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Lights twice' AND [Status lights on] Equals False) OR ([{CMD}] Equals 'Lights' AND [Status lights on] Equals True AND [full beam] Equals True)
+            DISABLED - Set Boolean [full beam] to False
+        DISABLED - Else
+            DISABLED - Set Boolean [full beam] to True
+        DISABLED - End Condition
+        DISABLED - Press variable key(s) [edHeadlightsBuggyButton] and hold for 0,1 seconds and release
+        DISABLED - Pause 0,3 seconds
+        DISABLED - Begin Condition : ([{CMD}] Equals 'Lights on' AND [Status lights on] Equals True AND [full beam] Equals True) OR ([{CMD}] Equals 'Lights of' AND [Status lights on] Equals True) OR ([{CMD}] Equals 'Lights off' AND [Status lights on] Equals True) OR ([{CMD}] Equals 'Lights pulls' AND [Status lights on] Equals True) OR ([{CMD}] Equals 'Full beam' AND [full beam] Equals False) OR ([{CMD}] Equals 'Lights twice' AND [full beam] Equals False)
+            DISABLED - Press variable key(s) [edHeadlightsBuggyButton] and hold for 0,1 seconds and release
+        DISABLED - End Condition
+    DISABLED - Else
+        DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
+    DISABLED - End Condition
+    
+    -- ↓ Environment conditions SRV
 Else If : ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Environment}] Equals 'Normal space')
-    Write [Yellow] '-- srv on' to log
-    --  SRV lights (toggle)
+    -- ↓ Command - SRV lights (toggle)
     Begin Text Compare : [{CMD}] Equals 'Lights'
         Begin Boolean Compare : [Status lights on] Equals True
             Press variable key(s) [edHeadlightsBuggyButton] and hold for 0,1 seconds and release
@@ -27,23 +52,23 @@ Else If : ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Environment}] Equals 'N
             Set Boolean [full beam] to False
         End Condition
         
-        -- SRV on
+        -- ↓ Command - SRV Lights on
     Else If Text Compare : [{CMD}] Equals 'Lights on'
+        -- ↓ Lights conditions SRV
         Begin Boolean Compare : [Status lights on] Equals False
             Press variable key(s) [edHeadlightsBuggyButton] and hold for 0,1 seconds and release
             Set Boolean [full beam] to False
-            
-            -- SRV on from full beam
+            -- ↓ Command - SRV Lights on from full beam
         Else If : ([Status lights on] Equals True AND [full beam] Equals True)
             Press variable key(s) [edHeadlightsBuggyButton] and hold for 0,1 seconds and release
             Pause 0,05 seconds
             Press variable key(s) [edHeadlightsBuggyButton] and hold for 0,1 seconds and release
             Set Boolean [full beam] to False
         Else
-            Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
+            Play sound, 'internal:Echo'
         End Condition
         
-        -- SRV off
+        -- ↓ Command - SRV Lights off
     Else If : ([{CMD}] Equals 'Lights off' AND [Status lights on] Equals True) OR ([{CMD}] Equals 'Lights of' AND [Status lights on] Equals True) OR ([{CMD}] Equals 'Lights pulls' AND [Status lights on] Equals True)
         Begin Boolean Compare : [full beam] Equals False
             Press variable key(s) [edHeadlightsBuggyButton] and hold for 0,1 seconds and release
@@ -51,8 +76,9 @@ Else If : ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Environment}] Equals 'N
         Press variable key(s) [edHeadlightsBuggyButton] and hold for 0,1 seconds and release
         Set Boolean [full beam] to False
         
-        -- lights TWICE; FULL BEAM;
+        -- ↓ Command - SRV Lights Twice; Full Beam
     Else If : [{CMD}] Equals 'Full beam' OR [{CMD}] Equals 'Lights twice'
+        -- ↓ Lights conditions SRV
         Begin Boolean Compare : [Status lights on] Equals False
             Set Boolean [full beam] to False
         End Condition
@@ -64,11 +90,11 @@ Else If : ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Environment}] Equals 'N
             Press variable key(s) [edHeadlightsBuggyButton] and hold for 0,1 seconds and release
             Set Boolean [full beam] to True
         Else
-            Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
+            Play sound, 'internal:Echo'
         End Condition
-        
     Else
-        Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
+        Play sound, 'internal:Echo'
     End Condition
-    
+Else
+    Write [Yellow] '3 environment unkown' to log
 End Condition

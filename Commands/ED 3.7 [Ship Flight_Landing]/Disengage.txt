@@ -1,4 +1,4 @@
-﻿--
+﻿-- Disengage
 
 Begin Condition : ([{TXT:Environment}] Equals 'Supercruise' AND [{TXT:Status Vehicle}] Equals 'Ship')
     Press variable key(s) [edHyperSuperCombination] and hold for 0,02 seconds and release

@@ -1,4 +1,4 @@
-﻿--
+﻿-- Galaxy [Info; Route; Bookmarks; Filter; Options; Search; Map Select; Map Route; Map System; Engage]
 -- todo, Tab select
 -- Galaxy Map Route, selects target that is in the clipboard text.
 -- Galaxy Engage,

@@ -1,5 +1,6 @@
-﻿-- Do not combine, required by other commands [C]
---
+﻿-- [External; Navigation; Nav; Target] Panel
+
+-- Do not combine, required by other commands [C]
 -- EDDI: {TXT:Status gui focus} = external panel
 
 Begin Text Compare : [{TXT:Status vehicle}] Has Not Been Set

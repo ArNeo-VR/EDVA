@@ -1,4 +1,5 @@
-﻿-- todo, Tab select
+﻿-- System [Info; Bookmarks; Stations]
+-- todo, Tab select
 
 -- ↓
 Begin Condition : [{TXT:Status vehicle}] Has Not Been Set OR [{TXT:Status gui focus}] Equals 'system map'

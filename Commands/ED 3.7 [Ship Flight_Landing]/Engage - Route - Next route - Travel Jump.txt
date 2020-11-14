@@ -1,4 +1,5 @@
-﻿!!! EXPERIMENTAL
+﻿-- Engage; Engage route; Engage next route; Engage travel jump; Travel jump; Superjump; Engage Superjump
+!!! EXPERIMENTAL
 
 Write [Blue] 'FSD Status - {TXT:Status fsd status}' to log
 Write [Blue] 'GUI Focus - {TXT:Status gui focus}' to log
@@ -6,11 +7,11 @@ Write [Blue] 'GUI Focus - {TXT:Status gui focus}' to log
 -- ↓ execute command
 
 -- ↓ variables
-Set decimal [Traveldelay] value to 6
-Set decimal [Chargingdelay] value to 1,30000
-Set decimal [Cooldowndelay] value to 2,300000
-Set integer [EngageFSDloopMax] value to 3
-Set integer [EngageFSDloop] value to 0
+Set decimal [~Traveldelay] value to 6
+Set decimal [~Chargingdelay] value to 1,30000
+Set decimal [~Cooldowndelay] value to 2,300000
+Set integer [~EngageFSDloopMax] value to 3
+Set integer [~EngageFSDloop] value to 0
 
 DISABLED - Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
 -- ↓ travel jump; Engage travel jump
@@ -70,16 +71,16 @@ Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'masslock'
     End Condition - Exit when condition not met
     
     -- ↓ <<< LOOP
-    Start Loop While : [{TXT:Status fsd status}] Does Not Equal 'charging' OR [EngageFSDloop] Is Greater Than [EngageFSDloopMax]
-        Set integer [EngageFSDloop] to [EngageFSDloop] plus 1
+    Start Loop While : [{TXT:Status fsd status}] Does Not Equal 'charging' OR [~EngageFSDloop] Is Greater Than [~EngageFSDloopMax]
+        Set integer [~EngageFSDloop] to [~EngageFSDloop] plus 1
         Write [Blue] 'not charging, engage check 0.3s' to log
         Pause 0,4 seconds
         . .
         Begin Text Compare : [{TXT:Status fsd status}] Equals 'cooldown'
-            Write [Blue] 'cooldown delay - {DEC:Cooldowndelay}' to log
-            DISABLED - Set decimal [Traveldelay] to [Traveldelay] minus 2,3
+            Write [Blue] '~Cooldown delay - {DEC:~Cooldowndelay}' to log
+            DISABLED - Set decimal [~Traveldelay] to [~Traveldelay] minus 2,3
             DISABLED - Pause 2,3 seconds
-            Pause a variable number of seconds [Cooldowndelay]
+            Pause a variable number of seconds [~Cooldowndelay]
         End Condition
         . .
         Write [Blue] 'engage' to log
@@ -89,8 +90,8 @@ Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'masslock'
             DISABLED - Pause 1,1 seconds
         Else If : ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Travel jump') OR ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Engage travel jump')
             Write [Blue] '>>> travel' to log
-            Write [Blue] 'Delay {DEC:Traveldelay}' to log
-            Pause a variable number of seconds [Traveldelay]
+            Write [Blue] 'Delay {DEC:~Traveldelay}' to log
+            Pause a variable number of seconds [~Traveldelay]
             Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
         Else If : ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Jump') OR ([{TXT:Status fsd status}] Does Not Equal 'charging' AND [{CMD}] Equals 'Engage jump')
             Write [Blue] 'Jump' to log
@@ -103,8 +104,8 @@ Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'masslock'
         Else
             Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Critical Stop.wav'
         End Condition - Exit when condition not met
-        Pause a variable number of seconds [Chargingdelay]
-        Set integer [EngageFSDloop] to [EngageFSDloop] plus 1
+        Pause a variable number of seconds [~Chargingdelay]
+        Set integer [~EngageFSDloop] to [~EngageFSDloop] plus 1
     End Loop
     -- LOOP >>>
     
@@ -116,14 +117,15 @@ Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'masslock'
         -- ↓
         Begin Text Compare : [{TXT:Status fsd status}] Equals 'cooldown'
             Write [Blue] 'cooldown delay' to log
-            Pause 2,3 seconds
+            Pause a variable number of seconds [~Cooldowndelay]
+            DISABLED - Pause 2,3 seconds
         End Condition
         Write [Blue] 'engage' to log
         Begin Condition : [{CMD}] Equals 'Engage' OR ([{CMD}] Equals 'Engage route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}') OR ([{CMD}] Equals 'Engage next route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}')
             Press variable key(s) [edHyperSuperCombination] and hold for 0,2 seconds and release
         Else If : [{CMD}] Equals 'Travel jump' OR [{CMD}] Equals 'Engage travel jump'
-            Write [Blue] 'Delay {DEC:Traveldelay}' to log
-            Pause a variable number of seconds [Traveldelay]
+            Write [Blue] 'Delay {DEC:~Traveldelay}' to log
+            Pause a variable number of seconds [~Traveldelay]
             Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
             Exit Command
         Else If : [{CMD}] Equals 'Jump' OR [{CMD}] Equals 'Engage jump'
@@ -150,8 +152,8 @@ Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'masslock'
             Begin Condition : [{CMD}] Equals 'Engage' OR ([{CMD}] Equals 'Engage route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}') OR ([{CMD}] Equals 'Engage next route' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}')
                 Press variable key(s) [edHyperSuperCombination] and hold for 0,2 seconds and release
             Else If : [{CMD}] Equals 'Travel jump' OR [{CMD}] Equals 'Engage travel jump'
-                Write [Blue] 'Delay {DEC:Traveldelay}' to log
-                Pause a variable number of seconds [Traveldelay]
+                Write [Blue] 'Delay {DEC:~Traveldelay}' to log
+                Pause a variable number of seconds [~Traveldelay]
                 Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
             Else If : [{CMD}] Equals 'Jump' OR [{CMD}] Equals 'Engage jump'
             Else If : [{CMD}] Equals 'Superjump' OR [{CMD}] Equals 'Engage Superjump'
@@ -164,10 +166,9 @@ Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'masslock'
     End Condition
 End Condition
 
-Set decimal [Traveldelay] value to [Not Set]
-Set decimal [Chargingdelay] value to [Not Set]
-Set decimal [Cooldowndelay] value to [Not Set]
-Set integer [EngageFSDloop] value to [Not Set]
+DISABLED - Set decimal [Chargingdelay] value to [Not Set]
+DISABLED - Set decimal [Cooldowndelay] value to [Not Set]
+DISABLED - Set integer [EngageFSDloop] value to [Not Set]
 
 DISABLED - Press variable key(s) [edHyperSuperCombination] and hold for 0,05 seconds and release
 DISABLED - Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release

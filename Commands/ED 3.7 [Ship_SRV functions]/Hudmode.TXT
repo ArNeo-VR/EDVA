@@ -1,0 +1,33 @@
+﻿-- [Analysis; Exploration; Combat; hud mode]
+-- recode
+
+DISABLED - Write [Blank] '-- WIP - Work in Progress' to log
+DISABLED - Press Right Ctrl+\ | keys and hold for 0,05 seconds and release
+
+-- ↓ Environment conditions
+Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+    Begin Text Compare : [{CMD}] Equals 'Hud mode'
+        Press variable key(s) [edPlayerHUDModeToggle] and hold for 0,05 seconds and release
+    Else If : ([Status analysis mode] Equals True AND [{CMD}] Equals 'Combat')
+        Press variable key(s) [edPlayerHUDModeToggle] and hold for 0,05 seconds and release
+    Else If : ([Status analysis mode] Equals False AND [{CMD}] Equals 'Analysis') OR ([Status analysis mode] Equals False AND [{CMD}] Equals 'Exploration')
+        Press variable key(s) [edPlayerHUDModeToggle] and hold for 0,05 seconds and release
+    End Condition
+    Begin Boolean Compare : [Debug Write] Equals True
+        Write [Blue] 'Ship Status analysis mode - {BOOL:Status analysis mode}' to log
+    End Condition
+    
+    -- ↓ Environment conditions
+Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+    Begin Text Compare : [{CMD}] Equals 'Hud mode'
+        Press variable key(s) [edPlayerHUDModeToggle_Buggy] and hold for 0,05 seconds and release
+        Set Boolean [SRV analysis mode] to Toggle
+    Else If : ([SRV analysis mode] Equals True AND [{CMD}] Equals 'Combat')
+        Press variable key(s) [edPlayerHUDModeToggle_Buggy] and hold for 0,05 seconds and release
+        Set Boolean [SRV analysis mode] to False
+    Else If : ([SRV analysis mode] Equals False AND [{CMD}] Equals 'Analysis') OR ([SRV analysis mode] Equals False AND [{CMD}] Equals 'Exploration')
+        Press variable key(s) [edPlayerHUDModeToggle_Buggy] and hold for 0,05 seconds and release
+        Set Boolean [SRV analysis mode] to True
+    End Condition
+    Write [Blue] 'SRV analysis mode - {BOOL:SRV analysis mode}' to log
+End Condition
