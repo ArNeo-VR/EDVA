@@ -146,7 +146,7 @@ Galaxy map functions:
 [Map] [Select; Route; Plot Route; Planet; Surface; Bookmark; System; Purchase ; Back] [;Exploration Data; Exploration; System Data; Trade Data; Trade] ::  
 Moves cursor and select the command.
 
-Galaxy Map :: Opens galaxy map.  
+Galaxy map; Stellar Cartography :: Opens galaxy map.  
 Galaxy [Info; Route; Bookmarks; Filter; Options; Search; Map Select; Map Route; Map System; Engage] :: Moves to the spoken tab/field.  
 Galaxy map select ::  
 Galaxy map route :: Goes to the selected target (in clipboard) and maps route.  
@@ -154,10 +154,31 @@ Galaxy map system ::
 Galaxy engage :: Same as Galaxy map route and engages supercruise.  
 
 System Map :: Opens system map.  
+System [Info; Bookmarks; Stations] ::  
 
+Review codex ::  
+[Set Filter; Set] [All; Default; Standard; Missions; Signals; Stations; Fleet Carriers; Anomaly; Unknown; Settlement; Scanner; Signal source; system; systems; next system only] [;filters]  
+[Lock location; Lock Destination; Lock and jump; Lock and supercruise; Lock and engage hyperdrive; Surface map; Bookmark location; Engage Destination]  
+Scan System  
 
 ## EDVA [Ship_SRV Panel Menu]
+[External; Navigation; Nav; Target] Panel ::  
+[Internal; System; Sys; Status; Inventory; Functions] Panel ::  
+[Communication; Comms] Panel ::  
+[Role; SRV] Panel ::  
+
+Back; Exit; Exit codex ::  
+[Enter; Exit;] [System scan; System scanner; Spectrum; Spectrum scan; Spectrum scanner; Spectrum help] ::  
+Paneltab counting System BOOL :: <Left Shift> + <Right> - Resets variables
+Panel-tab counting E Next Panel :: <E> <Joystick2 Button 25> - Counts the tab the panels on, sometimes needs to be reset.
+Panel-tab counting Q Previous Panel :: <Q> <Joystick2 Button 27>
+
 ## EDVA [Starport services]
+[Request; Cancel;] Docking [;Request] ::  
+[Restock; Repair; Refuel] ::  
+[Return to surface; Enter hangar] ::  
+Starport [Commodities Market; Mission board; Passenger Lounge; Contacts; Universal Cartographics; Crew Lounge; Exit; Galnet; Livery; Holo-me; Store; Workshop; Engineer Workshop; Remote Workshop; Outfitting; Shipyard; Advanced maintenance; Market; Passengers; Map; Crew]  
+
 ## EDVA EDDI [Actions Modified]
 ## EDVA EDDI [Actions]
 ## EDVA [Main Startup Menu]
