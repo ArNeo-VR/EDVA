@@ -30,8 +30,8 @@ Activates the in game menu and goes to the submenu/selection.
 **Show scores**  
 
 ## EDVA [Debug Functions]  
-**status text** :: Shows EDDI varables  
-**[Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Silent Running; Cargo Scoop; Lights on; Night Vision]** :: *Writes and says(TTS) EDDI variable Status*  
+**status text** :: Shows EDDI/list of varables  
+**[Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Silent Running; Cargo Scoop; Lights on; Night Vision]** :: Writes to log and says(TTS) EDDI variable Status  
 
 **Used for debuging/setting variables:**  
 [Set; Status; Reset] [Hangar; cockpit; orbit lines; Elite Menu; Camera] [;true; false; not set] :: BOOL variables  
@@ -40,9 +40,8 @@ Activates the in game menu and goes to the submenu/selection.
 [Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set] :: Stored variables in profile.  
 [Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set] :: Stored variables in profile.  
 
-
 ## EDVA [Apps-Plugins]
-## Elite Dangerous - Applications/Tools (3rd party, not included)
+### Elite Dangerous - Applications/Tools (3rd party, not included)
 *Used for starting applications, the [app_variables] are set in the startup sequence.*  
 [Start;Close] [;Elite;] [Discovery] :: [ED Discovery](https://github.com/EDDiscovery/EDDiscovery)  
 [Start;Close;Move] [;Elite;] Engineer :: [ED Engineer](https://github.com/msarilar/EDEngineer)  
@@ -51,8 +50,8 @@ Activates the in game menu and goes to the submenu/selection.
 *Applications are start from variables (Main Startup), Example is in the Variables.txt file.*  
 **note:** Applications are not included.  
 
-~~## ED 3.6 [App] NeutronPlotter~~  
-~~## ED 3.7 [Camera]~~  
+### ~~ED 3.6 [App] NeutronPlotter~~  
+### ~~ED 3.7 [Camera]~~  
 
 ## EDVA [Help Find-Websites]
 **Open [Coriolis, EDDB, EDSM, Elite-Forum-Reddit-Store-Support , Engineers, Fuelrats, Galnet, Inara, Ivona, Malics profile, Material trader, Material trader, Neutron plotter, Permits, Road to riches, Thargoid structures, Voiceattack, Twitch status, Sector map, Shipyard, List of Rares]**  
@@ -64,25 +63,25 @@ Activates the in game menu and goes to the submenu/selection.
 **Find [System states (boom, bust, famine, ...]** :: Opens a page to EDSM and searches.  
 
 ## EDVA [Ship Flight_Landing]
-#### Launch
+Launch ::  
 Ship Docked at station: Starts Launch, moves ship up, retracts landing gear.  
-Ship Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.
+Ship Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.  
 
-#### Boost
-Closes cargoscoop and Boost upon boost key is pressed is detected.
+Boost :: Closes cargoscoop and Boost upon boost key is pressed is detected.
+Disengage :: Disengages from supercruise.
 
-#### Disengage
-Disengages from supercruise.
-
-#### Engage; Engage route; Engage next route; Engage travel jump; Travel jump; Superjump; Engage Superjump
-Engage - Engages supercruise / hyperspace (if there is a route it superjumps).  
-Engage route - 
-Engage next route - Select the next route in Galaxy map and Engages.  
-Travel jump - FSD Cooldown delay and activates hyperspace to destination.  
-Superjump - 
+Engage; Engage route; Engage next route; Engage travel jump; Travel jump; Superjump; Engage Superjump ::  
+Engage :: Engages supercruise / hyperspace (if there is a route it superjumps).  
+Engage route ::  
+Engage next route :: Select the next route in Galaxy map and Engages.  
+Travel jump :: FSD Cooldown delay and activates hyperspace to destination.  
+Superjump ::  
 *Command is experimental, drops you out of supercruise if the target is not set correctly*
 
+~~Engage [;previous;next;] waypoint; Target next waypoint~~ :: Used for NeutronPlotter plugin
+
 ## EDVA [Ship_SRV functions]
+
 
 #### Deploy SRV / Board Ship
 Deploys SRV / Board ship requires the 'SRV Handbrake' is enabled.
