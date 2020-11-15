@@ -1,4 +1,4 @@
-# [EDVA](../../../../EDVA) - Commands - ED 3.7 N
+# [EDVA](../../../../EDVA) - Commands
 ## EDVA [Main Startup]
 **Profile Load** ::  on Profile load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
 **(((MAIN))) Load Variables** :: Loads variables from profile, set required for Initialisation.  
@@ -78,32 +78,14 @@ Engage route ::
 Engage next route :: Select the next route in Galaxy map and Engages.  
 Travel jump :: FSD Cooldown delay and activates hyperspace to destination.  
 Superjump ::  
-*Command is experimental, drops you out of supercruise if the target is not set correctly*
+*Command is experimental, [drops you out of supercruise](https://github.com/ArNeo-VR/EDVA/issues/1) if the target is not set correctly*
 
 ~~Engage [;previous;next;] waypoint; Target next waypoint~~ :: Used for NeutronPlotter plugin
 
 ## EDVA [Ship_SRV functions]
 Cockpit [; on; off; pulls]  
 Orbit Lines [; on; off; pulls]  
-
-[deploy; retract;] Landing Gear  
-[deploy; retract;] Hardpoints  
-Silent running [; on; off; pulls]  
-Flightassist [; on; off; pulls]  
-Rotational correction [; on; off; pulls]  
-[Next; Previous;] Firegroup  
-[deploy; fire;] [Chaff; ECM; Heat sink]  
-[Shield cell; Deploy Shield; Shields up; Pop Shields]  
 [Engine Color; Weapon Color]  
-[deploy; retract;] Cargo Scoop; Cargo Hatch; Cargo Hooch  
-Night vision [; on; off; pulls]  
-[Hud mode; Analysis; Exploration; Combat]  
-[Restock; Repair; Refuel] :: For both Ship & SRV (SRV requires to Internal-panel to be on synthesis page).  
-Deploy SRV :: Deploys SRV.  
-Board Ship :: Board ship requires the 'SRV Handbrake' is enabled.  
-SRV Transfer Cargo  
-SRV Turret; Turret; Guns; Gun  
-[Recall;Dismiss] Ship
 
 [Lights; Full Beam] [; on; of; off; pulls; twice] :: 
 Ship/SRV lights, command checks the current lights status.  
@@ -112,15 +94,25 @@ If the lights are allready 'On', 'Off' or at 'Full Beam' it does nothing.
 Full-Beam / Lights twice it goes to to the Full-Beam only in the SRV.  
 *About the first command I made*  
 
-#### Ship/SRV Commands that either toggles or execute action.  
+[Restock; Repair; Refuel] :: For both Ship & SRV (SRV requires to Internal-panel to be on synthesis page).  
+Night vision [; on; off; pulls]  
+[deploy; retract;] Landing Gear  
+[deploy; retract;] Hardpoints  
+[deploy; retract;] Cargo Scoop; Cargo Hatch; Cargo Hooch  
+Silent running [; on; off; pulls]  
+Flightassist [; on; off; pulls]  
+Rotational correction [; on; off; pulls]  
 
+[Next; Previous;] Firegroup  
+[deploy; fire;] [Chaff; ECM; Heat sink]  
+[Shield cell; Deploy Shield; Shields up; Pop Shields]  
+[Hud mode; Analysis; Exploration; Combat]  
 
 #### SRV Commands that either toggles or execute action.
-Deploy SRV  
-Board ship; SVR Board ship  
+Deploy SRV :: Deploys SRV.  
+Board Ship :: Board ship requires the 'SRV Handbrake' is enabled.  
 [Recall;Dismiss] Ship  
 SRV Transfer Cargo  
-[Restock; Repair; Refuel] - Requires the system-panel to be on Synthesis
 SRV Turret; Turret; Guns; Gun
 
 ## EDVA [Ship_SRV Panel Menu functions]
