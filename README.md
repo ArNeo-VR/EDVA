@@ -8,7 +8,7 @@ For the time beeing catagories are exported as a voiceattack profile (.vap) file
 [List of commands can be found here](Commands#edva---commands)  
 
 ## [Profiles](Profiles)
-~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)~~ *to be tested/published*  
+[[EDVA Profile] EDVA-3.7.5(version)-profile](Profiles) *to be tested*  
 Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.vap)  
 **note:** [\[release\] EDDI-3.7.1-profile](Profiles) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
 
