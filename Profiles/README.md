@@ -5,14 +5,13 @@
 [Add ...] select "[release] EDDI-3.7.0-profile"  
 
 ### [release] [global profile]-Profile.vap
-Set it as global profile in VoiceAttack Options (Icon down-right).  
+Set as 'global profile' in VoiceAttack Options (Icon down-right).  
 
 ### [release] [Off]-Profile.vap
-
+Set as 'Losf Profile on Startup' in VoiceAttack Options (Icon down-right).  
 
 ### [release]-2020c-Profile.vap
 [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
-[Add ...] select "[Off]"  
+[Add ...] select "[Off]"   
   
-  
-Set profile load / unload in Profile-options > [Profile Exec] 'Execute a command each time this profile is loaded / unloaded'
+Set profile load / unload in Profile-options > [Profile Exec] 'Execute a command each time this profile is loaded / unloaded'  
