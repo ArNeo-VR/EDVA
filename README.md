@@ -5,7 +5,7 @@ This profile has only the commands, all third party plugins and applications req
 ## [VoiceAttack Commands](Commands)
 Commands are exported to a text file, they are manualy exported and not fully up to date.
 For the time beeing catagories are exported as a voiceattack profile (.vap) file. Until the full profile is tested and published.  
-[List of commands can be found here](Commands#edva---commands---ed-37-l)  
+[List of commands can be found here](Commands#edva---commands)  
 
 ## [Profiles](Profiles)
 ~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)~~ *to be tested/published*  
