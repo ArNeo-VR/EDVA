@@ -1,4 +1,4 @@
-# [EDVA](../../../../EDVA) - Commands - ED 3.7 M
+# [EDVA](../../../../EDVA) - Commands - ED 3.7 N
 ## EDVA [Main Startup]
 **Profile Load** ::  on Profile load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
 **(((MAIN))) Load Variables** :: Loads variables from profile, set required for Initialisation.  
@@ -83,29 +83,29 @@ Superjump ::
 ~~Engage [;previous;next;] waypoint; Target next waypoint~~ :: Used for NeutronPlotter plugin
 
 ## EDVA [Ship_SRV functions]
+Cockpit [; on; off; pulls]  
+Orbit Lines [; on; off; pulls]  
+
 [deploy; retract;] Landing Gear  
 [deploy; retract;] Hardpoints  
-Cockpit [; on; off; pulls]  
 Silent running [; on; off; pulls]  
 Flightassist [; on; off; pulls]  
 Rotational correction [; on; off; pulls]  
-Orbit Lines [; on; off; pulls]  
+[Next; Previous;] Firegroup  
 [deploy; fire;] [Chaff; ECM; Heat sink]  
 [Shield cell; Deploy Shield; Shields up; Pop Shields]  
-[Next; Previous;] Firegroup  
 [Engine Color; Weapon Color]  
 [deploy; retract;] Cargo Scoop; Cargo Hatch; Cargo Hooch  
 Night vision [; on; off; pulls]  
-[Analysis; Exploration; Combat; hud mode]  
-[lights; full beam] [; on; of; off; pulls; twice]  
+[Hud mode; Analysis; Exploration; Combat]  
+[Restock; Repair; Refuel] :: For both Ship & SRV (SRV requires to Internal-panel to be on synthesis page).  
+Deploy SRV :: Deploys SRV.  
+Board Ship :: Board ship requires the 'SRV Handbrake' is enabled.  
+SRV Transfer Cargo  
+SRV Turret; Turret; Guns; Gun  
 [Recall;Dismiss] Ship
-Board ship; SVR Board ship
 
-
-#### Deploy SRV / Board Ship
-Deploys SRV / Board ship requires the 'SRV Handbrake' is enabled.
-
-#### [Lights; Full Beam] [; on; of; off; pulls; twice] 
+[Lights; Full Beam] [; on; of; off; pulls; twice] :: 
 Ship/SRV lights, command checks the current lights status.  
 If the lights are allready 'On', 'Off' or at 'Full Beam' it does nothing.  
 'Lights' toggles the next light status, 'On/Off' lights does go to that status.  
@@ -113,25 +113,7 @@ Full-Beam / Lights twice it goes to to the Full-Beam only in the SRV.
 *About the first command I made*  
 
 #### Ship/SRV Commands that either toggles or execute action.  
-Night vision [; on; off; pulls]  
-[Analysis; Exploration; Combat; hud mode]  
-Cockpit [; on; off; pulls]  
-[deploy; retract;] Cargo Scoop; Cargo Hatch; Cargo Hooch  
-[deploy; retract;] Landing Gear  
-[deploy; retract;] Hardpoints  
-Silent running [; on; off; pulls]  
-Flightassist [; on; off; pulls]  
-Rotational correction [; on; off; pulls]  
-Orbit Lines [; on; off; pulls]  
-[Engine Color; Weapon Color]  
-[Shield cell; Deploy Shield; Shields up; Pop Shields]  
-[Next; Previous;] Firegroup  
-[deploy; fire;] [Chaff; ECM; Heat sink]  
-[Recall;Dismiss] Ship
-Board ship; SVR Board ship  
-SRV Transfer Cargo  
-[Restock; Repair; Refuel]  
-SRV Turret; Turret; Guns; Gun  
+
 
 #### SRV Commands that either toggles or execute action.
 Deploy SRV  
