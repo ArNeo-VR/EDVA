@@ -1,0 +1,42 @@
+﻿-- [Target; Targets; Next; Previous] [Target; ahead; front; next; previous; Threat; Hostile; Subsystem; Signal; Current Signal; Signal Source]
+
+-- Target
+Begin Condition : [{CMDSEGMENT:0}] Equals 'Target' OR [{CMDSEGMENT:1}] Equals 'Target'
+    
+    -- Next Previous
+    Begin Condition : [{CMDSEGMENT:0}] Equals 'Next' OR [{CMDSEGMENT:1}] Equals 'Next'
+        Press variable key(s) [edCycleNextTarget] and hold for 0,02 seconds and release
+    Else If : [{CMDSEGMENT:0}] Equals 'Previous' OR [{CMDSEGMENT:1}] Equals 'Previous'
+        Press variable key(s) [edCyclePreviousTarget] and hold for 0,02 seconds and release
+    End Condition - Exit when condition met
+    
+    -- target ahead front
+    Begin Condition : ([{CMDSEGMENT:0}] Equals 'Target' AND [{CMDSEGMENT:1}] Equals '') OR ([{CMDSEGMENT:0}] Equals 'Target' AND [{CMDSEGMENT:1}] Equals 'ahead') OR ([{CMDSEGMENT:0}] Equals 'Target' AND [{CMDSEGMENT:1}] Equals 'front') OR ([{CMDSEGMENT:0}] Equals 'Target' AND [{CMDSEGMENT:1}] Equals 'Target') OR ([{CMDSEGMENT:0}] Equals 'Target' AND [{CMDSEGMENT:1}] Equals 'Current Signal') OR ([{CMDSEGMENT:0}] Equals 'Target' AND [{CMDSEGMENT:1}] Equals 'Signal') OR ([{CMDSEGMENT:0}] Equals 'Target' AND [{CMDSEGMENT:1}] Equals 'Signal source')
+        Press variable key(s) [edSelectTarget] and hold for 0,02 seconds and release
+    End Condition - Exit when condition met
+    
+    -- Threat
+    Begin Condition : ([{CMDSEGMENT:0}] Equals 'Target' AND [{CMDSEGMENT:1}] Equals 'Threat') OR ([{CMDSEGMENT:0}] Equals 'Target' AND [{CMDSEGMENT:1}] Equals 'Hostile')
+        Press variable key(s) [edSelectHighestThreat] and hold for 0,02 seconds and release
+    End Condition - Exit when condition met
+    
+End Condition
+
+-- Next/Previous
+Begin Condition : [{CMDSEGMENT:0}] Equals 'Next' OR [{CMDSEGMENT:0}] Equals 'Previous'
+    
+    -- Hostile Next Previous
+    Begin Condition : ([{CMDSEGMENT:0}] Equals 'Next' AND [{CMDSEGMENT:1}] Equals 'Threat') OR ([{CMDSEGMENT:0}] Equals 'Next' AND [{CMDSEGMENT:1}] Equals 'Hostile')
+        Press variable key(s) [edCycleNextHostileTarget] and hold for 0,02 seconds and release
+    Else If : ([{CMDSEGMENT:0}] Equals 'Previous' AND [{CMDSEGMENT:1}] Equals 'Threat') OR ([{CMDSEGMENT:0}] Equals 'Previous' AND [{CMDSEGMENT:1}] Equals 'Hostile')
+        Press variable key(s) [edCyclePreviousHostileTarget] and hold for 0,02 seconds and release
+    End Condition - Exit when condition met
+    
+    -- Subsystem Next Previous
+    Begin Condition : ([{CMDSEGMENT:0}] Equals 'Next' AND [{CMDSEGMENT:1}] Equals 'Subsystem')
+        Press variable key(s) [edCycleNextSubsystem] and hold for 0,02 seconds and release
+    Else If : ([{CMDSEGMENT:0}] Equals 'Previous' AND [{CMDSEGMENT:1}] Equals 'Subsystem')
+        Press variable key(s) [edCyclePreviousSubsystem] and hold for 0,02 seconds and release
+    End Condition - Exit when condition met
+    
+End Condition

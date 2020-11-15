@@ -1,0 +1,6 @@
+﻿-- ((EDDI message received from))
+
+Write [Blue] '[FROM EVENT] - - test' to log
+
+Begin Boolean Compare : [LogEDDImessages] Equals True
+End Condition

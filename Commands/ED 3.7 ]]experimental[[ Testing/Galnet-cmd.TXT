@@ -1,0 +1,13 @@
+﻿-- [Previous;Play;Pause;Stop;Next;Clear] gal net [;news]
+
+Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Next'
+    Press variable key(s) [edGalnetAudio_SkipForward] and hold for 0,1 seconds and release
+Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Play'
+    Press variable key(s) [edGalnetAudio_Play_Pause] and hold for 0,1 seconds and release
+Else If : [{CMDSEGMENT:0}] Equals 'Pause' OR [{CMDSEGMENT:0}] Equals 'Stop'
+    Press variable key(s) [edGalnetAudio_Play_Pause] and hold for 0,1 seconds and release
+Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Previous'
+    Press variable key(s) [edGalnetAudio_SkipBackward] and hold for 0,1 seconds and release
+Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Clear'
+    Press variable key(s) [edGalnetAudio_ClearQueue] and hold for 0,1 seconds and release
+End Condition

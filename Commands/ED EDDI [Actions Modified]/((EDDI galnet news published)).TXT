@@ -1,0 +1,8 @@
+﻿-- ((EDDI galnet news published))
+Play sound, '{VA_SOUNDS}\ED_SFX2018\Galnet-news.mp3'
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, '{EDDI galnet news!}
+-------------
+' to file '{TXT:Log-eddi-events}'
+End Condition

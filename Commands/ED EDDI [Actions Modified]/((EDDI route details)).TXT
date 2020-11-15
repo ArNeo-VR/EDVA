@@ -1,0 +1,16 @@
+﻿-- ((EDDI route details))
+
+Write [Blue] 'EDDI route details system - {TXT:EDDI route details system}' to log
+Write [Blue] 'EDDI route details routetype - {TXT:EDDI route details routetype}' to log
+Write [Blue] 'EDDI route details routedistance - {DEC:EDDI route details routedistance}' to log
+Write [Blue] 'EDDI route details route - {TXT:EDDI route details route}' to log
+Write [Blue] 'EDDI route details distance - {DEC:EDDI route details distance}' to log
+Write [Blue] 'EDDI route details count - {DEC:EDDI route details count}' to log
+Write [Blue] 'EDDI next jump system - {TXT:EDDI next jump system}' to log
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, 'EDDI route details:
+- system: {TXT:EDDI route details system}
+- routetype: {TXT:EDDI route details routetype}
+- routedistance: {DEC:EDDI route details routedist...
+End Condition

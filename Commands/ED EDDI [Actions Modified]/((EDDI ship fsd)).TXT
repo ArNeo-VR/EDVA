@@ -1,0 +1,7 @@
+﻿-- ((EDDI ship fsd))
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, '{EDDI ship fsd}
+-------------
+' to file '{TXT:Log-eddi-events}'
+End Condition

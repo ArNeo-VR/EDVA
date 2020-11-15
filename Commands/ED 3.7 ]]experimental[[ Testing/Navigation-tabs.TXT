@@ -1,0 +1,82 @@
+﻿-- [Navigation;] [Navigation; Transactions; Missions;Passengers;Claims;Fines;Bounty; Contacts;Sub-targets;Inventory]
+
+Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'external panel'
+    Start Loop : Repeat 2 Times
+        Pause 0,01 seconds
+        Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+    End Loop
+    Pause 0,1 seconds
+End Condition
+
+-- Goto, [reset] Navigation filters
+Press variable key(s) [edFocusLeftPanel] and hold for 0,05 seconds and release
+Pause 0,08 seconds
+- System Panel
+Start Loop While : [nav-tab] Is Greater Than 0
+    Press variable key(s) [edLeftThrustButton] and hold for 0,05 seconds and release
+    Pause 0,03 seconds
+    Set small int (condition) [nav-tab] value as decremented by 1
+End Loop
+-
+Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
+Pause 0,05 seconds
+Start Loop : Repeat 3 Times
+    Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+End Loop
+
+- Transactions
+Begin Condition : [{CMDSEGMENT:1}] Equals 'Transactions' OR [{CMDSEGMENT:1}] Equals 'Contacts' OR [{CMDSEGMENT:1}] Equals 'Sub-targets' OR [{CMDSEGMENT:1}] Equals 'Inventory' OR [{CMDSEGMENT:1}] Equals 'Missions' OR [{CMDSEGMENT:1}] Equals 'Passengers' OR [{CMDSEGMENT:1}] Equals 'Claims' OR [{CMDSEGMENT:1}] Equals 'Fines' OR [{CMDSEGMENT:1}] Equals 'Bounty'
+    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+    Set small int (condition) [nav-tab] value to 1
+    -
+    Start Loop : Repeat 5 Times
+        Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+        Pause 0,05 seconds
+    End Loop
+    Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Missions'
+        Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+        Pause 0,05 seconds
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Passengers'
+        Start Loop : Repeat 2 Times
+            Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+        End Loop
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Claims'
+        Start Loop : Repeat 3 Times
+            Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+        End Loop
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Fines'
+        Start Loop : Repeat 4 Times
+            Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+        End Loop
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Bounty'
+        Start Loop : Repeat 5 Times
+            Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+        End Loop
+    End Condition
+End Condition
+
+- Contacts
+Begin Condition : [{CMDSEGMENT:1}] Equals 'Contacts' OR [{CMDSEGMENT:1}] Equals 'Sub-targets' OR [{CMDSEGMENT:1}] Equals 'Inventory'
+    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+    Set small int (condition) [nav-tab] value to 2
+End Condition
+-
+Begin Condition : [{CMDSEGMENT:1}] Equals 'Sub-targets' OR [{CMDSEGMENT:1}] Equals 'Inventory'
+    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+    Set small int (condition) [nav-tab] value to 3
+End Condition
+-
+Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Inventory'
+    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
+    Pause 0,05 seconds
+    Set small int (condition) [nav-tab] value to 4
+End Condition
+Pause 0,05 seconds

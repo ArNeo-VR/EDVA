@@ -1,0 +1,10 @@
+﻿-- Be quiet;Radio silence;Stop talking [;EDDI]
+-- Be quiet | EDDI original command
+
+-- disablespeechresponder, EDDI will not speak unless spoken to
+Execute external plugin, 'EDDI 3.7.1' using context 'disablespeechresponder'
+
+Begin Small Integer Compare : [VA_LOAD_STATUS] Equals 0
+    Play sound, '{VA_SOUNDS}\ED2018\startrek-sfx-acknowledge.wav'
+    Say, 'Engaging radio silence.'
+End Condition

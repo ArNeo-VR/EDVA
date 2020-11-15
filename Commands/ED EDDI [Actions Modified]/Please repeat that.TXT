@@ -1,0 +1,5 @@
+﻿-- Please repeat that;What was that?;Could you say that again?;Say that again;say again;Repeat that;Repeat last
+-- EDDI original command | Please repeat that;What was that?;Could you say that again?;Say that again
+
+Set text [Script] to [EDDI state eddi_context_last_speech]
+Execute external plugin, 'EDDI 3.7.1' using context 'say'

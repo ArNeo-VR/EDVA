@@ -1,0 +1,11 @@
+﻿-- ((EDDI docking denied))
+
+Set Boolean [Request] to False
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, 'DOCKING REQUEST DENIED:
+Your request to dock at {TXT:EDDI docking denied station} for the following reason:
+{TXT:EDDI docking denied reason}
+-------------
+' to f...
+End Condition

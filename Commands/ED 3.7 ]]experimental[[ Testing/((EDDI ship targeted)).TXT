@@ -1,0 +1,9 @@
+﻿-- ((EDDI ship targeted))
+
+Begin Condition : ([PreviousTargetName] Equals [EDDI ship targeted name] AND [EDDI ship targeted scanstage] Equals 3) OR ([PreviousTargetName] Equals 'None' AND [EDDI ship targeted scanstage] Equals 3)
+    Write [Purple] 'Targeted: {TXT:EDDI ship targeted subsystem}' to log
+    Begin Text Compare : [TargetSubsystem] Does Not Equal [EDDI ship targeted subsystem]
+        Set text [PreviousTargetName] to [EDDI ship targeted name]
+        Press variable key(s) [edCyclePreviousSubsystem] and hold for 0,05 seconds and release
+    End Condition
+End Condition

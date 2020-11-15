@@ -1,0 +1,6 @@
+﻿-- You may [talk; speak] [;now;EDDI]
+-- You may [talk; speak] [now;] | EDDI original command
+
+Say, 'Resuming notifications Commander.'
+-- enablespeechresponder
+Execute external plugin, 'EDDI 3.7.1' using context 'enablespeechresponder'

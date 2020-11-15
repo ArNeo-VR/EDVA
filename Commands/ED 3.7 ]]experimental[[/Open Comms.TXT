@@ -1,0 +1,4 @@
+﻿-- Open Comms; Open Channel; On Screen
+
+Start Dictation Mode (Clearing Dictation Buffer)
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Notify.wav'

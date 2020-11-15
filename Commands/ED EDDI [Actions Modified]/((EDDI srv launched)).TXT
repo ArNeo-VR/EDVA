@@ -1,0 +1,10 @@
+﻿-- ((EDDI srv launched))
+
+Set Boolean [full beam] to False
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, 'SRV LAUNCHED:
+SRV launched with loadout {TXT:EDDI srv launched loadout}.
+-------------
+' to file '{TXT:Log-eddi-events}'
+End Condition

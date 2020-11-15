@@ -1,0 +1,21 @@
+﻿-- Target [none; reset; Power plant; Drive; Thrusters; FSD; Life Support; Power Distributor; Shield Generator; Shield Cell Bank; FSD Interdictor; Heatsink; Chaff; Shield Booster; Cargo Hatch; Drive; Rail gun; Cannon; Burst Laser]
+
+-- cargo hatch, rail gun, burst laser, seeker missile rack, manifest scanner, point defence, drive, power plant, frame shift drive, life support, power distributor shield generator, frame shift drive interdictor
+-- Not set; Power plant; FSD; Life Support; Power Distributor; Shield Generator; Shield Cell Bank; FSD Interdictor; Heatsink; Chaff; Shield Booster; Cargo Hatch; Drive; Rail gun; Cannon; Burst Laser
+
+Begin Text Compare : [{CMDSEGMENT:1}] Equals 'none'
+    Set text [TargetSubsystem] to 'None'
+    Set text [PreviousTargetName] to 'None'
+    Set text [SubsystemTarget] to 'None'
+    Set text [SubsystemTargetPrevious] to 'None'
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Thusters'
+    Set text [TargetSubsystem] to 'Drive'
+    Set text [SubsystemTarget] to 'Drive'
+Else
+    Set text [TargetSubsystem] to '{CMDSEGMENT:1}'
+    Set text [SubsystemTarget] to '{CMDSEGMENT:1}'
+End Condition
+Set text [PreviousTargetName] to 'None'
+Set text [SubsystemTargetPrevious] to 'None'
+
+Press variable key(s) [edCycleNextSubsystem] and hold for 0,05 seconds and release

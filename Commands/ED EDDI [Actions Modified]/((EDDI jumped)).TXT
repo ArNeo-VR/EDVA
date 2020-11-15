@@ -1,0 +1,41 @@
+﻿-- ((EDDI jumped))
+
+-- Required for distance calculation ?
+Set decimal [XAxis] value to the converted value of {DEC:EDDI jumped x} (round to 3 decimal places)
+Set decimal [YAxis] value to the converted value of {DEC:EDDI jumped y} (round to 3 decimal places)
+Set decimal [ZAxis] value to the converted value of {DEC:EDDI jumped z} (round to 3 decimal places)
+Set decimal [FuelLevel] value to the converted value of {DEC:EDDI jumped fuelremaining}
+Write [Blue] '{DEC:EDDI jumped fuelremaining}' to log
+Set decimal [FuelLevel] to [FuelLevel] divided by [{DEC:Ship total fuel tank capacity}] (integer division)
+Set decimal [FuelLevel] to [FuelLevel] times 100
+Set decimal [FuelLevel] value to the value of [FuelLevel] (round to 2 decimal places)
+Set decimal [FuelUsed] value to the converted value of {DEC:EDDI jumped fuelused} (round to 2 decimal places)
+
+Begin Decimal Compare : [FuelLevel] Is Less Than Or Equals 16,00000
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\CargoScoopSpeedWarning_New_ringtone.mp3'
+    Set text [Warning] to 'Your fuel level is under 5%.  If you do not refuel soon you risk being stranded.'
+Else If Decimal Compare : [FuelLevel] Is Less Than Or Equals 30,00000
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\CargoScoopSpeedWarning_Old_ringtone.mp3'
+    Set text [Warning] to 'You have a quarter tank of fuel remaining.  Refuel soon.'
+Else If Decimal Compare : [FuelLevel] Is Less Than Or Equals 50
+    DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\PlayerComms_Quindar_PTT_Open_text.mp3'
+    Set text [Warning] to 'Your tank is half empty. Refuel soon.'
+Else
+    Set text [Warning] to 'Your fuel level is adequate.'
+End Condition
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    DISABLED - Append, 'JUMPED: 
+You have jumped into the {TXT:EDDI jumped system} system.
+
+Coordinates: {DEC:XAxis},{DEC:YAxis},{DEC:ZAxis}
+Security: {TXT:EDDI jumped security}
+Economy: ...
+End Condition
+
+Write [Red] 'Level {DEC:FuelLevel} - {DEC:EDDI jumped fuelremaining} -' to log
+Write [Red] '{TXT:Warning}' to log
+Pause 2 seconds
+
+>> Malics profile v4, Check star system; system check
+Execute command, 'Check Star System;system check'

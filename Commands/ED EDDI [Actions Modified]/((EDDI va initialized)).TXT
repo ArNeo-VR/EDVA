@@ -1,0 +1,8 @@
+﻿-- ((EDDI va initialized))
+
+Write [Pink] 'EDDI-init' to log
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, '{EDDI init}
+-------------' to file '{TXT:Log-eddi-events}'
+End Condition

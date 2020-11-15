@@ -1,0 +1,4 @@
+﻿-- ((EDDI settlement approached))
+
+Write [Blue] '{TXT:EDDI settlement approached bodyname} [ {DEC:EDDI settlement approached latitude},{DEC:EDDI settlement approached longitude} ] {TXT:EDDI settlement approached name}' to log
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-c808.wav'

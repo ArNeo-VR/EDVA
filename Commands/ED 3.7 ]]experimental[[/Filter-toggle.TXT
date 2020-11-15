@@ -1,0 +1,210 @@
+﻿-- [Enable; Disable; Tag] [Stars; Asteroid clusters; Planets and Moons; Landfall planets and Moons; Settlements; Stations; Fleet Carriers; Points of Interest; Signal source; Systems; Asteroids; Planets; Moons; Landfalls; Landfall planets] Filter
+== Global/Wide Variables used:
+nav-tab (experimental tab counting)
+
+-- TODO: Command to toggle a filter 
+
+!!! >> ## For auto-panel-select to be functional ##
+!!! >> In Elite Dangerous, following keybinds need to be bound!
+!!! >> [Controls] > [Mode Switches] > TARGET PANEL (i use, <rshift>-<num4>)
+-- I left in the navigation-tab counting, disabled.
+
+==============================================================
+=> To Create a new filter
+= Add trigger word to the 'When I say'-command (above)
+= Create a new else if statement, with trigger text for {CMDSEGMENT:1}
+= Copy "Set [ALL] variables Settings to false" (just below)
+= Delete the one's you don't want enabled.
+==============================================================
+
+Signals; Stations; Anomaly; Unknown; Settlement; Settlement filter; Scanner; Signal source; Station filter; systems; system filter; system only;]
+= ALL =
+= ALL = All filters enabled.
+= Default; Standard; = Stars, Planet and Moons, Landfall planets and Moons, Settlements, Stations, Point of Interest, Signal source, Systems.
+= Missions = Landfall and Moons, Settlements, Stations, Systems.
+= signals; stations; Anomaly; Unknown;
+= Settlement; Settlement filter;
+= scanner; signal source; station filter; systems; system filter; system only
+
+==============================================================
+# Automaticly open Panel and go to Filter selection.
+Set Boolean [auto-panel-select] to True
+# Set [ALL] variables Settings to false
+Set Boolean [Stars] to False
+Set Boolean [Asteroid clusters] to False
+Set Boolean [Planet and Moons] to False
+Set Boolean [Landfall planets and Moons] to False
+Set Boolean [Settlements] to False
+Set Boolean [Stations] to False
+Set Boolean [Fleet Carriers] to False
+Set Boolean [Points of Interest] to False
+Set Boolean [Signal sources] to False
+Set Boolean [Systems] to False
+==============================================================
+# Set Selections
+Begin Text Compare : [{CMDSEGMENT:1}] Equals 'All'
+    Set Boolean [Stars] to True
+    Set Boolean [Asteroid clusters] to True
+    Set Boolean [Planet and Moons] to True
+    Set Boolean [Landfall planets and Moons] to True
+    Set Boolean [Settlements] to True
+    Set Boolean [Stations] to True
+    Set Boolean [Fleet Carriers] to False
+    Set Boolean [Points of Interest] to True
+    Set Boolean [Signal sources] to True
+    Set Boolean [Systems] to True
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Default'
+    [Stars; Asteroid clusters; Planets and Moons; Landfall planets and Moons; Settlements; Stations; Points of Interest; Signal source; Systems; Asteroids; Planets; Moons; Landfalls; Landfall planets]
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Missions'
+Else If : [{CMDSEGMENT:1}] Equals 'standard' OR [{CMDSEGMENT:1}] Equals 'standard filter' OR [{CMDSEGMENT:1}] Equals 'Default'
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Settlements'
+    Set Boolean [Settlements] to True
+    Set Boolean [Stations] to True
+Else If : [{CMDSEGMENT:1}] Equals 'stations' OR [{CMDSEGMENT:1}] Equals 'station filter'
+    Set Boolean [Stations] to True
+Else If : [{CMDSEGMENT:1}] Equals 'unknown' OR [{CMDSEGMENT:1}] Equals 'anomaly'
+Else If : [{CMDSEGMENT:1}] Equals 'signals' OR [{CMDSEGMENT:1}] Equals 'scanner' OR [{CMDSEGMENT:1}] Equals 'signal source'
+    Set Boolean [Signal sources] to True
+Else If : [{CMDSEGMENT:1}] Equals 'systems' OR [{CMDSEGMENT:1}] Equals 'next system only' OR [{CMDSEGMENT:1}] Equals 'system'
+    Set Boolean [Systems] to True
+End Condition - Exit when condition not met
+
+==============================================================
+==============================================================
+>> Execute, Set Filters
+
+>> Back to main viewer
+Begin Boolean Compare : [auto-panel-select] Equals True
+    Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'external panel'
+        Start Loop While : [{TXT:Status gui focus}] Does Not Equal 'none'
+            Pause 0,06 seconds
+            Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+        End Loop
+        DISABLED - Start Loop : Repeat 3 Times
+            DISABLED - Pause 0,06 seconds
+            DISABLED - Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+        DISABLED - End Loop
+        
+        >> Goto [navigation panel] Ship/SRV
+        Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+            Press variable key(s) [edFocusLeftPanel] and hold for 0,05 seconds and release
+        Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+            Press variable key(s) [edFocusLeftPanel_Buggy] and hold for 0,05 seconds and release
+        End Condition
+    End Condition
+    Pause 0,09 seconds
+    
+    ##############################################################
+    >> When in different [tab] move back to the left (variable [nav-tab])
+    Start Loop While : [nav-tab] Is Greater Than 0
+        Press variable key(s) [edLeftThrustButton] and hold for 0,05 seconds and release
+        Pause 0,06 seconds
+        Set small int (condition) [nav-tab] value as decremented by 1
+    End Loop
+    ##############################################################
+End Condition
+
+>> Move to tab [Navigation] left and top menu item
+Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
+Pause 0,06 seconds
+Start Loop : Repeat 3 Times
+    Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+    Pause 0,06 seconds
+End Loop
+
+>> reset filters
+Begin Condition : ([{CMDSEGMENT:0}] Starts With 'Enable' AND [{CMDSEGMENT:1}] Does Not Equal '') OR ([{CMDSEGMENT:0}] Equals 'Disable' AND [{CMDSEGMENT:1}] Does Not Equal '')
+    Begin Boolean Compare : [filter] Equals True
+        Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+        Set Boolean [filter] to False
+        Pause 0,04 seconds
+        Pause 0,2 seconds
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+        Pause 0,2 seconds
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    Else
+        Pause 0,2 seconds
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+        Pause 0,5 seconds
+    End Condition
+    Pause 0,2 seconds
+    DISABLED - Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+    DISABLED - Pause 0,5 seconds
+End Condition
+DISABLED - Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+DISABLED - Pause 0,5 seconds
+DISABLED - Press Space key and hold for 0,05 seconds and release
+
+>> Goto top and Set Filters
+Pause 0,2 seconds
+Press variable key(s) [edUI_Up] and hold for 0,9 seconds and release
+Pause 0,06 seconds
+Begin Text Compare : [{CMDSEGMENT:1}] Does Not Equal ''
+    
+    ---- Set filters
+    Begin Boolean Compare : [Stars] Equals True
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+    Pause 0,025 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Begin Boolean Compare : [Asteroid clusters] Equals True
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+    Pause 0,025 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Begin Boolean Compare : [Planet and Moons] Equals True
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+    Pause 0,025 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Begin Boolean Compare : [Landfall planets and Moons] Equals True
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+    Pause 0,025 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Begin Boolean Compare : [Settlements] Equals True
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+    Pause 0,025 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Begin Boolean Compare : [Stations] Equals True
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+    Pause 0,025 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Begin Boolean Compare : [Points of Interest] Equals True
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+    Pause 0,025 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Begin Boolean Compare : [Signal sources] Equals True
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+    Pause 0,025 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Begin Boolean Compare : [Systems] Equals True
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    End Condition
+    Set Boolean [filter] to True
+    DISABLED - Pause 0,025 seconds
+    DISABLED - Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    
+    ---- Back to main viewer
+    Start Loop : Repeat 2 Times
+        Pause 0,06 seconds
+        Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+    End Loop
+End Condition
+
+==============================================================
+Set Boolean [auto-panel-select] to [Not Set]
+# Unset [ALL] variables Settings
+Set Boolean [Stars] to [Not Set]
+Set Boolean [Asteroid clusters] to [Not Set]
+Set Boolean [Planet and Moons] to [Not Set]
+Set Boolean [Landfall planets and Moons] to [Not Set]
+Set Boolean [Settlements] to [Not Set]
+Set Boolean [Stations] to [Not Set]
+Set Boolean [Points of Interest] to [Not Set]
+Set Boolean [Signal sources] to [Not Set]
+Set Boolean [Systems] to [Not Set]

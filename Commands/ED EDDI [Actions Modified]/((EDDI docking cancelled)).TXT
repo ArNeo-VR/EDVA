@@ -1,0 +1,10 @@
+﻿-- ((EDDI docking cancelled))
+
+Set Boolean [Request] to False
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, 'DOCKING REQUEST RETRACTED:
+You have cancelled your docking request to {TXT:EDDI docking cancelled station}.
+-------------
+' to file '{TXT:Log-eddi-events}'
+End Condition

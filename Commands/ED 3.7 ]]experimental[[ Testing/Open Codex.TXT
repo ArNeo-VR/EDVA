@@ -1,0 +1,5 @@
+﻿-- [Open;] Codex
+
+DISABLED - Press Right Ctrl+Left Shift+\ | keys and hold for 0,05 seconds and release
+Press variable key(s) [edOpenCodexGoToDiscovery] and hold for 0,05 seconds and release
+Write [Blue] '= {txt:edOpenCodexGoToDiscovery}' to log

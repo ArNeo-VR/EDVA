@@ -1,0 +1,68 @@
+﻿-- [Do;Can] you see me
+-- QGV - Do you see me?  - - . -   - - .   . . . -
+
+-
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,8 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+
+Pause 1,3 seconds
+-
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,8 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 1,3 seconds
+
+.
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,3 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 1,3 seconds
+
+-
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,8 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 2 seconds
+
+-
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,8 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 1,3 seconds
+
+-
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,8 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 1,3 seconds
+
+.
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,3 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 2 seconds
+
+.
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,3 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 1,3 seconds
+
+.
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,3 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 1,3 seconds
+
+.
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,3 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 1,3 seconds
+
+-
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 0,8 seconds
+Press variable key(s) [edShipSpotLightToggle] and hold for 0,05 seconds and release
+Pause 1,3 seconds

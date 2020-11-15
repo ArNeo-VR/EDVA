@@ -1,0 +1,6 @@
+﻿-- ((EDDI unhandled event))
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, '{EDDI unhandled event}
+-------------' to file '{TXT:Log-eddi-events}'
+End Condition

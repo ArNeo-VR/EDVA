@@ -1,0 +1,9 @@
+﻿-- [Shut up; Quiet; Damnit] [;EDDI]
+
+Stop all text-to-speech
+-- shutup, EDDI stops current speech
+Execute external plugin, 'EDDI 3.7.1' using context 'shutup'
+
+Begin Small Integer Compare : [VA_LOAD_STATUS] Equals 0
+    Say, 'Okay'
+End Condition

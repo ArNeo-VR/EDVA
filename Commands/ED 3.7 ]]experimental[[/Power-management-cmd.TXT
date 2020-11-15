@@ -1,0 +1,33 @@
+﻿-- [Reset Pips; Brace for Impact; SHIT] [;Power]
+-- Shields; Power to Shields; Shields Up; Brace for Impact
+
+Begin Condition : [{CMDSEGMENT:0}] Equals 'Max' OR [{CMDSEGMENT:0}] Equals 'Max Power to' OR ([{CMDSEGMENT:0}] Equals 'Max' AND [{CMDSEGMENT:2}] Equals 'Power') OR [{CMDSEGMENT:0}] Equals ''
+    Set integer [loopcount] value to 4
+Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Power to'
+    Set integer [loopcount] value to 1
+Else If : [{CMDSEGMENT:0}] Equals 'Balance' OR [{CMDSEGMENT:0}] Equals 'Reset pips'
+    Set integer [loopcount] value to 2
+Else If : [{CMDSEGMENT:0}] Starts With 'Brace' OR [{CMDSEGMENT:0}] Equals 'Shit'
+    Set integer [loopcount] value to 4
+End Condition
+Start Loop : Repeat [loopcount] Times
+    Begin Condition : [{CMDSEGMENT:1}] Equals 'Shield' OR [{CMDSEGMENT:1}] Equals 'Shields' OR [{CMDSEGMENT:1}] Equals 'System' OR [{CMDSEGMENT:1}] Equals 'Systems' OR [{CMDSEGMENT:1}] Equals 'Brace for Impact' OR [{CMDSEGMENT:1}] Equals 'Shit'
+        Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+            Press variable key(s) [edIncreaseSystemsPower] and hold for 0,05 seconds and release
+        Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+            Press variable key(s) [edIncreaseSystemsPower_Buggy] and hold for 0,05 seconds and release
+        End Condition
+    Else If : [{CMDSEGMENT:1}] Equals 'Engine' OR [{CMDSEGMENT:1}] Equals 'Engines'
+        Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+            Press variable key(s) [edIncreaseEnginesPower] and hold for 0,05 seconds and release
+        Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+            Press variable key(s) [edIncreaseEnginesPower_Buggy] and hold for 0,05 seconds and release
+        End Condition
+    Else If : [{CMDSEGMENT:1}] Equals 'Weapon' OR [{CMDSEGMENT:1}] Equals 'Weapons'
+        Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+            Press variable key(s) [edIncreaseWeaponsPower] and hold for 0,05 seconds and release
+        Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+            Press variable key(s) [edIncreaseWeaponsPower_Buggy] and hold for 0,05 seconds and release
+        End Condition
+    End Condition
+End Loop

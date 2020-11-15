@@ -1,0 +1,80 @@
+﻿-- ((EDDI message received))
+-- Says (TTS) ingame messages.
+-- bug: Sometimes events get triggered twice
+
+-- compare / filter messages said thought TTS
+Begin Text Compare : [{TXT:EDDI message received message}] Equals '######'
+Else If Text Compare : [{TXT:EDDI message received message}] Equals 'Docking request granted.'
+Else If Text Compare : [{TXT:EDDI message received message}] Equals 'Docking request cancelled.'
+Else If Text Compare : [{TXT:EDDI message received message}] Equals 'Docking request denied.'
+Else If Text Compare : [{TXT:EDDI message received message}] Equals 'No fire zone entered.'
+Else If Text Compare : [{TXT:EDDI message received message}] Equals 'No fire zone left.'
+Else If Text Compare : [{TXT:EDDI message received from}] Equals 'Wedding Barge'
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows User Account Control.wav'
+Else If Text Compare : [{TXT:EDDI message received from}] Equals 'Cruise Ship'
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows User Account Control.wav'
+DISABLED - Else If Text Compare : [{TXT:EDDI message received message}] Equals '######'
+    --
+Else
+    Begin Text Compare : [{TXT:EDDI message received channel}] Equals 'starsystem'
+        Play sound, 'internal:Fwip'  (and wait until it completes)
+    Else
+        Begin Boolean Compare : [EDDI message received player] Equals True
+            Play sound, '{VA_SOUNDS}\ED2018\startrek-sfx-doorbell-c801.wav'
+        End Condition
+        Pause 1 second
+        Begin Text Compare : [{TXT:EDDI message received channel} message,] Does Not Equal 'NPC'
+            Say, '{TXT:EDDI message received from}'  (and wait until it completes)
+        End Condition
+        Begin Text Compare : [{TXT:EDDI message received channel}] Does Not Equal 'starsystem'
+            Say, '{TXT:EDDI message received channel},'  (and wait until it completes)
+        End Condition
+        Say, '{TXT:EDDI message received source}'  (and wait until it completes)
+        Say, '{TXT:EDDI message received message}'
+    End Condition
+    Begin Text Compare : [{TXT:EDDI message received channel}] Does Not Equal 'starsystem'
+        Write [Blue] '{TXT:EDDI message received channel} - {TXT:EDDI message received source} - {TXT:EDDI message received from}> {TXT:EDDI message received message}' to log
+    End Condition
+End Condition
+
+Begin Boolean Compare : [LogEDDImessages] Equals True
+    Append, '{TXT:EDDI message received channel} - {TXT:EDDI message received source} - {TXT:EDDI message received from}> {TXT:EDDI message received message}' to file '{TXT:Log...
+End Condition
+Pause 1,5 seconds
+
+Set Boolean [~PlayerCharacter] to [{BOOL:EDDI message received player}]
+DISABLED - Begin Text Compare : [{TXT:EDDI message received channel}] Equals 'direct'
+    DISABLED - Begin Boolean Compare : [~PlayerCharacter] Equals True
+        DISABLED - Append, 'DIRECT MESSAGE RECIEVED:
+You have recieved a direct message from Cmdr. {TXT:EDDI message received from}.
+MESSAGE: {TXT:EDDI message received message}
+--------
+' to...
+    DISABLED - Else
+        DISABLED - Append, 'DIRECT MESSAGE RECIEVED:
+You have recieved a direct message from {TXT:EDDI message received from}.
+MESSAGE: {TXT:EDDI message received message}
+--------
+' to file ...
+    DISABLED - End Condition
+DISABLED - Else If Text Compare : [{TXT:EDDI message received channel}] Equals 'local'
+    DISABLED - Begin Boolean Compare : [~PlayerCharacter] Equals True
+        DISABLED - Append, 'LOCAL MESSAGE RECIEVED:
+You have recieved a local message from Cmdr. {TXT:EDDI message received from}.
+MESSAGE: {TXT:EDDI message received message}
+--------
+' to f...
+    DISABLED - Else
+        DISABLED - Append, 'LOCAL MESSAGE RECIEVED:
+You have recieved a local message from {TXT:EDDI message received from}.
+MESSAGE: {TXT:EDDI message received message}
+--------
+' to file '{...
+    DISABLED - End Condition
+DISABLED - Else If Text Compare : [{TXT:EDDI message received channel}] Equals 'wing'
+    DISABLED - Append, 'WING MESSAGE RECIEVED:
+You have recieved a message from wing member Cmdr. {TXT:EDDI message received from}.
+MESSAGE: {TXT:EDDI message received message}
+--------
+'...
+DISABLED - End Condition

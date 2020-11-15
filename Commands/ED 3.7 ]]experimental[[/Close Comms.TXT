@@ -1,0 +1,9 @@
+﻿-- Close Comms; Close channel; Send message; Over
+
+Stop Dictation Mode
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Notify.wav'
+Set Windows clipboard to '{DICTATION:PERIOD:CAPITAL}'
+Press Left Ctrl+V keys and hold for 0,1 seconds and release
+
+Enable the command below if you want it to send the command without it pasting
+DISABLED - Press Enter key and hold for 0,2 seconds and release

@@ -1,0 +1,8 @@
+﻿-- ((EDDI docking timed out))
+
+Set Boolean [Request] to False
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, 'DOCKING REQUEST TIMEOUT:
+Your docking request has timed out.  Please submit a new docking request to {TXT:EDDI docking timed out} station control if you still wis...
+End Condition

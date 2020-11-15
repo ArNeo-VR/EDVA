@@ -1,0 +1,20 @@
+﻿-- ((EDDI engineer progressed))
+
+Pause 13 seconds
+-- ↓ Environment conditions
+Begin Condition : ([Status vehicle] Equals 'Ship' AND [Status docked] Equals True AND [Status landed] Equals False AND [Hangar] Has Not Been Set)
+    
+    -- ↓ When resuming game, variables needed for 'Return to service' /  'Starport services'
+    Set Boolean [Hangar] to True
+    Set Boolean [Starport services] to False
+    Begin Boolean Compare : [Debug Write] Equals True
+        Write [Blue] 'Continue || Docked || Ship > Hangar True' to log
+        Write [Blue] 'Continue || Docked || Ship > Starport service Not Set' to log
+    End Condition
+End Condition
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, 'ENGINEERING PROGRESSION:
+Your reputation with engineer {TXT:EDDI engineer progressed engineer} has increased  to level {INT:EDDI engineer progressed rank}.
+-----...
+End Condition

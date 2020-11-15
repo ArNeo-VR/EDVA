@@ -1,0 +1,30 @@
+﻿-- Ship Hardpoints; Utility mounts; Core Internals; Optional internals; Livery; Stored modules
+--
+
+-- ↓ Condition
+Begin Condition : ([Status docked] Equals True AND [hangar] Equals True)
+    Write [Blue] 'Docked: {BOOL:docked}' to log
+    Begin Text Compare : [{CMD}] Equals 'Ship Hardpoints'
+        DISABLED - Set small int (condition) [outfitting-menu] value to 0
+        Set integer [~outfitting-menu] value to 0
+    Else If Text Compare : [{CMD}] Equals 'Utility mounts'
+        Set integer [~outfitting-menu] value to 1
+    Else If Text Compare : [{CMD}] Equals 'Core internals'
+        Set integer [~outfitting-menu] value to 2
+    Else If Text Compare : [{CMD}] Equals 'Optional internals'
+        Set integer [~outfitting-menu] value to 3
+    Else If Text Compare : [{CMD}] Equals 'Livery'
+        Set integer [~outfitting-menu] value to 4
+    Else If Text Compare : [{CMD}] Equals 'Stored modules'
+        Set integer [~outfitting-menu] value to 5
+    Else
+        Play sound, 'internal:Echo'
+    End Condition - Exit when condition not met
+    
+    -- ↓ Execute
+    Start Loop : Repeat [~outfitting-menu] Times
+        Press Down key and hold for 0,05 seconds and release
+        Pause 0,07 seconds
+    End Loop
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+End Condition

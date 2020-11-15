@@ -1,0 +1,12 @@
+﻿-- ((EDDI undocked))
+
+Write [Blue] '>>> UnDocked' to log
+Set Boolean [hangar] to [Not Set]
+Set Boolean [Starport services] to [Not Set]
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, 'UNDOCKED:
+You have undocked from {TXT:Last station name}.
+-------------
+' to file '{TXT:Log-eddi-events}'
+End Condition

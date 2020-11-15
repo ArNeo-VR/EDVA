@@ -1,0 +1,3 @@
+﻿-- Test start mode
+
+Start Dictation Mode (Clearing Dictation Buffer)

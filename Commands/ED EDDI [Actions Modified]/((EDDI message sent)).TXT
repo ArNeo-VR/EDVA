@@ -1,0 +1,8 @@
+﻿-- ((EDDI message sent))
+
+Begin Boolean Compare : [LogEDDImessages] Equals True
+    Append, 'MESSAGE SENT:
+You have sent a message to {TXT:EDDI message sent to} - MESSAGE: {TXT:EDDI message sent message}
+-------------
+' to file '{TXT:Log-eddi-events}'
+End Condition

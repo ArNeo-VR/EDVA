@@ -1,0 +1,8 @@
+﻿-- ((EDDI docking granted))
+
+Set Boolean [Request] to True
+
+Begin Boolean Compare : [LogEDDIevents] Equals True
+    Append, 'DOCKING REQUEST GRANTED:
+Your request to dock at {TXT:EDDI docking granted station} has been approved.  Please proceed to landing pad {INT:EDDI docking granted la...
+End Condition
