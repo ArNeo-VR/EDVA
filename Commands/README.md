@@ -16,9 +16,10 @@
 
 Activates the in game menu and goes to the submenu/selection.  
 **Elite [Menu; Options; Help; Social; Friends; groups; blocked; report player; ...] [;Menu]**  
-**Elite Audio [;Sound Effects; Music; Voice; Ship; and-more...]**  
-**Elite Grahpics [;Display; Quality; 3D]**  
 **Elite Controls [;Mouse; Flight rotation; Driving; and-more...]**  
+**Elite Grahpics [;Display; Quality; 3D]**  
+**Elite Audio [;Sound Effects; Music; Voice; Ship; and-more...]**  
+**Elite apply [Controls; Graphics; Audio; Changes]** Notice Audio has a different exit selection.
 
 **Exit to Elite menu** :: Exits the game to MainMenu.  
 **Exit to Desktop, Quit Elite Dangerous** :: Exit and closes the game.  
