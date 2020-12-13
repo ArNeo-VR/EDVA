@@ -1,4 +1,4 @@
-﻿-- <E> <Joystick2 Button 25>
+﻿-- E <edCycleNextPanel> <Joystick2 Button 25>
 
 Begin Text Compare : [{ACTIVEWINDOWPROCESSNAME}] Equals 'EliteDangerous64'
     
@@ -33,7 +33,7 @@ Begin Text Compare : [{ACTIVEWINDOWPROCESSNAME}] Equals 'EliteDangerous64'
         Write [Blue] '1navtab: {SMALL:sys-tab}' to log
     End Condition
     
-    Press variable key(s) [edCycleNextPanel] and hold for 0,2 seconds and release
+    DISABLED - Press variable key(s) [edCycleNextPanel] and hold for 0,2 seconds and release
     DISABLED - = Delay to prevent miscounting
     DISABLED - Pause 0,15 seconds
 End Condition

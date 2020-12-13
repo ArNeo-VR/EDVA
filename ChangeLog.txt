@@ -2,6 +2,18 @@
 Rename EDDIVoice variable
 --
 
+-- 202012, E:D 3.7.5O
+Elite apply settings / audio (has a different selection).
++Command, 'Firegroup [1..15]' selection, need add to also work with a,b,c,.. to function.
++Command, 'Landing pad 1..45' speaks (TTS) the location of the landingpad.
+Changed, Panel-tab Counting, removed pressing a key. Used edBind-variable-key instead of a Letter. Key&Joystick need to be bound ingame.
+
+-- 202011, E:D 3.7.5N :: Profile released "[release] ED [ArNeo]-3.7.5N-Profile"
+Export to >> [release] EDDI-3.7.1-Profile.vap
+Split/Double command: = Back[R] Panel UI << Removed to trash = Back; Exit; Exit codex - added reset the outfitting status
+Changed variable: 'Starport services' to 'Starport loaded' (Status loading delay of the starport menu)
+Added variabes: Starport outfitting - menu is active :: Starport loaded - menu is active
+
 -- 202008, E:D 3.7.5M, version number change
 Changed command variables to ~localvariables
 

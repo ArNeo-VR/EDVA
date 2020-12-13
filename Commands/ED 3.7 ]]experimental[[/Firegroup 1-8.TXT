@@ -1,0 +1,21 @@
+﻿-- Experimental: [Firegroup;Group] [1..8]
+
+Set integer [~set-firegroup] value to the converted value of {TXTNUM:"{CMD}"}
+Set integer [~set-firegroup] to [~set-firegroup] minus 1
+Set integer [~loop] value to the value of [Status firegroup]
+Set integer [~loop] to [~loop] minus [~set-firegroup]
+
+Write [Blue] '>> Firegroup current: [ {INT:Status firegroup} ] to [ {INT:~set-firegroup} ] diff [ {INT:~loop} ]' to log
+Begin Integer Compare : [~set-firegroup] Is Greater Than [Status firegroup]
+    Start Loop : Repeat [~loop] Times
+        Press variable key(s) [edCycleFireGroupNext] and hold for 0,1 seconds and release
+    End Loop
+Else If Integer Compare : [~set-firegroup] Is Less Than [Status firegroup]
+    Start Loop : Repeat [~loop] Times
+        Press variable key(s) [edCycleFireGroupPrevious] and hold for 0,1 seconds and release
+    End Loop
+Else
+    Play sound, 'internal:Cleek'
+End Condition
+DISABLED - Play sound, 'internal:Sneak'
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'
