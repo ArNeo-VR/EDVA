@@ -1,6 +1,7 @@
 ﻿-- [Restock; Repair; Refuel]
-!!!Requirement in a SRV > set internal (system) panel on [Inventory] > [Synthesis]
+
 !!!Requirements in Ship > Docked at station.
+!!!Requirement in a SRV > set internal (system) panel on [Inventory] > [Synthesis]
 
 Begin Text Compare : [{CMD}] Equals 'Restock'
     Set integer [~CMDCount] value to 0
@@ -9,6 +10,7 @@ Else If Text Compare : [{CMD}] Equals 'Repair'
 Else If Text Compare : [{CMD}] Equals 'Refuel'
     Set integer [~CMDCount] value to 2
 End Condition
+Write [Blue] '{TXT:Status vehicle} - Fuel> {DEC:Status fuel percent}% - Ship> {DEC:Ship health}%' to log
 
 -- ↓ Environment conditions
 Begin Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
@@ -76,7 +78,8 @@ Else If Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
     
     -- ↓ execute command
     Pause 0,05 seconds
-    Begin Condition : ([{CMD}] Equals 'Refuel' AND [Status fuel percent] Does Not Equal 100,00000) OR ([{CMD}] Equals 'Repair' AND [Ship health] Does Not Equal 100,00000) OR [{CMD}] Equals 'Restock'
+    Begin Condition : ([{CMD}] Equals 'Refuel' AND [Status fuel percent] Does Not Equal 100,00000) OR ([{CMD}] Equals 'Repair' AND [Ship health] Is Less Than 100,00000) OR [{CMD}] Equals 'Restock' OR [{CMD}] Equals 'Repair'
+        
         Set integer [~CMDCount] to [~CMDCount] minus 2
         Set integer [~CMDCount] to [~CMDCount] times -1
         Start Loop : Repeat [~CMDCount] Times

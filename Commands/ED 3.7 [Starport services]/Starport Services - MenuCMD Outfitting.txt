@@ -1,0 +1,39 @@
+﻿-- Ship Hardpoints; Utility mounts; Core Internals; Optional internals; Livery; Stored modules
+--
+
+-- ↓ Condition
+Begin Condition : ([Status docked] Equals True AND [hangar] Equals True AND [Starport loaded] Equals True AND [Starport outfitting] Equals True)
+    Begin Text Compare : [{CMD}] Equals 'Ship Hardpoints'
+        DISABLED - Set small int (condition) [outfitting-menu] value to 0
+        Set integer [~outfitting-menu] value to 0
+    Else If Text Compare : [{CMD}] Equals 'Utility mounts'
+        Set integer [~outfitting-menu] value to 1
+    Else If Text Compare : [{CMD}] Equals 'Core internals'
+        Set integer [~outfitting-menu] value to 2
+    Else If Text Compare : [{CMD}] Equals 'Optional internals'
+        Set integer [~outfitting-menu] value to 3
+    Else If Text Compare : [{CMD}] Equals 'Livery'
+        Set integer [~outfitting-menu] value to 4
+    Else If Text Compare : [{CMD}] Equals 'Stored modules'
+        Set integer [~outfitting-menu] value to 5
+    Else If Text Compare : [{CMD}] Equals 'Outfitting back'
+        Begin Condition : ([{TXT:Status gui focus}] Equals 'station services' AND [Starport outfitting] Equals True AND Joystick 2 Button 5 Is Not Pressed AND Keyboard Key 'R' Is Not Pressed)
+            Start Loop : Repeat 6 Times
+                Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+                Pause 0,05 seconds
+            End Loop
+            Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+            Set Boolean [Starport outfitting] to False
+        End Condition
+    Else
+        Play sound, 'internal:Echo'
+    End Condition - Exit when condition not met
+    
+    -- ↓ Execute
+    Write [Yellow] '{INT:~outfitting-menu}' to log
+    Start Loop : Repeat [~outfitting-menu] Times
+        Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+        Pause 0,05 seconds
+    End Loop
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+End Condition

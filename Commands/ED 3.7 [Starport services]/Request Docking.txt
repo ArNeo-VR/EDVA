@@ -1,11 +1,13 @@
+!!!EXPERIMENTAL uses tab counting see Panel Menu catagory
+
 -- [Request; Cancel;] Docking [;Request]
 -- <Joystick 2 button 12>
 
-!!!EXPERIMENTAL uses tab counting see Panel Menu catagory
 ++ Required !! Status/Reset nav-tab (for counting the tabs), Accounting Keys and buttons.
 
 Begin Condition : ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'masslock') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'ready') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space')
     
+    Write [Blue] '0' to log
     -- ↓ Go back to main screen
     Begin Text Compare : [Status gui focus] Does Not Equal 'external panel'
         Start Loop : Repeat 4 Times
@@ -36,6 +38,8 @@ Begin Condition : ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND 
         Pause 0,04 seconds
         Set small int (condition) [nav-tab] value as decremented by 1
     End Loop
+    
+    Write [Blue] '1' to log
     -- ↓ move to Contacts-[TAB]
     Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
     Pause 0,06 seconds

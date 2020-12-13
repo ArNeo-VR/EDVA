@@ -5,7 +5,7 @@ Execute command, '[reset key; update key] [bind; binds]' (and wait until it comp
 
 -- ↓ disablespeechresponder, EDDI will, not speak unless spoken to
 Begin Boolean Compare : [EDDIVoice] Equals True
-    Execute command, 'You may talk; You may speak; Speak up [;EDDI]' (and wait until it completes)
+    Execute command, 'You may [talk; speak] [;now;EDDI]' (and wait until it completes)
     DISABLED - Execute command, 'You may speak' (by name) (and wait until it completes)
 Else
     Execute command, 'Be quiet;Radio silence;Stop talking [;EDDI]' (and wait until it completes)

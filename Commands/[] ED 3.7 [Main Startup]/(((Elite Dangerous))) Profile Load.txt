@@ -6,7 +6,7 @@ Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Logon Sound.wav'
 Set small int (condition) [VA_LOAD_STATUS] value to 1
 
 -- ↓ TESTING TESTING TESTING
-Set small int (condition) [Firegroup] value to 1
+DISABLED - Set small int (condition) [Firegroup] value to 1
 -- ↓ Test/idea EDDI frontier-connected?
 DISABLED - Begin Text Compare : [TODO - Frontier API status EDDI] Has Not Been Set
     DISABLED - Say, 'Your Eddi is not logged in to the Frontier-API. Please close VoiceAttack and run Eddi standalone to login.'

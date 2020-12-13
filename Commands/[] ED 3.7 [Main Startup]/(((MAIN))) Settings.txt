@@ -33,7 +33,7 @@ Set text [App_EDEngineer] to '%APPDATA%\Microsoft\Windows\Start Menu\Programs\Ma
 Set text [App_EDDiscovery] to 'c:\Program Files\EDDiscovery\EDDiscovery.exe'
 Set text [App_EDPlanetBearing] to '{TXT:VA_APP}\EDPlanetBearing\EDPlanetBearing.exe'
 
-============================================================================
+==Deprecated BK=============================================================
 -- [defaultpath:] %LOCALAPPDATA%\VoiceAttack\Logs\ [filename:] eddi_output_{DATE:Today}.log
 -- ↓ [path] EDDI Actions
 -- ↓ (backslash is required at end of the path, becouse its used)
@@ -45,6 +45,13 @@ Set text [Filename] to 'EDDI_actions_{DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10
 -- ↓ [path]
 Set text [eddi-msg-path] to '{TXT:VA_Logs}\eddi-messages'
 Set text [eddi-msg] to 'EDDI_msg_{DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10,0,'')}{DATEMONTHNUMERIC}{EXP: IIF({DATEDAY} < 10,0,'')}{DATEDAY}.log'
+
+============================================================================
+-- ↓ [filenames] Locations, Log files | Apps | Custom
+Set text [App_EDMC] to 'c:\Program Files (x86)\EDMarketConnector\EDMarketConnector.exe'
+Set text [App_EDEngineer] to '%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms'
+Set text [App_EDDiscovery] to 'c:\Program Files\EDDiscovery\EDDiscovery.exe'
+Set text [App_EDPlanetBearing] to '{TXT:VA_APP}\EDPlanetBearing\EDPlanetBearing.exe'
 
 ============================================================================
 

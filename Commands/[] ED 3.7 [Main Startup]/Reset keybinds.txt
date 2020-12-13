@@ -11,7 +11,6 @@
 Begin Condition : ([VA_LOAD_STATUS] Equals 0 AND [Debug Notifications] Equals True)
     Write [Blue] '[plugin] ED Keybinds READ-Custom.binds file Triggered' to log
 End Condition
-
 -- ↓ Executy READ Keybinds
 Execute external plugin, 'bindED Plugin v1.0' and wait for return
 

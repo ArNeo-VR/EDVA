@@ -7,9 +7,12 @@ Market; Missions; Passengers; Map; Crew
 
 Begin Condition : ([Status landing gear down] Equals True AND [Status docked] Equals True AND [Status landed] Equals False)
     
+    -- ↓ execute command - Starport Services
+    Execute command, 'Starport Services' (and wait until it completes)
+    
     -- ↓
     Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Exit'
-        Set Boolean [Starport services] to True
+        Set Boolean [Starport loaded] to True
         Press variable key(s) [edUI_back] and hold for 0,05 seconds and release
         Exit Command
         
@@ -62,11 +65,13 @@ Begin Condition : ([Status landing gear down] Equals True AND [Status docked] Eq
         Set integer [~starport-x] value to 2
         Set integer [~starport-y] value to 5
         Set Boolean [Hangar] to True
+        Set Boolean [Starport outfitting] to True
         
         -- ↓ Shipyard - 2,6
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Shipyard'
         Set integer [~starport-x] value to 2
         Set integer [~starport-y] value to 6
+        Set Boolean [Hangar] to True
         
         -- ↓ Advanced maintenance - 2,7
     Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Advanced maintenance'
@@ -76,27 +81,30 @@ Begin Condition : ([Status landing gear down] Equals True AND [Status docked] Eq
     
     -- ↓ Debug text
     Begin Boolean Compare : [Debug write] Equals True
-        Write [Blue] 'Outfitting:{BOOL:Last station has outfitting} Shipyard:{BOOL:Last station has shipyard} Market:{BOOL:Last station has market}' to log
-        Write [Blue] 'Refeul:{BOOL:Last station has refuel} Repair:{BOOL:Last station has repair}' to log
+        Write [Blue] 'Has - Outfitting: {BOOL:Last station has outfitting} Shipyard: {BOOL:Last station has shipyard} Market: {BOOL:Last station has market}' to log
+        Write [Blue] 'Refeul: {BOOL:Last station has refuel} Repair: {BOOL:Last station has repair} -- Has - Outfitting: {BOOL:Last station has outfitting} Shipyard: {BOOL:Last station has shipy...' to log
     End Condition
     
     -- ↓ If station doesn't have services:
     Begin Boolean Compare : [Last station has outfitting] Equals False
         Set integer [~starport-y] to [~starport-y] minus 1
     End Condition
-    Begin Condition : ([Last station has shipyard] Equals False AND [~starport-y] Is Greater Than 5)
+    Begin Condition : ([Last station has shipyard] Equals False AND [~starport-y] Is Greater Than Or Equals 5)
         Set integer [~starport-y] to [~starport-y] minus 1
     End Condition
     
-    -- ↓ execute command - Starport Services
-    Execute command, 'Starport Services' (and wait until it completes)
+    -- ↓ Debug text
+    Begin Boolean Compare : [Debug write] Equals True
+        Write [Blue] 'x {INT:~starport-x} y {INT:~starport-y}' to log
+    End Condition
     
+    -- ↓ execute command
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
     Pause 0,1 seconds
-    Write [Blue] 'x {INT:~starport-x} y {INT:~starport-y}' to log
     Begin Integer Compare : [~starport-x] Is Greater Than 0
         Start Loop : Repeat [~starport-x] Times
             Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
-            Pause 0,05 seconds
+            Pause 0,1 seconds
         End Loop
     End Condition
     Begin Integer Compare : [~starport-y] Is Greater Than 0
@@ -105,6 +113,6 @@ Begin Condition : ([Status landing gear down] Equals True AND [Status docked] Eq
             Pause 0,05 seconds
         End Loop
     End Condition
-    Set Boolean [Starport services] to True
+    Set Boolean [Starport loaded] to True
     Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
 End Condition

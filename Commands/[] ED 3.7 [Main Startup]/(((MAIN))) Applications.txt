@@ -4,7 +4,10 @@
 Execute command, 'Start Elite Market Connector' (by name) (and wait until it completes)
 
 -- ↓ Move Applications
-Move window 'Elite - Dangerous (CLIENT)' to (3,3)
+Set text [~~MyProcess] to 'EliteDangerous64'
+Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
+    Move window 'Elite - Dangerous (CLIENT)' to (3,3)
+End Condition
 
 Display window 'Oculus' as [Minimize]
 

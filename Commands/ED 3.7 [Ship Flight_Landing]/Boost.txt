@@ -1,4 +1,4 @@
-﻿-- Boost
+﻿-- Boost <edUseBoostJuice> <Joy1button4>
 
 Begin Text Compare : [{TXT:Status vehicle}] Does Not Equal 'SRV'
     Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'communications panel'
