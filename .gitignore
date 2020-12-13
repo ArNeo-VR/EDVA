@@ -1,0 +1,11 @@
+EDVA/.gitignore
+
+# User-specific files
+*.bak
+
+# Build results
+[Rr]elease/
+#[Rr]eleases/
+#build/
+#[Bb]in/
+#[Oo]bj/
