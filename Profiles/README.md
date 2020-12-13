@@ -1,6 +1,6 @@
 # [EDVA](../../../EDVA) - Profiles
 
-### [[release] ED [ArNeo]-3.7.5N-Profile](https://github.com/ArNeo-VR/EDVA/tree/master/Profiles) EDVA profile 3.7.5N 2020-11-15. *to be tested*  
+### [[release] ED [ArNeo]-3.7.5N-Profile](https://github.com/ArNeo-VR/EDVA/tree/master/releases) EDVA profile 3.7.5N 2020-11-15. *to be tested*  
 [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
 [Add ...] select "[release] EDDI-3.7.0-profile"  
 
@@ -8,7 +8,7 @@
 Set as 'global profile' in VoiceAttack Options (Icon down-right).  
 
 ### [release] [Off]-Profile.vap
-Set as 'Losf Profile on Startup' in VoiceAttack Options (Icon down-right).  
+Set as 'Default Profile on Startup' in VoiceAttack Options (Icon down-right).  
 
 ### [release]-2020c-Profile.vap
 [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  

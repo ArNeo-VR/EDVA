@@ -12,10 +12,16 @@ Commands are exported to a text file, they are manualy exported and not fully up
 For the time beeing catagories are exported as a voiceattack profile (.vap) file. Until the full profile is tested and published.  
 [List of commands can be found here](Commands#edva---commands)  
 
-## [Profiles](Profiles)
-[[EDVA Profile] EDVA-3.7.5(version)-profile](Profiles) *to be tested*  
+## [Profiles](Profiles) - [Releases](releases)
+[[EDVA Profile] EDVA-3.7.5(version)-profile](releases) *to be tested*  
 Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.vap)  
-**note:** [\[release\] EDDI-3.7.1-profile](Profiles) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
+**note:** [\[release\] EDDI-3.7.1-profile](releases) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
+
+Other [Profiles](Profiles), 
+- [global profile]-Profile, for switching to other profiles.
+- [Off]-Profile(default), Only a Test command and the global profile commands for switching.
+- [release]-2020c-Profile, My main profile 
+- 'EDDI 3.x.x'(required to include in this profile)
 
 ## Voice Attack locations for Apps/Plugins and Sounds
 ### VoiceAttack [default] on x64 bit windows
