@@ -1,0 +1,2 @@
+﻿-- <ESC> Panel exited press Escape
+Execute command, 'Panel exited'

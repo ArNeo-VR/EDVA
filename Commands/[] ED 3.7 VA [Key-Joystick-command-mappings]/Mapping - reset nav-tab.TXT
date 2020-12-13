@@ -1,0 +1,2 @@
+﻿-- <Joy2-Button13> Reset nav-tab , variable for tab-counting left (external) panel.
+Execute command, 'Reset nav-tab' (by name)
