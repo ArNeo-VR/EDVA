@@ -5,7 +5,7 @@ This profile has only the commands, all third party plugins and applications req
 # NOTE !! 
 This profile is not plug-n-play it needs some work to get it going.
 I've not tested it on a clean computer.
-Applications and VoiceAttack plugins are <i>not</i> included.
+Applications and VoiceAttack plugins are **not** included.
 
 ## [VoiceAttack Commands](Commands)
 Commands are exported to a text file, they are manualy exported and not fully up to date.
