@@ -3,8 +3,8 @@ Sharing VoiceAttack commands as text file and as a single profile release (.vap)
 This profile has only the commands, all third party plugins and applications required need to be installed manualy.  
 
 # NOTE !! 
-This profile is not plug-n-play it needs some work to get it going.
-I've not tested it on a clean computer.
+This profile is not plug-n-play it needs some work to get it going.  
+I've not tested it on a clean computer.  
 Applications and VoiceAttack plugins are **not** included.
 
 ## [VoiceAttack Commands](Commands)
