@@ -1,10 +1,15 @@
 ﻿Navigation filter, enable **** filter, only enabled does not reset.
 --
 
+-- 202101, E:D 3.7.5P - Happy New Year
++ Added Settings variable AppProcessEliteDangerous, for only activating the command when the E:D window is active.
++ Added Catagory [Key | Joystick | command mappings], for mapping Joystick buttons, [single/double/hold] joy/button command.
+
+
 -- 202012, E:D 3.7.5O
 Elite apply settings / audio (has a different selection).
 +Command, 'Firegroup [1..15]' selection, need add to also work with a,b,c,.. to function.
-+Command, 'Landing pad 1..45' speaks (TTS) the location of the landingpad.
++Command, 'Landing pad 1..45' speaks (TTS) the location of the landingpad. Calculating the reverse.
 +Command, MenuCMD - Outfitting ...
 +Update, MenuCMD - Starport ...
 Changed, Panel-tab Counting, removed pressing a key. Used edBind-variable-key instead of a Letter. Key&Joystick need to be bound ingame.
