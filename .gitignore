@@ -9,3 +9,4 @@ EDVA/.gitignore
 #build/
 #[Bb]in/
 #[Oo]bj/
+.DS_Store
