@@ -1,0 +1,11 @@
+﻿/l	/local	
+/sy	/system
+/w	/wing
+/mc	/multicrew
+/s	/squadron
+/sl				squadron leader
+/r	/reply
+/d	/direct	/to	[name]
+/t	/target
+	/clear
+	/help

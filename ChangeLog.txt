@@ -1,11 +1,14 @@
 ﻿Navigation filter, enable **** filter, only enabled does not reset.
 --
 
+-- 202103, E:D 3.7.5Q
+
+
 -- 202101, E:D 3.7.5P - Happy New Year
 + Added Settings variable AppProcessEliteDangerous, for only activating the command when the E:D window is active.
 + Added Catagory [Key | Joystick | command mappings], for mapping Joystick buttons, [single/double/hold] joy/button command.
 + Reworked the power distribution commands (Ship Power*)
-
++ Added sounds
 
 
 -- 202012, E:D 3.7.5O
