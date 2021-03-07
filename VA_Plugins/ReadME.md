@@ -1,7 +1,7 @@
 ## [VA_Plugins](VA_Plugins) Voice attack plugins
 
-Voiceattack plugins are by default saved in the Apps folder.
-Apps folder is located in the Voiceattack Program files folder.
+Voiceattack plugins are by default saved in the Apps folder.  
+Apps folder is located in the Voiceattack Program files folder.  
 
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 VoiceAttack: [EDDI VoiceAttack profile "EDDI.vap" file](https://github.com/EDCD/EDDI/tree/develop/VoiceAttackResponder) [Forum](https://forum.voiceattack.com/smf/index.php?topic=564.0)
@@ -15,5 +15,4 @@ VoiceAttack: [EDDI VoiceAttack profile "EDDI.vap" file](https://github.com/EDCD/
 
 - [ED Google sheet for variable key-presses](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) Used in voice attack for the key-stoke commands in voice-attack.
 
-- ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
-Removed the URL's
+- ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~
