@@ -1,17 +1,19 @@
 ﻿Navigation filter, enable **** filter, only enabled does not reset.
 
-
 -- 202103, E:D 3.7.5Q
+# Look into, BindED fork by alterNERDtive [BindED-3.0 Github](https://github.com/alterNERDtive/bindED) [VoiceAttack-forum](https://forum.voiceattack.com/smf/index.php?topic=564.60)
+! Adding bugs to the github issues and this changelog (short description)
 
 
 -- 202101, E:D 3.7.5P - Happy New Year
 + Added Settings variable AppProcessEliteDangerous, for only activating the command when the E:D window is active.
 + Added Catagory [Key | Joystick | command mappings], for mapping Joystick buttons, [single/double/hold] joy/button command.
-+ Reworked the power distribution commands (Ship Power*)
+- Reworked the power distribution commands (Ship Power*)
 + Added sounds
 + Added plugins, EDbinds, EDDI
 - Fix, MenuCMD - Starport ... (Selected wrong menu item).
 + Added tags in Description '[development]'.
+Export: 07-03-2021
 
 -- 202012, E:D 3.7.5O
 Elite apply settings / audio (has a different selection).
@@ -22,11 +24,13 @@ Elite apply settings / audio (has a different selection).
 Changed, Panel-tab Counting, removed pressing a key. Used edBind-variable-key instead of a Letter. Key&Joystick need to be bound ingame.
 Sorted, renamed, disabled, deleted some commands.
 
+
 -- 202011, E:D 3.7.5N :: Profile released "[release] ED [ArNeo]-3.7.5N-Profile"
 Export to >> [release] EDDI-3.7.1-Profile.vap
 Split/Double command: = Back[R] Panel UI << Removed to trash = Back; Exit; Exit codex - added reset the outfitting status
 Changed variable: 'Starport services' to 'Starport loaded' (Status loading delay of the starport menu)
 Added variabes: Starport outfitting - menu is active :: Starport loaded - menu is active
+Export: 01-01-2021
 
 -- 202008, E:D 3.7.5M, version number change
 Changed command variables to ~localvariables
