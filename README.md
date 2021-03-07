@@ -13,7 +13,7 @@ For the time beeing catagories are exported as a voiceattack profile (.vap) file
 [List of commands can be found here](Commands#edva---commands)  
 
 ## [Profiles](Profiles) - [Releases](releases)
-[[EDVA Profile] EDVA-3.7.x(version)-profile](releases) *to be tested*  
+[[EDVA Profile] E:D EDVA-3.7.x(version)-profile](releases) *to be tested*  
 Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.vap)  
 **note:** [\[release\] EDDI-3.7.2-profile](releases) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
 
@@ -35,7 +35,7 @@ Other [Profiles](Profiles),
 <code>Plugins location "c:\ProgramData\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>
 
-## [VA_Plugins](VA_Plugins) Voice attack plugins (3rd party, not included)
+## [VA_Plugins](VA_Plugins) Voice attack plugins
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 - [EDBinds](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables  
 - [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version, not tested/checked it out.
@@ -45,7 +45,7 @@ Other [Profiles](Profiles),
 - ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
 - Google spreadsheets are read from within a InLine C# script.  
 
-- [ED Google sheet for variable key-presses](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) Used in voice attack for the 'variable key-press' commands in voice-attack.
+- [ED Google sheet for variable key-presses](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) Used in voice attack for the key-stoke commands in voice-attack.
 
 ## Elite Dangerous - Applications/Tools (3rd party, not included)
 - [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
