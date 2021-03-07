@@ -1,5 +1,5 @@
 ﻿Navigation filter, enable **** filter, only enabled does not reset.
---
+
 
 -- 202103, E:D 3.7.5Q
 
@@ -10,7 +10,8 @@
 + Reworked the power distribution commands (Ship Power*)
 + Added sounds
 + Added plugins, EDbinds, EDDI
-
+- Fix, MenuCMD - Starport ... (Selected wrong menu item).
++ Added tags in Description '[development]'.
 
 -- 202012, E:D 3.7.5O
 Elite apply settings / audio (has a different selection).
