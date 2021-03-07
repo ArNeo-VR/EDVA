@@ -9,12 +9,11 @@ Note that importing a package file **WILL OVERWRITE** any existing sounds or app
 
 [App] (Local windows applications)
  - [none]
- 
+
 [Apps] (VoiceAttack Plugins)
  - BindED - [BindED (VoiceAttack Forum)](https://forum.voiceattack.com/smf/index.php?topic=564.0)
  - EDDI - [EDDI (GitHUB)](https://github.com/EDCD/EDDI/blob/develop/README.md)
- 
+
 [Sounds]
  - [ED_SFX2018] - Custom sound effects
  - [ED_ThemeSounds] - Elite Theme Sounds
-
