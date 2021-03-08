@@ -1,6 +1,6 @@
-﻿Navigation filter, enable **** filter, only enabled does not reset.
+﻿## Change log
 
--- 202103, E:D 3.7.5Q
+-- 202103, E:D 3.7.11a
 # Look into, BindED fork by alterNERDtive [BindED-3.0 Github](https://github.com/alterNERDtive/bindED) [VoiceAttack-forum](https://forum.voiceattack.com/smf/index.php?topic=564.60)
 ! Adding bugs to the github issues and this changelog (short description)
 
@@ -11,6 +11,7 @@
 - Reworked the power distribution commands (Ship Power*)
 + Added sounds
 + Added plugins, EDbinds, EDDI
++ Added missing (referenced) command 'Focus Elite'
 - Fix, MenuCMD - Starport ... (Selected wrong menu item).
 + Added tags in Description '[development]'.
 Export: 07-03-2021
