@@ -1,7 +1,8 @@
 # [release] ED [ArNeo]-[version]-Profile-zippackage.vax
 
+Note that importing a package file **! WILL OVERWRITE !** any existing sounds or app/plugin files that have the same path and file name.  
+  
 Opening the 'VAX' VoiceAttack package will automatically import the following.  
-Note that importing a package file **! WILL OVERWRITE !** any existing sounds or app/plugin files that have the same path and file name
 
 [Profiles] 
  - EDVA Profile commands - "[release] ED [EDVA]-3.7.x-Profile.vap"
