@@ -1,0 +1,12 @@
+﻿## Changelog - Custom profiles
+
+### Global profile - (Set in the Options of voice attack > General > [Global profile])
+Profile command that is always available.
+
+### Off - Basic commands
+
+### 2021c - Default profile - 
++Add application 'Signal (messenger)'  
+
+### EDDI - Default commands from the [EDDI plugin](https://github.com/EDCD/EDDI)  
+a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
