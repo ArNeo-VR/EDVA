@@ -7,6 +7,8 @@ This profile is not plug-n-play it needs some work to get it going.
 I've not tested it on a clean computer.  
 ~~Applications and VoiceAttack plugins are **not** included.~~
 
+- [VoiceAttack Plug-ins](#va_plugins-voice-attack-plugins)
+
 ## [VoiceAttack Commands](Commands)
 Commands are exported to a text file, they are manualy exported and not fully up to date.
 For the time beeing catagories are exported as a voiceattack profile (.vap) file. Until the full profile is tested and published.  
