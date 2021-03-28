@@ -2,11 +2,14 @@
 Sharing VoiceAttack (VA) commands as text file and as a single profile release (.vap) file.  
 This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
   
-[EDVA VoiceAttack Commands](#voice-attack)  
-[VoiceAttack Plug-ins](#voice-attack-apps-plugins)
-#other-documents
-#elite-dangerous---applicationstools-3rd-party-not-included
-[VoiceAttack EDVA Release and Profiles](#voiceattack-profiles-and-voiceattack-profile-package)  
+[VoiceAttack Commands](#voice-attack)  
+[VoiceAttack Apps (Plug-ins)](#voice-attack-apps-plugins) (EDBinds, Route-plugins, Other)
+[Other Documents](#other-documents)
+[Other Applications](#elite-dangerous---applicationstools-3rd-party-not-included)
+[VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) Apps and Sounds
+[VoiceAttack EDVA Release and Profiles](#voiceattack-profiles-and-voiceattack-profile-package) EDVA package en VAP files.
+
+[E:D Windows Apllications](#windows-applications)
 
 
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
@@ -20,7 +23,7 @@ Some applications and third party plugins are required and need to be installed 
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds plugin
 - [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables.  
-[GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) Forum post copied to github by Corysia.
+[GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) EDBinds copied to github by Corysia.
 - [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version.
 ### Route plugins
 - [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] 
@@ -30,7 +33,17 @@ Some applications and third party plugins are required and need to be installed 
 - ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
 Google spreadsheets are read from within a InLine C# script.  
 ### Other documents
-- [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands in voice-attack.
+- [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
+
+## Elite Dangerous : Applications/Tools (3rd party, not included)
+- [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
+- [ED Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
+- [ED Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
+- [ED PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
+
+## Windows applications
+<code>Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"</code>  
+- [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
 ## Locations for Apps(Plugins) and Sounds folders
 ### VoiceAttack on x64 bit windows [default]
@@ -43,16 +56,6 @@ Google spreadsheets are read from within a InLine C# script.
 *Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
 <code>Plugins location "c:\ProgramData\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>  
-
-## Elite Dangerous : Applications/Tools (3rd party, not included)
-- [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
-- [ED Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
-- [ED Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
-- [ED PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
-
-## Windows applications
-<code>Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"</code>  
-- [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
 ### [VoiceAttack EDVA profile-package](Releases) and [Voiceattack Profiles](Profiles) releases
 EDVA Profile package can be found in [the Releases](Releases), 
