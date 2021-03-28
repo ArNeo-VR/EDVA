@@ -1,23 +1,26 @@
 # [EDVA](https://github.com/ArNeo-VR/EDVA) - VoiceAttack CMDs / profiles for Elite Dangerous.
 Sharing VoiceAttack commands as text file and as a single profile release (.vap) file.  
-This profile has only the commands, all third party plugins and applications required need to be installed manualy.  
+This profile has only the commands, some third party plugins and applications required need to be installed manualy.  
 
 # NOTE !! 
 This profile is not plug-n-play it needs some work to get it going.  
 I've not tested it on a clean computer.  
 ~~Applications and VoiceAttack plugins are **not** included.~~
 
-- [VoiceAttack Plug-ins](#va_plugins-voice-attack-plugins)
+
+#voiceattack-commands
+#profiles---Releases
+[VoiceAttack Plug-ins](#va_plugins-voice-attack-plugins)
 
 ## [VoiceAttack Commands](Commands)
 Commands are exported to a text file, they are manualy exported and not fully up to date.
 For the time beeing catagories are exported as a voiceattack profile (.vap) file. Until the full profile is tested and published.  
 [List of commands can be found here](Commands#edva---commands)  
 
-## [Profiles](Profiles) - [Releases](releases)
-[[EDVA Profile] E:D EDVA-3.7.x(version)-profile](releases) *to be tested*  
+## [Profiles](Profiles) - [Releases](Releases)
+[[EDVA Profile] E:D EDVA-(version)-profile](Releases)
 Seperate [commands exported](Commands) to Text and Grouped in a profile-file (.vap)  
-**note:** [\[release\] EDDI-3.7.2-profile](releases) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
+**note:** [\[release\] EDDI-(version)-profile](Releases) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
 
 Other [Profiles](Profiles), 
 - [global profile]-Profile, for switching to other profiles.
@@ -65,7 +68,7 @@ Other [Profiles](Profiles),
 <code>Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"</code>  
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
-## [VA_Sounds](VA_Sounds): Sounds used in commands
+## [Sounds](Releases): used in commands
 - ED_ThemeSounds-2015.zip - Elite themed sounds
 - ED_SFX2018.zip - SFX miscellaneous 
 
