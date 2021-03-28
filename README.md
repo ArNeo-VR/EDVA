@@ -39,7 +39,9 @@ Other [Profiles](Profiles),
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite: Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds
 
-- [EDBinds original()](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) [GitHub(Corysia)](https://github.com/Corysia/bindED)-[*note](https://github.com/Corysia/bindED/blob/master/License.md)  Reads keybindings from custom.binds file and creates variables  
+- [EDBinds original()](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables  
+-- [GitHub(Corysia)](https://github.com/Corysia/bindED)-[*note](https://github.com/Corysia/bindED/blob/master/License.md)  
+
 - [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version, not tested/checked it out.
 - ? [EDBinds Corysia](https://github.com/Corysia/bindED)
 ### Route plugins
