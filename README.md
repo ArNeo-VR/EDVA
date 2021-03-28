@@ -9,19 +9,19 @@ This profile has only the commands, some third party plugins and applications re
 ***Applications and VoiceAttack plugins are **not** included.***  
   
 ## [VoiceAttack Commands](Commands)
-Commands are exported to a text file, they are manualy exported and not fully up to date.  
-[List of commands can be found here](Commands#edva---commands)  
+Commands are exported to a [text files](Commands), they are manualy exported and not fully up to date. 
 
-## [Profiles](Profiles) - [Releases](Releases)
-[[EDVA Profile] E:D EDVA-(version)-profile](Releases)  
-**note:** [\[release\] EDDI-(version)-profile](Releases) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
-Documented [commands exported](commands in plain text) grouped in a profile-file (.vap)  
+## Profiles - Releases
+EDVA Profile package can be found in [the Releases](Releases)  
 
-Other [Profiles](Profiles), 
-- [global profile]-Profile, for switching to other profiles.
-- [Off]-Profile(default), Only a Test command and the global profile commands for switching.
-- [release]-2020c-Profile, My main profile 
-- 'EDDI 3.x.x'(required to include in this profile)
+The EDVA-(version)-profile.VAP file and my other profiles can be found [here](Profiles)  
+- [release] [EDVA]-(version)-profile, Main Elite Dangerous Voiceattack profile  
+- [release] EDDI-(version)-profile, EDDI default commands needs to be included in the main-profile.
+Other [Profiles](Profiles)
+- [global profile]-Profile, for switching to other profiles  
+- [Off]-Profile(default), Only a Test command and the global profile commands for switching  
+- [release]-2020c-Profile, My main profile  
+- 'EDDI 3.x.x'(required to include in this profile)  
 
 ## Voice Attack locations for Apps/Plugins and Sounds
 ### VoiceAttack [default] on x64 bit windows
