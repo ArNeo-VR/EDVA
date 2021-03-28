@@ -1,7 +1,7 @@
 # [release] ED [ArNeo]-[version]-Profile-zippackage.vax
 
 Note that Opening/Importing a 'VAX' VoiceAttack package file 
-## **!!! WILL AUTOMATICALLY OVERWRITE !!!**
+### **!!! WILL AUTOMATICALLY OVERWRITE !!!**
 any existing sounds or app/plugin files that have the same path and file name.  
 ***Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.***  
   
