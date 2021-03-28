@@ -3,8 +3,8 @@ Sharing VoiceAttack (VA) commands as text file and as a single profile release (
 This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
   
 [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
-[Applications E:D](#elite-dangerous--applicationstools-3rd-party-not-included)  
-[Apllications Windows](#applications-windows)  
+[Applications Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
+[Applications Windows](#applications-windows)  
 [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
 [Other Documents](#other-documents)  
   
@@ -14,9 +14,10 @@ This profile has commands, plugins and soundfiles for the game Elite Dangerous (
 Some applications and third party plugins are required and need to be installed manualy.  
   
 # Voice Attack
-### [VoiceAttack Commands](Commands)
-[VoiceAttack](Voiceattack.com) commands are exported to a [text files](Commands) to view the contense, they are manualy exported and not fully up to date. 
-
+Voice-activated control for your PC games and apps.
+### EDVA VoiceAttack [Commands](Commands)
+[VoiceAttack.com](https://Voiceattack.com) commands are exported to a [text files](Commands) to view the contense,  
+they are manualy exported and not fully up to date.
 ## VoiceAttack : Apps (plugins)
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds plugin
@@ -33,15 +34,15 @@ Google spreadsheets are read from within a InLine C# script.
 
 ## Elite Dangerous : Applications/Tools (3rd party, not included)
 ### E:D Market Connector
-- [E:D MC (Market Connector)](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.  
-***E:D MC Plugins***
-- [E:D MC Canonn](https://github.com/canonn-science/EDMC-Canonn) EDMC plugin to automatically collect accurate science data from the galaxy and coordinate missions.  
-- [E:D MC Habzone](https://github.com/Marginal/HabZone) This plugin helps explorers find high-value planets. It displays the "habitable-zone" (i.e. the range of distances in which you might find an Earth-Like World).  
+- [E:D Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.  
+### E:D Market Connector Plugins
+- [E:D MC Canonn](https://github.com/canonn-science/EDMC-Canonn) to automatically collect accurate science data from the galaxy and coordinate missions.  
+- [E:D MC Habzone](https://github.com/Marginal/HabZone) This plugin helps explorers find high-value planets. It displays the "habitable-zone".  
 - [E:D MC Screenshot](https://github.com/NoFoolLikeOne/EDMC-Screenshot) A plugin for EDMC that detects screenshot events are converts them to PNG format.  
 ### E:D Other applications
-- [E:D Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
-- [E:D Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
-- [E:D PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
+- [E:D Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) EDEngineer is a basic app I've written to track materials, data and cargo acquired in E:D.
+- [E:D Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.
+- [E:D PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.
 
 ## Applications Windows
 <code>Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"</code>  
