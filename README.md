@@ -9,14 +9,14 @@ This profile has commands, plugins and soundfiles for the game Elite Dangerous (
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
   
-## [VA Commands](Commands)
+# Voice Attack
+### [VoiceAttack Commands](Commands)
 Commands are exported to a [text files](Commands), they are manualy exported and not fully up to date. 
 
-## [VA Profiles](Profiles) and [VA profile-package](Releases)
+### [Voiceattack Profiles](Profiles) and [VoiceAttack profile-package](Releases)
 EDVA Profile package can be found in [the Releases](Releases)  
 The EDVA-(version)-profile.VAP file and [other profiles](Profiles) files.
 
-# Voice Attack (VA)
 ## Locations for Apps(Plugins) and Sounds folders
 ### VoiceAttack on x64 bit windows [default]
 <code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>  
