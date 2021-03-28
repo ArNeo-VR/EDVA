@@ -3,14 +3,12 @@ Sharing VoiceAttack (VA) commands as text file and as a single profile release (
 This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
   
 [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
-[E:D Applications](#elite-dangerous--applicationstools-3rd-party-not-included)  
-[Windows Apllications](#windows-applications)  
+[Applications E:D](#elite-dangerous--applicationstools-3rd-party-not-included)  
+[Apllications Windows](#applications-windows)  
 [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
 [Other Documents](#other-documents)  
   
-[VoiceAttack EDVA Release and Profiles](#voiceattack-profiles-and-voiceattack-profile-package) EDVA package en VAP files.  
-
-
+[VoiceAttack EDVA Release and Profiles](#release-voiceattack-edva-profile-package-and-voiceattack-profiles) EDVA package en VAP files.  
 
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
@@ -34,12 +32,17 @@ Some applications and third party plugins are required and need to be installed 
 Google spreadsheets are read from within a InLine C# script.  
 
 ## Elite Dangerous : Applications/Tools (3rd party, not included)
-- [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
-- [ED Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
-- [ED Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
-- [ED PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
+### E:D Market Connector
+- [E:D Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.  
+- [E:D MC Canonn](https://github.com/canonn-science/EDMC-Canonn) EDMC plugin to automatically collect accurate science data from the galaxy and coordinate missions.  
+- [E:D MC Habzone](https://github.com/Marginal/HabZone) This plugin helps explorers find high-value planets. It displays the "habitable-zone" (i.e. the range of distances in which you might find an Earth-Like World).  
+- [E:D MC Screenshot](https://github.com/NoFoolLikeOne/EDMC-Screenshot) A plugin for EDMC that detects screenshot events are converts them to PNG format.  
+### E:D Other applications
+- [E:D Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
+- [E:D Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
+- [E:D PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) [Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.]
 
-## Windows applications
+## Applications Windows
 <code>Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"</code>  
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
@@ -58,54 +61,53 @@ Google spreadsheets are read from within a InLine C# script.
 ### Other documents
 - [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
 
-
 # EDVA profile Setup
 
 ## Release VoiceAttack [EDVA profile-package](Releases) and [Voiceattack Profiles](Profiles)
 EDVA Profile package can be found in [the Releases](Releases), 
 The EDVA-(version)-profile.VAP file and [other profiles](Profiles) files.
   
-Note that Opening/Importing a 'VAX' VoiceAttack package file
+Note that Opening/Importing the VoiceAttack package file (.VAX)
 ### **!!! WILL AUTOMATICALLY OVERWRITE !!!**
 any existing sounds or app/plugin files that have the same path and file name.  
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*
   
 The profile package is an all in one page, contents is described in the [releases readme](Releases) 
+***Installation of the .VAX file is not tested !***
 
-## EDVA profile Notes, VoiceAttack (VA) profile requirements
-
-### Import Main profile
-[More profile actions] > [Import profiles] > (select *[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)* file)  
-
-### Include: [[release] EDDI-3.x.x-profile](Profiles)
-Import profile: "[release] EDDI-3.x.x-profile.vap"  
-- is required and needs to be included in the main profile.  
-Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
-[Add ...] select "[release] EDDI-3.x.x-profile"
-
-### Execute commands at profile [loaded / unloaded]
+## EDVA profile installation Notes, VoiceAttack (VA) profile requirements
+### Import the (.vap) profiles
+[More profile actions] > [Import profiles] > (select the file)  
+- [[EDVA Profile] EDVA-(version)-profile](Profiles)
+- [[release] EDDI-(version)-profile](Profiles)
+### The EDDI-profile is required and needs to be included in the main profile.  
+Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles' ***The ... at the right***
+### Editing the profile to Execute commands at profile (load unload)
 Main profile [Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded'  
 Select the corresponding profile from the 'pull-down' menu.  
-*"(((Elite Dangerous))) Profile Load"  ,  "(((Elite Dangerous))) Profile UnLoad"*
-
+- *"(((Elite Dangerous))) Profile Load"*
+- *"(((Elite Dangerous))) Profile UnLoad"*
 ### Optional, Auto-load the Main profile when Elite is started
 Main profile [Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'  
 Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
+## EDVA configuration 
 ### Configure settings
 - [Custom / Phonetic name] in > '(((MAIN))) Settings'
 
-## Plugin custo extract/install locations
+## Plugin custom extract/install locations
 - [EDDI] [VA_Profile]\Plugins\EDDI\
 - [EDbinds] [VA_Profile]\Plugins\bindEDplugin\
 - [ED-ED-NeutronRouter] [VA_Profile]\Plugins\ED-NeutronRouter\
 - [ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\
 
 ## Applications custom extract/install locations
-- [ED PlanetBearing] [VA_Profile]\App\EDPlanetBearing\
+- [E:D PlanetBearing] [VA_Profile]\App\EDPlanetBearing\
 - [NirCMD] [VA_Profile]\App\NirCMD\
 
 # Notes
+Managing plugins with GitHub desktop, you can install plugins directly from github with a desktop application.
+If you clone the plugin directly to the use location of the Apps/Plugin locations
 ...
 
 ---
