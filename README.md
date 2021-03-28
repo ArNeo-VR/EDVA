@@ -9,7 +9,7 @@ This profile has commands, plugins and soundfiles for the game Elite Dangerous (
 [Applications Windows](#applications-windows)  
 [Other Documents](#other-documents)  
   
-[VoiceAttack EDVA Release and Profiles](#release-voiceattack-edva-profile-package-and-voiceattack-profiles) EDVA package en VAP files.  
+[VoiceAttack EDVA Release and Profiles](#edva-profile-package-release-and-voiceattack-profiles) EDVA package en VAP files.  
 
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
@@ -23,7 +23,7 @@ they are manualy exported and not fully up to date.
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds plugin
 - [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables.  
-[GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) EDBinds copied to github by Corysia.
+\- [GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) EDBinds copied to github by Corysia.
 - [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version.
 ### Route plugins
 - [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] 
