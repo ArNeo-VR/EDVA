@@ -1,5 +1,5 @@
 # [EDVA](../../../../EDVA) - Commands
-# [EDVA - Commands E:D 3.7.5N](../../../../EDVA/releases)
+# [EDVA - Commands E:D 3.7.5N](../../../../EDVA/Releases)
 ## EDVA [Main Startup]
 **Profile Load** ::  on Profile load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
 **(((MAIN))) Load Variables** :: Loads variables from profile, set required for Initialisation.  
