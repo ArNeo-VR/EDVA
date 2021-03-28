@@ -33,7 +33,8 @@ Google spreadsheets are read from within a InLine C# script.
 
 ## Elite Dangerous : Applications/Tools (3rd party, not included)
 ### E:D Market Connector
-- [E:D Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.  
+- [E:D MC (Market Connector)](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.  
+***E:D MC Plugins***
 - [E:D MC Canonn](https://github.com/canonn-science/EDMC-Canonn) EDMC plugin to automatically collect accurate science data from the galaxy and coordinate missions.  
 - [E:D MC Habzone](https://github.com/Marginal/HabZone) This plugin helps explorers find high-value planets. It displays the "habitable-zone" (i.e. the range of distances in which you might find an Earth-Like World).  
 - [E:D MC Screenshot](https://github.com/NoFoolLikeOne/EDMC-Screenshot) A plugin for EDMC that detects screenshot events are converts them to PNG format.  
