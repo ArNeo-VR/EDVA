@@ -13,17 +13,10 @@ Commands are exported to a [text files](Commands), they are manualy exported and
 
 ## Profiles - Releases
 EDVA Profile package can be found in [the Releases](Releases)  
+The EDVA-(version)-profile.VAP file and [other profiles](Profiles) files.
 
-The EDVA-(version)-profile.VAP file and my other profiles can be found [here](Profiles)  
-- [release] [EDVA]-(version)-profile, Main Elite Dangerous Voiceattack profile  
-- [release] EDDI-(version)-profile, EDDI default commands needs to be included in the main-profile.
-Other [Profiles](Profiles)
-- [global profile]-Profile, for switching to other profiles  
-- [Off]-Profile(default), Only a Test command and the global profile commands for switching  
-- [release]-2020c-Profile, My main profile  
-- 'EDDI 3.x.x'(required to include in this profile)  
-
-## Voice Attack locations for Apps/Plugins and Sounds
+# Voice Attack (VA)
+## Locations for Apps(Plugins) and Sounds folders
 ### VoiceAttack [default] on x64 bit windows
 <code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>
