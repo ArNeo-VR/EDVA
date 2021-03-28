@@ -1,7 +1,7 @@
-# [EDVA](../../../../EDVA) - Commands
-# [EDVA - Commands E:D 3.7.5N](../../../../EDVA/Releases)
+# [EDVA](https://github.com/ArNeo-VR/EDVA) - Commands
+# [EDVA - Commands E:D 3.7.5N](https://github.com/ArNeo-VR/EDVA/tree/master/Releases)
 ## EDVA [Main Startup]
-**Profile Load** ::  on Profile load Command, [see setup](../../../../EDVA/#execute-commands-at-profile-loaded--unloaded)  
+**Profile Load** ::  on Profile load Command, [see setup](https://github.com/ArNeo-VR/EDVA#edva-profile-manual-installation-notes)  
 **(((MAIN))) Load Variables** :: Loads variables from profile, set required for Initialisation.  
 **(((MAIN))) Initialisation** :: Load Key-binds, set preferences from loaded variables.  
 **(((MAIN))) Settings** :: Commander NAME/Phonetic, Path's, Applications.  
