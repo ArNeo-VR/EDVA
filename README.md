@@ -1,17 +1,15 @@
 # [EDVA](https://github.com/ArNeo-VR/EDVA) - VoiceAttack CMDs / profiles for Elite Dangerous.
 Sharing VoiceAttack commands as text file and as a single profile release (.vap) file.  
 This profile has only the commands, some third party plugins and applications required need to be installed manualy.  
-
-# NOTE !! Not plug-n-play it needs some work to get it going!!  
-***Applications and VoiceAttack plugins are **not** included.***  
-  
 [EDVA Commands](#voiceattack-commands)  
 [EDVA Profiles / Releases](#profiles---Releases)  
 [VoiceAttack Plug-ins](#va_plugins-voice-attack-plugins)  
 
+# NOTE !! Plug-n-pray it needs some work to get it going!!  
+***Applications and VoiceAttack plugins are **not** included.***  
+  
 ## [VoiceAttack Commands](Commands)
-Commands are exported to a text file, they are manualy exported and not fully up to date.
-For the time beeing catagories are exported as a voiceattack profile (.vap) file. Until the full profile is tested and published.  
+Commands are exported to a text file, they are manualy exported and not fully up to date.  
 [List of commands can be found here](Commands#edva---commands)  
 
 ## [Profiles](Profiles) - [Releases](Releases)
