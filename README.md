@@ -65,35 +65,36 @@ Google spreadsheets are read from within a InLine C# script.
 - [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
 
 # EDVA profile Setup
-
 ## EDVA profile-package [Release](Releases) and VoiceAttack [Profiles](Profiles)
 EDVA profile-package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).  
 Note that Opening/Importing the VoiceAttack package file (.VAX)  
 ### **!!! WILL AUTOMATICALLY OVERWRITE !!!**  
-***Installation of the .VAX file is not tested !***  
 any existing sounds or app/plugin files that have the same path and file name.  
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
+***Installation of the .VAX file is not tested !***  
   
 The profile package is an all in one page, contents is described in the [releases readme](Releases)  
 
-
-## EDVA profile installation Notes, VoiceAttack (VA) profile requirements
+## EDVA profile manual installation Notes.
 ### Import the (.vap) profiles
 [More profile actions] > [Import profiles] > (select the file)  
 - [[EDVA Profile] EDVA-(version)-profile](Profiles)
 - [[release] EDDI-(version)-profile](Profiles)
+
 ### The EDDI-profile is required and needs to be included in the main profile.  
 Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles' ***The ... at the right***
+
 ### Editing the profile to Execute commands at profile (load unload)
 Main profile [Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded'  
 Select the corresponding profile from the 'pull-down' menu.  
 - *"(((Elite Dangerous))) Profile Load"*
 - *"(((Elite Dangerous))) Profile UnLoad"*
+
 ### Optional, Auto-load the Main profile when Elite is started
 Main profile [Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'  
 Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
-## EDVA configuration 
+## EDVA profile configuration 
 ### Configure settings
 - [Custom / Phonetic name] in > '(((MAIN))) Settings'
 
@@ -110,19 +111,3 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 # Notes
 Managing plugins with GitHub desktop, you can install plugins directly from github with a desktop application.
 If you clone the plugin directly to the use location of the Apps/Plugin locations
-...
-
----
-
-# 1 EDVA
-## 2 Commands:
-Text line bla bla.
-Secondline bla bla.
-
-Third with blank line above. bla bla  
-Fouth line with two spaces behind the third line.
-### 3 Test
-
-#### 4 Test
-
-##### 5 Test
