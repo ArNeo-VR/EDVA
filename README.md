@@ -116,7 +116,7 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 [App_EDMC] (%ProgramFiles(x86)%\EDMarketConnector\EDMarketConnector.exe)  
 [App_EDEngineer] (%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms)  
 [App_EDDiscovery] (%ProgramFiles%\EDDiscovery\EDDiscovery.exe)  
-[App_EDPlanetBearing]({TXT:VA_APP}\EDPlanetBearing\EDPlanetBearing.exe)  
+[App_EDPlanetBearing](TXT:VA_APP\EDPlanetBearing\EDPlanetBearing.exe)  
   
 ## Applications custom extract/install locations
 - [E:D PlanetBearing] [VA_Profile]\App\EDPlanetBearing\  
