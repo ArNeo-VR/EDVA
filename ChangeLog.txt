@@ -1,5 +1,4 @@
 ﻿## Change log
-Navigation filter, enable **** filter, only enabled does not reset.
 
 -- 202103, E:D 3.7.11c
 BindED fork by alterNERDtive [BindED-3.0 Github](https://github.com/alterNERDtive/bindED) [VoiceAttack-forum](https://forum.voiceattack.com/smf/index.php?topic=564.60)
