@@ -8,9 +8,9 @@ I've not tested it on a clean computer.
 ~~Applications and VoiceAttack plugins are **not** included.~~
 
 
-#voiceattack-commands
-#profiles---Releases
-[VoiceAttack Plug-ins](#va_plugins-voice-attack-plugins)
+[EDVA Commands](#voiceattack-commands)  
+[EDVA Releases](#profiles---Releases)  
+[VoiceAttack Plug-ins](#va_plugins-voice-attack-plugins)  
 
 ## [VoiceAttack Commands](Commands)
 Commands are exported to a text file, they are manualy exported and not fully up to date.
