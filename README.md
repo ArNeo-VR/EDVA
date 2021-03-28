@@ -2,20 +2,35 @@
 Sharing VoiceAttack (VA) commands as text file and as a single profile release (.vap) file.  
 This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
   
-[EDVA Commands](#voiceattack-commands)  
-[EDVA Profiles / Releases](#profiles---Releases)  
-[VoiceAttack Plug-ins](#voice-attack-va)  
+[EDVA VoiceAttack Commands](#voice-attack)  
+[VoiceAttack Plug-ins](#voice-attack-apps-plugins)
+#other-documents
+#elite-dangerous---applicationstools-3rd-party-not-included
+[VoiceAttack EDVA Release and Profiles](#voiceattack-profiles-and-voiceattack-profile-package)  
+
 
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
   
 # Voice Attack
 ### [VoiceAttack Commands](Commands)
-Commands are exported to a [text files](Commands), they are manualy exported and not fully up to date. 
+[VoiceAttack](Voiceattack.com) commands are exported to a [text files](Commands) to view the contense, they are manualy exported and not fully up to date. 
 
-### [Voiceattack Profiles](Profiles) and [VoiceAttack profile-package](Releases)
-EDVA Profile package can be found in [the Releases](Releases)  
-The EDVA-(version)-profile.VAP file and [other profiles](Profiles) files.
+## VoiceAttack : Apps (plugins)
+- [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
+### EDBinds plugin
+- [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables.  
+[GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) Forum post copied to github by Corysia.
+- [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version.
+### Route plugins
+- [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] 
+- [ED-Router ChrisZero](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/) 
+- [ED-Router dominiquesavoie](https://github.com/dominiquesavoie/ED-Router) - ([releases](https://github.com/dominiquesavoie/ED-Router/releases)) [Neutron router tool app] 
+### Other plugins
+- ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
+Google spreadsheets are read from within a InLine C# script.  
+### Other documents
+- [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands in voice-attack.
 
 ## Locations for Apps(Plugins) and Sounds folders
 ### VoiceAttack on x64 bit windows [default]
@@ -29,22 +44,7 @@ The EDVA-(version)-profile.VAP file and [other profiles](Profiles) files.
 <code>Plugins location "c:\ProgramData\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>  
 
-## Voice attack Apps (plugins)
-- [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
-### EDBinds
-- [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables.  
-[GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) Forum post copied to github by Corysia.
-- [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version.
-### Route plugins
-- [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] 
-- [ED-Router ChrisZero](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/) 
-- [ED-Router dominiquesavoie](https://github.com/dominiquesavoie/ED-Router) - ([releases](https://github.com/dominiquesavoie/ED-Router/releases)) [Neutron router tool app] 
-- ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
-Google spreadsheets are read from within a InLine C# script.  
-### Other documents
-- [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands in voice-attack.
-
-## Elite Dangerous - Applications/Tools (3rd party, not included)
+## Elite Dangerous : Applications/Tools (3rd party, not included)
 - [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
 - [ED Engineer](https://github.com/msarilar/EDEngineer) ([releases](https://github.com/msarilar/EDEngineer/releases)) [EDEngineer is a basic app I've written to track materials, data and cargo acquired in Elite Dangerous. That way, we can also track progress of blueprints available from the Engineers.]
 - [ED Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) [EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.]
@@ -54,9 +54,9 @@ Google spreadsheets are read from within a InLine C# script.
 <code>Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"</code>  
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
-## [Sounds](Releases): used in commands
-- ED_ThemeSounds-2015.zip - Elite themed sounds
-- ED_SFX2018.zip - SFX miscellaneous 
+### [VoiceAttack EDVA profile-package](Releases) and [Voiceattack Profiles](Profiles) releases
+EDVA Profile package can be found in [the Releases](Releases), 
+The EDVA-(version)-profile.VAP file and [other profiles](Profiles) files.
 
 # Setup using the profile
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
