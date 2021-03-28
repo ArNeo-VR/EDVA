@@ -27,3 +27,21 @@ Other [Profiles](Profiles)
 - [Off]-Profile(default), Only a Test command and the global profile commands for switching  
 - [release]-2020c-Profile, My main profile  
 
+
+# Other profiles
+I've also other profiles: a 'Global profile', 'Off', 'Profile default', 'Profile default include', ...]
+
+### 'Global profile'
+In here are VoiceCommands that activate other profiles,  
+*i.e. 'profile Elite', 'profile default', 'profile disable', 'Computer off'*  
+You can add the 'Global profile' in VoiceAttack > [Options] > [General] > 'Global Profiles' > [Add ...]
+
+### Profile 'Off' 
+Is very limited and has a small set of commands. *Test, Exit voiceattack*
+
+### 'Profile default' 
+Has (Computer [Sleep; Restart; Shutdown now]) commands and 'Profile default include' is included.
+
+### 'Profile default include'
+Contains basic commands, start/stop/focus/show programs, text-functions copy/paste, playback/recording devices.
+is used for including in selected profiles (Profile Elite) and not enable Computer shutdown commands from (Profile default).
