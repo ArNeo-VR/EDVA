@@ -3,9 +3,10 @@ Sharing VoiceAttack (VA) commands as text file and as a single profile release (
 This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
   
 [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
+[VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
+  
 [Applications Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
 [Applications Windows](#applications-windows)  
-[VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
 [Other Documents](#other-documents)  
   
 [VoiceAttack EDVA Release and Profiles](#release-voiceattack-edva-profile-package-and-voiceattack-profiles) EDVA package en VAP files.  
@@ -32,6 +33,18 @@ they are manualy exported and not fully up to date.
 - ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
 Google spreadsheets are read from within a InLine C# script.  
 
+## Locations for Apps(Plugins) and Sounds folders
+### VoiceAttack on x64 bit windows [default]
+<code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>  
+<code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>  
+#### My personal settings are, if you export your computer profile to another computer it will go with the userdata.
+<code>Plugins location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Apps"</code>   
+<code>Sounds location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>  
+#### Depending if you want to use the same profile for all the users on the computer place it in:
+*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
+<code>Plugins location "c:\ProgramData\VoiceAttack\Apps"</code>  
+<code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>  
+
 ## Elite Dangerous : Applications/Tools (3rd party, not included)
 ### E:D Market Connector
 - [E:D Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.  
@@ -48,26 +61,13 @@ Google spreadsheets are read from within a InLine C# script.
 <code>Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"</code>  
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
-## Locations for Apps(Plugins) and Sounds folders
-### VoiceAttack on x64 bit windows [default]
-<code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>  
-<code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>  
-#### My personal settings are, if you export your computer profile to another computer it will go with the userdata.
-<code>Plugins location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Apps"</code>   
-<code>Sounds location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>  
-#### Depending if you want to use the same profile for all the users on the computer place it in:
-*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
-<code>Plugins location "c:\ProgramData\VoiceAttack\Apps"</code>  
-<code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>  
-
 ### Other documents
 - [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
 
 # EDVA profile Setup
 
-## Release VoiceAttack [EDVA profile-package](Releases) and [Voiceattack Profiles](Profiles)
-EDVA Profile package can be found in [the Releases](Releases), 
-The EDVA-(version)-profile.VAP file and [other profiles](Profiles) files.
+## EDVA profile-package [Release](Releases) and VoiceAttack [Profiles](Profiles)
+EDVA profile-package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).
   
 Note that Opening/Importing the VoiceAttack package file (.VAX)
 ### **!!! WILL AUTOMATICALLY OVERWRITE !!!**
