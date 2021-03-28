@@ -1,6 +1,6 @@
-# [EDVA](../../../EDVA) - Profiles
+# [EDVA](../../../../EDVA) - Profiles
 
-### [[release] [EDVA]-(version)-Profile](https://github.com/ArNeo-VR/EDVA)  
+### [[release] [EDVA]-(version)-Profile](https://github.com/ArNeo-VR/EDVA/tree/master/releases)  
 [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
 [Add ...] select "[release] EDDI-3.7.0-profile"  
 
