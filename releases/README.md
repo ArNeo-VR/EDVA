@@ -18,3 +18,6 @@ Opening the 'VAX' VoiceAttack package will automatically import the following.
 [Sounds]
  - [ED_SFX2018] - Custom sound effects
  - [ED_ThemeSounds] - Elite Theme Sounds
+
+# Installation
+
