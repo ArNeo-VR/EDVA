@@ -10,6 +10,11 @@ This profile has commands, plugins and soundfiles for the game Elite Dangerous (
 [Other Documents](#other-documents)  
   
 [VoiceAttack EDVA Release and Profiles](#edva-profile-package-release-and-voiceattack-profiles) EDVA package en VAP files.  
+  
+[EDVA package installation](#edva-profile-package-release-and-voiceattack-profiles)  
+[EDVA manual installation](#edva-profile-manual-installation-notes)  
+\- [EDVA profile configuration](#edva-profile-configuration)  
+
 
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
@@ -96,18 +101,32 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 ## EDVA profile configuration 
 ### Configure settings
-- [Custom / Phonetic name] in > '(((MAIN))) Settings'
-
-## Plugin custom extract/install locations
-- [EDDI] [VA_Profile]\Plugins\EDDI\
-- [EDbinds] [VA_Profile]\Plugins\bindEDplugin\
-- [ED-ED-NeutronRouter] [VA_Profile]\Plugins\ED-NeutronRouter\
-- [ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\
-
+- [Custom / Phonetic name] in > '(((MAIN))) Settings'  
+  
+## Plugin custom extract/install locations and variables
+[VA_App] (%LOCALAPPDATA%\VoiceAttack\App) Custom Applications E:D / Windows path  
+[VA_Plugins] (%LOCALAPPDATA%\VoiceAttack\Apps) VoiceAttack Plugins path  
+[VA_Logs] & [Log_path] (%LOCALAPPDATA%\VoiceAttack\Logs)  
+  
+[EDDI] [VA_Profile]\Apps\EDDI\  
+[EDbinds] [VA_Profile]\Plugins\bindEDplugin\  
+[ED-ED-NeutronRouter] [VA_Profile]\Plugins\ED-NeutronRouter\  
+[ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\  
+   
+[App_EDMC] (%ProgramFiles(x86)%\EDMarketConnector\EDMarketConnector.exe)  
+[App_EDEngineer] (%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms)  
+[App_EDDiscovery] (%ProgramFiles%\EDDiscovery\EDDiscovery.exe)  
+[App_EDPlanetBearing]({TXT:VA_APP}\EDPlanetBearing\EDPlanetBearing.exe)  
+  
 ## Applications custom extract/install locations
-- [E:D PlanetBearing] [VA_Profile]\App\EDPlanetBearing\
-- [NirCMD] [VA_Profile]\App\NirCMD\
-
+- [E:D PlanetBearing] [VA_Profile]\App\EDPlanetBearing\  
+- [NirCMD] [VA_Profile]\App\NirCMD\  
+  
 # Notes
 Managing plugins with GitHub desktop, you can install plugins directly from github with a desktop application.
 If you clone the plugin directly to the use location of the Apps/Plugin locations
+
+## History
+Shortly after playing Elite-Dangerous on a flat-screen I got me an Oculus Rift VR Headset.
+Therefor VoiceAttack (control) became a must for some keyboard commands.
+Learning profiles from players on Twitch.tv shared their profile, from there I started.
