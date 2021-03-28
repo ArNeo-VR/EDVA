@@ -16,8 +16,8 @@ For the time beeing catagories are exported as a voiceattack profile (.vap) file
 
 ## [Profiles](Profiles) - [Releases](Releases)
 [[EDVA Profile] E:D EDVA-(version)-profile](Releases)  
-Documented [commands exported](commands in plain text) grouped in a profile-file (.vap)  
 **note:** [\[release\] EDDI-(version)-profile](Releases) (is the EDDI.vap file, needs to be imported seperately and included into the main profile)  
+Documented [commands exported](commands in plain text) grouped in a profile-file (.vap)  
 
 Other [Profiles](Profiles), 
 - [global profile]-Profile, for switching to other profiles.
@@ -53,7 +53,7 @@ Other [Profiles](Profiles),
 - ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
 - Google spreadsheets are read from within a InLine C# script.  
 
-- [ED Google sheet for variable key-presses](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) Used in voice attack for the key-stoke commands in voice-attack.
+- [Elite Dangerous : EDBinds VoiceAttack](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet)for variable key-presses used in voice attack for the key-stoke commands in voice-attack.
 
 ## Elite Dangerous - Applications/Tools (3rd party, not included)
 - [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
