@@ -3,13 +3,14 @@ Sharing VoiceAttack (VA) commands as text file and as a single profile release (
 This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
   
 [VoiceAttack Commands](#voice-attack)  
-[VoiceAttack Apps (Plug-ins)](#voice-attack-apps-plugins) (EDBinds, Route-plugins, Other)
-[Other Documents](#other-documents)
-[Other Applications](#elite-dangerous---applicationstools-3rd-party-not-included)
-[VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) Apps and Sounds
-[VoiceAttack EDVA Release and Profiles](#voiceattack-profiles-and-voiceattack-profile-package) EDVA package en VAP files.
+[VoiceAttack Apps (Plug-ins)](#voice-attack-apps-plugins) (EDBinds, Route-plugins, Other)  
+  
+[Other Documents](#other-documents)  
+[Other Applications](#elite-dangerous---applicationstools-3rd-party-not-included)  
+[VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) Apps and Sounds  
+[VoiceAttack EDVA Release and Profiles](#voiceattack-profiles-and-voiceattack-profile-package) EDVA package en VAP files.  
 
-[E:D Windows Apllications](#windows-applications)
+[E:D Windows Apllications](#windows-applications)  
 
 
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
@@ -57,9 +58,15 @@ Google spreadsheets are read from within a InLine C# script.
 <code>Plugins location "c:\ProgramData\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>  
 
-### [VoiceAttack EDVA profile-package](Releases) and [Voiceattack Profiles](Profiles) releases
+## Release VoiceAttack [EDVA profile-package](Releases) and [Voiceattack Profiles](Profiles)
 EDVA Profile package can be found in [the Releases](Releases), 
 The EDVA-(version)-profile.VAP file and [other profiles](Profiles) files.
+  
+Note that Opening/Importing a 'VAX' VoiceAttack package file 
+### **!!! WILL AUTOMATICALLY OVERWRITE !!!**
+any existing sounds or app/plugin files that have the same path and file name.  
+***Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.***  
+
 
 # Setup using the profile
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
