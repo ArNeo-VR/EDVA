@@ -1,11 +1,10 @@
 # [release] ED [ArNeo]-[version]-Profile-zippackage.vax
 
-Note that Opening/Importing a 'VAX' VoiceAttack package file **!!! WILL AUTOMATICALLY OVERWRITE !!!**  
+Note that Opening/Importing a 'VAX' VoiceAttack package file 
+## **!!! WILL AUTOMATICALLY OVERWRITE !!!**
 any existing sounds or app/plugin files that have the same path and file name.  
-  
 ***Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.***  
- 
-
+  
 [Profiles] 
  - EDVA Profile commands - "[release] ED [EDVA]-3.7.x-Profile.vap"
  - EDDI default profile (EDDI.vap) - "[release] EDDI-3.7.2-Profile.vap"
@@ -20,8 +19,4 @@ any existing sounds or app/plugin files that have the same path and file name.
 [Sounds]
  - [ED_SFX2018] - Custom sound effects
  - [ED_ThemeSounds] - Elite Theme Sounds
-
-
-
-# Installation
-
+  
