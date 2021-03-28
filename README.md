@@ -2,8 +2,8 @@
 Sharing VoiceAttack commands as text file and as a single profile release (.vap) file.  
 This profile has only the commands, some third party plugins and applications required need to be installed manualy.  
 
-# NOTE !! This profile is not plug-n-play it needs some work to get it going.  
-~~Applications and VoiceAttack plugins are **not** included.~~
+# NOTE !! Not plug-n-play it needs some work to get it going!!  
+***Applications and VoiceAttack plugins are **not** included.***  
   
 [EDVA Commands](#voiceattack-commands)  
 [EDVA Profiles / Releases](#profiles---Releases)  
