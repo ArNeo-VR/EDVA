@@ -71,11 +71,12 @@ EDVA profile-package can be found in [the Releases](Releases), the .VAP files an
   
 Note that Opening/Importing the VoiceAttack package file (.VAX)
 ### **!!! WILL AUTOMATICALLY OVERWRITE !!!**
-any existing sounds or app/plugin files that have the same path and file name.  
-*Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*
-  
-The profile package is an all in one page, contents is described in the [releases readme](Releases) 
 ***Installation of the .VAX file is not tested !***
+any existing sounds or app/plugin files that have the same path and file name.  
+*Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
+  
+The profile package is an all in one page, contents is described in the [releases readme](Releases)  
+
 
 ## EDVA profile installation Notes, VoiceAttack (VA) profile requirements
 ### Import the (.vap) profiles
