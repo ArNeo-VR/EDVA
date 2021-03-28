@@ -15,3 +15,4 @@ Set as 'Default Profile on Startup' in VoiceAttack Options (Icon down-right).
 [Add ...] select "[Off]"   
   
 Set profile load / unload in Profile-options > [Profile Exec] 'Execute a command each time this profile is loaded / unloaded'  
+
