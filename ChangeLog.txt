@@ -1,8 +1,14 @@
 ﻿## Change log
+Navigation filter, enable **** filter, only enabled does not reset.
 
--- 202103, E:D 3.7.11a
-# Look into, BindED fork by alterNERDtive [BindED-3.0 Github](https://github.com/alterNERDtive/bindED) [VoiceAttack-forum](https://forum.voiceattack.com/smf/index.php?topic=564.60)
-! Adding bugs to the github issues and this changelog (short description)
+-- 202103, E:D 3.7.11c
+BindED fork by alterNERDtive [BindED-3.0 Github](https://github.com/alterNERDtive/bindED) [VoiceAttack-forum](https://forum.voiceattack.com/smf/index.php?topic=564.60)
++ Created an other Request Docking ([Start; End] docking request) not using tab-counting. Still testing!
+
+-- 202103, E:D 3.7.11 >>> https://github.com/ArNeo-VR/EDVA
+>>> ChangeLog.txt moved to GitHub.com EDVA <<<
+https://github.com/ArNeo-VR/EDVA/blob/master/ChangeLog.txt
+>>> Adding bugs to the 'GitHub Issues' page. <<<
 
 
 -- 202101, E:D 3.7.5P - Happy New Year
