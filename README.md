@@ -2,15 +2,14 @@
 Sharing VoiceAttack (VA) commands as text file and as a single profile release (.vap) file.  
 This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
   
-[VoiceAttack Commands](#voice-attack)  
-[VoiceAttack Apps (Plug-ins)](#voice-attack-apps-plugins) (EDBinds, Route-plugins, Other)  
-  
+[VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
+[E:D Applications](#elite-dangerous--applicationstools-3rd-party-not-included)  
+[Windows Apllications](#windows-applications)  
+[VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
 [Other Documents](#other-documents)  
-[Other Applications](#elite-dangerous---applicationstools-3rd-party-not-included)  
-[VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) Apps and Sounds  
+  
 [VoiceAttack EDVA Release and Profiles](#voiceattack-profiles-and-voiceattack-profile-package) EDVA package en VAP files.  
 
-[E:D Windows Apllications](#windows-applications)  
 
 
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
@@ -33,8 +32,6 @@ Some applications and third party plugins are required and need to be installed 
 ### Other plugins
 - ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
 Google spreadsheets are read from within a InLine C# script.  
-### Other documents
-- [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
 
 ## Elite Dangerous : Applications/Tools (3rd party, not included)
 - [ED Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) [It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.]
@@ -58,21 +55,27 @@ Google spreadsheets are read from within a InLine C# script.
 <code>Plugins location "c:\ProgramData\VoiceAttack\Apps"</code>  
 <code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>  
 
+### Other documents
+- [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
+
+
+# EDVA profile Setup
+
 ## Release VoiceAttack [EDVA profile-package](Releases) and [Voiceattack Profiles](Profiles)
 EDVA Profile package can be found in [the Releases](Releases), 
 The EDVA-(version)-profile.VAP file and [other profiles](Profiles) files.
   
-Note that Opening/Importing a 'VAX' VoiceAttack package file 
+Note that Opening/Importing a 'VAX' VoiceAttack package file
 ### **!!! WILL AUTOMATICALLY OVERWRITE !!!**
 any existing sounds or app/plugin files that have the same path and file name.  
-***Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.***  
+*Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*
+  
+The profile package is an all in one page, contents is described in the [releases readme](Releases) 
 
-
-# Setup using the profile
 ## EDVA profile Notes, VoiceAttack (VA) profile requirements
 
 ### Import Main profile
-[More profile actions] > [Import profiles] > (select ~~[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)~~ file)  
+[More profile actions] > [Import profiles] > (select *[[EDVA Profile] EDVA-3.7-(version)-profile](Profiles)* file)  
 
 ### Include: [[release] EDDI-3.x.x-profile](Profiles)
 Import profile: "[release] EDDI-3.x.x-profile.vap"  
@@ -104,24 +107,6 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 # Notes
 ...
-
-# Other profiles
-I've also other profiles: a 'Global profile', 'Off', 'Profile default', 'Profile default include', ...]
-
-### 'Global profile'
-In here are VoiceCommands that activate other profiles,  
-*i.e. 'profile Elite', 'profile default', 'profile disable', 'Computer off'*  
-You can add the 'Global profile' in VoiceAttack > [Options] > [General] > 'Global Profiles' > [Add ...]
-
-### Profile 'Off' 
-Is very limited and has a small set of commands. *Test, Exit voiceattack*
-
-### 'Profile default' 
-Has (Computer [Sleep; Restart; Shutdown now]) commands and 'Profile default include' is included.
-
-### 'Profile default include'
-Contains basic commands, start/stop/focus/show programs, text-functions copy/paste, playback/recording devices.
-is used for including in selected profiles (Profile Elite) and not enable Computer shutdown commands from (Profile default).
 
 ---
 
