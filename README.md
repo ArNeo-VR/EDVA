@@ -14,7 +14,7 @@ Some applications and third party plugins are required and need to be installed 
   
 [VoiceAttack EDVA Release and Profiles](#edva-profile-package-release-and-voiceattack-profiles) EDVA package en VAP files.  
   
-[EDVA package installation](#edva-profile-package-release-and-voiceattack-profiles)  
+[EDVA package installation](#edva-profile-setup)  
 [EDVA manual installation](#edva-profile-manual-installation-notes)  
 \- [EDVA profile configuration](#edva-profile-configuration)  
   
@@ -73,8 +73,8 @@ Google spreadsheets are read from within a InLine C# script.
 The profile package is an all in one package, contents is described in the [releases readme](Releases)  
 EDVA profile-package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).  
   
-Note that Importing the VoiceAttack package file (.VAX),  
-### <span style="color:red">**!!! WILL AUTOMATICALLY OVERWRITE !!!**</span>  
+Note that Importing the VoiceAttack package file (.VAX),
+### **!!! WILL AUTOMATICALLY OVERWRITE !!!**
 any existing sounds or app/plugin files that have the same path and file name.  
   
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
