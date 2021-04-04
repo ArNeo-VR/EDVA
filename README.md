@@ -2,6 +2,9 @@
 Sharing VoiceAttack (VA) commands as text file and as a single profile release (.vap) file.  
 This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
   
+# NOTE !! plug-n-pray, it needs some work to get it going!!  
+Some applications and third party plugins are required and need to be installed manualy.  
+  
 [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
 [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
   
@@ -14,10 +17,6 @@ This profile has commands, plugins and soundfiles for the game Elite Dangerous (
 [EDVA package installation](#edva-profile-package-release-and-voiceattack-profiles)  
 [EDVA manual installation](#edva-profile-manual-installation-notes)  
 \- [EDVA profile configuration](#edva-profile-configuration)  
-
-
-# NOTE !! plug-n-pray, it needs some work to get it going!!  
-Some applications and third party plugins are required and need to be installed manualy.  
   
 # Voice Attack
 Voice-activated control for your PC games and apps.
@@ -70,15 +69,22 @@ Google spreadsheets are read from within a InLine C# script.
 - [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
 
 # EDVA profile Setup
-## EDVA profile-package [Release](Releases) and VoiceAttack [Profiles](Profiles)
+## EDVA (VAX) profile-package release and VoiceAttack Profiles
+The profile package is an all in one package, contents is described in the [releases readme](Releases)  
 EDVA profile-package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).  
-Note that Opening/Importing the VoiceAttack package file (.VAX)  
+  
+Note that Importing the VoiceAttack package file (.VAX),  
 ### **!!! WILL AUTOMATICALLY OVERWRITE !!!**  
 any existing sounds or app/plugin files that have the same path and file name.  
+  
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
 ***Installation of the .VAX file is not tested !***  
   
-The profile package is an all in one page, contents is described in the [releases readme](Releases)  
+### Importing VAX-profile package
+The [Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.
+After importing it is required 
+- to link the 'EDDI-profile' as [described below](#the-eddi-profile-is-required-and-needs-to-be-included-in-the-main-profile)
+- Re-enable 'Plugin Support'
 
 ## EDVA profile manual installation Notes.
 ### Import the (.vap) profiles
