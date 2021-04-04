@@ -74,7 +74,7 @@ The profile package is an all in one package, contents is described in the [rele
 EDVA profile-package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).  
   
 Note that Importing the VoiceAttack package file (.VAX),  
-### **!!! WILL AUTOMATICALLY OVERWRITE !!!**  
+<span style="color:red">### **!!! WILL AUTOMATICALLY OVERWRITE !!!**</span>  
 any existing sounds or app/plugin files that have the same path and file name.  
   
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
