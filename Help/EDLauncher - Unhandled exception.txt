@@ -1,0 +1,27 @@
+﻿Launcher error message: `'Unhandled exception: Object reference not set to an instance of an object'`
+
+Issue: 
+```launcher gets a 'Unhandled exception: Object reference not set to an instance of an object' whenever the ED sign in screen opens.
+It then closes the window and I can't play the game.```
+Solution:
+```This is often related to .NET I'm afraid. You should be able to circumvent the issue by running through the following:
+
+Find a file named EDLaunch.exe.config in: C:\Program Files (x86)\Frontier\EDLaunch\
+For Steam installs, it should be here: C:\Program Files (x86)\Steam\steamapps\common\Elite Dangerous\
+
+Firstly, make a backup of this file by copying it to another location
+Open the EDLaunch.exe.config file with a text editor such as Notepad. 
+You'll see something similar to:
+
+<supportedRuntime version="v2.0.50727"/ >
+<supportedRuntime version="v4.0"/ >
+
+Switch the lines, so they look like this:
+
+<supportedRuntime version="v4.0"/ >
+<supportedRuntime version="v2.0.50727"/ >
+
+Once you have done this, save the file and attempt to start up the launcher. 
+If it's still not working you can just replace the file with the backup you created.```
+
+source: CMDR Sputnik, https://forums.oculusvr.com/t5/Games-and-Apps/Elite-Dangerous-launch-error-in-Rift-S/td-p/819605
