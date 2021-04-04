@@ -4,6 +4,7 @@
 BindED fork by alterNERDtive [BindED-3.0 Github](https://github.com/alterNERDtive/bindED) [VoiceAttack-forum](https://forum.voiceattack.com/smf/index.php?topic=564.60)  
 + Created an other Request Docking ([Start; End] docking request) not using tab-counting. Still testing!  
 +Add application 'Signal (messenger)'
+~Removed some leftover files from the VAX-profile-zippackage.
 
 -- 202103, E:D 3.7.11 >>> https://github.com/ArNeo-VR/EDVA
 >>> ChangeLog.txt moved to [GitHub.com EDVA](https://github.com/ArNeo-VR/EDVA/blob/master/ChangeLog.txt) <<<  
