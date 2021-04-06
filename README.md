@@ -12,8 +12,6 @@ Some applications and third party plugins are required and need to be installed 
 [Applications Windows](#applications-windows)  
 [Other Documents](#other-documents)  
   
-[VoiceAttack EDVA Release and Profiles](#edva-profile-package-release-and-voiceattack-profiles) EDVA package en VAP files.  
-  
 [EDVA package installation](#edva-profile-setup)  
 [EDVA manual installation](#edva-profile-manual-installation-notes)  
 \- [EDVA profile configuration](#edva-profile-configuration)  
