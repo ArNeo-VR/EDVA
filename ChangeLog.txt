@@ -1,12 +1,14 @@
 ﻿## Change log
 
+
 -- 202103, E:D 3.7.11c - [release] E:D [EDVA]-3.7.21c-Profile - 20210328
+* Cleanup disabled and not used commands and lines.
 BindED fork by alterNERDtive [BindED-3.0 Github](https://github.com/alterNERDtive/bindED) [VoiceAttack-forum](https://forum.voiceattack.com/smf/index.php?topic=564.60)  
 + Created new Request Docking (not using tab-counting.) ...  
 + Add application 'Signal (messenger)'
 ~Removed some leftover files from the VAX-profile-zippackage.
 - Changed ((EDDI message received)) to filter out NPC messages.
-+ Add what was the message (that was filtered out.)
++ Add 'what was the message' (that was filtered out.)
 
 
 -- 202103, E:D 3.7.11 >>> https://github.com/ArNeo-VR/EDVA
