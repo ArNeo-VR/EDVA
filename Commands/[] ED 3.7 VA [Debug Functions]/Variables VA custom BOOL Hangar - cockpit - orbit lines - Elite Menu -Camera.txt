@@ -9,15 +9,30 @@ Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
 ==============================================================
 Begin Condition : ([{CMDSEGMENT:0}] Equals 'Status' AND [{CMDSEGMENT:2}] Equals '')
     Say, '{BOOL:{CMDSEGMENT:1}}'
+    Begin Boolean Compare : [Debug Notifications] Equals True
+        Write [Yellow] '{CMDSEGMENT:1} = {BOOL:{CMDSEGMENT:1}}' to log
+    End Condition
 End Condition - Exit when condition met
 
 Begin Condition : ([{CMDSEGMENT:0}] Equals 'Set' AND [{CMDSEGMENT:2}] Does Not Equal '') OR ([{CMDSEGMENT:0}] Equals 'Status' AND [{CMDSEGMENT:2}] Does Not Equal '') OR ([{CMDSEGMENT:0}] Equals 'Reset' AND [{CMDSEGMENT:2}] Equals '')
     Begin Text Compare : [{CMDSEGMENT:2}] Equals 'True'
+        Begin Boolean Compare : [Debug Notifications] Equals True
+            Write [Yellow] '{CMDSEGMENT:1} = {BOOL:{CMDSEGMENT:1}} > True' to log
+        End Condition
         Set Boolean [{CMDSEGMENT:1}] to True
     Else If Text Compare : [{CMDSEGMENT:2}] Equals 'False'
+        Begin Boolean Compare : [Debug Notifications] Equals True
+            Write [Yellow] '{CMDSEGMENT:1} = {BOOL:{CMDSEGMENT:1}} > False' to log
+        End Condition
         Set Boolean [{CMDSEGMENT:1}] to False
     Else If : [{CMDSEGMENT:2}] Equals 'Not set' OR [{CMDSEGMENT:0}] Equals 'Reset'
+        Begin Boolean Compare : [Debug Notifications] Equals True
+            Write [Yellow] '{CMDSEGMENT:1} = {BOOL:{CMDSEGMENT:1}} > Not set' to log
+        End Condition
         Set Boolean [{CMDSEGMENT:1}] to [Not Set]
     End Condition
     Say, '{CMDSEGMENT:1} {BOOL:{CMDSEGMENT:1}}'
+    DISABLED - Begin Boolean Compare : [Debug Notifications] Equals True
+        DISABLED - Write [Yellow] '{CMDSEGMENT:1} > {BOOL:{CMDSEGMENT:1}}' to log
+    DISABLED - End Condition
 End Condition - Exit when condition met

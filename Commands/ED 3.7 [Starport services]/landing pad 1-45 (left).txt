@@ -1,12 +1,11 @@
 -- [landing pad; landing; pad] [1..45] [;left] ::  Ingame NPC talks about Landing pad so request as such.
 
--- Arriving to a port you keep GREEN to the RIGHT and RED to the LEFT
--- When GREEN is on the LEFT side, add "LEFT" to the command.
+-- Arriving to a port you keep GREEN to the RIGHT and RED to the LEFT -- When GREEN is on the LEFT side, add "LEFT" to the command.
 
 -- ↓ Environment conditions
 Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space' AND [Status Docked] Equals False) OR ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space' AND [{CMDSEGMENT:0}] Starts With 'Landing' AND [{CMDSEGMENT:1}] Has Been Set AND [Docked] Equals False)
     
-    -- ↓ Landing pad Distance [ Immediate; Mid; Far ]
+    -- ↓ Landing pad Distance ==== Immediate; Mid; Far ====
     Begin Condition : [{CMDSEGMENT:1}] Equals '1' OR [{CMDSEGMENT:1}] Equals '2' OR [{CMDSEGMENT:1}] Equals '5' OR [{CMDSEGMENT:1}] Equals '6' OR [{CMDSEGMENT:1}] Equals '9' OR [{CMDSEGMENT:1}] Equals '11' OR [{CMDSEGMENT:1}] Equals '12' OR [{CMDSEGMENT:1}] Equals '16' OR [{CMDSEGMENT:1}] Equals '17' OR [{CMDSEGMENT:1}] Equals '20' OR [{CMDSEGMENT:1}] Equals '21' OR [{CMDSEGMENT:1}] Equals '24' OR [{CMDSEGMENT:1}] Equals '26' OR [{CMDSEGMENT:1}] Equals '27' OR [{CMDSEGMENT:1}] Equals '31' OR [{CMDSEGMENT:1}] Equals '32' OR [{CMDSEGMENT:1}] Equals '35' OR [{CMDSEGMENT:1}] Equals '36' OR [{CMDSEGMENT:1}] Equals '39' OR [{CMDSEGMENT:1}] Equals '41' OR [{CMDSEGMENT:1}] Equals '42'
         Set text [~PadDistance] to 'Immediate'
     Else If : [{CMDSEGMENT:1}] Equals '7' OR [{CMDSEGMENT:1}] Equals '13' OR [{CMDSEGMENT:1}] Equals '22' OR [{CMDSEGMENT:1}] Equals '28' OR [{CMDSEGMENT:1}] Equals '37' OR [{CMDSEGMENT:1}] Equals '43'
@@ -23,7 +22,6 @@ Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] 
         Set small int (condition) [~PadDirection] value to 6
     Else If : [{CMDSEGMENT:1}] Equals '5' OR [{CMDSEGMENT:1}] Equals '6'
         Set small int (condition) [~PadDirection] value to 7
-        - check -
     Else If Text Compare : [{CMDSEGMENT:1}] Equals '9'
         Set small int (condition) [~PadDirection] value to 8
     Else If : [{CMDSEGMENT:1}] Equals '11' OR [{CMDSEGMENT:1}] Equals '12'
@@ -52,7 +50,6 @@ Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] 
         Set small int (condition) [~PadDirection] value to 9
     Else If Text Compare : [{CMDSEGMENT:1}] Equals '22'
         Set small int (condition) [~PadDirection] value to 11
-        - check -
     Else If Text Compare : [{CMDSEGMENT:1}] Equals '28'
         Set small int (condition) [~PadDirection] value to 1
     Else If Text Compare : [{CMDSEGMENT:1}] Equals '37'
@@ -71,7 +68,6 @@ Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] 
         Set small int (condition) [~PadDirection] value to 9
     Else If : [{CMDSEGMENT:1}] Equals '18' OR [{CMDSEGMENT:1}] Equals '19'
         Set small int (condition) [~PadDirection] value to 10
-        - check -
     Else If Text Compare : [{CMDSEGMENT:1}] Equals '23'
         Set small int (condition) [~PadDirection] value to 11
     Else If Text Compare : [{CMDSEGMENT:1}] Equals '25'
@@ -87,10 +83,10 @@ Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] 
     Else If : [{CMDSEGMENT:1}] Equals '44' OR [{CMDSEGMENT:1}] Equals '45'
         Set small int (condition) [~PadDirection] value to 5
     End Condition
-    ====================================================
     
-    -- ↓ Landing pad Left ## enterance Green lights on the LEFT
-    Swaps the PadDirection 180 degrees
+    -- ↓ Swaps the PadDirection 180 degrees
+    ====================================================
+    -- ↓ Landing pad LEFT ## (enterance Green lights on the LEFT)
     Begin Condition : ([{CMDSEGMENT:2}] Equals 'Left' AND [~PadDirection] Is Greater Than Or Equals 1 AND [~PadDirection] Is Less Than Or Equals 6)
         Set small int (condition) [~PadDirection] value as incremented by 6
     Else If : ([{CMDSEGMENT:2}] Equals 'Left' AND [~PadDirection] Is Greater Than Or Equals 7 AND [~PadDirection] Is Less Than Or Equals 12)
@@ -98,7 +94,7 @@ Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] 
     End Condition
     
     -- ↓ execute command
-    Write [Yellow] '>> {CMDSEGMENT:0} {CMDSEGMENT:1} >> {SMALL:~PadDirection} O'Clock {TXT:~PadDistance}' to log
+    Write [Yellow] '>> {CMDSEGMENT:0} {CMDSEGMENT:1} >> {SMALL:~PadDirection} O'Clock >> {TXT:~PadDistance}' to log
     Say, '{SMALL:~PadDirection} O'Clock {TXT:~PadDistance}'  (and wait until it completes)
     
 End Condition

@@ -1,82 +1,48 @@
-!!!EXPERIMENTAL uses tab counting see Panel Menu catagory
-
 -- [Request; Cancel;] Docking [;Request]
 -- <Joystick 2 button 12>
 
-++ Required !! Status/Reset nav-tab (for counting the tabs), Accounting Keys and buttons.
-
-Begin Condition : ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'masslock') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'ready') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space')
-    
-    Write [Blue] '0' to log
-    -- ↓ Go back to main screen
-    Begin Text Compare : [Status gui focus] Does Not Equal 'external panel'
-        Start Loop : Repeat 4 Times
-            Pause 0,02 seconds
-            Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
-        End Loop
+-- ↓ Environment conditions
+Begin Condition : ([{ACTIVEWINDOWPROCESSNAME}] Equals '{TXT:AppProcessEliteDangerous}' AND [{CMD}] Contains 'Docking') OR ([{ACTIVEWINDOWPROCESSNAME}] Equals '{TXT:AppProcessEliteDangerous}' AND Joystick 2 Button 12 Is Pressed)
+    Begin Condition : ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'masslock') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space' AND [Status fsd status] Equals 'ready') OR ([Vehicle] Equals 'Ship' AND [Status docked] Equals False AND [Environment] Equals 'Normal Space')
+        Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
         
-        -- ↓ Goto Panel, Navigation (external panel)
-        Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
-            Press variable key(s) [edFocusLeftPanel] and hold for 0,05 seconds and release
-        Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
-            Press variable key(s) [edFocusLeftPanel_Buggy] and hold for 0,05 seconds and release
+        -- ↓ execute command
+        Begin Device State Check :  Joystick 2 Button 12 Is Pressed
+            Pause 0,6 seconds
         End Condition
-        Pause 0,08 seconds
+        Begin Condition : [{CMD}] Starts With 'Cancel' OR [Docking Request] Equals False OR [Request Granted] Equals False OR (Joystick 2 Button 12 Is Pressed AND [Docking Request] Equals True AND [Request Granted] Equals True)
+            Set Boolean [Docking Request] to [Not Set]
+            Set Boolean [Request Granted] to [Not Set]
+        End Condition
+        -- ↓ Select external panel
+        Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'external panel'
+            Execute command, '[External; Navigation; Nav; Target] Panel' - passing values (and wait until it completes)
+        End Condition
+        -- ↓ ((EDDI docking granted))
+        Start Loop While : [Request Granted] Has Not Been Set
+            -- ↓ ((EDDI docking requested))
+            Start Loop While : [Docking Request] Has Not Been Set
+                -- ↓ Request denied delay
+                Begin Boolean Compare : [Request Denied] Equals True
+                    Pause 26 seconds
+                    Set Boolean [Request Denied] to [Not Set]
+                End Condition
+                Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
+                Press variable key(s) [edUI_Right] and hold for 0,1 seconds and release
+                Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+                Pause 0,1 seconds
+                Begin Boolean Compare : [Docking Request] Has Been Set
+                    Pause 3 seconds
+                End Condition
+                Press variable key(s) [edCycleNextPanel] and hold for 0,05 seconds and release
+                DISABLED - Play sound, 'internal:Byaaaan'
+                -- ↓ Request delay
+            End Loop
+            Play sound, 'internal:Bedebeep'  (and wait until it completes)
+            Pause 1,5 seconds
+        End Loop
+        Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
     End Condition
-    
-    -- ↓ Lights / Nightvision Off (also little delay for opening the panel)
-    Begin Boolean Compare : [Status lights on] Equals True
-        Press variable key(s) [edShipSpotLightToggle] and hold for 0,1 seconds and release
-    End Condition
-    Begin Boolean Compare : [Status night vision] Equals True
-        Press variable key(s) [edNightVisionToggle] and hold for 0,05 seconds and release
-    End Condition
-    
-    -- ↓ When in different [tab] move back to the left (variable [nav-tab])
-    Start Loop While : [nav-tab] Is Greater Than 0
-        Press variable key(s) [edLeftThrustButton] and hold for 0,025 seconds and release
-        Pause 0,04 seconds
-        Set small int (condition) [nav-tab] value as decremented by 1
-    End Loop
-    
-    Write [Blue] '1' to log
-    -- ↓ move to Contacts-[TAB]
-    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
-    Pause 0,06 seconds
-    Press variable key(s) [edRightThrustButton] and hold for 0,05 seconds and release
-    Pause 0,05 seconds
-    
-    -- ↓ Move cursor to Top of contacts
-    Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
-    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
-    Press variable key(s) [edUI_Up] and hold for 0,6 seconds and release
-    
-    -- ↓ Select docking request
-    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
-    Pause 0,08 seconds
-    Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
-    Pause 0,08 seconds
-    Press Space key and hold for 0,1 seconds and release
-    Pause 0,08 seconds
-    Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
-    Pause 0,06 seconds
-    
-    -- ↓ [back] to start position
-    Pause 0,1 seconds
-    Press variable key(s) [edLeftThrustButton] and hold for 0,05 seconds and release
-    Pause 0,1 seconds
-    Press variable key(s) [edLeftThrustButton] and hold for 0,05 seconds and release
-    Pause 0,1 seconds
-    Press variable key(s) [edUI_Left] and hold for 0,1 seconds and release
-    Pause 0,06 seconds
-    Press variable key(s) [edUI_Left] and hold for 0,1 seconds and release
-    Pause 0,06 seconds
-    Press variable key(s) [edUI_Up] and hold for 0,7 seconds and release
-    DISABLED - Pause 0,06 seconds
-    
-    -- ↓ [back] exit panel
-    Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
-    Pause 0,1 seconds
-    Set small int (condition) [nav-tab] value to 0
-    
+Else
+    Play sound, 'internal:Bweeneefrrp'
 End Condition

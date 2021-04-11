@@ -1,12 +1,13 @@
-﻿-- [Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set]
-
+﻿## Enabling Debug / BOOL variables used in this profile.
+-- [Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set]
 
 = Reset [Variable] - (Resets value to default value)
 = Status [Variable] - (Speaks variable value)
 = Set [Variable] {True/False} - (Set variable true/false)
 = Get, Put [Variable] {true/false} - (BOOL from/to Profile)
+
 ==============================================================
-Play sound, '{VA_SOUNDS}\ED2018\startrek-sfx-blip.mp3'
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
 -- Status variable
 Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Status'
     Say, '{BOOL:{CMDSEGMENT:1}}'

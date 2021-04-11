@@ -1,5 +1,5 @@
-﻿-- (EDDI:) Status [Variable] - (Speaks variable value)
--- [Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Landinggear; Silent Running; Cargo Scoop; Night Vision]
+﻿-- [Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Landinggear; Silent Running; Cargo Scoop; Night Vision]
+-- (EDDI:) Status [Variable] - (Speaks variable value)
 
 Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
 
@@ -14,10 +14,13 @@ Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Drive assist'
     Set text [~STATUSTEXT] to 'srv drive assist'
 Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Cargo scoop'
     Set text [~STATUSTEXT] to 'cargo scoop deployed'
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Handbrake'
+    Set text [~STATUSTEXT] to 'srv handbrake activated'
 End Condition
 
 Begin Condition : ([{TXT:Status vehicle}] Does Not Equal 'SRV' AND [~STATUSTEXT] Starts With 'SRV')
     Play sound, 'internal:Echo'
+    Write [Red] 'Not in SRV' to log
     Exit Command
 End Condition
 

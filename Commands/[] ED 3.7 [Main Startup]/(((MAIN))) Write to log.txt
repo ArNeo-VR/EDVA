@@ -1,37 +1,30 @@
-﻿-=-
-Begin Boolean Compare : [Debug Write] Equals True
-    Write [Blank] '=== [Exe] {CMD}' to log
-End Condition
+﻿-- (((MAIN))) Write to log
 
 Begin Boolean Compare : [Debug Write] Equals True
-    DISABLED - Write [Blank] '-' to log
-    Write [Orange] '[var] ??? [NewNavCommand] {TXT:NewNavCommand}' to log
-    DISABLED - Write [Orange] '[var] [VAR-Systems-URL] {TXT:VAR-Systems-URL}' to log
-    DISABLED - Write [Orange] '[var] [myFile] {TXT:myFile}' to log
-    DISABLED - Write [Orange] '[var] [NavFileVer] {TXT:NavFileVer}' to log
+    Write [Blank] '-' to log
     Write [Orange] '[var] [Name], custom, (phonetic) == {TXT:Name} - {TXT:Name custom} - ({TXT:Name custom phonetic})' to log
     Write [Blank] '-' to log
 End Condition
 Begin Boolean Compare : [Debug Write] Equals True
-    Write [Purple] '[VAR-Write-Discovered-Systems] {TXT:VAR-Write-Discovered-Systems}' to log
-    Write [Gray] '[var] [VAR-Systems-DIR] {TXT:VAR-Systems-DIR} || [VAR-Discovered-Systems] {TXT:VAR-Discovered-Systems}' to log
     Write [Gray] '[var] [directory] {TXT:Directory} || [filename] {TXT:Filename}' to log
-    Write [Gray] '[var] [log messages] {TXT:Log-EDDI-message}' to log
+    Write [Gray] '[var] [log messages] {TXT:Log-EDDI-messages}' to log
     Write [Gray] '[var] [directory] {TXT:eddi-msg-path} || [filename] {TXT:eddi-msg}' to log
     Write [Blank] '-- ↓ Log file locations' to log
 End Condition
 Write [Blank] '-' to log
+
 Write [Blue] '== Log_path - {TXT:Log_path}' to log
 Write [Blue] '== VA_Logs - {TXT:VA_Logs}' to log
 Write [Blue] '== VA_Sound - {VA_SOUNDS}' to log
-Write [Blank] '-' to log
+Write [Blank] '- custom variables' to log
+
 Write [Blue] '== Applications - {TXT:VA_APP}' to log
 Write [Blue] '== VA_Plugins - {TXT:VA_Plugins}' to log
 Write [Blue] '== VA_Apps - {VA_APPS}' to log
-Write [Blank] '-' to log
+Write [Blank] '- VoiceAttack variables' to log
+
 Write [Blue] '== ↓ VoiceAttack - {VA_DIR}  :: -- ↓ VoiceAttack paths - Assemblies - Apps-Plugins - Sounds' to log
 
-Write [Yellow] '-- New streamlined YG-System-Navigation : Master-Navigation-Systems - v{TXT:NavFileVer} ({TXT:NavFileVerDate})' to log
 Write [Yellow] 'Elite Time - {DATE:Today} {TIME:Today} - ( Local time: {TIME} )' to log
 -=-
 Begin Boolean Compare : [Debug Write] Equals True
