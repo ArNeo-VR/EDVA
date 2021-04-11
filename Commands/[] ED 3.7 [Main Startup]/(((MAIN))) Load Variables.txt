@@ -1,21 +1,18 @@
-﻿-- [ Set Time, ReadSaved, Set-URL ]--
+﻿-- (((MAIN))) Load Variables
+-- [ Set Time, ReadSaved]
 
--- ↓ from init...
 -- ↓ set Variables (note: from init...)
 Set date [Today] value to the current date/time (UTC)
+
 -- ↓ get saved Variables
 Set Boolean [cockpit] to [Saved Value]
 Set Boolean [Debug Write] to [Saved Value]
 Set Boolean [Debug Notifications] to [Saved Value]
+
 -- ↓ [Eddivoice; Vocal mode]
 Set Boolean [EDDIVoice] to [Saved Value]
 Set Boolean [Vocal mode] to [Saved Value]
 Set Boolean [filter] to True
-
-Load Profile ↓ Set variables required for initialisation / onload
-============================================================================
---- Sets URLs ↓ for Navigation spreadsheet (CSV), Others are disabled in (((MAIN))) Settings
-*-*
 
 Begin Boolean Compare : [Debug Write] Equals True
     Write [Blank] '=== [Exe] {CMD}' to log

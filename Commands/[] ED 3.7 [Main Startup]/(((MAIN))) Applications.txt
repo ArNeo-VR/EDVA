@@ -1,21 +1,24 @@
-﻿--
+﻿-- (((MAIN))) Applications
 
 -- ↓ Start Applications
 Execute command, 'Start Elite Market Connector' (by name) (and wait until it completes)
 
--- ↓ Move Applications
+-- ↓ Minimize / Move Applications
+Display window 'OculusClient' as [Minimize]
+
+-- ↓ Elite Dangerous Client
 Set text [~~MyProcess] to 'EliteDangerous64'
 Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
     Move window 'Elite - Dangerous (CLIENT)' to (3,3)
 End Condition
 
-Display window 'Oculus' as [Minimize]
-
-Set text [~~MyProcess] to 'EDLauncher SET!!'
+-- ↓ Elite Dangerous Launcher
+Set text [~~MyProcess] to 'EDLaunch'
 Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
-    Display window 'ED Launcher SET!!!' as [Minimize]
+    Display window 'EDLaunch' as [Minimize]
 End Condition
 
+-- ↓ Elite Dangerous Market Connector
 Set text [~~MyProcess] to 'EDMarketConnector'
 Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
     DISABLED - Move window 'E:D Market Connector' to (2600,750)

@@ -1,13 +1,11 @@
-﻿-- [ CmdrName, Paths, AudioDevices,  ] --
+﻿-- (((MAIN))) Settings
+-- [ CmdrName, Paths, AudioDevices,  ] --
 
 -- ↓ Set your custom name/phonetic, otherwise it will use EDDI:{TXT:NAME}
 DISABLED - Set text [Name custom] to 'OVERRIDE#YOURNAMEHERE'
-
 *** How do you want the Commander Name to Sound when system speaks it to you  ***
-Set text [Name custom phonetic] to 'OVERRIDE#YOURNAMEHERE PHONETIC'
-
-
--- Retrieve Name from EDDI
+DISABLED - Set text [Name custom phonetic] to 'OVERRIDE#YOURNAMEHERE PHONETIC'
+-- No custom name - Retrieve Name from EDDI
 Begin Text Compare : [Name custom] Has Not Been Set
     Set text [Name custom] to [Name]
 End Condition
@@ -24,36 +22,41 @@ Set text [VA_RecordingDevice] to 'Microphone'
 ============================================================================
 -- ↓ [path] Locations, Log files | Apps | Custom
 Set text [VA_App] to '%LOCALAPPDATA%\VoiceAttack\App'
+Set text [VA_Plugins] to '%LOCALAPPDATA%\VoiceAttack\Apps'
 Set text [VA_Logs] to '%LOCALAPPDATA%\VoiceAttack\Logs'
+Set text [Log_path] to '%LOCALAPPDATA%\VoiceAttack\Logs'
 
 ============================================================================
 -- ↓ [filenames] Locations, Log files | Apps | Custom
-Set text [App_EDMC] to 'c:\Program Files (x86)\EDMarketConnector\EDMarketConnector.exe'
+Set text [App_EDMC] to '%ProgramFiles(x86)%\EDMarketConnector\EDMarketConnector.exe'
 Set text [App_EDEngineer] to '%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms'
-Set text [App_EDDiscovery] to 'c:\Program Files\EDDiscovery\EDDiscovery.exe'
+Set text [App_EDDiscovery] to '%ProgramFiles%\EDDiscovery\EDDiscovery.exe'
 Set text [App_EDPlanetBearing] to '{TXT:VA_APP}\EDPlanetBearing\EDPlanetBearing.exe'
 
-==Deprecated BK=============================================================
+============================================================================
+-- ↓ [path] Locations, Log files | Apps | Custom
+
+-- ↓ {ACTIVEWINDOWPROCESSNAME} = {TXT:AppProcessEliteDangerous}, for commands that are not in focus to elite dangerous
+Set text [AppProcessEliteDangerous] to 'EliteDangerous64'
+
+Set Boolean [LogEDDIevents] to True
+Set text [Log-EDDI-events] to '{TXT:Log_path}\EDDI-actions\EDDI_actions_{DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10,0,'')}{DATEMONTHNUMERIC}{EXP: IIF({DATEDAY} < 10,0,'')}{...
+deprecated variable:
+Set text [Log-EDDI-actions] to '{TXT:Log_path}\EDDI-actions\EDDI_actions_{DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10,0,'')}{DATEMONTHNUMERIC}{EXP: IIF({DATEDAY} < 10,0,'')}...
+
+Set Boolean [LogEDDImessages] to True
+Set text [Log-EDDI-messages] to '{TXT:Log_path}\EDDI-messages\EDDI_msg_{DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10,0,'')}{DATEMONTHNUMERIC}{EXP: IIF({DATEDAY} < 10,0,'')}{D...
+
+============================================================================
 -- [defaultpath:] %LOCALAPPDATA%\VoiceAttack\Logs\ [filename:] eddi_output_{DATE:Today}.log
--- ↓ [path] EDDI Actions
--- ↓ (backslash is required at end of the path, becouse its used)
+-- ↓ [path] EDDI Actions -- note: (backslash is required at end of the path, becouse its used in the profile, needs to be renamed)
 Set text [Directory] to '{TXT:VA_Logs}\eddi-actions\'
-DISABLED - Set text [Filename] to 'EDDI_actions_{DATEYEAR}{DATEMONTHNUMERIC}{DATEDAY}.log'
 Set text [Filename] to 'EDDI_actions_{DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10,0,'')}{DATEMONTHNUMERIC}{EXP: IIF({DATEDAY} < 10,0,'')}{DATEDAY}.log'
 
--- ↓ [path] {DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10,0,'')}{DATEMONTHNUMERIC}-{EXP: IIF({DATEDAY} < 10,0,'')}{DATEDAY}
--- ↓ [path]
+-- ↓ EDDI messages path / logfile
 Set text [eddi-msg-path] to '{TXT:VA_Logs}\eddi-messages'
 Set text [eddi-msg] to 'EDDI_msg_{DATEYEAR}{EXP: IIF({DATEMONTHNUMERIC} < 10,0,'')}{DATEMONTHNUMERIC}{EXP: IIF({DATEDAY} < 10,0,'')}{DATEDAY}.log'
 
-============================================================================
--- ↓ [filenames] Locations, Log files | Apps | Custom
-Set text [App_EDMC] to 'c:\Program Files (x86)\EDMarketConnector\EDMarketConnector.exe'
-Set text [App_EDEngineer] to '%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms'
-Set text [App_EDDiscovery] to 'c:\Program Files\EDDiscovery\EDDiscovery.exe'
-Set text [App_EDPlanetBearing] to '{TXT:VA_APP}\EDPlanetBearing\EDPlanetBearing.exe'
-
-============================================================================
 
 Begin Boolean Compare : [Debug Write] Equals True
     Write [Blank] '=== [Exe] {CMD}' to log

@@ -1,14 +1,14 @@
-﻿-- [ Keybinds, EDDIVoice, Sound ] --
+﻿-- (((MAIN))) Initialisation
 
 -- ↓ Read keybinds
 Execute command, '[reset key; update key] [bind; binds]' (and wait until it completes)
 
 -- ↓ disablespeechresponder, EDDI will, not speak unless spoken to
 Begin Boolean Compare : [EDDIVoice] Equals True
-    Execute command, 'You may [talk; speak] [;now;EDDI]' (and wait until it completes)
+    Execute command, 'You may [talk; speak] [;now;EDDI]' - passing values (and wait until it completes)
     DISABLED - Execute command, 'You may speak' (by name) (and wait until it completes)
 Else
-    Execute command, 'Be quiet;Radio silence;Stop talking [;EDDI]' (and wait until it completes)
+    Execute command, 'Be quiet;Radio silence;Stop talking [;EDDI]' - passing values (and wait until it completes)
     DISABLED - Execute command, 'Be quiet EDDI' (by name) (and wait until it completes)
 End Condition
 
@@ -16,7 +16,6 @@ End Condition
 Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Station_Ident_Orbis_text.mp3'
 DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Exclamation.wav'
 
--=-
 Begin Boolean Compare : [Debug Write] Equals True
     Write [Blank] '=== [Exe] {CMD}' to log
 End Condition

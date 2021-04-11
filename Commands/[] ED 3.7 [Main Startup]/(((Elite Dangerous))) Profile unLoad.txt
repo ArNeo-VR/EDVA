@@ -1,5 +1,4 @@
-﻿--
---
+﻿-- (((Elite Dangerous))) Profile unLoad
 
 unLoad ↓ Set variable for muting sounds
 Set small int (condition) [VA_LOAD_STATUS] value to 1
