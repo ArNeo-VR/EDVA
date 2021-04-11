@@ -1,4 +1,4 @@
-# [release] ED [ArNeo]-[version]-Profile-zippackage.vax
+# [release] E:D [EDVA]-[version]-Profile-zippackage.vax
 
 Note that Opening/Importing a 'VAX' VoiceAttack package file 
 ### **!!! WILL AUTOMATICALLY OVERWRITE !!!**
