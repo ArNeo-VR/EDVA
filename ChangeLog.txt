@@ -1,7 +1,8 @@
 ﻿## Change log
 
 -- 202104, [release] E:D [EDVA]-3.7.21e-Profile
-
+* Cleanup old variables, descriptions, comments.
+* Moved functions to other catagories
 
 -- 20210411, [release] E:D [EDVA]-3.7.21d-Profile
 -- 20210328, [release] E:D [EDVA]-3.7.21c-Profile
@@ -39,7 +40,7 @@ Elite apply settings / audio (has a different selection).
 Changed, Panel-tab Counting, removed pressing a key. Used edBind-variable-key instead of a Letter. Key&Joystick need to be bound ingame  
 Sorted, renamed, disabled, deleted some commands  
 
--- 202011, E:D 3.7.5N :: Profile released "[release] ED [ArNeo]-3.7.5N-Profile" 2020-11-15.
+-- 202011, E:D 3.7.5N :: Profile released "[release] ED [EDVA]-3.7.5N-Profile" 2020-11-15.
 Export to >> [release] EDDI-3.7.1-Profile.vap  
 Split/Double command: = Back[R] Panel UI << Removed to trash = Back; Exit; Exit codex - added reset the outfitting status  
 Changed variable: 'Starport services' to 'Starport loaded' (Status loading delay of the starport menu)  
