@@ -17,7 +17,7 @@ Some applications and third party plugins are required and need to be installed 
 \- [EDVA profile configuration](#edva-profile-configuration)  
   
 # Voice Attack
-Voice-activated control for your PC games and apps.
+Voice-activated control for your PC games and apps. More information go [here](https://voiceattack.com).
 ### EDVA VoiceAttack [Commands](Commands)
 [VoiceAttack.com](https://Voiceattack.com) commands are exported to a [text files](Commands) to view the contense,  
 they are manualy exported and not fully up to date.
