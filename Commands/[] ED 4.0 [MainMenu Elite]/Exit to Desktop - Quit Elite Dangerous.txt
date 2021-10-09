@@ -1,0 +1,37 @@
+﻿-- Exit to Desktop; Quit Elite Dangerous
+>> required by other commands
+
+>> Back, Elite Dangerous Menu
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Notify.wav'
+
+Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+Pause 0,05 seconds
+Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+Pause 0,05 seconds
+Begin Text Compare : [Status gui focus] Does Not Equal 'none'
+    Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+End Condition
+
+>> Select, Elite Menu
+Press variable key(s) [edPause] and hold for 0,05 seconds and release
+Pause 0,5 seconds
+Start Loop : Repeat 1 Times
+    Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+    DISABLED - Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+End Loop
+
+>> Select, Exit to Main Menu
+Pause 0,05 seconds
+Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Logoff Sound.wav'
+Pause 0,4 seconds
+Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+Pause 0,1 seconds
+
+>> Confirm, Exit to Main Menu
+Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+>>
+Pause 3,3 seconds
+Switch to profile, '[Profile Default]-2021c'

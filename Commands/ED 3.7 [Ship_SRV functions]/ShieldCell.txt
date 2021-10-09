@@ -1,8 +1,0 @@
-﻿-- [Shield cell; Deploy Shield; Shields up; Pop Shields]
-
--- ↓ Environment conditions
-Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space')
-    Press variable key(s) [edUseShieldCell] and hold for 0,05 seconds and release
-Else
-    Play sound, 'internal:Echo'
-End Condition

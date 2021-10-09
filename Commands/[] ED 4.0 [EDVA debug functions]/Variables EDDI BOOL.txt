@@ -1,0 +1,50 @@
+﻿-- [Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Landed; Silent Running; Cargo Scoop; Lights; Lights on; Night Vision]
+
+-- (EDDI:) Status [Variable] - (Speaks variable value)
+-- [Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Landinggear; Silent Running; Cargo Scoop; Night Vision]
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+
+Begin Text Compare : [{CMDSEGMENT:1}] Equals ''
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Hardpoints'
+    Set text [~STATUSTEXT] to 'hardpoints deployed'
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'landinggear'
+    Set text [~STATUSTEXT] to 'landing gear down'
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Flight assist'
+    Set text [~STATUSTEXT] to 'flight assist off'
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Drive assist'
+    Set text [~STATUSTEXT] to 'srv drive assist'
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Cargo scoop'
+    Set text [~STATUSTEXT] to 'cargo scoop deployed'
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Handbrake'
+    Set text [~STATUSTEXT] to 'srv handbrake activated'
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Lights'
+    Set text [~STATUSTEXT] to 'Lights on'
+End Condition
+
+Begin Condition : ([{TXT:Status vehicle}] Does Not Equal 'SRV' AND [~STATUSTEXT] Starts With 'SRV')
+    Play sound, 'internal:Echo'
+    Write [Red] 'Not in SRV' to log
+    Exit Command
+End Condition
+
+Begin Text Compare : [~STATUSTEXT] Has Been Set
+    Begin Boolean Compare : [Debug Notifications] Equals True
+        Write [Yellow] 'Status {TXT:~STATUSTEXT} = {BOOL:Status {TXT:~STATUSTEXT}}' to log
+    End Condition
+    Begin Text Compare : [~STATUSTEXT] Equals 'flight assist off'
+        Set text [~STATUSTEXTVAR] to 'Status {TXT:~STATUSTEXT}'
+        Begin Boolean Compare : [~STATUSTEXTVAR] Equals False
+            Say, 'True'
+        Else
+            Say, 'False'
+        End Condition
+    Else
+        Say, '{BOOL:Status {TXT:~STATUSTEXT}}'
+    End Condition
+Else
+    Begin Boolean Compare : [Debug Notifications] Equals True
+        Write [Yellow] 'Status {CMDSEGMENT:1} = {BOOL:Status {CMDSEGMENT:1}}' to log
+    End Condition
+    Say, '{BOOL:Status {CMDSEGMENT:1}}'
+End Condition

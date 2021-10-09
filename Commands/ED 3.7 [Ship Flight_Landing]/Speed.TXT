@@ -1,10 +1,9 @@
-﻿-- [Speed; Speed back] [;100;75;50;25;0;-25;-50;-75;-100]
--- [Speed commands are split up for less command combinations]
+﻿-- [Speed; Speed back; Full Speed; Stop] [;100;75;50;25;0;-25;-50;-75;-100]
 
 Begin Condition : ([{CMDSEGMENT:0}] Equals 'Speed' AND [{CMDSEGMENT:1}] Has Been Set)
     Begin Text Compare : [{CMDSEGMENT:1}] Has Not Been Set
         ^^ dummy if statement
-    Else If Text Compare : [{CMDSEGMENT:1}] Equals '100'
+    Else If : [{CMDSEGMENT:1}] Equals '100' OR [{CMD}] Equals 'Full Speed'
         Press variable key(s) [edSetSpeed100] and hold for 0,05 seconds and release
     Else If Text Compare : [{CMDSEGMENT:1}] Equals '75'
         Press variable key(s) [edSetSpeed75] and hold for 0,05 seconds and release
@@ -12,9 +11,9 @@ Begin Condition : ([{CMDSEGMENT:0}] Equals 'Speed' AND [{CMDSEGMENT:1}] Has Been
         Press variable key(s) [edSetSpeed50] and hold for 0,05 seconds and release
     Else If Text Compare : [{CMDSEGMENT:1}] Equals '25'
         Press variable key(s) [edSetSpeed25] and hold for 0,05 seconds and release
-    Else If Text Compare : [{CMDSEGMENT:1}] Equals '0'
+    Else If : [{CMDSEGMENT:1}] Equals '0' OR [{CMD}] Equals 'Stop'
         Press variable key(s) [edSetSpeedZero] and hold for 0,05 seconds and release
-    Else If : [{CMDSEGMENT:1}] Equals '-25' OR ([{CMDSEGMENT:1}] Equals '25' AND [{CMDSEGMENT:0}] Equals 'Speed back')
+    Else If : [{CMDSEGMENT:1}] Equals '-25' OR ([{CMDSEGMENT:0}] Equals 'Speed back' AND [{CMDSEGMENT:1}] Equals '25')
         Press variable key(s) [edSetSpeedMinus25] and hold for 0,05 seconds and release
     Else If : [{CMDSEGMENT:1}] Equals '-50' OR ([{CMDSEGMENT:0}] Equals 'Speed back' AND [{CMDSEGMENT:1}] Equals '50')
         Press variable key(s) [edSetSpeedMinus50] and hold for 0,05 seconds and release

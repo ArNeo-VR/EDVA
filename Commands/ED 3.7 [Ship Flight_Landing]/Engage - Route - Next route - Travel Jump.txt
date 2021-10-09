@@ -67,7 +67,7 @@ Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'masslock'
     Else If : ([{CMD}] Equals 'Engage' AND [{TXT:Environment}] Does Not Equal 'Supercruise') OR ([{CMD}] Equals 'Engage' AND [{TXT:Environment}] Equals 'Supercruise' AND [{TXT:System name}] Does Not Equal '{TXT:EDDI next jump system}')
     Else
         Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Critical Stop.wav'
-        Execute command, 'Galaxy map' (and wait until it completes)
+        Execute command, 'Galaxy map; Stellar Cartography' (and wait until it completes)
     End Condition - Exit when condition not met
     
     -- ↓ <<< LOOP
@@ -165,11 +165,3 @@ Begin Text Compare : [{TXT:Status fsd status}] Does Not Equal 'masslock'
         End Condition
     End Condition
 End Condition
-
-DISABLED - Set decimal [Chargingdelay] value to [Not Set]
-DISABLED - Set decimal [Cooldowndelay] value to [Not Set]
-DISABLED - Set integer [EngageFSDloop] value to [Not Set]
-
-DISABLED - Press variable key(s) [edHyperSuperCombination] and hold for 0,05 seconds and release
-DISABLED - Press variable key(s) [edHyperspace] and hold for 0,05 seconds and release
-DISABLED - Press variable key(s) [edSupercruise] and hold for 0,05 seconds and release

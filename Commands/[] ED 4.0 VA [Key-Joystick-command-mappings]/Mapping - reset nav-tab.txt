@@ -1,0 +1,7 @@
+﻿-- #mapping reset nav-tab
+-- Variable for tab-counting left (external) panel.
+-- <joy2> <button13>
+
+Begin Text Compare : [{ACTIVEWINDOWPROCESSNAME}] Equals '{TXT:AppProcessEliteDangerous}'
+    Execute command, 'Reset nav-tab' (by name)
+End Condition

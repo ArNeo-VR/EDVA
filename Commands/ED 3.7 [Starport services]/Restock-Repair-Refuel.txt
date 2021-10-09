@@ -10,18 +10,37 @@ Else If Text Compare : [{CMD}] Equals 'Repair'
 Else If Text Compare : [{CMD}] Equals 'Refuel'
     Set integer [~CMDCount] value to 2
 End Condition
-Write [Blue] '{TXT:Status vehicle} - Fuel> {DEC:Status fuel percent}% - Ship> {DEC:Ship health}%' to log
 
--- ↓ Environment conditions
+-- ↓ Debug text
+Begin Boolean Compare : [Debug write] Equals True
+    Write [Blue] '[ Market {BOOL:Last station has market} || BlackMarket {BOOL:Last station has black market} || Outfitting {BOOL:Last station has outfitting} || ShipYard {BOOL:Last station ...' to log
+    Write [Blue] '[ Refeul {BOOL:Last station has refuel} || Repair {BOOL:Last station has repair} || Restock {BOOL:Last station has rearm} ]' to log
+    Write [Blue] '{TXT:Status vehicle} - Fuel> {DEC:Status fuel percent}% - Ship> {DEC:Ship health}%' to log
+    Write [Blue] 'Ship> {DEC:Ship health}% | B: {DEC:Ship bulkheads health}% | PP: {DEC:Ship power plant health}% | T: {DEC:Ship thrusters health}% | fsd: {DEC:Ship frame shift drive health}...' to log
+End Condition
+
+DISABLED - Begin Condition : [Last station has refuel] Equals False OR [Last station has repair] Equals False OR [Last station has rearm] Equals False
+    DISABLED - Play sound, 'internal:Thonk'
+    DISABLED - Play sound, '{TXT:soundfx_acknowledge}'
+DISABLED - End Condition
+
+Begin Boolean Compare : [Last station has {CMD}] Equals False
+    DISABLED - Play sound, 'internal:Thonk'
+    Play sound, '{TXT:soundfx_acknowledge}'
+End Condition
+Begin Condition : ([Last station has rearm] Equals False AND [{CMD}] Equals 'Restock')
+    DISABLED - Play sound, 'internal:Thonk'
+    Play sound, '{TXT:soundfx_acknowledge}'
+End Condition
+
+-- ↓ Environment conditions - SRV
 Begin Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
-    
     -- ↓ go to internal panel if not allready selected
     Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'internal panel'
         DISABLED - Execute command, '[Internal; System; Sys; Status; Inventory; Functions] Panel' (and wait until it completes)
         Press variable key(s) [edFocusRightPanel_Buggy] and hold for 0,05 seconds and release
         Pause 0,3 seconds
     End Condition
-    
     -- ↓ execute command
     Press variable key(s) [edUI_Left] and hold for 0,02 seconds and release
     Pause 0,06 seconds
@@ -57,8 +76,8 @@ Begin Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
     
     
     
-    -- ↓ Environment conditions
-Else If Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+    -- ↓ Environment conditions - Ship
+Else If : ([{TXT:Status vehicle}] Equals 'Ship' AND [Last station has refuel] Equals True) OR ([{TXT:Status vehicle}] Equals 'Ship' AND [Last station has repair] Equals True) OR ([{TXT:Status vehicle}] Equals 'Ship' AND [Last station has rearm] Equals True)
     -- ↓ go back to station services menu (202008)
     Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'none'
         Pause 1 second
@@ -73,13 +92,16 @@ Else If Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
             Press variable key(s) [edUIFocus] and hold for 0,05 seconds and release
         End Condition
         Pause 0,4 seconds
+        -- ↓ EDDI aint quick enough
         Set text [Status gui focus] to 'none'
     End Condition
-    
     -- ↓ execute command
     Pause 0,05 seconds
-    Begin Condition : ([{CMD}] Equals 'Refuel' AND [Status fuel percent] Does Not Equal 100,00000) OR ([{CMD}] Equals 'Repair' AND [Ship health] Is Less Than 100,00000) OR [{CMD}] Equals 'Restock' OR [{CMD}] Equals 'Repair'
-        
+    Fuel / repair 100% not accurate enough.
+    Begin Condition : ([{CMD}] Equals 'Refuel' AND [Status fuel percent] Does Not Equal 100,00000) OR ([{CMD}] Equals 'Repair' AND [Ship health] Does Not Equal 100,00000) OR [{CMD}] Equals 'Refuel' OR [{CMD}] Equals 'Repair' OR [{CMD}] Equals 'Restock'
+        Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+        Pause 0,05 seconds
+        -- correction difference between SHIP/SRV
         Set integer [~CMDCount] to [~CMDCount] minus 2
         Set integer [~CMDCount] to [~CMDCount] times -1
         Start Loop : Repeat [~CMDCount] Times
@@ -91,8 +113,13 @@ Else If Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
             Pause 0,1 seconds
             Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
         End Loop
+        Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+        Pause 0,05 seconds
     Else
         Play sound, 'internal:Echo'
     End Condition
+Else
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Fail.wav'
+    Exit Command
     
 End Condition

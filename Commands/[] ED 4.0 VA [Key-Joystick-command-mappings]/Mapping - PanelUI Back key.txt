@@ -1,0 +1,14 @@
+﻿-- E:D 3.5 [Starport services] Back Keys
+-- variable-hotkey: edUI_Back
+-- joystick 2 button 5
+
+DISABLED - Set Boolean [Starport services] to False
+Set Boolean [Elite Menu] to False
+--
+DISABLED - Begin Small Integer Compare : [elite-menu] Is Greater Than 0
+    DISABLED - Set small int (condition) [elite-menu] value as decremented by 1
+DISABLED - End Condition
+DISABLED - Begin Text Compare : [Status gui focus] Does Not Equal 'none'
+    DISABLED - Press Left Shift key and hold for 0,05 seconds and release
+DISABLED - End Condition
+-- E:D 3.5 [Starport services] Back Keys

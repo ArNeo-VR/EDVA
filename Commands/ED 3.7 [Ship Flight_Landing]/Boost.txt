@@ -1,19 +1,8 @@
 ﻿-- Boost <edUseBoostJuice> <Joy1button4>
 
-Begin Text Compare : [{TXT:Status vehicle}] Does Not Equal 'SRV'
-    Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'communications panel'
-        Begin Boolean Compare : [Status cargo scoop deployed] Equals True
-            Press variable key(s) [edToggleCargoScoop] and hold for 0,2 seconds and release
-        End Condition
-        Begin Boolean Compare : [Status landing gear down] Equals True
-            Swap these Enabled/Disabled commands if you want to have it retract when you press boost key ↓
-            WARNING
-            Do not use boost in a station unless you will not get angry
-            at Malic for creating this command and you enable the auto-retract
-            DISABLED - Say, 'Landing Gear is down.'
-            DISABLED - Press variable key(s) [edLandingGearToggle] and hold for 0,2 seconds and release
-            Swap these Enabled/Disabled commands if you want to have it retract when you press boost key ↑
-        End Condition
-        Press variable key(s) [edUseBoostJuice] and hold for 0,05 seconds and release
+Begin Condition : ([{ACTIVEWINDOWPROCESSNAME}] Equals '{TXT:App_EliteDangerous_Process}' AND [{TXT:Status vehicle}] Does Not Equal 'SRV' AND [{TXT:Status gui focus}] Does Not Equal 'communications panel')
+    Begin Boolean Compare : [Status cargo scoop deployed] Equals True
+        Press variable key(s) [edToggleCargoScoop] and hold for 0,2 seconds and release
     End Condition
+    Press variable key(s) [edUseBoostJuice] and hold for 0,05 seconds and release
 End Condition

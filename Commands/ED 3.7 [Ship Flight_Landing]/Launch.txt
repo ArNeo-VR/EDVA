@@ -1,57 +1,56 @@
 -- Launch
 -- Works with Ship and SRV
 
-Begin Condition : ([Status landing gear down] Equals True AND [Status landed] Equals False AND [Status docked] Equals True) OR ([Status landing gear down] Equals True AND [Status landed] Equals True AND [Status docked] Equals False AND [Hangar] Has Not Been Set)
+Begin Condition : ([{TXT:Environment}] Equals 'Docked' AND [Status landing gear down] Equals True AND [Status landed] Equals False AND [Status docked] Equals True) OR ([Status landing gear down] Equals True AND [Status landed] Equals True AND [Status docked] Equals False AND [Hangar] Has Not Been Set) OR ([{TXT:Environment}] Equals 'Landed' AND [Status landing gear down] Equals True AND [Status landed] Equals True AND [Status docked] Equals False AND [Status near surface] Equals True)
+    -- SRV
     Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [Status landed] Equals True)
         Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-c711-eginesonline.wav'
     End Condition
     
     -- ↓ go back to station services menu
-    Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'none'
-        Begin Text Compare : [{TXT:Status gui focus}] Equals 'station services'
-            Start Loop : Repeat 7 Times
-                Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
-                Pause 0,1 seconds
-            End Loop
-            Pause 0,4 seconds
-        Else If Text Compare : [Status gui focus] Equals 'internal panel'
-            Press variable key(s) [edUI_Back] and hold for 0,2 seconds and release
-            Pause 0,1 seconds
-        Else If Text Compare : [Status gui focus] Equals 'external panel'
-            Press variable key(s) [edUIFocus] and hold for 0,05 seconds and release
-            Pause 0,2 seconds
-        End Condition
-        Press variable key(s) [edUI_Back] and hold for 0,2 seconds and release
-        Pause 0,1 seconds
-        Press variable key(s) [edUIFocus] and hold for 0,05 seconds and release
-        Pause 0,2 seconds
-        Set text [Status gui focus] to 'none'
-    End Condition
-    Pause 0,1 seconds
+    DISABLED - Execute command, 'Starport Service back' (and wait until it completes)
+    Execute command, 'Starport Exit' (and wait until it completes)
     
     -- ↓ Select Launch
-    Pause 0,2 seconds
-    Press variable key(s) [edUI_Down] and hold for 0,07 seconds and release
+    Start Loop : Repeat 3 Times
+        Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+        Pause 0,05 seconds
+    End Loop
     Pause 0,25 seconds
-    Press variable key(s) [edUI_Down] and hold for 0,07 seconds and release
+    Press variable key(s) [edUI_Down] and hold for 0,08 seconds and release
     Pause 0,25 seconds
-    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    Press variable key(s) [edUI_Down] and hold for 0,08 seconds and release
+    Pause 0,25 seconds
+    Press variable key(s) [edUI_Select] and hold for 0,08 seconds and release
     
-    -- ↓ Delay depending on ship position
+    -- ↓ Hangar loaded
+    -- ↓ Launch Delay depending on ship position
+    Write [Blue] 'Launch' to log
+    -- ↓ Docked approach
     Begin Condition : ([Status docked] Equals True AND [hangar] Has Not Been Set)
-        Pause 11 seconds
-        Set Boolean [hangar] to False
+        Pause 11,3 seconds
+        Write [Blue] 'Launch A' to log
+        -- ↓ Docked hangar
     Else If : ([Status docked] Equals True AND [hangar] Equals True)
         Pause 18 seconds
-    Else If : ([Status docked] Equals False AND [Status hangar] Has Not Been Set)
-        Pause 2 seconds
+        Write [Blue] 'Launch D' to log
+    Else If : ([Status docked] Equals True AND [hangar] Has Not Been Set)
+        Pause 11 seconds
+        Write [Blue] 'Launch H' to log
+        -- ↓ Docked return from hangar
+    Else If : ([Status docked] Equals True AND [Status hangar] Equals False)
+        Pause 3 seconds
+        Write [Blue] 'Launch R' to log
     End Condition
     
-    -- ↓ Move ship Up, retract Landing Gear
+    -- ↓ Move ship Up
     Pause 0,1 seconds
-    Set Boolean [Starport Services] to False
+    Set Boolean [Starport loaded] to False
     Press variable key(s) [edUpThrustButton] and hold for 3,1 seconds and release
+    -- ↓ Retract Landing Gear, Move ship Up
     Press variable key(s) [edLandingGearToggle] and hold for 0,05 seconds and release
     Pause 0,2 seconds
     Press variable key(s) [edUpThrustButton] and hold for 2,2 seconds and release
+Else
+    Write [Blue] 'Nope' to log
 End Condition

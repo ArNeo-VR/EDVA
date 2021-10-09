@@ -1,45 +1,27 @@
--- Starport Services
+-- Starport Services; Local Services
 -- Mind changing this command, required/used by other commands
--- Variable: {BOOL:Starport services}, 1st start opening delay of starport services.
+-- Variable: {BOOL:Starport loaded}, 1st start opening delay of starport services.
 
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
 Begin Condition : ([Status landing gear down] Equals True AND [Status docked] Equals True AND [Status landed] Equals False)
-    Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
     
-    -- ↓ go back to station services menu (202008)
-    Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'none'
-        Pause 1 second
-        Begin Text Compare : [{TXT:Status gui focus}] Equals 'station services'
-            Start Loop : Repeat 7 Times
-                Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
-                Pause 0,1 seconds
-            End Loop
-            Pause 0,4 seconds
-        Else If Text Compare : [Status gui focus] Equals 'internal panel'
-            Press variable key(s) [edUI_Back] and hold for 0,2 seconds and release
-            Pause 0,1 seconds
-        Else If Text Compare : [Status gui focus] Equals 'external panel'
-            Press variable key(s) [edUIFocus] and hold for 0,05 seconds and release
-            Pause 0,2 seconds
-        End Condition
-        Set text [Status gui focus] to 'none'
-        DISABLED - Press variable key(s) [edUI_Back] and hold for 0,2 seconds and release
-        DISABLED - Pause 0,1 seconds
-        DISABLED - Press variable key(s) [edUIFocus] and hold for 0,05 seconds and release
-        DISABLED - Pause 0,05 seconds
-    End Condition
-    
+    -- ↓ go back to station services menu (202105)
+    Execute command, 'Starport Exit' (and wait until it completes)
+      
     -- ↓ execute command
     Begin Text Compare : [{TXT:Status gui focus}] Equals 'none'
+        Pause 0,05 seconds
         Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
         Pause 0,05 seconds
         Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+        Set Boolean [Starport outfitting] to False
     End Condition
     Pause 0,5 seconds
     
-    -- ↓ delay uppon first arival
-    Begin Boolean Compare : [Starport services] Equals False
-        Pause 3,6 seconds
-        Set Boolean [Starport services] to True
+    -- ↓ delay - uppon first opening menu after arival
+    Begin Boolean Compare : [Starport loaded] Equals False
+        Pause 3,65 seconds
+        Set Boolean [Starport loaded] to True
     End Condition
     
     Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'

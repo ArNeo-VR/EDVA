@@ -1,0 +1,69 @@
+-- Elite Audio [;Sound Effects; Music; Voice; Ship; Ships Voice; Playlist; Playlist; Galnet]
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+-- ↓ prevent accidental selecting with the cursor of the HMD
+Move mouse cursor to application coordinates (52, 52)
+
+-- ↓ go back, elite menu (202008)
+Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
+Pause 0,5 seconds
+Start Loop : Repeat 3 Times
+    Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
+    Pause 0,1 seconds
+End Loop
+Begin Text Compare : [Status gui focus] Does Not Equal 'none'
+    Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
+    Pause 0,1 seconds
+End Condition
+
+Execute command, 'Elite Options' (by name) (and wait until it completes)
+Pause 0,4 seconds
+Press variable key(s) [edUI_Right] and hold for 0,1 seconds and release
+Pause 0,2 seconds
+Press variable key(s) [edUI_Right] and hold for 0,1 seconds and release
+Pause 0,2 seconds
+Press variable key(s) [edUI_Select] and hold for 0,1 seconds and release
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Insert.wav'
+
+-- Elite Options > Audio and submenus
+### set [audio subsection] counter
+Pause 1 second
+Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Sound effects'
+    Pause 0,1 seconds
+    Press ] } key and hold for 0,1 seconds and release
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Music'
+    Pause 0,1 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Press ] } key and hold for 0,1 seconds and release
+Else If : [{CMDSEGMENT:1}] Equals 'Voice' OR [{CMDSEGMENT:1}] Equals 'Ship' OR [{CMDSEGMENT:1}] Equals 'Ships Voice' OR [{CMDSEGMENT:1}] Equals 'Playlist' OR [{CMDSEGMENT:1}] Equals 'Galnet'
+    Pause 0,1 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press ] } key and hold for 0,1 seconds and release
+End Condition
+
+#### set [subsection] counter
+Begin Condition : [{CMDSEGMENT:1}] Equals 'Ship' OR [{CMDSEGMENT:1}] Equals 'Ships Voice'
+    Pause 0,3 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,2 seconds
+    Press ] } key and hold for 0,05 seconds and release
+Else If : [{CMDSEGMENT:1}] Equals 'Playlist' OR [{CMDSEGMENT:1}] Equals 'Galnet'
+    Pause 0,3 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press ] } key and hold for 0,05 seconds and release
+    Pause 0,3 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press ] } key and hold for 0,05 seconds and release
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+    Press ] } key and hold for 0,05 seconds and release
+End Condition

@@ -1,0 +1,46 @@
+﻿-- Deploy SRV
+
+-- ↓ Environment conditions
+Begin Condition : [{TXT:Status vehicle}] Equals 'Ship' OR [{TXT:Status vehicle}] Equals 'SRV'
+    Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Status fsd status}] Equals 'masslock' AND [Status landing gear down] Equals True AND [Status landed] Equals True AND [Status docked] Equals False)
+        Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+        
+        Begin Text Compare : [{TXT:Status gui focus}] Does Not Equal 'role panel'
+            Start Loop While : [{TXT:Status gui focus}] Does Not Equal 'none'
+                Press variable key(s) [edUI_Back] and hold for 0,05 seconds and release
+                Pause 0,15 seconds
+            End Loop
+            Execute command, '[Role; SRV] Panel' (and wait until it completes)
+            Pause 0,02 seconds
+        End Condition
+        
+        -- ↓ execute command
+        Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
+        Pause 0,02 seconds
+        Press variable key(s) [edUI_Left] and hold for 0,05 seconds and release
+        Pause 0,15 seconds
+        Start Loop : Repeat 3 Times
+            Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+        End Loop
+        Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+        Pause 0,02 seconds
+        Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+        Pause 0,02 seconds
+        Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+        
+    Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+        Play sound, 'internal:Doink'
+    Else
+        Play sound, 'internal:Echo'
+        Begin Boolean Compare : [Debug write] Equals True
+            Write [Red] 'Environment conditions not valid' to log
+        End Condition
+    End Condition
+    
+Else
+    Play sound, 'internal:Zazaza'
+    Begin Boolean Compare : [Debug write] Equals True
+        Write [Red] 'Environment conditions not valid' to log
+    End Condition
+End Condition

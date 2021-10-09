@@ -1,0 +1,20 @@
+﻿-- Experimental: [Firegroup;Group] [1..8]
+
+Begin Text Compare : [{CMDSEGMENT:1}] Equals 'alpha'
+    Set integer [~firegroupnumber] value to 1
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'bravo'
+    Set integer [~firegroupnumber] value to 2
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'charlie'
+    Set integer [~firegroupnumber] value to 3
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'delta'
+    Set integer [~firegroupnumber] value to 4
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'echo'
+    Set integer [~firegroupnumber] value to 5
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'foxtrot'
+    Set integer [~firegroupnumber] value to 6
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'golf'
+    Set integer [~firegroupnumber] value to 7
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'hotel'
+    Set integer [~firegroupnumber] value to 8
+End Condition
+Execute command, 'Firegroup {INT:~firegroupnumber}' (by name) (and wait until it completes)

@@ -1,0 +1,24 @@
+﻿-- [deploy; retract;] Cargo Scoop; Cargo Hatch; Cargo Hooch
+
+-- ↓ Environment conditions
+Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space' AND [{TXT:Status fsd status}] Does Not Equal 'charging') OR ([{TXT:Status vehicle}] Equals 'SRV' AND [{TXT:Environment}] Equals 'Normal space')
+    
+    -- ↓ execute command
+    Begin Condition : [{CMD}] Starts With 'Cargo ' OR ([{CMDSEGMENT:0}] Equals 'deploy' AND [{Status cargo scoop deployed}] Equals False) OR ([{CMDSEGMENT:0}] Equals 'retract' AND [{Status cargo scoop deployed}] Equals True)
+        Begin Text Compare : [{TXT:Status vehicle}] Equals 'Ship'
+            Press variable key(s) [edToggleCargoScoop] and hold for 0,05 seconds and release
+        Else If Text Compare : [{TXT:Status vehicle}] Equals 'SRV'
+            Press variable key(s) [edToggleCargoScoop_Buggy] and hold for 0,05 seconds and release
+        End Condition
+    Else
+        Play sound, 'internal:Echo'
+        DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
+    End Condition
+    
+Else
+    Play sound, 'internal:Zazaza'
+    DISABLED - Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Fail.wav'
+    Begin Boolean Compare : [Debug write] Equals True
+        Write [Red] 'Environment conditions not valid' to log
+    End Condition
+End Condition

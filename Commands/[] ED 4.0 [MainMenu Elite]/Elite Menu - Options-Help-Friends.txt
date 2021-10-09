@@ -1,0 +1,49 @@
+﻿-- Elite [Menu; Options; Help; Social; Friends; private group; groups; blocked; report player] [;Menu]
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+
+-- Private Group ; Groups
+Begin Condition : [{CMDSEGMENT:1}] Equals 'Social' OR [{CMDSEGMENT:1}] Equals 'Friends' OR [{CMDSEGMENT:1}] Equals 'Groups' OR [{CMDSEGMENT:1}] Equals 'Private Group' OR [{CMDSEGMENT:1}] Equals 'Blocked' OR [{CMDSEGMENT:1}] Equals 'Report player'
+    Press variable key(s) [edFriendsMenu] and hold for 0,05 seconds and release
+    Pause 1 second
+    Begin Condition : [{CMDSEGMENT:1}] Equals 'Groups' OR [{CMDSEGMENT:1}] Equals 'Private Group'
+        Press variable key(s) [edCycleNextPanel] and hold for 0,05 seconds and release
+        Pause 0,1 seconds
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Blocked'
+        Start Loop : Repeat 2 Times
+            Press variable key(s) [edCyclePreviousPanel] and hold for 0,05 seconds and release
+            Pause 0,1 seconds
+        End Loop
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Report player'
+        Press variable key(s) [edCyclePreviousPanel] and hold for 0,05 seconds and release
+        Pause 0,1 seconds
+        Start Loop : Repeat 8 Times
+            Press variable key(s) [edUI_Up] and hold for 0,05 seconds and release
+            Pause 0,05 seconds
+        End Loop
+        Press variable key(s) [edUI_Select] and hold for 0,2 seconds and release
+    End Condition
+End Condition - Exit when condition met
+
+-- Elite Menu
+Press variable key(s) [edPause] and hold for 0,02 seconds and release
+-- prevent accidental selecting with the cursor of the HMD
+Move mouse cursor to application coordinates (53, 53)
+Pause 0,7 seconds
+
+-- Elite Menu, ....
+Begin Text Compare : [{CMDSEGMENT:1}] Equals ''
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Social'
+    Set integer [~loopcount] value to 1
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Options'
+    Set integer [~loopcount] value to 2
+Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Help'
+    Set integer [~loopcount] value to 3
+End Condition
+
+### Execute
+Start Loop : Repeat [~loopcount] Times
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+End Loop
+Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release

@@ -1,24 +1,67 @@
 ﻿## Change log
 
--- 202104, [release] E:D [EDVA]-3.7.21e-Profile
-* Cleanup old variables, descriptions, comments.
-* Moved functions to other catagories
+-- 202108, [] E:D [EDVA]-4.0.21h-Profile  
+! Some commands are not compatible with 4.0 !!  
+* Changed some comments in commands.  
+* Cleaned up unused variables Log-EDDI-actions, ..  
+* Removed commands (test/firegroup)
+- Update/reworked Starport* commands,(ingame menu function changed): Starport [Missions; Passenger Lounge] commands.  
++ Add SoundFX variables to Main Startup.  
++ Add [Starport*] Last station has [market;black market;outfitting;shipyard], detects if present, sound-error on fail.  
++ Add [Starport*] Starport Completed Missions; Mission Depot.  
++ Add [refeul;repair;restock] Last station has * detects if present, sound-error on fail.  
++ Add [Hardpoints] also deploys SRV turret.  
++ Add On Foot commands [Board Vehicle; Board Ship].  
++ Added Environment conditions {BOOL:odyssey} for Odyssey only commands.  
+~ Test Starport exit, exits the starport menu from different scenarios.  
+- fixed 'hardpoints' toggle command, was not working.  
 
--- 20210411, [release] E:D [EDVA]-3.7.21d-Profile
--- 20210328, [release] E:D [EDVA]-3.7.21c-Profile
-* Cleanup disabled and not used commands and lines.
+-- notes
+? Landing gear, environment check ?
+? 
+-- ideas
+- Catagorize soundfx
+
+Mini package
+- *Firegroup*
+- Landing gear
+- Hardpoints
+- Lights
+
+
+
+-- 202105, [] E:D [EDVA]-4.0.21e-Profile  
+! Some commands are not compatible with 4.0 !!  
+> Odyssey is launced, created new profile 4.0  
+> verified commands are changed from 3.7 to 4.0  
+* Starport services, changed layout. some  
+* Merged Continue commands  
+* verified commands in odyssey, minor fixes.  
+* Rename variable AppProcessEliteDangerous > AppProc_EliteDangerous  
+* Moved Application variables to the command itself. No need to be global.  
++ Add Firegroup Alpha, Bravo, ...  
++ Add Local services (starport services), commands like local contacts etc.  
+- fixed Cargo scoop command did not work fully.  
+
+-- 202104, [release] E:D [EDVA]-3.7.21e-Profile  
+* Cleanup old variables, descriptions, comments.  
+* Moved functions to other catagories  
+
+-- 20210411, [release] E:D [EDVA]-3.7.21d-Profile  
+-- 20210328, [release] E:D [EDVA]-3.7.21c-Profile  
+* Cleanup disabled and not used commands and lines.  
 BindED fork by alterNERDtive [BindED-3.0 Github](https://github.com/alterNERDtive/bindED) [VoiceAttack-forum](https://forum.voiceattack.com/smf/index.php?topic=564.60)  
 + Created new Request Docking (not using tab-counting.) ...  
-+ Add application 'Signal (messenger)'
-~Removed some leftover files from the VAX-profile-zippackage.
-- Changed ((EDDI message received)) to filter out NPC messages.
-+ Add 'what was the message' (that was filtered out.)
-+ update to EDDI-3.7.3
-- release notes got mixed with 3.7.21c
++ Add application 'Signal (messenger)'  
+~ Removed some leftover files from the VAX-profile-zippackage.  
+- Changed ((EDDI message received)) to filter out NPC messages.  
++ Add 'what was the message' (that was filtered out.)  
++ update to EDDI-3.7.3 (vap file)
+- release notes got mixed with 3.7.21c  
 
 -- 202103, E:D 3.7.11 >>> https://github.com/ArNeo-VR/EDVA
->>> ChangeLog.txt moved to [GitHub.com EDVA](https://github.com/ArNeo-VR/EDVA/blob/master/ChangeLog.txt) <<<  
->>> Adding bugs to the [GitHub Issues](https://github.com/ArNeo-VR/EDVA/issues page. <<<  
+> ChangeLog.txt moved to [GitHub.com EDVA](https://github.com/ArNeo-VR/EDVA/blob/master/ChangeLog.txt) <<<  
+> Adding bugs to the [GitHub Issues](https://github.com/ArNeo-VR/EDVA/issues page. <<<  
 
 -- 202101, E:D 3.7.5P - Happy New Year
 + Added Settings variable AppProcessEliteDangerous, for only activating the command when the E:D window is active  
@@ -109,7 +152,7 @@ on/off are not used, because of recognition and to large dynamic command, remove
 -- 201904, E:D 3.4c
 cleanup and sorting commands into groups.  
 Added exceptions for commands when in SRV to prevent false calls  
-Added EDDI-3.4.1, copied profile to 3.4d  
+Added EDDI-3.4.1 (vap file), copied profile to 3.4d  
 
 -- 201904, E:D 3.4b
 Supercruise and Hyperspace commands Engage / Jump, mixed them to one command.  

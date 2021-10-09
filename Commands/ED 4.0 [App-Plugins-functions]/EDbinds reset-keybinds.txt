@@ -1,0 +1,23 @@
+﻿-- [reset key; update key] [bind; binds]
+#> Used by [Main Startup] commands
+
+-- [plugin:bindED] Reloads Custom.#.0.binds XML file for settings.
+-- Steam default-location [ . ] - %LOCALAPPDATA%\Frontier Developments\Elite Dangerous\Options\Binding
+-- Elite location [2.0] - %LOCALAPPDATA%\Frontier Developments\Elite Dangerous\Options\Bindings\Custom.2.0.binds
+-- Elite location [3.0] - %LOCALAPPDATA%\Frontier Developments\Elite Dangerous\Options\Bindings\Custom.3.0.binds
+-- Elite location [4.0] [Default] - %LOCALAPPDATA%\Frontier Developments\Elite Dangerous\Options\Bindings\Custom.4.0.binds
+
+-- ↓ execute command
+-- ↓ VA_LOAD_Status to filter notification out of the Main Startup.
+-- [DEFAULT SETTING] - {empty} searches automaticly
+Begin Condition : ([VA_LOAD_STATUS] Equals 0 AND [Debug Notifications] Equals True)
+    Write [Blue] '[plugin] ED Keybinds READ-Custom.binds file Triggered' to log
+End Condition
+-- ↓ Executy READ Keybinds
+Execute external plugin, 'bindED Plugin v1.0' and wait for return
+
+-- for notifications/sounds disabled at startup
+Begin Small Integer Compare : [VA_LOAD_STATUS] Equals 0
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Notify.wav'
+    Write [Yellow] 'ED Keybinds have been reloaded and set' to log
+End Condition

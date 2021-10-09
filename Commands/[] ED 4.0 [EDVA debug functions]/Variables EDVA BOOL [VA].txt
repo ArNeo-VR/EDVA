@@ -1,0 +1,70 @@
+﻿-- [Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set]
+
+## Enabling Debug / BOOL variables used in this profile.
+
+= Reset [Variable] - (Resets value to default value)
+= Status [Variable] - (Speaks variable value)
+= Set [Variable] {True/False} - (Set variable true/false)
+= Get, Put [Variable] {true/false} - (BOOL from/to Profile)
+
+==============================================================
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+-- Status variable
+Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Status'
+    Say, '{BOOL:{CMDSEGMENT:1}}'
+    Begin Condition : [{CMDSEGMENT:1}] Equals 'Debug Write' OR [Debug Write] Equals True
+        Write [Blue] '> {CMDSEGMENT:1} = {BOOL:{CMDSEGMENT:1}} ( {CMDSEGMENT:0} {CMDSEGMENT:2} )' to log
+    End Condition
+End Condition - Exit when condition met
+
+==============================================================
+-- Resets | BOOL to preffered setting.
+Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Reset'
+    Begin Text Compare : [{CMDSEGMENT:1}] Equals 'ALL'
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'EDDIVoice'
+        Set Boolean [{CMDSEGMENT:1}] to False
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Debug write'
+        Set Boolean [{CMDSEGMENT:1}] to False
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Debug Notifications'
+        Set Boolean [{CMDSEGMENT:1}] to False
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Vocal mode'
+        Set Boolean [{CMDSEGMENT:1}] to False (save value to profile)
+    End Condition
+End Condition
+
+==============================================================
+-- Set | BOOL value.
+Begin Condition : ([{CMDSEGMENT:0}] Equals 'Set' AND [{CMDSEGMENT:2}] Has Been Set)
+    Begin Text Compare : [{CMDSEGMENT:2}] Equals 'true'
+        Set Boolean [{CMDSEGMENT:1}] to True
+    Else If Text Compare : [{CMDSEGMENT:2}] Equals 'false'
+        Set Boolean [{CMDSEGMENT:1}] to False
+    Else If Text Compare : [{CMDSEGMENT:2}] Equals 'not set'
+        Set Boolean [{CMDSEGMENT:1}] to [Not Set]
+    End Condition
+End Condition
+
+==============================================================
+= Get, Put, variable BOOL from/to Profile
+-- get
+Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Get'
+    Set Boolean [{CMDSEGMENT:1}] to [Saved Value] (save value to profile)
+End Condition
+
+-- put
+Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Put'
+    Begin Text Compare : [{CMDSEGMENT:2}] Has Not Been Set
+    Else If Text Compare : [{CMDSEGMENT:2}] Equals 'not set'
+        Set Boolean [{CMDSEGMENT:1}] to [Not Set] (save value to profile)
+    Else If : [{CMDSEGMENT:2}] Equals 'true' OR ([{CMDSEGMENT:2}] Equals '' AND [{BOOL:{CMDSEGMENT:1}}] Equals 'True')
+        Set Boolean [{CMDSEGMENT:1}] to True (save value to profile)
+    Else If : [{CMDSEGMENT:2}] Equals 'false' OR ([{CMDSEGMENT:2}] Equals '' AND [{BOOL:{CMDSEGMENT:1}}] Equals 'False')
+        Set Boolean [{CMDSEGMENT:1}] to False (save value to profile)
+    End Condition
+End Condition
+
+==============================================================
+Say, '{CMDSEGMENT:1} {BOOL:{CMDSEGMENT:1}}'
+Begin Condition : [{CMDSEGMENT:1}] Equals 'Debug Write' OR [Debug Write] Equals True
+    Write [Blue] '> {CMDSEGMENT:1} = {BOOL:{CMDSEGMENT:1}} ( {CMDSEGMENT:0} {CMDSEGMENT:2} )' to log
+End Condition

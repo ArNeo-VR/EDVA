@@ -1,0 +1,46 @@
+﻿-- [Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set]
+
+>> Required by: Request docking, tab-counting functions
+= Status [Variable] - (Speaks variable value)
+= Reset [Variable] - (Resets value to 0)
+= Set [Variable] {True/False} - (Set variable true/false)
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+==============================================================
+
+-- Status variable
+Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Status'
+    Say, '{SMALL:{CMDSEGMENT:1}}'
+End Condition - Exit when condition met
+
+-- Resets to preffered setting.
+Begin Condition : ([{CMDSEGMENT:0}] Equals 'Reset' AND [{CMDSEGMENT:1}] Equals 'nav-tab') OR ([{CMDSEGMENT:0}] Equals 'Reset' AND [{CMDSEGMENT:1}] Equals 'sys-tab')
+    Set small int (condition) [{CMDSEGMENT:1}] value to 0
+Else If : ([{CMDSEGMENT:0}] Equals 'Reset' AND [{CMDSEGMENT:1}] Equals 'galaxy-tab')
+    Set small int (condition) [{CMDSEGMENT:1}] value to [Not Set]
+End Condition
+
+-- Set, Reset variable BOOL/INT to FALSE or ZERO
+Begin Condition : ([{CMDSEGMENT:0}] Equals 'Set' AND [{CMDSEGMENT:2}] Does Not Equal '')
+    Set small int (condition) [{CMDSEGMENT:1}] value to the converted value of {CMDSEGMENT:2}
+End Condition
+
+==============================================================
+= Get, Put, variable BOOL from/to Profile
+-- get
+Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Get'
+    Set small int (condition) [{CMDSEGMENT:1}] value to [Saved Value] (save value to profile)
+End Condition
+
+-- put
+Begin Text Compare : [{CMDSEGMENT:0}] Equals 'Put'
+    Begin Text Compare : [{CMDSEGMENT:2}] Has Not Been Set
+        Set small int (condition) [{CMDSEGMENT:1}] value to the value of [{CMDSEGMENT:1}] (save value to profile)
+    Else If Text Compare : [{CMDSEGMENT:2}] Equals 'not set'
+        Set small int (condition) [{CMDSEGMENT:1}] value to [Not Set] (save value to profile)
+    Else If : ([{CMDSEGMENT:2}] Has Been Set AND [{CMDSEGMENT:2}] Does Not Equal 'not set')
+        Set small int (condition) [{CMDSEGMENT:1}] value to the converted value of {CMDSEGMENT:2} (save value to profile)
+    End Condition
+End Condition
+
+Say, '{CMDSEGMENT:1} {SMALL:{CMDSEGMENT:1}}'

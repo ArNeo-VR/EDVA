@@ -1,0 +1,39 @@
+-- [Start;Close] [;Elite;] [Discovery]
+-- Set Application path {TXT:App_EDDiscovery} in command '(((MAIN))) Settings'
+
+Set text [~~AppProcess] to [App_EDDiscovery_Process]
+Set text [~App] to [App_EDDiscovery]
+Set text [~AppParameters] to [App_EDDiscovery_Parameters]
+Set text [~AppPath] to [App_EDDiscovery_Path]
+
+-- ↓ Application is running
+Begin Text Compare : [{PROCESSEXISTS:~~AppProcess}] Equals '1'
+    
+    -- ↓ Application is running
+    Begin Condition : ([{CMDSEGMENT:0}] Equals 'Close' AND [{CMDSEGMENT:0}] Equals 'Open' AND [{CMDSEGMENT:0}] Equals 'Start')
+        Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Remove.wav'
+        Write [Green] 'Skipped, Allready running [{TXT:~App}]' to log
+        
+        -- ↓ Close Application
+    Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Close'
+        Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Critical Stop.wav'
+        Close window '{TXT:~~AppProcess}'
+        -- ↓ Move Application
+    Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Move'
+        Move window '{TXT:~~AppProcess}' to (1985,0)
+        Display window '{TXT:~~AppProcess}' as [Show Maximized]
+        DISABLED - Display window '{TXT:~~AppProcess}' as [Show No Activate]
+        
+    Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Update'
+    Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Show'
+    Else If Text Compare : [{CMDSEGMENT:0}] Equals 'Focus'
+    End Condition
+    
+Else
+    -- ↓ Start Application
+    Begin Condition : [{CMDSEGMENT:0}] Equals 'Start' OR [{CMDSEGMENT:0}] Equals 'Open'
+        Run application '{TXT:~App}'
+        Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Error.mp3'
+    End Condition
+End Condition
+Pause 0,5 seconds

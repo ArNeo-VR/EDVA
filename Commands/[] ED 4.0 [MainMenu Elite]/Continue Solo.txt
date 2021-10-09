@@ -1,0 +1,32 @@
+-- Continue [Open; Private; Solo; Arena; Training]
+>> required by other commands
+
+-- ↓ Environment conditions
+Set text [~~MyProcess] to 'EliteDangerous64'
+Begin Text Compare : [{PROCESSEXISTS:~~MyProcess}] Equals '1'
+    Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+    -- ↓ prevent accidental selecting with the cursor of the HMD
+    Move mouse cursor to application coordinates (52, 52)
+    
+    Execute command, '[Continue back; Elite Resume]' (and wait until it completes)
+    Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Private'
+        Set integer [~continue-loop] value to 1
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Solo'
+        Set integer [~continue-loop] value to 2
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Arena'
+        Set integer [~continue-loop] value to 3
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Training'
+        Set integer [~continue-loop] value to 4
+    End Condition
+    
+    -- ↓ execute command
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+    Pause 0,8 seconds
+    Start Loop : Repeat [~continue-loop] Times
+        Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+        Pause 0,06 seconds
+    End Loop
+    Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Insert.wav'
+    Pause 0,3 seconds
+    Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+End Condition

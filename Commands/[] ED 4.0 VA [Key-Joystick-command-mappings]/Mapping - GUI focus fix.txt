@@ -1,0 +1,10 @@
+﻿-- #mapping <UIselect button> gui focus fix
+-- <joy2> <button1>
+>> Used by: [Launch] | [Return to surface; Enter hangar]
+
+Begin Text Compare : [{ACTIVEWINDOWPROCESSNAME}] Equals '{TXT:AppProcessEliteDangerous}'
+    Begin Text Compare : [{TXT:Status gui focus}] Equals 'internal panel'
+        Pause 1,5 seconds
+        Set text [Status gui focus] to 'internal panel'
+    End Condition
+End Condition

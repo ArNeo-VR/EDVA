@@ -1,0 +1,55 @@
+-- Elite Graphics [;Display;Quality;3d]
+
+Play sound, '{VA_SOUNDS}\ED_SFX2018\startrek-sfx-blip.mp3'
+
+Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
+Pause 0,5 seconds
+Start Loop : Repeat 3 Times
+    Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
+    Pause 0,1 seconds
+End Loop
+Begin Text Compare : [Status gui focus] Does Not Equal 'none'
+    Press variable key(s) [edUI_Back] and hold for 0,1 seconds and release
+    Pause 0,1 seconds
+End Condition
+
+>> Select, Elite Menu
+Press variable key(s) [edPause] and hold for 0,05 seconds and release
+-- prevent accidental selecting with the cursor of the HMD
+Move mouse cursor to application coordinates (52, 52)
+Pause 0,7 seconds
+Start Loop : Repeat 2 Times
+    DISABLED - Press variable key(s) [edUI_UP] and hold for 0,05 seconds and release
+    Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+    Pause 0,1 seconds
+End Loop
+Pause 0,15 seconds
+Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+
+-- Options Menu
+Pause 0,15 seconds
+DISABLED - Press variable key(s) [edUI_Select] and hold for 0,1 seconds and release
+
+-- Controls Menu
+Pause 0,8 seconds
+Press variable key(s) [edUI_Right] and hold for 0,05 seconds and release
+Pause 0,2 seconds
+Press variable key(s) [edUI_Select] and hold for 0,05 seconds and release
+Play sound, '{VA_SOUNDS}\ED_ThemeSounds\Windows Hardware Insert.wav'
+
+-- Controls Menu Selection
+Begin Text Compare : [{CMDSEGMENT:1}] Does Not Equal ''
+    Pause 1,2 seconds
+    Begin Text Compare : [{CMDSEGMENT:1}] Equals 'Display'
+        Set integer [~loopcount] value to 0
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals 'Quality'
+        Set integer [~loopcount] value to 2
+    Else If Text Compare : [{CMDSEGMENT:1}] Equals '3D'
+        Set integer [~loopcount] value to 5
+    End Condition
+    Start Loop : Repeat [~loopcount] Times
+        Press variable key(s) [edUI_Down] and hold for 0,05 seconds and release
+        Pause 0,05 seconds
+    End Loop
+    Press ] } key and hold for 0,05 seconds and release
+End Condition

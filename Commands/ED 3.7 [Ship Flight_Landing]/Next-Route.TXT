@@ -1,4 +1,6 @@
 ﻿-- Next route; Next system in route; Target Next System
 -- Do not combine, required by other commands [c]
 
-Press variable key(s) [edTargetNextRouteSystem] and hold for 0,05 seconds and release
+Begin Text Compare : [{ACTIVEWINDOWPROCESSNAME}] Equals '{TXT:App_EliteDangerous_Process}'
+    Press variable key(s) [edTargetNextRouteSystem] and hold for 0,05 seconds and release
+End Condition

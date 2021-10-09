@@ -1,0 +1,9 @@
+﻿-- [Next; Previous;] Firegroup
+-- no keybinds available
+
+-- ↓ execute command
+Begin Condition : [{CMDSEGMENT:1}] Equals 'Firegroup' OR ([{CMDSEGMENT:0}] Equals 'Next' AND [{CMDSEGMENT:1}] Equals 'Firegroup')
+    Press variable key(s) [edCycleFireGroupNext] and hold for 0,05 seconds and release
+Else If : ([{CMDSEGMENT:0}] Equals 'Previous' AND [{CMDSEGMENT:1}] Equals 'Firegroup')
+    Press variable key(s) [edCycleFireGroupPrevious] and hold for 0,05 seconds and release
+End Condition - Exit when condition met
