@@ -2,9 +2,11 @@
 
 -- 202108, [] E:D [EDVA]-4.0.21h-Profile  
 ! Some commands are not compatible with 4.0 !!  
+! Catagories with ++ are verified, + are not.  
 * Changed some comments in commands.  
 * Cleaned up unused variables Log-EDDI-actions, ..  
 * Removed commands (test/firegroup)
+- Added [release] EDDI-4.0.1 (original EDDI.vap file to be included in [Profile] E:D [ArNeo]-4.0.21h)
 - Update/reworked Starport* commands,(ingame menu function changed): Starport [Missions; Passenger Lounge] commands.  
 + Add SoundFX variables to Main Startup.  
 + Add [Starport*] Last station has [market;black market;outfitting;shipyard], detects if present, sound-error on fail.  
@@ -13,21 +15,30 @@
 + Add [Hardpoints] also deploys SRV turret.  
 + Add On Foot commands [Board Vehicle; Board Ship].  
 + Added Environment conditions {BOOL:odyssey} for Odyssey only commands.  
-~ Test Starport exit, exits the starport menu from different scenarios.  
++ Add variables for sound effects files.  
 - fixed 'hardpoints' toggle command, was not working.  
+
+~ Test Starport exit, exits the starport menu from different scenarios.  
+~ Board ship does not function well for on-foot / SRV fix needed.  
 
 -- notes
 ? Landing gear, environment check ?
-? 
--- ideas
-- Catagorize soundfx
 
+--- ideas
+Catagorize soundfx
 Mini package
+- Landing pads
+- Lights
+- Night vision
 - *Firegroup*
 - Landing gear
 - Hardpoints
-- Lights
-
+- Orbit lines
+- Cockpit
+- Dismiss;Recall ship
+- Disembark
+- Deploy SRV
+- Board ship *fix disembark/srv..
 
 
 -- 202105, [] E:D [EDVA]-4.0.21e-Profile  
