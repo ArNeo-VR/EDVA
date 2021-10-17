@@ -20,6 +20,9 @@
 
 ~ Test Starport exit, exits the starport menu from different scenarios.  
 ~ Board ship does not function well for on-foot / SRV fix needed.  
+fix: disable up command, add comments, add Board SRV = Board Vehicle to command.
+~ Night vision does not work while landed / at ED start
+fix: add > {TXT:Environment}=Landed
 
 -- notes
 ? Landing gear, environment check ?
