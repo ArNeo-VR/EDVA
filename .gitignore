@@ -10,3 +10,4 @@ EDVA/.gitignore
 #[Bb]in/
 #[Oo]bj/
 .DS_Store
+*.binds
