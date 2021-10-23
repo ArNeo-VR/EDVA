@@ -1,34 +1,4 @@
 ﻿
--- 202108, [] E:D [EDVA]-4.0.21h-Profile  
-~ Debug function: Status [Environment; Vehicle
-~ Add comments to debug functions
-~ Add profile-var debug tts
-~ Debug function: Status [Environment; Vehicle
-~ remove disabled
-~ add target commands
->> back to Elite main screen.
-~ Elite blocked players 
-~ Speed up >> Elite menu / Elite Resume; Continue back (from Elite Graphics [;Display;Quality;3d]) -- ↓ go back, elite menu (202008)
-~ Add Elite audio suits voice / remove double playlists
-- Add Elite report issue / Elite support
-~ Change Elite menu blip 75%
-~ Change Elite graphics quality key >> edUI_Toggle
-~ Change show hide off exit - [Classified; Camera] [; Camera; enable; disable; on; off; Back; Show; Hide; Exit]
-~ Remove camera exit; show;hide 
-~ rename description Ship Camera Menu
-~ Add Profile-var default-camera
-~ Add description to Open 'Websites...'
-~ Add Elite controls ....
-~ Change disembark, Docked/Landed/Hangar, activate Station services menu.
-~ Change boardship, environment settings.
-~ Rename E:D 4.0 [Ship Flight_Landing_on-foot]++
-~ Add landing pad, fail sound, TTS of spoken port 40 .. location.
-~ When in comms-text chat, changing to otherpanel does not work, GUI focus = commspanel.
-~ fix lock and supercruise activation.
-~ fix travel jump 
-~ fix rename hud mode - [Hud mode; Analysis; Exploration; Combat] [;mode]
-~ ?? rotational correction.
-
 Next release / Ideas / notes
 
 -- notes
@@ -38,8 +8,11 @@ It gets set when you use the 'Enter hangar/Return to surface' command, or manual
 
 --- ideas
 - default firegroup plan, weapons, limpet,... enable with direct commands.
+
 - Filter toggle one command.
+
 Catagorize soundfx
+
 Mini package
 - Landing pads
 - Lights
