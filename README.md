@@ -79,10 +79,10 @@ EDVA profile-package can be found in [the Releases](Releases), the .VAP files an
 ***Installation of the .VAX file is not tested !***  
   
 ## Importing VAX-profile package
-The [Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing and reenable it afterwards.  
-After importing it is required to,  
-- link the 'EDDI-profile' as [described below](#the-eddi-profile-is-required-and-needs-to-be-included-in-the-main-profile)
+The [Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.
+After importing the following is required,
 - Re-enable 'Plugin Support'
+- link the 'EDDI-X.X.X-profile' to the EDVA-profile as [described below](#the-eddi-profile-is-required-and-needs-to-be-included-in-the-main-profile)
 
 ## EDVA profile manual installation Notes.
 ### Import the (.vap) profiles
@@ -90,16 +90,16 @@ After importing it is required to,
 - [[EDVA Profile] EDVA-(version)-profile](Profiles)
 - [[release] EDDI-(version)-profile](Profiles)
 
-### The EDDI-profile is required and needs to be included in the main profile.  
+## The EDDI-profile is required and needs to be included in the main profile.  
 Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles' ***The ... at the right***
 
-### Editing the profile to Execute commands at profile (load unload)
+## Editing the profile to Execute commands at profile (load unload)
 Main profile [Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded'  
 Select the corresponding profile from the 'pull-down' menu.  
 - *"(((Elite Dangerous))) Profile Load"*
 - *"(((Elite Dangerous))) Profile UnLoad"*
 
-### Optional, Auto-load the Main profile when Elite is started
+## Optional, Auto-load the Main profile when Elite is started
 Main profile [Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'  
 Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
@@ -125,6 +125,7 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 ## Applications custom extract/install locations
 - [E:D PlanetBearing] [VA_Profile]\App\EDPlanetBearing\  
 - [NirCMD] [VA_Profile]\App\NirCMD\  
+- [E:D Market Connector] [default] "C:\Program Files (x86)\EDMarketConnector\"
   
 # Notes
 Managing plugins with GitHub desktop, you can install plugins directly from github with a desktop application.
