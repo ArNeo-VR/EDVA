@@ -1,5 +1,46 @@
 ﻿## Change log
 
+
+Next release / Ideas
+~ Debug function: Status [Environment; Vehicle
+~ Add comments to debug functions
+~ Add profile-var debug tts
+~ Debug function: Status [Environment; Vehicle
+~ remove disabled
+~ add target commands
+>> back to Elite main screen.
+~ Elite blocked players 
+~ Speed up >> Elite menu / Elite Resume; Continue back (from Elite Graphics [;Display;Quality;3d]) -- ↓ go back, elite menu (202008)
+~ Add Elite audio suits voice / remove double playlists
+- Add Elite report issue / Elite support
+~ Change Elite menu blip 75%
+~ Change Elite graphics quality key >> edUI_Toggle
+~ Change show hide off exit - [Classified; Camera] [; Camera; enable; disable; on; off; Back; Show; Hide; Exit]
+~ Remove camera exit; show;hide 
+~ rename description Ship Camera Menu
+~ Add Profile-var default-camera
+
+-- notes
+? Landing gear, environment check ?
+
+--- ideas
+Catagorize soundfx
+Mini package
+- Landing pads
+- Lights
+- Night vision
+- *Firegroup*
+- Landing gear
+- Hardpoints
+- Orbit lines
+- Cockpit
+- Dismiss;Recall ship
+- Disembark
+- Deploy SRV
+- Board ship *fix disembark/srv..
+
+
+
 -- 202108, [] E:D [EDVA]-4.0.21h-Profile  
 ! Some commands are not compatible with 4.0 !!  
 ! Catagories with ++ are verified, + are not.  
@@ -23,25 +64,8 @@
 fix: disable up command, add comments, add Board SRV = Board Vehicle to command.
 ~ Night vision does not work while landed / at ED start
 fix: add > {TXT:Environment}=Landed
+~ Debug function: Status [Environment; Vehicle
 
--- notes
-? Landing gear, environment check ?
-
---- ideas
-Catagorize soundfx
-Mini package
-- Landing pads
-- Lights
-- Night vision
-- *Firegroup*
-- Landing gear
-- Hardpoints
-- Orbit lines
-- Cockpit
-- Dismiss;Recall ship
-- Disembark
-- Deploy SRV
-- Board ship *fix disembark/srv..
 
 
 -- 202105, [] E:D [EDVA]-4.0.21e-Profile  
