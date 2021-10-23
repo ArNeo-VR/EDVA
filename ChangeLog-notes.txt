@@ -1,5 +1,5 @@
 ﻿
-Next release / Ideas
+-- 202108, [] E:D [EDVA]-4.0.21h-Profile  
 ~ Debug function: Status [Environment; Vehicle
 ~ Add comments to debug functions
 ~ Add profile-var debug tts
@@ -28,6 +28,8 @@ Next release / Ideas
 ~ fix travel jump 
 ~ fix rename hud mode - [Hud mode; Analysis; Exploration; Combat] [;mode]
 ~ ?? rotational correction.
+
+Next release / Ideas / notes
 
 -- notes
 ? Landing gear, environment check ?
