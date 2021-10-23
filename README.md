@@ -67,12 +67,13 @@ Google spreadsheets are read from within a InLine C# script.
 - [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
 
 # EDVA profile Setup
+### **!!! Importing a (.VAX) package file !!!**
+### **!!! WILL AUTOMATICALLY OVERWRITE ANY EXISTING SOUNDS OR APP/PLUGIN FILES !!!**
+
 ## EDVA (VAX) profile-package release and VoiceAttack Profiles
 The profile package is an all in one package, contents is described in the [releases readme](Releases)  
 EDVA profile-package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).  
   
-Note that Importing the VoiceAttack package file (.VAX)
-### **!!! WILL AUTOMATICALLY OVERWRITE ANY EXISTING SOUNDS OR APP/PLUGIN FILES !!!**
   
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
 ***Installation of the .VAX file is not tested !***  
