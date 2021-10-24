@@ -27,7 +27,7 @@ they are manualy exported and not fully up to date.
 - [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables.  
 \- [GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) EDBinds copied to github by Corysia.
 - [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version.
-- [EDBinds tool](https://www.reddit.com/r/EliteDangerous/comments/o4oj3p/a_tiny_app_i_made_to_search_through_key_bindings/) ([GitHUB](https://github.com/ghorsey/edbindings)) Quickly search through Key Bindings.
+- [EDBinds tool](https://www.reddit.com/r/EliteDangerous/comments/o4oj3p/a_tiny_app_i_made_to_search_through_key_bindings/) ([GitHUB](https://github.com/ghorsey/edbindings)) Quickly search through Key Bindings.  
 ### Route plugins
 - [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] 
 - [ED-Router ChrisZero](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/) 
@@ -35,6 +35,7 @@ they are manualy exported and not fully up to date.
 ### Other plugins
 - ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
 Google spreadsheets are read from within a InLine C# script.  
+- [VA Spotify plugin](http://www.litpixi.com/va-spotify/) ([Forum](https://forum.voiceattack.com/smf/index.php?topic=585.0;all))
 
 ## Locations for Apps(Plugins) and Sounds folders
 ### VoiceAttack on x64 bit windows [default]
