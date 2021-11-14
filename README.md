@@ -91,22 +91,22 @@ EDVA profile (.vax)  package can be found in [the Releases](Releases), the .VAP 
 ***Installation of the .VAX file is not tested !***  
   
 ## Importing VAX-profile package
-The [Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.  
+<CODE>[Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.</CODE>
 After importing the following is required,  
 - Re-enable 'Plugin Support'
 - link the 'EDDI-X.X.X-profile' to the EDVA-profile as [described below](#the-eddi-profile-is-required-and-needs-to-be-included-in-the-main-profile)
 
 ## EDVA profile manual installation Notes.
 ### Import the (.vap) profiles
-[More profile actions] > [Import profiles] > (select the file)  
+<CODE>[More profile actions] > [Import profiles] > (select the file)</CODE>
 
 ## The EDDI-profile is required and needs to be included in the main profile.  
 <CODE>Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'</CODE>  
 ***The ... at the right***
 
 ## Editing the profile to Execute commands at profile (load unload)
-<CODE>Main profile [Edit profile] > [Options] > [Profile Exec] >  
-\> 'Execute a command each time this profile is loaded/unloaded'</CODE>   
+<CODE>Main profile [Edit profile] > [Options] > [Profile Exec] ></CODE>
+<CODE>>'Execute a command each time this profile is loaded/unloaded'</CODE>   
   
 Select the corresponding profile from the 'pull-down' menus.  
 - *"(((Elite Dangerous))) Profile Load"*
