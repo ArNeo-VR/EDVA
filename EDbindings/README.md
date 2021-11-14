@@ -1,4 +1,4 @@
-# [EDVA](https://github.com/ArNeo-VR/EDVA) - EDbinds / keybindings ingame
+# [EDVA](https://github.com/ArNeo-VR/EDVA#edva) - EDbinds / keybindings ingame
 
 In this folder a picture of the keyboard map and Logitech X56 layout.  
 The mode switch on the throttle I don't have a function for it yet, 
