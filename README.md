@@ -1,28 +1,27 @@
 # [EDVA](https://github.com/ArNeo-VR/EDVA)
-VoiceAttack CMDs / profiles for Elite Dangerous  
+VoiceAttack profiles for Elite Dangerous  
   
-Sharing VoiceAttack (VA) commands as text file and as a single profile release (.vap) file.  
-This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
+Sharing VoiceAttack (VA) commands in single profile release (.vap / .vax) file.  
+This profile has [Commands](ProfileCommands#edva---commands), plugins and soundfiles for the game Elite Dangerous (E:D).
+Some commands are exported to a [text files](Commands) to view the contense, they are manualy exported and not fully up to date.
   
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
+
+- [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
+- [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
   
-[VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
-[VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
+- [Applications Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
+- [Applications Windows](#applications-windows)  
+- [Other Documents](#other-documents)  
   
-[Applications Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
-[Applications Windows](#applications-windows)  
-[Other Documents](#other-documents)  
-  
-[EDVA package installation](#edva-profile-setup)  
-[EDVA manual installation](#edva-profile-manual-installation-notes)  
-\- [EDVA profile configuration](#edva-profile-configuration)  
+- [EDVA package installation](#edva-profile-setup)  
+- [EDVA manual installation](#edva-profile-manual-installation-notes)  
+- \- [EDVA profile configuration](#edva-profile-configuration)  
   
 # Voice Attack
-Voice-activated control for your PC games and apps. More information go [here](https://voiceattack.com).
-### EDVA VoiceAttack [Commands](ProfileCommands#edva---commands)
-[VoiceAttack.com](https://Voiceattack.com) commands are exported to a [text files](Commands) to view the contense,  
-they are manualy exported and not fully up to date.
+Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
+.
 ## VoiceAttack : Apps (plugins)
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds plugin
