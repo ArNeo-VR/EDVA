@@ -131,10 +131,10 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 ~~~
   
 ~~~
-[EDDI]    [VA_Profile]\Apps\EDDI\  
-[EDbinds] [VA_Profile]\Plugins\bindEDplugin\  
+[EDDI]       [VA_Profile]\Apps\EDDI\  
+[EDbinds]    [VA_Profile]\Plugins\bindEDplugin\  
 
-[ED-ED-NeutronRouter]           [VA_Profile]\Plugins\ED-NeutronRouter\  
+[ED-NeutronRouter]              [VA_Profile]\Plugins\ED-NeutronRouter\  
 [ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\  
 ~~~
   
