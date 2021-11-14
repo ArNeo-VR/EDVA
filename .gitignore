@@ -12,4 +12,3 @@ EDVA/.gitignore
 tmp/
 #tmp/
 .DS_Store
-*.binds
