@@ -1,4 +1,4 @@
-# [EDVA](https://github.com/ArNeo-VR/EDVA) - Commands
+# [EDVA](https://github.com/ArNeo-VR/EDVA#edva) - Commands
 # [EDVA - Commands E:D 3.7.5N](https://github.com/ArNeo-VR/EDVA/tree/master/Releases)
 ## EDVA [Main Startup]
 **Profile Load** ::  on Profile load Command, [see setup](https://github.com/ArNeo-VR/EDVA#edva-profile-manual-installation-notes)  
