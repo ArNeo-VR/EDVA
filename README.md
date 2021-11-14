@@ -101,12 +101,12 @@ After importing the following is required,
 [More profile actions] > [Import profiles] > (select the file)  
 
 ## The EDDI-profile is required and needs to be included in the main profile.  
-Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'  
+<CODE>Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'</CODE>  
 ***The ... at the right***
 
 ## Editing the profile to Execute commands at profile (load unload)
-Main profile [Edit profile] > [Options] > [Profile Exec] >  
-\> 'Execute a command each time this profile is loaded/unloaded'   
+<CODE>Main profile [Edit profile] > [Options] > [Profile Exec] >  
+\> 'Execute a command each time this profile is loaded/unloaded'</CODE>   
   
 Select the corresponding profile from the 'pull-down' menus.  
 - *"(((Elite Dangerous))) Profile Load"*
