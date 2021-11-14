@@ -123,19 +123,27 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 - [Custom / Phonetic name] in > '(((MAIN))) Settings'  
   
 ## Plugin custom extract/install locations and variables
-[VA_App] (%LOCALAPPDATA%\VoiceAttack\App) Custom Applications E:D / Windows path  
+~~~
+[VA_App]     (%LOCALAPPDATA%\VoiceAttack\App) Custom Applications E:D / Windows path  
 [VA_Plugins] (%LOCALAPPDATA%\VoiceAttack\Apps) VoiceAttack Plugins path  
-[VA_Logs] & [Log_path] (%LOCALAPPDATA%\VoiceAttack\Logs)  
+[VA_Logs] & 
+[Log_path]   (%LOCALAPPDATA%\VoiceAttack\Logs)  
+~~~
   
-[EDDI] [VA_Profile]\Apps\EDDI\  
+~~~
+[EDDI]    [VA_Profile]\Apps\EDDI\  
 [EDbinds] [VA_Profile]\Plugins\bindEDplugin\  
-[ED-ED-NeutronRouter] [VA_Profile]\Plugins\ED-NeutronRouter\  
+
+[ED-ED-NeutronRouter]           [VA_Profile]\Plugins\ED-NeutronRouter\  
 [ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\  
+~~~
   
-[App_EDMC] (%ProgramFiles(x86)%\EDMarketConnector\EDMarketConnector.exe)  
-[App_EDEngineer] (%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms)  
-[App_EDDiscovery] (%ProgramFiles%\EDDiscovery\EDDiscovery.exe)  
-[App_EDPlanetBearing](TXT:VA_APP\EDPlanetBearing\EDPlanetBearing.exe)  
+~~~
+[App_EDMC]            (%ProgramFiles(x86)%\EDMarketConnector\EDMarketConnector.exe)  
+[App_EDEngineer]      (%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms)  
+[App_EDDiscovery]     (%ProgramFiles%\EDDiscovery\EDDiscovery.exe)  
+[App_EDPlanetBearing] (TXT:VA_APP\EDPlanetBearing\EDPlanetBearing.exe)  
+~~~
   
 ## Applications custom extract/install locations
 ~~~
