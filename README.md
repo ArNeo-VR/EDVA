@@ -40,15 +40,18 @@ Google spreadsheets are read from within a InLine C# script.
 
 ## Locations for Apps(Plugins) and Sounds folders
 ### VoiceAttack on x64 bit windows [default]
-<code>Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"</code>  
-<code>Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"</code>  
+~~~
+Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"
+Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"~~~
 #### My personal settings are, if you export your computer profile to another computer it will go with the userdata.
-<code>Plugins location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Apps"</code>   
-<code>Sounds location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Sounds"</code>  
+~~~
+Plugins location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Apps"   
+Sounds location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Sounds"~~~
 #### Depending if you want to use the same profile for all the users on the computer place it in:
 *Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
-<code>Plugins location "c:\ProgramData\VoiceAttack\Apps"</code>  
-<code>Sounds location "c:\ProgramData\VoiceAttack\Sounds"</code>  
+~~~
+Plugins location "c:\ProgramData\VoiceAttack\Apps"
+Sounds location "c:\ProgramData\VoiceAttack\Sounds"~~~
 
 ## Elite Dangerous : Applications/Tools (3rd party, not included)
 ### E:D Market Connector
