@@ -2,8 +2,8 @@
 
 
 -- 202112, [] E:D [EDVA]-4.0.21i-Profile  
-+ Add Debug level [0..15] variable default=5 (debug notifications=5 / debug write=7)  
-+ Added my keybindings layout (pictures) see [EDbinds] folder  
++ WIP: Add Debug level [0..15] variable default=5 (debug notifications=5 / debug write=7)  
++ Added my keybindings layout (pictures) see [EDbindings] folder  
 ~ Renamed some commands, ingame text is the voice-command. e.i. lock-location, Detach camera, Stabilizers...  
 
 
