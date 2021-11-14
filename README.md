@@ -50,8 +50,8 @@ Plugins location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Apps"
 Sounds location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Sounds"
 ~~~
 #### Depending if you want to use the same profile for all the users on the computer place it in:
-*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
 ~~~
+*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
 Plugins location "c:\ProgramData\VoiceAttack\Apps"
 Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 ~~~
@@ -69,7 +69,7 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 - [E:D PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.
 
 ## Applications Windows
-<code>Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"</code>  
+~~~Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
 ### Other documents
