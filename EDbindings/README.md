@@ -15,23 +15,25 @@ Is not used for binding buttons to a (keyboard) keys.
 - Most are set to Unprogrammed  
 *Dunno the difference between Unprogrammed and fallback .. guess RTFM*
 
-
-~~~
 ### On the joystick
+~~~
 - Firebutton and sidebutton are bound to the mouse 1/2   
-
+~~~
+~~~
 ### Settings on the X-56 Joystick  
 X-Axis: Curve profile:S Deadband:0 Curvature:660 X-SAT:1000 Y-SAT:1000  
 Y-Axis: Curve profile:S Deadband:0 Curvature:665 X-SAT:1000 Y-SAT:1000  
 Rudder: Curve profile:S Deadband:153 Curvature:149 X-SAT:0 Y-SAT:1000 (I don't use this)  
-
+~~~
 
 ### On the throttle  
+~~~
 - Hat 3/4 are set to 4-way, fallback  
 - The throttle has two seperate parts, I've bound them to the Ship/SRV (Right/Left)  
 
 - Slide-button, I use it to mute Teamspeak  
-
+~~~
+~~~
 ### Settings on the X-56 Throttle
 Throttle 1: Curve profile:S Deadband:23 Curvature:667 X-SAT:1000 Y-SAT:1000 (SHIP)  
 Throttle 2: Curve profile:S Deadband:25 Curvature:763 X-SAT:1000 Y-SAT:1000 (SRV)  
