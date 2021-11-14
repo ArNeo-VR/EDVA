@@ -8,5 +8,30 @@ In VA I've assigned the joysticks to: ( in VA goto Options > General > [Joystick
 2. Logitech X-56 Throttle  
 3. Thrustmaster Pendular-rudder  
 
-The Logitech HOTAS Software not used for binding buttons to a (keyboard) keys.  
-The only is the firebutton and sidebutton on the joystick are bound to the mouse 1/2.  
+## The Logitech HOTAS Software 
+Is not used for binding buttons to a (keyboard) keys.  
+
+### Settings on the X-56 Joystick  
+X-Axis: Curve profile:S Deadband:0 Curvature:660 X-SAT:1000 Y-SAT:1000  
+Y-Axis: Curve profile:S Deadband:0 Curvature:665 X-SAT:1000 Y-SAT:1000  
+Rudder: Curve profile:S Deadband:153 Curvature:149 X-SAT:0 Y-SAT:1000 (I don't use this)  
+
+- Firebutton and sidebutton are bound to the mouse 1/2  
+
+
+### Settings on the X-56 Throttle
+Throttle 1: Curve profile:S Deadband:23 Curvature:667 X-SAT:1000 Y-SAT:1000 (SHIP)  
+Throttle 2: Curve profile:S Deadband:25 Curvature:763 X-SAT:1000 Y-SAT:1000 (SRV)  
+Rotary   1: Curve profile:J Deadband:0 Curvature:562 X-SAT:1000 Y-SAT:1000 
+Rotary   2: Curve profile:J Deadband:0 Curvature:803 X-SAT:1000 Y-SAT:1000  
+Rotary   3: Curve profile:S Deadband:150 Curvature:500 X-SAT:1000 Y-SAT:1000  
+Rotary   4: Curve profile:J Deadband:0 Curvature:410 X-SAT:1000 Y-SAT:992  
+
+On the throttle  
+- Most are set to Unprogrammed  
+- Hat 3/4 are set to 4-way, fallback  
+
+- Slide-button, I use it to mute Teamspeak
+
+###
+Dunno the difference between Unprogrammed and fallback .. guess RTFM  
