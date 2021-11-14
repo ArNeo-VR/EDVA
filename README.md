@@ -83,15 +83,15 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 # EDVA profile Setup
 ### **!!! Importing a (.VAX) package file !!!**
 ### **!!! WILL AUTOMATICALLY OVERWRITE ANY EXISTING SOUNDS OR APP/PLUGIN FILES !!!**
+### **!! Installation of the .VAX file is not tested !!**
 
 ## EDVA (VAX) profile-package release and VoiceAttack Profiles
 EDVA profile (.vax)  package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).  
   
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
-### Installation of the .VAX file is not tested !  
   
 ## Importing VAX-profile package
-<CODE>[Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.</CODE>
+<CODE>[Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.</CODE>  
 After importing the following is required,  
 - Re-enable 'Plugin Support'
 - link the 'EDDI-X.X.X-profile' to the EDVA-profile as [described below](#the-eddi-profile-is-required-and-needs-to-be-included-in-the-main-profile)
