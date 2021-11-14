@@ -1,4 +1,6 @@
-# [EDVA](https://github.com/ArNeo-VR/EDVA) - VoiceAttack CMDs / profiles for Elite Dangerous
+# [EDVA](https://github.com/ArNeo-VR/EDVA)
+VoiceAttack CMDs / profiles for Elite Dangerous  
+  
 Sharing VoiceAttack (VA) commands as text file and as a single profile release (.vap) file.  
 This profile has commands, plugins and soundfiles for the game Elite Dangerous (E:D).
   
