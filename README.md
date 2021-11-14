@@ -139,16 +139,18 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
   
 ## Applications custom extract/install locations
 ~~~
-- [E:D PlanetBearing] [VA_Profile]\App\EDPlanetBearing\  
-- [NirCMD] [VA_Profile]\App\NirCMD\  
-- [E:D Market Connector] [default] "C:\Program Files (x86)\EDMarketConnector\"
+- [E:D PlanetBearing]    [VA_Profile]\App\EDPlanetBearing\  
+- [NirCMD]               [VA_Profile]\App\NirCMD\  
+- [E:D Market Connector] [default]   "C:\Program Files (x86)\EDMarketConnector\"
 ~~~
   
 # Notes
-Managing plugins with GitHub desktop, you can install plugins directly from github with a desktop application.
-If you clone the plugin directly to the use location of the Apps/Plugin locations
+Managing plugins with GitHub desktop, you can install plugins directly from github with a desktop application.  
+If you clone the plugin directly to the use location of the Apps/Plugin locations  
 
 ## History
-Shortly after playing Elite-Dangerous on a flat-screen I got me an Oculus Rift VR Headset.
-Therefor VoiceAttack (control) became a must for some keyboard commands.
-Learning profiles from players on Twitch.tv shared their profile, from there I started.
+Shortly after playing Elite-Dangerous on a flat-screen I got me an Oculus Rift VR Headset.  
+Therefor VoiceAttack (control) became a must for some keyboard commands.  
+Learning profiles from players on Twitch.tv shared their profile, from there I started.  
+Later on I moved the profile notes and vap files to github.
+
