@@ -98,7 +98,7 @@ After importing the following is required,
 
 ## EDVA profile manual installation Notes.
 ### Import the (.vap) profiles
-[More profile actions] > [Import profiles] > (select the file from [profiles])  
+[More profile actions] > [Import profiles] > (select the file from (profiles) )  
 
 ## The EDDI-profile is required and needs to be included in the main profile.  
 Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles' ***The ... at the right***
