@@ -14,9 +14,9 @@ In VA I've assigned the joysticks to: ( in VA goto Options > General > [Joystick
 Is not used for binding buttons to a (keyboard) keys.  
 - Most are set to Unprogrammed  
 *Dunno the difference between Unprogrammed and fallback .. guess RTFM*
-~~~~~~ 
 
 
+~~~
 ### On the joystick
 - Firebutton and sidebutton are bound to the mouse 1/2   
 
@@ -39,3 +39,5 @@ Rotary   1: Curve profile:J Deadband:0 Curvature:562 X-SAT:1000 Y-SAT:1000
 Rotary   2: Curve profile:J Deadband:0 Curvature:803 X-SAT:1000 Y-SAT:1000  
 Rotary   3: Curve profile:S Deadband:150 Curvature:500 X-SAT:1000 Y-SAT:1000  
 Rotary   4: Curve profile:J Deadband:0 Curvature:410 X-SAT:1000 Y-SAT:992  
+~~~
+huh
