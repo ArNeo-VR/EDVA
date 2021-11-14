@@ -39,7 +39,8 @@ Google spreadsheets are read from within a InLine C# script.
 - [VA Spotify plugin](http://www.litpixi.com/va-spotify/) ([Forum](https://forum.voiceattack.com/smf/index.php?topic=585.0;all))
 
 ## Locations for Apps(Plugins) and Sounds folders
-~~~Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"
+~~~
+Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"
 ~~~
 
 ### VoiceAttack on x64 bit windows [default]
@@ -54,7 +55,9 @@ Sounds location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\Sounds"
 ~~~
 #### Depending if you want to use the same profile for all the users on the computer place it in:
 ~~~
-*Folder 'c:\ProgramData\VoiceAttack' needs to be created and security-rights set to Modify for users group.*  
+Folder 'c:\ProgramData\VoiceAttack' needs to be created 
+and security-rights set to Modify for users group.
+
 Plugins location "c:\ProgramData\VoiceAttack\Apps"
 Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 ~~~
