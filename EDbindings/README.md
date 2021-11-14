@@ -13,7 +13,8 @@ In VA I've assigned the joysticks to: ( in VA goto Options > General > [Joystick
 ## The Logitech HOTAS Software
 Is not used for binding buttons to a (keyboard) keys.  
 - Most are set to Unprogrammed  
-~~~Dunno the difference between Unprogrammed and fallback .. guess RTFM~~~ 
+*Dunno the difference between Unprogrammed and fallback .. guess RTFM*
+~~~~~~ 
 
 
 ### On the joystick
