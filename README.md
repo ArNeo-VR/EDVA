@@ -8,8 +8,11 @@ Some commands are exported to a [text files](Commands) to view the contense, the
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
 
+# Voice Attack
+Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
+
 - [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)
-- [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
+- [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations
   
 - [Applications Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)
 - [Applications Windows](#applications-windows)
@@ -18,10 +21,7 @@ Some applications and third party plugins are required and need to be installed 
 - [EDVA package installation](#edva-profile-setup)
 - [EDVA manual installation](#edva-profile-manual-installation-notes)
 - \- [EDVA profile configuration](#edva-profile-configuration)
-  
-# Voice Attack
-Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
-.
+
 ## VoiceAttack : Apps (plugins)
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds plugin
