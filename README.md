@@ -136,7 +136,7 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 [ED-NeutronRouter]    [VA_Profile]\Plugins\ED-NeutronRouter\  
 ~~~
-~~ [ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\ ~~
+~~\[ReadGoogleSpreadsheetVAPlugin\] \[VA_Profile\]\Plugins\ReadGoogleSheetVAPlugin~~
 
 ~~~
 [App_EDMC]            (%ProgramFiles(x86)%\EDMarketConnector\EDMarketConnector.exe)  
