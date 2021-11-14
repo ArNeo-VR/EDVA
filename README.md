@@ -106,7 +106,7 @@ Main profile - [Edit profile] > [Options] > [Profile General] > 'Include command
 
 ## Editing the profile to Execute commands at profile (load unload)
 Main profile [Edit profile] > [Options] > [Profile Exec]  
-> 'Execute a command each time this profile is loaded/unloaded'   
+\> 'Execute a command each time this profile is loaded/unloaded'   
 Select the corresponding profile from the 'pull-down' menus.  
 - *"(((Elite Dangerous))) Profile Load"*
 - *"(((Elite Dangerous))) Profile UnLoad"*
