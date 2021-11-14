@@ -75,8 +75,6 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 - [E:D PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.
 
 ## Applications Windows
-~~~Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"
-~~~
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
 ### Other documents
@@ -87,24 +85,20 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 ### **!!! WILL AUTOMATICALLY OVERWRITE ANY EXISTING SOUNDS OR APP/PLUGIN FILES !!!**
 
 ## EDVA (VAX) profile-package release and VoiceAttack Profiles
-The profile package is an all in one package, contents is described in the [releases readme](Releases)  
-EDVA profile-package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).  
-  
+EDVA profile (.vax)  package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).  
   
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
 ***Installation of the .VAX file is not tested !***  
   
 ## Importing VAX-profile package
-The [Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.
-After importing the following is required,
+The [Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.  
+After importing the following is required,  
 - Re-enable 'Plugin Support'
 - link the 'EDDI-X.X.X-profile' to the EDVA-profile as [described below](#the-eddi-profile-is-required-and-needs-to-be-included-in-the-main-profile)
 
 ## EDVA profile manual installation Notes.
 ### Import the (.vap) profiles
-[More profile actions] > [Import profiles] > (select the file)  
-- [[EDVA Profile] EDVA-(version)-profile](Profiles)
-- [[release] EDDI-(version)-profile](Profiles)
+[More profile actions] > [Import profiles] > (select the file from [profiles])  
 
 ## The EDDI-profile is required and needs to be included in the main profile.  
 Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles' ***The ... at the right***
