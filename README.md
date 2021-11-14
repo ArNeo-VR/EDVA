@@ -101,20 +101,19 @@ After importing the following is required,
 <CODE>[More profile actions] > [Import profiles] > (select the file)</CODE>
 
 ## The EDDI-profile is required and needs to be included in the main profile.  
-<CODE>Main profile - [Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'</CODE>  
+<CODE>[Edit profile] > [Options] > [Profile General] > 'Include commands from other profiles'</CODE>  
 ***The ... at the right***
 
 ## Editing the profile to Execute commands at profile (load unload)
-<CODE>Main profile [Edit profile] > [Options] > [Profile Exec] ></CODE>  
-<CODE>>'Execute a command each time this profile is loaded/unloaded'</CODE>   
+<CODE>[Edit profile] > [Options] > [Profile Exec] > 'Execute a command each time this profile is loaded/unloaded'</CODE>   
   
 Select the corresponding profile from the 'pull-down' menus.  
 - *"(((Elite Dangerous))) Profile Load"*
 - *"(((Elite Dangerous))) Profile UnLoad"*
 
 ## Optional, Auto-load the Main profile when Elite is started
-Main profile [Edit profile] > [Options] > [Profile General] >  
-\> 'Enable profile switching for the following windows or processes'  
+<CODE>Main profile [Edit profile] > [Options] > [Profile General] ></CODE>  
+<CODE>\> 'Enable profile switching for the following windows or processes'</CODE>  
   
 Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
@@ -124,15 +123,15 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
   
 ## Plugin custom extract/install locations and variables
 ~~~
-[VA_App]     (%LOCALAPPDATA%\VoiceAttack\App) Custom Applications E:D / Windows path  
-[VA_Plugins] (%LOCALAPPDATA%\VoiceAttack\Apps) VoiceAttack Plugins path  
+[VA_App]      (%LOCALAPPDATA%\VoiceAttack\App) Custom Applications E:D / Windows path  
+[VA_Plugins]  (%LOCALAPPDATA%\VoiceAttack\Apps) VoiceAttack Plugins path  
 [VA_Logs] & 
-[Log_path]   (%LOCALAPPDATA%\VoiceAttack\Logs)  
+[Log_path]    (%LOCALAPPDATA%\VoiceAttack\Logs)  
 ~~~
   
 ~~~
-[EDDI]       [VA_Profile]\Apps\EDDI\  
-[EDbinds]    [VA_Profile]\Plugins\bindEDplugin\  
+[EDDI]        [VA_Profile]\Apps\EDDI\  
+[EDbinds]     [VA_Profile]\Plugins\bindEDplugin\  
 
 [ED-NeutronRouter]    [VA_Profile]\Plugins\ED-NeutronRouter\  
 ~~~
