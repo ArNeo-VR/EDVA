@@ -88,7 +88,7 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 EDVA profile (.vax)  package can be found in [the Releases](Releases), the .VAP files and other profiles files in [Profiles folder](Profiles).  
   
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
-***Installation of the .VAX file is not tested !***  
+### Installation of the .VAX file is not tested !  
   
 ## Importing VAX-profile package
 <CODE>[Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.</CODE>
@@ -134,10 +134,10 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 [EDDI]       [VA_Profile]\Apps\EDDI\  
 [EDbinds]    [VA_Profile]\Plugins\bindEDplugin\  
 
-[ED-NeutronRouter]              [VA_Profile]\Plugins\ED-NeutronRouter\  
-[ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\  
+[ED-NeutronRouter]    [VA_Profile]\Plugins\ED-NeutronRouter\  
 ~~~
-  
+~~[ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\ ~~  
+
 ~~~
 [App_EDMC]            (%ProgramFiles(x86)%\EDMarketConnector\EDMarketConnector.exe)  
 [App_EDEngineer]      (%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms)  
