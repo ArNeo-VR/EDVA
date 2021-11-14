@@ -105,7 +105,7 @@ After importing the following is required,
 ***The ... at the right***
 
 ## Editing the profile to Execute commands at profile (load unload)
-<CODE>Main profile [Edit profile] > [Options] > [Profile Exec] ></CODE>
+<CODE>Main profile [Edit profile] > [Options] > [Profile Exec] ></CODE>  
 <CODE>>'Execute a command each time this profile is loaded/unloaded'</CODE>   
   
 Select the corresponding profile from the 'pull-down' menus.  
