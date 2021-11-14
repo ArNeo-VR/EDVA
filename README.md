@@ -1,4 +1,4 @@
-# [EDVA](https://github.com/ArNeo-VR/EDVA)
+# [EDVA](https://github.com/ArNeo-VR/EDVA#edva)
 VoiceAttack profiles for Elite Dangerous  
   
 Sharing VoiceAttack (VA) commands in single profile release (.vap / .vax) file.  
@@ -8,16 +8,16 @@ Some commands are exported to a [text files](Commands) to view the contense, the
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
 
-- [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
+- [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)
 - [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
   
-- [Applications Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
-- [Applications Windows](#applications-windows)  
-- [Other Documents](#other-documents)  
+- [Applications Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)
+- [Applications Windows](#applications-windows)
+- [Other Documents](#other-documents)
   
-- [EDVA package installation](#edva-profile-setup)  
-- [EDVA manual installation](#edva-profile-manual-installation-notes)  
-- \- [EDVA profile configuration](#edva-profile-configuration)  
+- [EDVA package installation](#edva-profile-setup)
+- [EDVA manual installation](#edva-profile-manual-installation-notes)
+- \- [EDVA profile configuration](#edva-profile-configuration)
   
 # Voice Attack
 Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
