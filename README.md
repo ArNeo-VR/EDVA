@@ -105,14 +105,17 @@ Main profile - [Edit profile] > [Options] > [Profile General] > 'Include command
 ***The ... at the right***
 
 ## Editing the profile to Execute commands at profile (load unload)
-Main profile [Edit profile] > [Options] > [Profile Exec]  
+Main profile [Edit profile] > [Options] > [Profile Exec] >  
 \> 'Execute a command each time this profile is loaded/unloaded'   
+  
 Select the corresponding profile from the 'pull-down' menus.  
 - *"(((Elite Dangerous))) Profile Load"*
 - *"(((Elite Dangerous))) Profile UnLoad"*
 
 ## Optional, Auto-load the Main profile when Elite is started
-Main profile [Edit profile] > [Options] > [Profile General] > 'Enable profile switching for the following windows or processes'  
+Main profile [Edit profile] > [Options] > [Profile General] >  
+\> 'Enable profile switching for the following windows or processes'  
+  
 Tag the option enabled, Add text 'EliteDangerous64' in the field.
 
 ## EDVA profile configuration 
@@ -120,19 +123,25 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 - [Custom / Phonetic name] in > '(((MAIN))) Settings'  
   
 ## Plugin custom extract/install locations and variables
+~~~
 [VA_App] (%LOCALAPPDATA%\VoiceAttack\App) Custom Applications E:D / Windows path  
 [VA_Plugins] (%LOCALAPPDATA%\VoiceAttack\Apps) VoiceAttack Plugins path  
 [VA_Logs] & [Log_path] (%LOCALAPPDATA%\VoiceAttack\Logs)  
+~~~
   
+~~~
 [EDDI] [VA_Profile]\Apps\EDDI\  
 [EDbinds] [VA_Profile]\Plugins\bindEDplugin\  
 [ED-ED-NeutronRouter] [VA_Profile]\Plugins\ED-NeutronRouter\  
 [ReadGoogleSpreadsheetVAPlugin] [VA_Profile]\Plugins\ReadGoogleSheetVAPlugin\  
-   
+~~~
+  
+~~~
 [App_EDMC] (%ProgramFiles(x86)%\EDMarketConnector\EDMarketConnector.exe)  
 [App_EDEngineer] (%APPDATA%\Microsoft\Windows\Start Menu\Programs\Max\EDEngineer.appref-ms)  
 [App_EDDiscovery] (%ProgramFiles%\EDDiscovery\EDDiscovery.exe)  
 [App_EDPlanetBearing](TXT:VA_APP\EDPlanetBearing\EDPlanetBearing.exe)  
+~~~
   
 ## Applications custom extract/install locations
 - [E:D PlanetBearing] [VA_Profile]\App\EDPlanetBearing\  
