@@ -39,6 +39,8 @@ Google spreadsheets are read from within a InLine C# script.
 - [VA Spotify plugin](http://www.litpixi.com/va-spotify/) ([Forum](https://forum.voiceattack.com/smf/index.php?topic=585.0;all))
 
 ## Locations for Apps(Plugins) and Sounds folders
+~~~Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App" ~~~
+
 ### VoiceAttack on x64 bit windows [default]
 ~~~
 Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"
@@ -69,7 +71,7 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 - [E:D PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.
 
 ## Applications Windows
-~~~Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"
+~~~Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App" ~~~
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
 ### Other documents
