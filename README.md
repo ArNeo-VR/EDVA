@@ -14,7 +14,7 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 ### Topics
 - [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
 - [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
-
+## .
 - [Applications Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
 - [Applications Windows](#applications-windows)  
 - [Other Documents](#other-documents)  
