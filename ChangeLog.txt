@@ -1,14 +1,19 @@
 ﻿## Change log
 
 
+-- 202112, [] E:D [EDVA]-4.0.21i-Profile  
++ Add Debug level [0..15] variable default=5 (debug notifications=5 / debug write=7)  
+~ Renamed some commands, ingame text is the voice-command. e.i. lock-location, Detach camera, Stabilizers...  
+
+
 -- 202108, [] E:D [EDVA]-4.0.21h-Profile  
 ! Some commands are not compatible with 4.0 !!  
 ! Catagories with ++ are verified, + are not.  
 * Changed some comments in commands.  
 * Cleaned up unused variables Log-EDDI-actions, ..  
-* Removed commands (test/firegroup)
-~ fixed around 30 minor glitches while testing.
-- Added [release] EDDI-4.0.1 (original EDDI.vap file to be included in [Profile] E:D [ArNeo]-4.0.21h)
+* Removed commands (test/firegroup)  
+~ fixed around 30 minor glitches while testing.  
+- Added [release] EDDI-4.0.1 (original EDDI.vap file to be included in [Profile] E:D [ArNeo]-4.0.21h)  
 - Update/reworked Starport* commands,(ingame menu function changed): Starport [Missions; Passenger Lounge] commands.  
 + Add SoundFX variables to Main Startup.  
 + Add [Starport*] Last station has [market;black market;outfitting;shipyard], detects if present, sound-error on fail.  
@@ -22,10 +27,10 @@
 
 ~ Test Starport exit, exits the starport menu from different scenarios.  
 ~ Board ship does not function well for on-foot / SRV fix needed.  
-fix: disable up command, add comments, add Board SRV = Board Vehicle to command.
-~ Night vision does not work while landed / at ED start
-fix: add > {TXT:Environment}=Landed
-~ Debug function: Status [Environment; Vehicle
+fix: disable up command, add comments, add Board SRV = Board Vehicle to command.  
+~ Night vision does not work while landed / at ED start  
+fix: add > {TXT:Environment}=Landed  
+~ Debug function: Status [Environment; Vehicle  
 
 
 
