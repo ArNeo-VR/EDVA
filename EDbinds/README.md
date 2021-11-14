@@ -27,11 +27,11 @@ Rotary   2: Curve profile:J Deadband:0 Curvature:803 X-SAT:1000 Y-SAT:1000
 Rotary   3: Curve profile:S Deadband:150 Curvature:500 X-SAT:1000 Y-SAT:1000  
 Rotary   4: Curve profile:J Deadband:0 Curvature:410 X-SAT:1000 Y-SAT:992  
 
-On the throttle  
+### On the throttle  
 - Most are set to Unprogrammed  
 - Hat 3/4 are set to 4-way, fallback  
 
 - Slide-button, I use it to mute Teamspeak
 
-###
+### -
 Dunno the difference between Unprogrammed and fallback .. guess RTFM  
