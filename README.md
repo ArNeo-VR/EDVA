@@ -3,7 +3,7 @@ VoiceAttack profiles for Elite Dangerous
   
 Sharing VoiceAttack (VA) commands in single profile release (.vap / .vax) file.  
 This profile has [Commands](ProfileCommands#edva---commands), plugins and soundfiles for the game Elite Dangerous (E:D).
-Some commands are exported to a [text files](Commands) to view the contense, they are manualy exported and not fully up to date.
+Some commands are exported to a [text files](ProfileCommands) to view the contense, they are manualy exported and not fully up to date.
   
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
@@ -22,7 +22,7 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 - [EDVA package installation](#edva-profile-setup)  
 - [EDVA manual installation](#edva-profile-manual-installation-notes)  
 \- [EDVA profile configuration](#edva-profile-configuration)  
-## VoiceAttack : Apps (plugins)
+## VoiceAttack : Apps/Plug-ins
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds plugin
 - [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variables.  
