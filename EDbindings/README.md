@@ -20,7 +20,7 @@ Is not used for binding buttons to a (keyboard) keys.
 - Firebutton and sidebutton are bound to the mouse 1/2   
 ~~~
 ~~~
-### Settings on the X-56 Joystick  
+**Settings on the X-56 Joystick** 
 X-Axis: Curve profile:S Deadband:0 Curvature:660 X-SAT:1000 Y-SAT:1000  
 Y-Axis: Curve profile:S Deadband:0 Curvature:665 X-SAT:1000 Y-SAT:1000  
 Rudder: Curve profile:S Deadband:153 Curvature:149 X-SAT:0 Y-SAT:1000 (I don't use this)  
