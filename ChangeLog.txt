@@ -1,15 +1,16 @@
 ﻿## Change log
 
 
--- 202112, [] E:D [EDVA]-4.0.21i-Profile  
+-- 202112, [] E:D [EDVA]-4.0.2i-Profile  
 ~ Renamed some commands, ingame text is the voice-command. e.i. lock-location, Detach camera, Stabilizers...  
-~ Elite Menu, keybinding <P> goes directly to the menu from anywhere.
-* Elite Menu commands changed, Executes call Elite Resume & Elite Options, Steps afterwards. [Remove disabled lines]
-* Added comments to commands.
-+ Added Continue Training...
+~ Elite Menu, keybinding <P> goes directly to the menu from anywhere.  
+* Elite Menu commands changed, Executes call Elite Resume & Elite Options, Steps afterwards. [Remove disabled lines]  
+* Added comments to commands.  
+* Removed some old ED 3.4 commands (debug info, galaxy-tab)
++ Added Continue Training...  
 + WIP: Add Debug level [0..15] variable default=5 (debug notifications=5 / debug write=7)  
 + Added my keybindings layout (pictures) see [EDbindings] folder  
-- Removed change-profile on 'Quit Elite Dangerous'
+- Removed change-profile on 'Quit Elite Dangerous'  
 
 -- 202108, [] E:D [EDVA]-4.0.21h-Profile  
 ! Some commands are not compatible with 4.0 !!  
