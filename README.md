@@ -8,6 +8,14 @@ Some commands are exported to a [text files](ProfileCommands) to view the conten
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
 
+# EDVA Profile notes
+
+### Hangar variable
+Using 'enter hangar', 'return to surface' in the hangar is dependent on a variable 'hangar'
+This variable gets set by the same command, if not set correctly it won't execute. 
+Some other commands also use this variable. 
+Setting the variable manualy by 'Set hangar true' correct that.
+
 # Voice Attack
 Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
 
@@ -96,8 +104,6 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 ## Applications Windows
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
-\
-\
 &nbsp;
 
 ### Other documents
