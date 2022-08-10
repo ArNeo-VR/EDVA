@@ -23,11 +23,10 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 - [EDVA manual installation](#edva-profile-manual-installation-notes)  
 \- [EDVA profile configuration](#edva-profile-configuration)  
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+\
+\
+\
+\
 &nbsp;
 
 
