@@ -16,6 +16,10 @@ This variable gets set by the same command, if not set correctly it won't execut
 Some other commands also use this variable. 
 Setting the variable manualy by 'Set hangar true' correct that.
 
+\
+\
+&nbsp;
+
 # Voice Attack
 Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
 
