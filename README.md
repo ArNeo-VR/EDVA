@@ -26,6 +26,10 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 &nbsp;
 &nbsp;
 &nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
 
 ## VoiceAttack : Apps/Plug-ins
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
