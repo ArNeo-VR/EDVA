@@ -12,8 +12,8 @@ Some applications and third party plugins are required and need to be installed 
 Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
 
 ### Topics
-- [VoiceAttack Commands & Apps (Plugins](#voice-attack) (EDVA | EDBinds, Route-plugins, Other)  
-- [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) V:A Apps and Sounds folder locations  
+- [VoiceAttack Commands & Apps (Plugins](#voiceattack--appsplug-ins) (EDVA | EDBinds, Route-plugins, Other)  
+- [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) VA Apps, Sounds and other folder locations in windows  
 ### Applications
 - [Applications/Tools Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
 - [Applications Windows](#applications-windows)  
@@ -22,6 +22,9 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 - [EDVA package installation](#edva-profile-setup)  
 - [EDVA manual installation](#edva-profile-manual-installation-notes)  
 \- [EDVA profile configuration](#edva-profile-configuration)  
+
+<br/>
+<br/>
 ## VoiceAttack : Apps/Plug-ins
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds plugin
@@ -37,6 +40,7 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 - ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
 Google spreadsheets are read from within a InLine C# script.  
 - [VA Spotify plugin](http://www.litpixi.com/va-spotify/) ([Forum](https://forum.voiceattack.com/smf/index.php?topic=585.0;all))
+
 
 ## Locations for Apps(Plugins) and Sounds folders
 ~~~
