@@ -29,7 +29,6 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 \
 &nbsp;
 
-
 ## VoiceAttack : Apps/Plug-ins
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds plugin
@@ -46,6 +45,9 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 Google spreadsheets are read from within a InLine C# script.  
 - [VA Spotify plugin](http://www.litpixi.com/va-spotify/) ([Forum](https://forum.voiceattack.com/smf/index.php?topic=585.0;all))
 
+\
+\
+&nbsp;
 
 ## Locations for Apps(Plugins) and Sounds folders
 ~~~
@@ -71,6 +73,10 @@ Plugins location "c:\ProgramData\VoiceAttack\Apps"
 Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 ~~~
 
+\
+\
+&nbsp;
+
 ## Elite Dangerous : Applications/Tools (3rd party, not included)
 ### E:D Market Connector
 - [E:D Market Connector](https://github.com/EDCD/EDMarketConnector) ([releases](https://github.com/EDCD/EDMarketConnector/releases)) It utilises the Journal files written by the game on the user's computer, together with data from the API Frontier Developments supplies in order to feed this data to various third party sites that the user may find useful.  
@@ -83,11 +89,23 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 - [E:D Discovery](https://github.com/EDDiscovery/EDDiscovery) ([releases](https://github.com/EDDiscovery/EDDiscovery/releases)) EDDiscovery is a captain's log and 2D/3D map for Elite Dangerous players.
 - [E:D PlanetBearing](https://github.com/Uriei/EDPlanetBearing) ([releases](https://github.com/Uriei/EDPlanetBearing/releases)) Calculate the heading you need to follow to reach an specific point giving its coordinates on a planet in Elite Dangerous.
 
+\
+\
+&nbsp;
+
 ## Applications Windows
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
+\
+\
+&nbsp;
+
 ### Other documents
 - [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
+
+\
+\
+&nbsp;
 
 # EDVA profile Setup
 ### **!!! Importing a (.VAX) package file !!!**
@@ -104,6 +122,10 @@ EDVA profile (.vax)  package can be found in [the Releases](Releases), the .VAP 
 After importing the following is required,  
 - Re-enable 'Plugin Support'
 - link the 'EDDI-X.X.X-profile' to the EDVA-profile as [described below](#the-eddi-profile-is-required-and-needs-to-be-included-in-the-main-profile)
+
+\
+\
+&nbsp;
 
 ## EDVA profile manual installation Notes.
 ### Import the (.vap) profiles
@@ -125,6 +147,10 @@ Select the corresponding profile from the 'pull-down' menus.
 <CODE>\> 'Enable profile switching for the following windows or processes'</CODE>  
   
 Tag the option enabled, Add text 'EliteDangerous64' in the field.
+
+\
+\
+&nbsp;
 
 ## EDVA profile configuration 
 ### Configure settings
