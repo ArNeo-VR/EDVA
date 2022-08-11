@@ -10,6 +10,8 @@ Some applications and third party plugins are required and need to be installed 
 
 # EDVA Profile notes
 
+[Profile commands](ProfileCommands#edva---commands)
+
 ### Hangar variable
 Using 'enter hangar', 'return to surface' in the hangar is dependent on a variable 'hangar'
 This variable gets set by the same command, if not set correctly it won't execute. 
