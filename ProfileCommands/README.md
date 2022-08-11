@@ -1,5 +1,9 @@
 # [EDVA](https://github.com/ArNeo-VR/EDVA#edva) - Commands
 # [EDVA - Commands E:D 3.7.5N](https://github.com/ArNeo-VR/EDVA/tree/master/Releases)
+
+\
+&nbsp;
+
 ## EDVA [Main Startup]
 **Profile Load** ::  on Profile load Command, [see setup](https://github.com/ArNeo-VR/EDVA#edva-profile-manual-installation-notes)  
 **(((MAIN))) Load Variables** :: Loads variables from profile, set required for Initialisation.  
@@ -9,6 +13,10 @@
 **(((MAIN))) Applications** :: START / MOVE Applications.  
 **(((MAIN))) Write to log** :: Show variables to log.  
 **Profile UnLoad** ::  on Profile unload Command
+
+\
+\
+&nbsp;
 
 ## EDVA [MainMenu Elite]
 **Continue [solo, open, arena, training]** :: Activates the action and goes to the menus and activates.  
