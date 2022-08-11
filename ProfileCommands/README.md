@@ -79,18 +79,19 @@ Activates the in game menu and goes to the submenu/selection.
 ## EDVA [Ship Flight_Landing]
 Launch ::  
 \- Ship Docked at station: Starts Launch, moves ship up, retracts landing gear.  
-Ship Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.  
+\- Ship Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.  
 
-Full Speed; Cruise; Impulse Speed; Half Impulse; Quarter Impulse; All Stop; Halt; Stepback; Backstep; Backpaddle; Go Back; Full back :: Sets speed  
-[Speed; Speed back] [;100;75;50;25;0;-25;-50;-75;-100] :: Sets speed  
+Sets Speed ::  
+\- Full Speed; Cruise; Impulse Speed; Half Impulse; Quarter Impulse; All Stop; Halt; Stepback; Backstep; Backpaddle; Go Back; Full back
+\- [Speed; Speed back] [;100;75;50;25;0;-25;-50;-75;-100]
 Boost :: Closes cargoscoop and Boost upon boost key is pressed is detected.
 Disengage :: Disengages from supercruise.
 
 Engage; Engage route; Engage next route; Engage travel jump; Travel jump; Superjump; Engage Superjump ::  
 Engage :: Engages supercruise / hyperspace (if there is a route it superjumps).  
-Engage route ::  
-Engage next route :: Select the next route in Galaxy map and Engages.  
+Engage route :: Engage next route :: Select the next route in Galaxy map and Engages.  
 Travel jump :: FSD Cooldown delay and activates hyperspace to destination.  
+
 Superjump ::  
 *Command is experimental, [drops you out of supercruise](https://github.com/ArNeo-VR/EDVA/issues/1) if the target is not set correctly*
 
@@ -104,13 +105,14 @@ Orbit Lines [; on; off; pulls]
 [Engine Color; Weapon Color]  
 
 [Lights; Full Beam] [; on; of; off; pulls; twice] :: 
-Ship/SRV lights, command checks the current lights status.  
-If the lights are allready 'On', 'Off' or at 'Full Beam' it does nothing.  
-'Lights' toggles the next light status, 'On/Off' lights does go to that status.  
-Full-Beam / Lights twice it goes to to the Full-Beam only in the SRV.  
-*About the first command I made*  
+\- Ship/SRV lights, command checks the current lights status.  
+\- If the lights are allready 'On', 'Off' or at 'Full Beam' it does nothing.  
+\- 'Lights' toggles the next light status, 'On/Off' lights does go to that status.  
+\- Full-Beam or Lights twice :: it goes to to the Full-Beam only in the SRV.  
+*the first command I made*  
 
 [Restock; Repair; Refuel] :: For both Ship & SRV (SRV requires to Internal-panel to be on synthesis page).  
+
 Night vision [; on; off; pulls]  
 [deploy; retract;] Landing Gear  
 [deploy; retract;] Hardpoints  
@@ -119,6 +121,8 @@ Silent running [; on; off; pulls]
 Flightassist [; on; off; pulls]  
 Rotational correction [; on; off; pulls]  
 
+[Firegroup alpha; bravo; charlie; ...] 
+[Firgroup 1..8]
 [Next; Previous;] Firegroup  
 [deploy; fire;] [Chaff; ECM; Heat sink]  
 [Shield cell; Deploy Shield; Shields up; Pop Shields]  
