@@ -78,7 +78,7 @@ Activates the in game menu and goes to the submenu/selection.
 
 ## EDVA [Ship Flight_Landing]
 Launch ::  
-\ Ship Docked at station: Starts Launch, moves ship up, retracts landing gear.  
+\- Ship Docked at station: Starts Launch, moves ship up, retracts landing gear.  
 Ship Landed on planet: Starts Launch and activates engines, moves ship up a bit, retracts landing gear.  
 
 Full Speed; Cruise; Impulse Speed; Half Impulse; Quarter Impulse; All Stop; Halt; Stepback; Backstep; Backpaddle; Go Back; Full back :: Sets speed  
