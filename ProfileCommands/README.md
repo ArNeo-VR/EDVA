@@ -1,4 +1,4 @@
-# [EDVA](https://github.com/ArNeo-VR/EDVA#edva) - Commands
+# [EDVA](https://github.com/ArNeo-VR/EDVA#edva) - [Commands](#edva---commands)
 # [EDVA - Commands E:D 3.7.5N](https://github.com/ArNeo-VR/EDVA/tree/master/Releases)
 
 \
@@ -14,8 +14,6 @@
 **(((MAIN))) Write to log** :: Show variables to log.  
 **Profile UnLoad** ::  on Profile unload Command
 
-\
-\
 &nbsp;
 
 ## EDVA [MainMenu Elite]
@@ -39,6 +37,8 @@ Activates the in game menu and goes to the submenu/selection.
 **[Show; Hide] [Framerate; Connection Status; Graphical debug]** :: Show data in desktop application  
 **Show scores**  
 
+&nbsp;
+
 ## EDVA [Debug Functions]  
 **status text** :: Shows EDDI/list of varables  
 **[Status] [Hardpoints; Docked; Supercruise; Flight assist; Drive assist; Handbrake; Landinggear; Silent Running; Cargo Scoop; Lights on; Night Vision]** :: Writes to log and says(TTS) EDDI variable Status  
@@ -49,6 +49,8 @@ Activates the in game menu and goes to the submenu/selection.
 [Set; Status; Reset] [FrameRate; ConnectionStatus; GraphicalDebug] [;true; false; not set] :: BOOL variables  
 [Status; Set; Reset; Get; Put] [Debug Write; Debug Notifications; Vocal mode; EDDIVoice] [;true; false; not set] :: Stored variables in profile.  
 [Set; Status; Reset; Get; Put] [nav-tab; sys-tab;galaxy-tab] [;0..6 ; not set] :: Stored variables in profile.  
+
+&nbsp;
 
 ## EDVA [Apps-Plugins]
 ### Elite Dangerous - Applications/Tools (3rd party, not included)
@@ -72,6 +74,8 @@ Activates the in game menu and goes to the submenu/selection.
 **Open this Station / System in EDDB / Coriolis.** *Modified EDDIcmd* :: More command combinations available, opens a webpage  
 **Find [System states (boom, bust, famine, ...]** :: Opens a page to EDSM and searches.  
 
+&nbsp;
+
 ## EDVA [Ship Flight_Landing]
 Launch ::  
 Ship Docked at station: Starts Launch, moves ship up, retracts landing gear.  
@@ -91,6 +95,8 @@ Superjump ::
 *Command is experimental, [drops you out of supercruise](https://github.com/ArNeo-VR/EDVA/issues/1) if the target is not set correctly*
 
 ~~Engage [;previous;next;] waypoint; Target next waypoint~~ :: Used for NeutronPlotter plugin
+
+&nbsp;
 
 ## EDVA [Ship_SRV functions]
 Cockpit [; on; off; pulls]  
@@ -118,12 +124,16 @@ Rotational correction [; on; off; pulls]
 [Shield cell; Deploy Shield; Shields up; Pop Shields]  
 [Hud mode; Analysis; Exploration; Combat]  
 
+&nbsp;
+
 #### SRV Commands that either toggles or execute action.
 Deploy SRV :: Deploys SRV.  
 Board Ship :: Board ship requires the 'SRV Handbrake' is enabled.  
 [Recall;Dismiss] Ship  
 SRV Transfer Cargo  
 SRV Turret; Turret; Guns; Gun
+
+&nbsp;
 
 ## EDVA [Ship_SRV Panel Menu functions]
 Galaxy map functions:  
@@ -144,6 +154,8 @@ Review codex ::
 [Set Filter; Set] [All; Default; Standard; Missions; Signals; Stations; Fleet Carriers; Anomaly; Unknown; Settlement; Scanner; Signal source; system; systems; next system only] [;filters]  
 [Lock location; Lock Destination; Lock and jump; Lock and supercruise; Lock and engage hyperdrive; Surface map; Bookmark location; Engage Destination]  
 Scan System  
+
+&nbsp;
 
 ## EDVA [Ship_SRV Panel Menu]
 [External; Navigation; Nav; Target] Panel ::  
