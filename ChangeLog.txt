@@ -1,7 +1,12 @@
 ﻿## Change log
 
+-- 202208, [] E:D [EDVA]-4.0.22h  
++ Added TTS text filter in ((EDDI message received))  
++ Added description and notes to EDVA README.md  
+- Removed deprecated command :: SRV Transfer cargo - moved to nav-panel inventory  
+- Removed E:D 3.8 commands  
 
--- 202112, [] E:D [EDVA]-4.0.2i-Profile  
+-- 202112, [] E:D [EDVA]-4.0.21i-Profile  
 ~ Renamed some commands, ingame text is the voice-command. e.i. lock-location, Detach camera, Stabilizers...  
 ~ Elite Menu, keybinding <P> goes directly to the menu from anywhere.  
 * Elite Menu commands changed, Executes call Elite Resume & Elite Options, Steps afterwards. [Remove disabled lines]  
