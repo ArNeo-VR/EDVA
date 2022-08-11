@@ -10,7 +10,8 @@ Some applications and third party plugins are required and need to be installed 
 
 # EDVA Profile notes
 
-[Profile commands](ProfileCommands#edva---commands)
+### Commands text
+pulls = off :: recognition sometimes is a bit off.
 
 ### Hangar variable
 Using 'enter hangar', 'return to surface' in the hangar is dependent on a variable 'hangar'
@@ -21,8 +22,11 @@ Setting the variable manualy by 'Set hangar true' correct that.
 ### Board ship (SRV)
 It is required to have the handbrakes enable while being under the ship to activate command.
 
-### Map [ search; route; route system; ]
+### Map [ search; route; route system; ... ]
 Some commands require to have the target system in the text-clipboard
+
+Also see [Profile commands readme](ProfileCommands#edva---commands)
+
 
 \
 \
