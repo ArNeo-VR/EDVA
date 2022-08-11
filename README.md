@@ -18,6 +18,12 @@ This variable gets set by the same command, if not set correctly it won't execut
 Some other commands also use this variable. 
 Setting the variable manualy by 'Set hangar true' correct that.
 
+### Board ship (SRV)
+It is required to have the handbrakes enable while being under the ship to activate command.
+
+### Map [ search; route; route system; ]
+Some commands require to have the target system in the text-clipboard
+
 \
 \
 &nbsp;
