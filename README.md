@@ -27,7 +27,6 @@ Some commands require to have the target system in the text-clipboard
 
 Also see [Profile commands readme](ProfileCommands#edva---commands)
 
-
 \
 \
 &nbsp;
