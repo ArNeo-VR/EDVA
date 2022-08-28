@@ -3,8 +3,10 @@
 -- 202208, [] E:D [EDVA]-4.0.22h  
 + Added TTS text filter in ((EDDI message received))  
 + Added description and notes to EDVA README.md  
+~ Starport; Local services, updated menu layout, due to changes in elite  
 - Removed deprecated command :: SRV Transfer cargo - moved to nav-panel inventory  
 - Removed E:D 3.8 commands  
+
 
 -- 202112, [] E:D [EDVA]-4.0.21i-Profile  
 ~ Renamed some commands, ingame text is the voice-command. e.i. lock-location, Detach camera, Stabilizers...  
