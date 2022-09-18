@@ -13,11 +13,11 @@ Some applications and third party plugins are required and need to be installed 
 ### Commands text
 pulls = off :: recognition sometimes is a bit off.
 
-### Hangar variable
+### The 'Hangar' variable
 Using 'enter hangar', 'return to surface' in the hangar is dependent on a variable 'hangar'
 This variable gets set by the same command, if not set correctly it won't execute. 
-Some other commands also use this variable. 
-Setting the variable manualy by 'Set hangar true' correct that.
+Some other commands also use/set this variable. 
+To correct it Say 'Set hangar true' it sets the variable. 
 
 ### Board ship (SRV)
 It is required to have the handbrakes enable while being under the ship to activate command.
