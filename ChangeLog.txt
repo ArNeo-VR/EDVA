@@ -13,9 +13,8 @@
 + Added / Changed multiple commands Sounds to SoundFX variables  
 + Added soundfx variable {TXT:soundfx_acknowledge_command} in (((MAIN))) Settings Audio SoundFX  
 + Added soundfx variables {TXT:soundfx_#######_volume} in (((MAIN))) Settings Audio SoundFX  
+~ Reworked [Request; Cancel;] Docking [;Request]  on Environment conditions, docking request denied retry 3 times, less switching external-panel-tabs  
 ~ verify commands are still working for release
-~ Reworked [Request; Cancel;] Docking [;Request]  on Environment conditions  
-
 
 -- 202112, [] E:D [EDVA]-4.0.21i-Profile  
 ~ Renamed some commands, ingame text is the voice-command. e.i. lock-location, Detach camera, Stabilizers...  
