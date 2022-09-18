@@ -1,11 +1,20 @@
 ﻿## Change log
 
--- 202208, [] E:D [EDVA]-4.0.22h  
+-- 202208, [] E:D [EDVA]-4.0.22i
+~ Bump version to 21i > 22i last published version one year ago.  
 + Added TTS text filter in ((EDDI message received))  
 + Added description and notes to EDVA README.md  
 ~ Starport; Local services, updated menu layout, due to changes in elite  
 - Removed deprecated command :: SRV Transfer cargo - moved to nav-panel inventory  
 - Removed E:D 3.8 commands  
++ Added menu command (on-foot) Insight hub [; Apex]  
++ Added menu command (on-foot) Apex [Lolal; Long range]  
++ Added menu command (galaxy map) Select system; System information; Plot route; Set route; Cancel route; Clear route  
++ Added / Changed multiple commands Sounds to SoundFX variables  
++ Added soundfx variable {TXT:soundfx_acknowledge_command} in (((MAIN))) Settings Audio SoundFX  
++ Added soundfx variables {TXT:soundfx_#######_volume} in (((MAIN))) Settings Audio SoundFX  
+~ verify commands are still working for release
+~ Reworked [Request; Cancel;] Docking [;Request]  on Environment conditions  
 
 
 -- 202112, [] E:D [EDVA]-4.0.21i-Profile  
