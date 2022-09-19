@@ -2,11 +2,12 @@
 VoiceAttack profiles for Elite Dangerous  
   
 Sharing VoiceAttack (VA) commands in single profile release (.vap / .vax) file.  
-This profile has [Commands](ProfileCommands#edva---commands), plugins and soundfiles for the game Elite Dangerous (E:D).
-Some commands are exported to a [text files](ProfileCommands) to view the contense, they are manualy exported and not fully up to date.
+This profile has [Commands](ProfileCommands#edva---commands), plugins and soundfiles for the game Elite Dangerous (E:D).  
+Some commands are exported to a [text files](ProfileCommands) to view the contense, they are manualy exported and not fully up to date.  
   
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
+
 
 # EDVA Profile notes
 
@@ -21,6 +22,11 @@ To correct it Say 'Set hangar true' it sets the variable.
 
 ### Board ship (SRV)
 It is required to have the handbrakes enable while being under the ship to activate command.
+
+### Panel Tabs 
+The external-panel (left) is required to be on the first tab initialy, commands are referenced to start from that position.  
+In the SRV to use the repair and refuel command it needs to be on the inventory-syntesis tab.  
+I've used tab-tracking variables in the past, some experimental commands still use it.  
 
 ### Map [ search; route; route system; ... ]
 Some commands require to have the target system in the text-clipboard
