@@ -1,5 +1,5 @@
 # [EDVA](https://github.com/ArNeo-VR/EDVA#edva) - [Commands](#edva---commands)
-# [EDVA - Commands E:D 3.7.5N](https://github.com/ArNeo-VR/EDVA/tree/master/Releases)
+# [EDVA - Commands E:D](https://github.com/ArNeo-VR/EDVA/tree/master/Releases)
 
 \
 &nbsp;
