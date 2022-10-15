@@ -13,8 +13,7 @@ Some applications and third party plugins are required and need to be installed 
 \
 &nbsp;
 
-### Topics
-### EDVA
+### EDVA Topics
 - [EDVA Profile notes](#edva-profile-notes)
 
 ### VoiceAttack application
