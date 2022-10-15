@@ -43,12 +43,11 @@ Also see [Profile commands readme](ProfileCommands#edva---commands)
 
 \
 \
+\
 &nbsp;
 
-# Voice Attack
-Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
-
 ### Topics
+- [VoiceAttack](#voiceattack) (Voiceattack application)  
 - [VoiceAttack Commands & Apps (Plugins](#voiceattack--appsplug-ins) (EDVA | EDBinds, Route-plugins, Other)  
 - [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) VA Apps, Sounds and other folder locations in windows  
 ### Applications
@@ -63,28 +62,10 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 \
 \
 \
-\
 &nbsp;
 
-## VoiceAttack : Apps/Plug-ins
-- [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
-### EDBinds plugin
-- [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variable hotkeys.  
-\- [GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) EDBinds copied to github by Corysia.
-- [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version.
-- [EDBinds tool](https://www.reddit.com/r/EliteDangerous/comments/o4oj3p/a_tiny_app_i_made_to_search_through_key_bindings/) ([GitHUB](https://github.com/ghorsey/edbindings)) Quickly search through Key Bindings.  
-### Route plugins
-- [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] 
-- [ED-Router ChrisZero](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/) 
-- [ED-Router dominiquesavoie](https://github.com/dominiquesavoie/ED-Router) - ([releases](https://github.com/dominiquesavoie/ED-Router/releases)) [Neutron router tool app] 
-### Other plugins
-- ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
-Google spreadsheets are read from within a InLine C# script.  
-- [VA Spotify plugin](http://www.litpixi.com/va-spotify/) ([Forum](https://forum.voiceattack.com/smf/index.php?topic=585.0;all))
-
-\
-\
-&nbsp;
+# Voice Attack
+Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
 
 ## Locations for Apps(Plugins) and Sounds folders
 ~~~
@@ -109,6 +90,27 @@ and security-rights set to Modify for users group.
 Plugins location "c:\ProgramData\VoiceAttack\Apps"
 Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 ~~~
+
+## VoiceAttack : Apps/Plug-ins
+- [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
+### EDBinds plugin
+- [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variable hotkeys.  
+\- [GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) EDBinds copied to github by Corysia.
+- [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version.
+- [EDBinds tool](https://www.reddit.com/r/EliteDangerous/comments/o4oj3p/a_tiny_app_i_made_to_search_through_key_bindings/) ([GitHUB](https://github.com/ghorsey/edbindings)) Quickly search through Key Bindings.  
+### Route plugins
+- [ED-NeutronRouter](https://github.com/sc-pulgan/ED-NeutronRouter) ([releases](https://github.com/sc-pulgan/ED-NeutronRouter/releases)) [Neutron router tool] 
+- [ED-Router ChrisZero](https://github.com/chriszero/ED-Router) ([releases](https://github.com/chriszero/ED-Router/releases)) [Neutron router tool app] [forum](https://forums.frontier.co.uk/threads/ed-router-a-neutron-router.416021/) 
+- [ED-Router dominiquesavoie](https://github.com/dominiquesavoie/ED-Router) - ([releases](https://github.com/dominiquesavoie/ED-Router/releases)) [Neutron router tool app] 
+### Other plugins
+- ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
+Google spreadsheets are read from within a InLine C# script.  
+- [VA Spotify plugin](http://www.litpixi.com/va-spotify/) ([Forum](https://forum.voiceattack.com/smf/index.php?topic=585.0;all))
+
+\
+\
+&nbsp;
+
 
 \
 \
