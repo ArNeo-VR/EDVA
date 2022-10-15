@@ -155,7 +155,7 @@ EDVA profile (.vax)  package can be found in [the Releases](Releases), the .VAP 
 *Essentialy the .VAX file is a Zip-file if you rename the extention to .ZIP you can open it and see the files inside.*  
   
 ## Importing VAX-profile package
-<CODE>[Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.</CODE>  
+\<CODE>[Voiceattack-options] > [General] > 'Enable Plugin Support' must be disabled before importing.</CODE>  
 After importing the following is required,  
 - Re-enable 'Plugin Support'
 - link the 'EDDI-X.X.X-profile' to the EDVA-profile as [described below](#the-eddi-profile-is-required-and-needs-to-be-included-in-the-main-profile)
