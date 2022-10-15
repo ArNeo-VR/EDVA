@@ -1,7 +1,11 @@
 ﻿## Change log
 
--- 202208, [] E:D [EDVA]-4.0.22i
-~ Bump version to 21i > 22i last published version one year ago.  
+-- 202210, [] E:D [EDVA]-4.0.22j
+~ Bump version to 22i > 22j
+
+
+-- 202209, [release] E:D [EDVA]-4.0.22i
+~ Bump version to 21i > 22i last year published version one year ago.  
 + Added TTS text filter in ((EDDI message received))  
 + Added description and notes to EDVA README.md  
 ~ Starport; Local services, updated menu layout, due to changes in elite  
@@ -18,7 +22,7 @@
 
 -- 202112, [] E:D [EDVA]-4.0.21i-Profile  
 ~ Renamed some commands, ingame text is the voice-command. e.i. lock-location, Detach camera, Stabilizers...  
-~ Elite Menu, keybinding <P> goes directly to the menu from anywhere.  
+~ Elite Menu, keybinding \<P\> goes directly to the menu from anywhere.  
 * Elite Menu commands changed, Executes call Elite Resume & Elite Options, Steps afterwards. [Remove disabled lines]  
 * Added comments to commands.  
 * Removed some old ED 3.4 commands (debug info, galaxy-tab)
@@ -27,7 +31,7 @@
 + Added my keybindings layout (pictures) see [EDbindings] folder  
 - Removed change-profile on 'Quit Elite Dangerous'  
 
--- 202108, [] E:D [EDVA]-4.0.21h-Profile  
+-- 202108, [release] E:D [EDVA]-4.0.21h-Profile  
 ! Some commands are not compatible with 4.0 !!  
 ! Catagories with ++ are verified, + are not.  
 * Changed some comments in commands.  
@@ -68,7 +72,7 @@ fix: add > {TXT:Environment}=Landed
 + Add Local services (starport services), commands like local contacts etc.  
 - fixed Cargo scoop command did not work fully.  
 
--- 202104, [release] E:D [EDVA]-3.7.21e-Profile  
+-- 202104, [] E:D [EDVA]-3.7.21e-Profile  
 * Cleanup old variables, descriptions, comments.  
 * Moved functions to other catagories  
 
