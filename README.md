@@ -7,31 +7,37 @@ This profile has [Commands](ProfileCommands#edva---commands), plugins and soundf
 Some commands are exported to [text files](ProfileCommands) to view its contens, they are manualy exported and not fully up-to-date.  
 The profile is shared in a '...-Profile-zippackage.vax' file witch is actualy a zip-file, it contains all items in the profile.  
   
-# NOTE !! plug-n-pray, it needs some work to get it going!!  
+## NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
 
+\
+&nbsp;
 
 # EDVA Profile notes
+
+I'm trying to have 
+The commands are as close to the ingame text/keybindings as in the game.
+In the FSS 'Target current signal' does as it says.
 
 ### Commands text
 pulls = off :: recognition sometimes is a bit off.
 
 ### The 'Hangar' variable
-Using 'enter hangar', 'return to surface' in the hangar is dependent on a variable 'hangar'
 This variable gets set by the same command, if not set correctly it won't execute. 
+Using 'enter hangar', 'return to surface' in the hangar is dependent on a variable 'hangar'
 Some other commands also use/set this variable. 
-To correct it Say 'Set hangar true' it sets the variable. 
+To correct its value, Say 'Set hangar true' it sets the variable. 
 
 ### Board ship (SRV)
 It is required to have the handbrakes enable while being under the ship to activate command.
 
 ### Panel Tabs 
-The external-panel (left) is required to be on the first tab initialy, commands are referenced to start from that position.  
-In the SRV to use the repair and refuel command it needs to be on the inventory-syntesis tab.  
-I've used tab-tracking variables in the past, some experimental commands still use it.  
+The (left) external-panel is required to be on the first tab initialy, commands are referenced to start from that position.  
+In the SRV to use the repair and refuel command it needs to be on the inventory tab.  
+I've used tab-tracking variables in the past, i'm slowly removing those (sys-tab, nav-tab) variables.  
 
 ### Map [ search; route; route system; ... ]
-Some commands require to have the target system in the text-clipboard
+Some commands require to have the 'target system' in the text-clipboard.  
 
 Also see [Profile commands readme](ProfileCommands#edva---commands)
 
