@@ -1,8 +1,11 @@
 # [EDVA](https://github.com/ArNeo-VR/EDVA#edva) - VoiceAttack profile for Elite Dangerous  
   
-Sharing VoiceAttack (VA) commands in single profile release (.vap / .vax) file.  
+[Elite dangerous](https://www.elitedangerous.com/) is a space simulation game with lots of different things to do.  
+This is my VA (VoiceAttack) profile that I made over the years becouse I mainly play in VR.  
+  
 This profile has [Commands](ProfileCommands#edva---commands), plugins and soundfiles for the game Elite Dangerous (E:D).  
 Some commands are exported to a [text files](ProfileCommands) to view the contense, they are manualy exported and not fully up to date.  
+The profile is shared in a '...-Profile-zippackage.vax' file witch is actualy a zip-file, it contains all items in the profile.  
   
 # NOTE !! plug-n-pray, it needs some work to get it going!!  
 Some applications and third party plugins are required and need to be installed manualy.  
