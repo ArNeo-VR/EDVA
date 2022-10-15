@@ -19,7 +19,7 @@ Firegroup commands add variable-keypress commands for SRV (Buggy)
 ## Commands
 Set target >>> elite back
 [] E:D 4.0 [EDVA mappings] Key | Joystick | command+
-Launch, Hud >> environment check !!! 
+Hide UI, Launch, Hud >> environment check !!! 
 
 ## [Galaxy map] Menu structure
 Menus differ on selected object (planet/station)
@@ -79,7 +79,7 @@ Keybinding \<R-ctrl>-\<T> .. edUI_???? Cam select current system
 ? Set: Applications
 -- note: (backslash is required at end of the path, becouse its used in the profile, needs to be renamed)
 
-# Find [boom;bust;famine;civil unrest;civil war;election;expansion;lockdown;outbreak;war;none;retreat;investment;civil liberty;incursion]
+#### Find [boom;bust;famine;civil unrest;civil war;election;expansion;lockdown;outbreak;war;none;retreat;investment;civil liberty;incursion]
 ? >> E:D 3.6 [Help Find] || 
 ? double/abandoned usage variables mySystemID, VB-script ?! 
 ? libraries, even used?
