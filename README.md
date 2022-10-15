@@ -48,8 +48,8 @@ Also see [Profile commands readme](ProfileCommands#edva---commands)
 
 ### Topics
 - [VoiceAttack](#voiceattack) (Voiceattack application)  
+- [VoiceAttack Locations](#voiceattack-locations-for-appsplugins-and-sounds-folders) VA Apps, Sounds and other folder locations in windows  
 - [VoiceAttack Commands & Apps (Plugins](#voiceattack--appsplug-ins) (EDVA | EDBinds, Route-plugins, Other)  
-- [VoiceAttack Locations](#locations-for-appsplugins-and-sounds-folders) VA Apps, Sounds and other folder locations in windows  
 ### Applications
 - [Applications/Tools Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
 - [Applications Windows](#applications-windows)  
@@ -67,15 +67,15 @@ Also see [Profile commands readme](ProfileCommands#edva---commands)
 # Voice Attack
 Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
 
-## Locations for Apps(Plugins) and Sounds folders
+## Voiceattack Locations for Apps(Plugins) and Sounds folders
 ~~~
 Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"
 ~~~
 
 ### VoiceAttack on x64 bit windows [default]
 ~~~
-Plugins location "c:\Program Files (x86)\VoiceAttack\Apps"
-Sounds location "c:\Program Files (x86)\VoiceAttack\Sounds"
+Plugins location "c:\Program Files[ (x86)]\VoiceAttack\Apps"
+Sounds location "c:\Program Files[ (x86)]\VoiceAttack\Sounds"
 ~~~
 #### My personal settings are, if you export your computer profile to another computer it will go with the userdata.
 ~~~
