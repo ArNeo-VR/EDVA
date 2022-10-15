@@ -19,6 +19,7 @@ Firegroup commands add variable-keypress commands for SRV (Buggy)
 ## Commands
 Set target >>> elite back
 [] E:D 4.0 [EDVA mappings] Key | Joystick | command+
+Launch, Hud >> environment check !!! 
 
 ## [Galaxy map] Menu structure
 Menus differ on selected object (planet/station)
