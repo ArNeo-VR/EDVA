@@ -13,6 +13,30 @@ Some applications and third party plugins are required and need to be installed 
 \
 &nbsp;
 
+### Topics
+### EDVA
+- [EDVA Profile notes](#edva-profile-notes)
+
+### VoiceAttack application
+- [VoiceAttack](#voiceattack) (Voiceattack application)  
+- [VoiceAttack Locations](#voiceattack-locations-for-appsplugins-and-sounds-folders) VA Apps, Sounds and other folder locations in windows  
+- [VoiceAttack Commands & Apps (Plugins](#voiceattack--appsplug-ins) (EDVA | EDBinds, Route-plugins, Other)  
+### Applications
+- [Applications/Tools Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
+- [Applications Windows](#applications-windows)  
+- [Other Documents](#other-documents)  
+### EDVA profile
+- [EDVA package installation](#edva-profile-setup)  
+- [EDVA manual installation](#edva-profile-manual-installation-notes)  
+\- [EDVA profile configuration](#edva-profile-configuration)  
+- [EDVA Notes](#notes)
+- [EDVA History](#history)
+
+\
+\
+\
+&nbsp;
+
 # EDVA Profile notes
 
 I'm trying to have 
@@ -46,24 +70,6 @@ Also see [Profile commands readme](ProfileCommands#edva---commands)
 \
 &nbsp;
 
-### Topics
-- [VoiceAttack](#voiceattack) (Voiceattack application)  
-- [VoiceAttack Locations](#voiceattack-locations-for-appsplugins-and-sounds-folders) VA Apps, Sounds and other folder locations in windows  
-- [VoiceAttack Commands & Apps (Plugins](#voiceattack--appsplug-ins) (EDVA | EDBinds, Route-plugins, Other)  
-### Applications
-- [Applications/Tools Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
-- [Applications Windows](#applications-windows)  
-- [Other Documents](#other-documents)  
-### EDVA profile
-- [EDVA package installation](#edva-profile-setup)  
-- [EDVA manual installation](#edva-profile-manual-installation-notes)  
-\- [EDVA profile configuration](#edva-profile-configuration)  
-
-\
-\
-\
-&nbsp;
-
 # Voice Attack
 Voice-activated control for your PC games and apps. More information go here [VoiceAttack.com](https://Voiceattack.com)  
 
@@ -72,7 +78,7 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"
 ~~~
 
-### VoiceAttack on x64 bit windows [default]
+### VoiceAttack on windows [default]
 ~~~
 Plugins location "c:\Program Files[ (x86)]\VoiceAttack\Apps"
 Sounds location "c:\Program Files[ (x86)]\VoiceAttack\Sounds"
@@ -94,7 +100,7 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 ## VoiceAttack : Apps/Plug-ins
 - [EDDI](https://github.com/EDCD/EDDI) ([releases](https://github.com/EDCD/EDDI/releases)) is a companion application for Elite Dangerous, providing responses to events that occur in-game using data from the game as well as various third-party tools.  
 ### EDBinds plugin
-- [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates variable hotkeys.  
+- [EDBinds original](https://forum.voiceattack.com/smf/index.php?topic=564.0) ([download](http://www.voiceattack.com/bindED)) Reads keybindings from custom.binds file and creates VA variable-hotkeys.  
 \- [GitHub(Corysia)](https://github.com/Corysia/bindED) [*license note](https://github.com/Corysia/bindED/blob/master/License.md) EDBinds copied to github by Corysia.
 - [EDBinds-3.0](https://forum.voiceattack.com/smf/index.php?topic=3564.0) ([GitHUB](https://github.com/alterNERDtive/bindED)) New forked version.
 - [EDBinds tool](https://www.reddit.com/r/EliteDangerous/comments/o4oj3p/a_tiny_app_i_made_to_search_through_key_bindings/) ([GitHUB](https://github.com/ghorsey/edbindings)) Quickly search through Key Bindings.  
@@ -106,11 +112,6 @@ Sounds location "c:\ProgramData\VoiceAttack\Sounds"
 - ~~[ReadGoogleSpreadsheetVAPlugin](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin) ([releases](https://github.com/trowgundam/ReadGoogleSpreadsheetVAPlugin/releases)) Used for reading data into VoiceAttack~~  
 Google spreadsheets are read from within a InLine C# script.  
 - [VA Spotify plugin](http://www.litpixi.com/va-spotify/) ([Forum](https://forum.voiceattack.com/smf/index.php?topic=585.0;all))
-
-\
-\
-&nbsp;
-
 
 \
 \
@@ -132,14 +133,14 @@ Google spreadsheets are read from within a InLine C# script.
 \
 &nbsp;
 
-## Applications Windows
+## Applications for Windows
 - [NIRCMD](https://www.nirsoft.net/utils/nircmd.html) [NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.]
 
 &nbsp;
 
 ### Other documents
-- [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) Variable key-presses used in voice attack for the E:D key-stoke commands.
-
+- [VoiceAttack : EDBinds](https://docs.google.com/spreadsheets/d/1LesTitHgI9L5cXfF-hgUVSKH4joeWj1AUAZWi--_GSI/edit) (Google sheet) variable-hoykeys used in voice attack for the E:D key-stoke commands.
+  
 \
 \
 &nbsp;
@@ -229,7 +230,9 @@ If you clone the plugin directly to the use location of the Apps/Plugin location
 
 ## History
 Shortly after playing Elite-Dangerous on a flat-screen I got me an Oculus Rift VR Headset.  
-Therefor VoiceAttack (control) became a must for some keyboard commands.  
+Controlling a keyboard got blindly cumbersome, therefor VoiceAttack (control) became a must for some keyboard commands.  
+After I went from keyboard-mouse setup to a HOTAS it even got more needed using voicecommands.
+
 Learning profiles from players on Twitch.tv shared their profile, from there I started.  
 Later on I moved the profile notes and vap files to github.
 
