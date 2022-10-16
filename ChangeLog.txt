@@ -1,11 +1,15 @@
 ﻿## Change log
 
 -- 202210, [] E:D [EDVA]-4.0.22j
-~ Bump version to 22i > 22j
-
+! Bump version to 22i > 22j  
+~ Camera 'On foot' not working (removed a dash)  
+~ Updated command environment filters, i.e. Elitedangerous64 needs to be as active-window  
+~ Updated Firegroup commands with variable-keypress commands for SRV (Buggy)  
++ Added command (On Foot emotes) Person [Point; Wave; Agree; Disagree; Go; Stop; Applaud; Salute]  
++ Added command (Transfer Cargo; SRV Transfer) Transfers items to ship.  
 
 -- 202209, [release] E:D [EDVA]-4.0.22i
-~ Bump version to 21i > 22i last year published version one year ago.  
+! Bump version to 21i > 22i last year published version one year ago.  
 + Added TTS text filter in ((EDDI message received))  
 + Added description and notes to EDVA README.md  
 ~ Starport; Local services, updated menu layout, due to changes in elite  
