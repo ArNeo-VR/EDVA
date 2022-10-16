@@ -1,8 +1,7 @@
 ﻿# Todo Next release / Ideas / notes / wishlist - E:D [EDVA]
 
 # EDVA Commands
-Firegroup commands add variable-keypress commands for SRV (Buggy)  
-  
+Starport market when shipyard is available its in a different position 1 down instead of 1 right.  
   
 ## EDVA Debug levels
 3 Command notifications  
@@ -10,16 +9,26 @@ Firegroup commands add variable-keypress commands for SRV (Buggy)
 6 Notifications  
 7 (old Debug write)  
   
-  
 
 ## Odyssey
-- E:D 3.8 [Ship_SRV functions], check in SRV / Ship
-- Scan System | todo, select fixed firegroup and analysis mode, activate d-scanner
+- E:D 3.8 [Ship_SRV functions], check in SRV / Ship  
+- Scan System | todo, select fixed firegroup and analysis mode, activate d-scanner  
+
+## Bug-issue report
+
+
+### Further Description
+
+### Step1
+
+### Step2
+
+
 
 ## Commands
 Set target >>> elite back
 [] E:D 4.0 [EDVA mappings] Key | Joystick | command+
-Hide UI, Launch, Hud >> environment check !!! 
+Launch >> environment check !!! 
 
 ## [Galaxy map] Menu structure
 Menus differ on selected object (planet/station)
