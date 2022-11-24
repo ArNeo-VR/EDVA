@@ -13,13 +13,13 @@ Some applications and third party plugins are required and need to be installed 
 \
 &nbsp;
 
-### EDVA Topics
+## EDVA Topics
 - [EDVA Profile notes](#edva-profile-notes)
 
 ### VoiceAttack application
 - [VoiceAttack](#voiceattack) (Voiceattack application)  
 - [VoiceAttack Locations](#voiceattack-locations-for-appsplugins-and-sounds-folders) VA Apps, Sounds and other folder locations in windows  
-- [VoiceAttack Commands & Apps (Plugins](#voiceattack--appsplug-ins) (EDVA | EDBinds, Route-plugins, Other)  
+- [VA Commands & Apps (Plugins](#voiceattack--appsplug-ins) (EDVA | EDBinds, Route-plugins, Other)  
 ### Applications
 - [Applications/Tools Elite Dangerous](#elite-dangerous--applicationstools-3rd-party-not-included)  
 - [Applications Windows](#applications-windows)  
@@ -28,8 +28,8 @@ Some applications and third party plugins are required and need to be installed 
 - [EDVA package installation](#edva-profile-setup)  
 - [EDVA manual installation](#edva-profile-manual-installation-notes)  
 \- [EDVA profile configuration](#edva-profile-configuration)  
-- [EDVA Notes](#notes)
-- [EDVA History](#history)
+- [EDVA Notes](#notes)  
+- [EDVA History](#history)  
 
 \
 \
@@ -37,22 +37,21 @@ Some applications and third party plugins are required and need to be installed 
 &nbsp;
 
 # EDVA Profile notes
-
-I'm trying to have 
-The commands are as close to the ingame text/keybindings as in the game.
-In the FSS 'Target current signal' does as it says.
+The commands are as close to the ingame text/keybindings as in the game.  
+In the FSS-mode 'Target current signal', 'enter hangar', 'return to surface' 
+Those command does as it says.  
 
 ### Commands text
-pulls = off :: recognition sometimes is a bit off.
+pulls = off :: recognition sometimes is a bit off.  
 
 ### The 'Hangar' variable
-This variable gets set by the same command, if not set correctly it won't execute. 
-Using 'enter hangar', 'return to surface' in the hangar is dependent on a variable 'hangar'
-Some other commands also use/set this variable. 
-To correct its value, Say 'Set hangar true' it sets the variable. 
+This variable gets set by the same command, if not set correctly it won't execute.  
+Using 'enter hangar', 'return to surface' in the hangar is dependent on a variable 'hangar'  
+Some other commands also use/set this variable.  
+To correct its value, Say 'Set hangar true' it sets the variable.  
 
 ### Board ship (SRV)
-It is required to have the handbrakes enable while being under the ship to activate command.
+It is required to have the handbrakes enable while being under the ship to activate command.  
 
 ### Panel Tabs 
 The (left) external-panel is required to be on the first tab initialy, commands are referenced to start from that position.  
@@ -77,10 +76,10 @@ Voice-activated control for your PC games and apps. More information go here [Vo
 Applications location "c:\Users\\%USERNAME%\AppData\Local\VoiceAttack\App"
 ~~~
 
-### VoiceAttack on windows [default]
+### VoiceAttack on windows [default] (Program Files (x86) for 32bit)
 ~~~
-Plugins location "c:\Program Files[ (x86)]\VoiceAttack\Apps"
-Sounds location "c:\Program Files[ (x86)]\VoiceAttack\Sounds"
+Plugins location "c:\Program Files\VoiceAttack\Apps"
+Sounds location "c:\Program Files\VoiceAttack\Sounds"
 ~~~
 #### My personal settings are, if you export your computer profile to another computer it will go with the userdata.
 ~~~
