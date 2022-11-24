@@ -1,5 +1,7 @@
 ﻿# Todo Next release / Ideas / notes / wishlist - E:D [EDVA]
 
+
+
 # EDVA Commands
 Starport market when shipyard is available its in a different position 1 down instead of 1 right.  
   
