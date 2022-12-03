@@ -1,7 +1,7 @@
 # [EDVA](https://github.com/ArNeo-VR/EDVA#edva) - VoiceAttack profile for Elite Dangerous  
   
-[Elite dangerous](https://www.elitedangerous.com/) is a space simulation game with lots of different things to do.  
-This is my VA (VoiceAttack) profile that I made over the years.  
+[Elite dangerous](https://www.elitedangerous.com/) is a space simulation game with a vast number of planets among the 1:1 scale recreation of the Milky Way galaxy and with lots of different things to do.  
+This is my VA (VoiceAttack) profile that I made over the years, I'm currently using Oddesey release.  
   
 This profile has [Commands](ProfileCommands#edva---commands), plugins and soundfiles for the game Elite Dangerous (E:D).  
 Some commands are exported to [text files](ProfileCommands) to view its contens, they are manualy exported and not fully up-to-date.  
