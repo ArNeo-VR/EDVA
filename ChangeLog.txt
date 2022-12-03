@@ -1,7 +1,14 @@
 ﻿## Change log
 
--- 202210, [] E:D [EDVA]-4.0.22k
+-- 202212, [] E:D [EDVA]-4.0.22L
+! Changes in VA causes a bug from EDDI.vap file causing key 1..8 / E disruption, modified to EDDI-4.0.1-nobindings.  
+~ Change EDDI message received event, TTS Wing simplified to only Playername and message.  
+
+
+-- 202211, [] E:D [EDVA]-4.0.22k
 ~ Added filter to [Refeul, Repair, Restock] doesnot activate within starport services.  
++ Added Command (Person [Point; Wave; Agree; Disagree; Go; Stop; Applaud; Salute]) On-foot emotes.  
++ Added Command ([Manage;] Loadout) In Ship/SRV go to the (manage) loadout menu.  
 
 
 -- 202210, [] E:D [EDVA]-4.0.22j
