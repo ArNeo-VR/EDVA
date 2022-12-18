@@ -1,6 +1,40 @@
 ﻿# Todo Next release / Ideas / notes / wishlist - E:D [EDVA]
 
+## Commands basic / mini package
+- Return to surface / Enter hangar
+- Re- load/stock/fuel
+- Lights
+- Nightvision
+- Orbit lines
+- Firegroup
+- Cargo hatch
+- Engine/Weapon color
+- Landing gear
+- Hardpoints
+- Landing pads
 
+## ...
+- Dismiss; Recall ship
+- Cockpit
+- Deploy SRV
+- Disembark
+- Board ship *fix disembark/srv*..
+- *Firegroup*
+
+#### Publish
+Landing pad [1..45] [;left]
+
+# Signal sources
+Stars
+Asteroid Clusters
+Planets and moons
+Landfall planets and moons
+Settlements
+Stations
+Fleet Carriers
+Points of interest
+Signal sources
+Systems
 
 # EDVA Commands
 Starport market when shipyard is available its in a different position 1 down instead of 1 right.  
@@ -100,7 +134,7 @@ Keybinding \<R-ctrl>-\<T> .. edUI_???? Cam select current system
 
 Navigation filters, 
 	[enable; disable]  %filtername% , only enabled does not reset.
-~~Navigation filter, enable **** filter, only enabled does not reset.~~
+Navigation filter, enable filter, only enabled does not reset.
 
 # old EDBinds addon https://github.com/Corysia/bindED
 
@@ -153,17 +187,5 @@ Map [Search; Search system; Route system; Select; Route; Planet; Surface; Bookma
 
 Catagorize soundfx
 
-Mini package
-- Landing pads
-- Lights
-- Night vision
-- *Firegroup*
-- Landing gear
-- Hardpoints
-- Orbit lines
-- Cockpit
-- Dismiss;Recall ship
-- Disembark
-- Deploy SRV
-- Board ship *fix disembark/srv..
+
 
