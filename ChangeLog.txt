@@ -1,12 +1,21 @@
 ﻿## Change log
 
+-- 202301, [] E:D [EDVA]-4.0.23A
+! Changes internal-audio effect to MP3/WAV files, becouse of output type cannot select internal to windows media crap.  
+~ Cosmetic changes.  
+~ Renamed custom variables VA_ to EDVA_  
+- Removed Hud mode from Analysis;.. mode command.  
+~ Experimental Rotational correction fix in ((Music Event)), ((EDDI entered normal space)) dropping to normal space activates it twice sometimes. It does work for the station entering and departing.  
+~ Reworked the Profile load process / sounds.  
+
 -- 202212, [] E:D [EDVA]-4.0.22L
 ! Changes in VA causes a bug from EDDI.vap file causing key 1..8 / E disruption, modified to EDDI-4.0.1-nobindings.  
 ~ Change EDDI message received event, TTS Wing simplified to only Playername and message.  
 ~ Update Open Help weblink.  
 ~ Fix the Starport Shipyard & Market location if either one is not present.  
-~ Command gets triggerd a lot, Renamed [Hud;...] [;mode] to [Hud;...] mode
+~ Command gets triggerd a lot, Renamed [Hud;...] [;mode] to [Hud;...] mode  
 ~ Updated all Open *weblinks*.  
+~ Changed [Request; Cancel;] Docking [;Request] Added soundfx variables, balance on the left (-65), changed delays, simplified retry-exit.  
 + Added commands Power management Joystick button to max.  
 
 
