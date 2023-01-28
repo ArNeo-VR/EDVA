@@ -221,6 +221,18 @@ Tag the option enabled, Add text 'EliteDangerous64' in the field.
 - [NirCMD]               [VA_Profile]\App\NirCMD\  
 - [E:D Market Connector] [default]   "C:\Program Files (x86)\EDMarketConnector\"
 ~~~
+
+## Voiceattack log colors
+Green - Command recognition
+Red - Error or fault
+Blue - 
+Yellow - Notification
+Purple - Profile change
+Orange - System notifications
+Blank - 
+Grey - 
+Pink -
+Blanc - 
   
 # Notes
 Managing plugins with GitHub desktop, you can install plugins directly from github with a desktop application.  
