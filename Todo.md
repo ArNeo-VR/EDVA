@@ -1,17 +1,24 @@
 ﻿# Todo Next release / Ideas / notes / wishlist - E:D [EDVA]
 
-## Commands basic / mini package
+## EDVA Modules
+Debug EDDI variables
+- Firegroup
+- Basic EDVA commands
+
+
+
+## Basic EDVA commands / mini package
 - Return to surface / Enter hangar
 - Re- load/stock/fuel
 - Lights
 - Nightvision
 - Orbit lines
-- Firegroup
 - Cargo hatch
 - Engine/Weapon color
 - Landing gear
 - Hardpoints
 - Landing pads
+
 
 ## ...
 - Dismiss; Recall ship
@@ -23,6 +30,8 @@
 
 #### Publish
 Landing pad [1..45] [;left]
+
+
 
 # Signal sources
 Stars
