@@ -1,12 +1,18 @@
 ﻿## Change log
 
+-- 202301, [] E:D [EDVA]-4.0.23b
+~ Added comments to Lights command.  
+
+
 -- 202301, [] E:D [EDVA]-4.0.23A
 ! Changes internal-audio effect to MP3/WAV files, becouse of output type cannot select internal to windows media crap.  
 ~ Cosmetic changes.  
 ~ Renamed custom variables VA_ to EDVA_  
-- Removed Hud mode from Analysis;.. mode command.  
-~ Experimental Rotational correction fix in ((Music Event)), ((EDDI entered normal space)) dropping to normal space activates it twice sometimes. It does work for the station entering and departing.  
+- Removed Hud mode from Analysis;.. mode command, triggered a lot accidently.  ~ Experimental Rotational correction fix in ((Music Event)), ((EDDI entered normal space)) dropping to normal space activates it twice sometimes. It does work for the station entering and departing.  
 ~ Reworked the Profile load process / sounds.  
+~ EDVA toggle command / Variable [BOOL:Travel Jump] used for auto-jump after ariving at a star.  
+~ EDVA toggle command / Variable [BOOL:Docking gear](stored) usef for auto-retract-landing-gear after undock.  
+~ EDVA toggle command / Variable [BOOL:Hangar] Status missing from EDDI when ship is in Hangar.  
 
 -- 202212, [] E:D [EDVA]-4.0.22L
 ! Changes in VA causes a bug from EDDI.vap file causing key 1..8 / E disruption, modified to EDDI-4.0.1-nobindings.  
@@ -41,7 +47,7 @@
 - Removed deprecated command :: SRV Transfer cargo - moved to nav-panel inventory  
 - Removed E:D 3.8 commands  
 + Added menu command (on-foot) Insight hub [; Apex]  
-+ Added menu command (on-foot) Apex [Lolal; Long range]  
++ Added menu command (on-foot) Apex [Local; Long range]  
 + Added menu command (galaxy map) Select system; System information; Plot route; Set route; Cancel route; Clear route  
 + Added / Changed multiple commands Sounds to SoundFX variables  
 + Added soundfx variable {TXT:soundfx_acknowledge_command} in (((MAIN))) Settings Audio SoundFX  
