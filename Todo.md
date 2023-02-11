@@ -8,7 +8,7 @@ Debug EDDI variables
 
 
 ## Basic EDVA commands / mini package
-- Return to surface / Enter hangar
+- Return to surface / Enter hangar, (remove Hangar Status requirements)
 - Re- load/stock/fuel
 - Lights
 - Nightvision
@@ -18,6 +18,8 @@ Debug EDDI variables
 - Landing gear
 - Hardpoints
 - Landing pads
+- Firegroups
+- Landing pad [1..45] [;left]
 
 
 ## ...
@@ -29,7 +31,6 @@ Debug EDDI variables
 - *Firegroup*
 
 #### Publish
-Landing pad [1..45] [;left]
 
 
 
