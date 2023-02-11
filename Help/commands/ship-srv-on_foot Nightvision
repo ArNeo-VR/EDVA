@@ -1,0 +1,13 @@
+﻿-- Ship/SRV/On-foot Nightvision, command: Night vision [; on; off; pulls]
+-- pulls = off (voice detection)
+
+## VoiceAttack Plugins:
+## EDbind: key-variables for Ship/SRV lights
+## EDDI: {TXT:Status vehicle} , {TXT:Environment} , {BOOL:Status night vision}
+
+# This command checks the current nightvision status with EDDI variables and uses EDbinds plugin (variablekeybinds) to press the keys.
+# You can either toggle 'nightvision' or say 'nightvision off/on/twice/full-beam', from any mode it goes to the spoken command.
+
+- Ship & SRV: 'Nightvision' toggles the next status, 'On/Off' nightvision goes to that status.
+- Ship & SRV: If the status is allready 'On', 'Off' or at 'Full Beam' it does nothing.
+
