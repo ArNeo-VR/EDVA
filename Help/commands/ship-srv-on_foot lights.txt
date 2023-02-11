@@ -1,0 +1,18 @@
+-- Ship/SRV lights, command: [Lights; Full Beam] [; on; of; off; pulls; twice]
+-- On-foot lights, no EDDI status yet, allowed all commands to always toggle
+-- pulls = off (voice detection)
+
+## VoiceAttack Plugins:
+## EDbind: keypress-variables for Ship/SRV lights
+## EDDI: {TXT:Status vehicle} , {TXT:Environment} , {BOOL:Status lights on}
+## Profile-wide variable: {BOOL:full beam} for SRV
+
+# This command checks the current lights status with EDDI variables and uses EDbinds plugin (variablekeybinds) to press the keys.
+# You can either toggle 'lights' or say lights off/on/twice/full-beam, from any mode it goes to the spoken command.
+
+- Ship & SRV: 'Lights' toggles the next  status, 'On/Off' lights goes to that status.
+- Ship & SRV: If the status is allready 'On', 'Off' or at 'Full Beam' it does nothing.
+- SRV: Full-Beam / Lights twice it goes to to the Full-Beam only.
+
+@todo, Add on-foot commands detection via EDDI if it is available. It is not available in the Status.json log.
+
