@@ -1,0 +1,15 @@
+﻿Elite Dangerous Voiceattack commands:
+Keybinds need to be loaded example in command: [reset key; update key] [bind; binds]
+
+[Lights; Full Beam] [; on; of; off; pulls; twice]
+-- Ship/SRV lights
+-- On-foot lights, no EDDI status yet, allowed all commands to always toggle lights
+# This command checks the current lights status with EDDI variables and uses EDbinds plugin (variablekeybinds) to press the keys.
+# You can either toggle 'lights' or say lights off/on/twice/full-beam, from any mode it goes to the spoken command.
+Sound effects are driven by variables and are at the top of the command.
+
+Night vision [; on; off; pulls]
+-- Ship/SRV/On-foot Nightvision
+# This command checks the current nightvision status with EDDI variables and uses EDbinds plugin (variablekeybinds) to press the keys.
+# You can either toggle 'nightvision' or say 'nightvision off/on/twice/full-beam', from any mode it goes to the spoken command.
+Sound effects are driven by variables and are at the top of the command.
