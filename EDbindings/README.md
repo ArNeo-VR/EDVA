@@ -40,4 +40,5 @@ Rotary   2: Curve profile:J Deadband:0   Curvature:803 X-SAT:1000 Y-SAT:1000
 Rotary   3: Curve profile:S Deadband:150 Curvature:500 X-SAT:1000 Y-SAT:1000  
 Rotary   4: Curve profile:J Deadband:0   Curvature:410 X-SAT:1000 Y-SAT:992  
 ~~~
-huh
+
+Linkto: 20230423 http://edrefcard.info/binds/wryyrg
