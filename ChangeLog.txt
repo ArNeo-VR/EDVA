@@ -1,7 +1,7 @@
 ﻿## Change log
 
 -- 202301, [] E:D [EDVA]-4.0.23b
-~ Added comments to Lights command.  
+.... ~ Added comments to Lights command.  
 
 
 -- 202301, [] E:D [EDVA]-4.0.23A
@@ -10,9 +10,12 @@
 ~ Renamed custom variables VA_ to EDVA_  
 - Removed Hud mode from Analysis;.. mode command, triggered a lot accidently.  ~ Experimental Rotational correction fix in ((Music Event)), ((EDDI entered normal space)) dropping to normal space activates it twice sometimes. It does work for the station entering and departing.  
 ~ Reworked the Profile load process / sounds.  
-~ EDVA toggle command / Variable [BOOL:Travel Jump] used for auto-jump after ariving at a star.  
-~ EDVA toggle command / Variable [BOOL:Docking gear](stored) usef for auto-retract-landing-gear after undock.  
+~ EDVA toggle command / Variable [BOOL:Travel Jump] used for auto-jump after ariving at a star, auto-disables at destination.  
+~ EDVA toggle command / Variable [BOOL:Docking gear](stored) used for auto-retract-landing-gear after undock.  
+~ EDVA toggle command / Variable [BOOL:Liftoff gear](stored) used for auto-retract-landing-gear after take-off.  
 ~ EDVA toggle command / Variable [BOOL:Hangar] Status missing from EDDI when ship is in Hangar.  
++ Added dateElite variables {DATE:DATEELITE} {INT:ELITEYEAR|ELITEMONTH|ELITEDAY}
++ Added date format variables
 
 -- 202212, [] E:D [EDVA]-4.0.22L
 ! Changes in VA causes a bug from EDDI.vap file causing key 1..8 / E disruption, modified to EDDI-4.0.1-nobindings.  
