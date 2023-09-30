@@ -1,8 +1,12 @@
 ﻿## Change log
 
--- 202301, [] E:D [EDVA]-4.0.23b
+-- 202310, [] E:D [EDVA]-4.0.23j [prepairing for new release package]
+! Bump version to 23D > 23J  
+! EDDI changed variable, Last station >> Current station
 .... ~ Added comments to Lights command.  
-
++ Added Command Commander's log
+. Moved some commands in catagories.
+.... ~ Added comments to Lights command.  
 
 -- 202301, [] E:D [EDVA]-4.0.23A
 ! Changes internal-audio effect to MP3/WAV files, becouse of output type cannot select internal to windows media crap.  
@@ -16,6 +20,7 @@
 ~ EDVA toggle command / Variable [BOOL:Hangar] Status missing from EDDI when ship is in Hangar.  
 + Added dateElite variables {DATE:DATEELITE} {INT:ELITEYEAR|ELITEMONTH|ELITEDAY}
 + Added date format variables
+
 
 -- 202212, [] E:D [EDVA]-4.0.22L
 ! Changes in VA causes a bug from EDDI.vap file causing key 1..8 / E disruption, modified to EDDI-4.0.1-nobindings.  
