@@ -2,11 +2,15 @@
 
 -- 202310, [] E:D [EDVA]-4.0.23j [prepairing for new release package]
 ! Bump version to 23D > 23J  
-! EDDI changed variable, Last station >> Current station
+! EDDI changed variable, (Last station) >> (Current station)
 .... ~ Added comments to Lights command.  
 + Added Command Commander's log
++ Added Command Target Power plant; Drive; Thrusters; FSD; Life Support; Power Distributor; .....
++ Added Command Eject Cargo
++ Added Command Stand Down; Balance Power; Reset Power; Gray mode
 . Moved some commands in catagories.
 .... ~ Added comments to Lights command.  
+? note unwritten keybinding CTRL-ALT-G Toggles cockpit on/off
 
 -- 202301, [] E:D [EDVA]-4.0.23A
 ! Changes internal-audio effect to MP3/WAV files, becouse of output type cannot select internal to windows media crap.  
