@@ -8,6 +8,11 @@
 + Added Command Target Power plant; Drive; Thrusters; FSD; Life Support; Power Distributor; .....
 + Added Command Eject Cargo
 + Added Command Stand Down; Balance Power; Reset Power; Gray mode
++ Added Command Carrier [Cargo; Inventory]
++ Added Command Tranfer all to Carrier
++ Added Command Confirm items transfer
++ Added Command Mininglaser & Abort Mininglaser 
++ Added Command Prospector limpet (Uses Firegroup A & left mouse)
 . Moved some commands in catagories.
 .... ~ Added comments to Lights command.  
 ? note unwritten keybinding CTRL-ALT-G Toggles cockpit on/off
