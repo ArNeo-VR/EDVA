@@ -1,6 +1,10 @@
 ﻿## Change log
 
--- 202310, [] E:D [EDVA]-4.0.23j [prepairing for new release package]
+-- 202312, [] E:D [EDVA]-4.0.23L
+~ Fixed docking request deny retry timer, there was no delay.
+
+
+-- 202310, [] E:D [EDVA]-4.0.23j
 ! Bump version to 23D > 23J  
 ! EDDI changed variable, (Last station) >> (Current station)
 .... ~ Added comments to Lights command.  
