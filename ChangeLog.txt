@@ -1,5 +1,8 @@
 ﻿## Change log
 
+-- 202312, [] E:D [EDVA]-4.0.24a
+
+
 -- 202312, [] E:D [EDVA]-4.0.23L
 ~ Fixed docking request deny retry timer, there was no delay.
 
