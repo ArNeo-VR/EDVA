@@ -1,7 +1,9 @@
 ﻿## Change log
 
--- 202312, [] E:D [EDVA]-4.0.24a
-
+-- 202412, [] E:D [EDVA]-4.0.24A
+~ Update command landing pad, changed variables TXT to INT, and used INT:EDDI docking granted landingpad
+~ Changed variables: Docking-request events, i.e. Request Granted to Docking Granted
++ Update [release] EDDI-4.0.4 (2024F) original EDDI.vap as a seperate profile to be included in EDVA profile
 
 -- 202312, [] E:D [EDVA]-4.0.23L
 ~ Fixed docking request deny retry timer, there was no delay.
