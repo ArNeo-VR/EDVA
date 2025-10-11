@@ -1,0 +1,114 @@
+﻿-- Landing pad [Assigned;1..45] [;left] :: Ingame NPC talks about Landing pad so request as such.
+
+-- ARRIVING AT A PORT - YOU KEEP GREEN AT THE RIGHT SIDE - (AND RED AT THE LEFT)
+-- WHEN GREEN IS ON THE LEFT SIDE - AFTER THE LANDING PAD ## COMMAND Say "LEFT"
+-- added say pad ## confirmation, to check for miss recognised numbers.
+-- Landing pad Assigned ## when a docking pad is actively assigned it used that landingpad number.
+
+-- ↓ Environment conditions
+Begin Condition : ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space' AND [Status Docked] Equals False) OR ([{TXT:Status vehicle}] Equals 'Ship' AND [{TXT:Environment}] Equals 'Normal space' AND [{CMDSEGMENT:0}] Starts With 'Landing' AND [{CMDSEGMENT:1}] Has Been Set AND [Docked] Equals False)
+    
+    --- {INT:EDDI docking granted landingpad}
+    Begin Text Compare : [{CMD}] Equals 'Landing pad Assigned'
+        Set integer [~PadNumber] value to the converted value of {INT:EDDI docking granted landingpad}
+    Else
+        Set integer [~PadNumber] value to the converted value of {CMDSEGMENT:1}
+    End Condition
+    
+    -- ↓ Landing pad Distance [ Immediate; Mid; Far ]
+    Begin Condition : [~PadNumber] Equals 1 OR [~PadNumber] Equals 2 OR [~PadNumber] Equals 5 OR [~PadNumber] Equals 6 OR [~PadNumber] Equals 9 OR [~PadNumber] Equals 11 OR [~PadNumber] Equals 12 OR [~PadNumber] Equals 16 OR [~PadNumber] Equals 17 OR [~PadNumber] Equals 20 OR [~PadNumber] Equals 21 OR [~PadNumber] Equals 24 OR [~PadNumber] Equals 26 OR [~PadNumber] Equals 27 OR [~PadNumber] Equals 31 OR [~PadNumber] Equals 32 OR [~PadNumber] Equals 35 OR [~PadNumber] Equals 36 OR [~PadNumber] Equals 39 OR [~PadNumber] Equals 41 OR [~PadNumber] Equals 42
+        Set text [~PadDistance] to 'Immediate'
+    Else If : [~PadNumber] Equals 7 OR [~PadNumber] Equals 13 OR [~PadNumber] Equals 22 OR [~PadNumber] Equals 28 OR [~PadNumber] Equals 37 OR [~PadNumber] Equals 43
+        Set text [~PadDistance] to 'Mid'
+    Else If : [~PadNumber] Equals 3 OR [~PadNumber] Equals 4 OR [~PadNumber] Equals 8 OR [~PadNumber] Equals 10 OR [~PadNumber] Equals 14 OR [~PadNumber] Equals 15 OR [~PadNumber] Equals 18 OR [~PadNumber] Equals 19 OR [~PadNumber] Equals 23 OR [~PadNumber] Equals 25 OR [~PadNumber] Equals 29 OR [~PadNumber] Equals 30 OR [~PadNumber] Equals 33 OR [~PadNumber] Equals 34 OR [~PadNumber] Equals 38 OR [~PadNumber] Equals 40 OR [~PadNumber] Equals 44 OR [~PadNumber] Equals 45
+        Set text [~PadDistance] to 'Far'
+    End Condition
+    
+    Write [Yellow] 'P# | {INT:~PadNumber} | CMD:1:{CMDSEGMENT:1} | Dist:{TXT:~PadDistance} | {INT:EDDI docking granted landingpad}' to log
+    -- ↓ Landing (pad) ## (enterance: keep GREEN to the RIGHT)
+    
+    ============= IMMEDIATE =============
+    Begin Integer Compare : [~PadNumber] Equals 0
+        Set small int (condition) [~PadDistance] value to the converted value of VOID
+    Else If : [~PadNumber] Equals 1 OR [~PadNumber] Equals 2
+        Set small int (condition) [~PadDirection] value to 6
+    Else If : [~PadNumber] Equals 5 OR [~PadNumber] Equals 6
+        Set small int (condition) [~PadDirection] value to 7
+    Else If Integer Compare : [~PadNumber] Equals 9
+        Set small int (condition) [~PadDirection] value to 8
+    Else If : [~PadNumber] Equals 11 OR [~PadNumber] Equals 12
+        Set small int (condition) [~PadDirection] value to 9
+    Else If : [~PadNumber] Equals 16 OR [~PadNumber] Equals 17
+        Set small int (condition) [~PadDirection] value to 10
+    Else If : [~PadNumber] Equals 20 OR [~PadNumber] Equals 21
+        Set small int (condition) [~PadDirection] value to 11
+    Else If Integer Compare : [~PadNumber] Equals 24
+        Set small int (condition) [~PadDirection] value to 12
+    Else If : [~PadNumber] Equals 26 OR [~PadNumber] Equals 27
+        Set small int (condition) [~PadDirection] value to 1
+    Else If : [~PadNumber] Equals 31 OR [~PadNumber] Equals 32
+        Set small int (condition) [~PadDirection] value to 2
+    Else If : [~PadNumber] Equals 35 OR [~PadNumber] Equals 36
+        Set small int (condition) [~PadDirection] value to 3
+    Else If Integer Compare : [~PadNumber] Equals 39
+        Set small int (condition) [~PadDirection] value to 4
+    Else If : [~PadNumber] Equals 41 OR [~PadNumber] Equals 42
+        Set small int (condition) [~PadDirection] value to 5
+        
+        ============= MID =============
+    Else If Integer Compare : [~PadNumber] Equals 7
+        Set small int (condition) [~PadDirection] value to 7
+    Else If Integer Compare : [~PadNumber] Equals 13
+        Set small int (condition) [~PadDirection] value to 9
+    Else If Integer Compare : [~PadNumber] Equals 22
+        Set small int (condition) [~PadDirection] value to 11
+    Else If Integer Compare : [~PadNumber] Equals 28
+        Set small int (condition) [~PadDirection] value to 1
+    Else If Integer Compare : [~PadNumber] Equals 37
+        Set small int (condition) [~PadDirection] value to 3
+    Else If Integer Compare : [~PadNumber] Equals 43
+        Set small int (condition) [~PadDirection] value to 5
+        
+        ============= FAR =============
+    Else If : [~PadNumber] Equals 3 OR [~PadNumber] Equals 4
+        Set small int (condition) [~PadDirection] value to 6
+    Else If Integer Compare : [~PadNumber] Equals 8
+        Set small int (condition) [~PadDirection] value to 7
+    Else If Integer Compare : [~PadNumber] Equals 10
+        Set small int (condition) [~PadDirection] value to 8
+    Else If : [~PadNumber] Equals 14 OR [~PadNumber] Equals 15
+        Set small int (condition) [~PadDirection] value to 9
+    Else If : [~PadNumber] Equals 18 OR [~PadNumber] Equals 19
+        Set small int (condition) [~PadDirection] value to 10
+    Else If Integer Compare : [~PadNumber] Equals 23
+        Set small int (condition) [~PadDirection] value to 11
+    Else If Integer Compare : [~PadNumber] Equals 25
+        Set small int (condition) [~PadDirection] value to 12
+    Else If : [~PadNumber] Equals 29 OR [~PadNumber] Equals 30
+        Set small int (condition) [~PadDirection] value to 1
+    Else If : [~PadNumber] Equals 33 OR [~PadNumber] Equals 34
+        Set small int (condition) [~PadDirection] value to 2
+    Else If Integer Compare : [~PadNumber] Equals 38
+        Set small int (condition) [~PadDirection] value to 3
+    Else If Integer Compare : [~PadNumber] Equals 40
+        Set small int (condition) [~PadDirection] value to 4
+    Else If : [~PadNumber] Equals 44 OR [~PadNumber] Equals 45
+        Set small int (condition) [~PadDirection] value to 5
+    End Condition
+    ====================================================
+    
+    -- ↓ Swaps the PadDirection 180 degrees
+    -- ↓ Landing pad LEFT ## (enterance: keep GREEN to the LEFT)
+    Begin Condition : ([{CMDSEGMENT:2}] Equals 'Left' AND [~PadDirection] Is Greater Than Or Equals 1 AND [~PadDirection] Is Less Than Or Equals 6)
+        Set small int (condition) [~PadDirection] value as incremented by 6
+    Else If : ([{CMDSEGMENT:2}] Equals 'Left' AND [~PadDirection] Is Greater Than Or Equals 7 AND [~PadDirection] Is Less Than Or Equals 12)
+        Set small int (condition) [~PadDirection] value as decremented by 6
+    End Condition
+    
+    -- ↓ execute command
+    Begin Condition : [Debug Notifications] Equals True OR [Debug Notifications] Has Not Been Set
+        Write [Yellow] '>> {CMDSEGMENT:0} {CMDSEGMENT:1} >> {SMALL:~PadDirection} O'Clock >> {TXT:~PadDistance}' to log
+    End Condition
+    Say, 'PAD {INT:~PadNumber}, {SMALL:~PadDirection} O'Clock {TXT:~PadDistance}'  (and wait until it completes)
+    
+End Condition

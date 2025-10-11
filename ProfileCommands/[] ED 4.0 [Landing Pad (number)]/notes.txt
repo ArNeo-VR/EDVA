@@ -1,0 +1,10 @@
+EDDI has a variable {INT:EDDI docking granted landingpad} can be used with the 'Landing pad' command.
+https://github.com/EDCD/EDDI/wiki/Docking-granted-event
+
+I had to rework the variable to an INTeger, couln't find variable conversion function in VA.
+*also it should be faster while working it with numbers*
+
+I included all exports (vap,txt,xml,csv,html) from VA
+
+Variable was not easy to find searching on "landingpad" doen't show anything, 
+it's hidden in the "Docking-granted-event" as a sub-text.
